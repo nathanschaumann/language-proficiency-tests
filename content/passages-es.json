@@ -1,0 +1,2047 @@
+[
+ {
+  "id": "ES-IL-1",
+  "sublevel": "IL",
+  "variety": "es-MX",
+  "accent": "Mexican (central, Mexico City)",
+  "genre": "anuncio en un supermercado",
+  "intro_pt": "Va a escuchar un anuncio en un supermercado.",
+  "duration_target_s": 50,
+  "speakers": [
+   {
+    "slot": "ES_MX_F",
+    "voice_style": "voz femenina, locución de radio clara y neutra"
+   }
+  ],
+  "script": [
+   {
+    "slot": "ES_MX_F",
+    "text": "Buenas tardes, clientes de Supermercados La Huerta. Hoy jueves tenemos tres ofertas especiales para ustedes. En la panadería, el pan dulce de la tarde sale del horno a las seis, calientito y recién hecho. Si compran tres piezas, la cuarta es gratis, y así hay pan para toda la familia en la cena. En frutas y verduras, hoy el aguacate cuesta menos porque tenemos mucho aguacate fresco de Michoacán: está a dos por treinta pesos. La leche también tiene oferta: si llevan dos litros, el segundo litro cuesta la mitad. Y una cosa más: la cafetería, al lado de la entrada, está abierta toda la tarde, con café de olla y pan de la casa. Recuerden: el pan dulce sale a las seis en punto. Hoy cerramos a las diez de la noche. Gracias por comprar en La Huerta, y que tengan una bonita tarde."
+   }
+  ],
+  "questions": [
+   {
+    "q_pt": "¿Cuál es el propósito principal del mensaje?",
+    "choices_pt": [
+     "Avisar que la tienda cerrará antes de lo normal",
+     "Dar a conocer promociones en varias secciones",
+     "Presentar una cafetería recién abierta en la tienda",
+     "Informar de la llegada de fruta de otra región"
+    ],
+    "correct": 1,
+    "type": "global"
+   },
+   {
+    "q_pt": "¿A qué hora sale del horno el pan dulce?",
+    "choices_pt": [
+     "A las cuatro",
+     "A las tres",
+     "A las seis",
+     "A las diez"
+    ],
+    "correct": 2,
+    "type": "selective"
+   },
+   {
+    "q_pt": "¿Qué recibe quien lleva dos litros de leche?",
+    "choices_pt": [
+     "Un segundo litro a mitad de precio",
+     "Un tercer litro sin costo",
+     "Los dos litros por treinta pesos",
+     "Un café de olla de regalo"
+    ],
+    "correct": 0,
+    "type": "detail"
+   }
+  ],
+  "title_pt": "Ofertas del día"
+ },
+ {
+  "id": "ES-IL-2",
+  "sublevel": "IL",
+  "variety": "es-ES",
+  "accent": "Peninsular Spanish (central-northern Spain, distinción)",
+  "genre": "anuncio en una estación de tren",
+  "intro_pt": "Va a escuchar un anuncio en una estación de tren.",
+  "duration_target_s": 43,
+  "speakers": [
+   {
+    "slot": "ES_ES_M",
+    "voice_style": "voz masculina, locución de radio profesional"
+   }
+  ],
+  "script": [
+   {
+    "slot": "ES_ES_M",
+    "text": "Atención, por favor. Atención, por favor. Información para los viajeros del tren con destino a Valencia. El tren de las diecisiete cuarenta sale hoy con retraso, porque hay obras en la vía. La nueva hora de salida es a las dieciocho y diez. Además, hoy este tren no sale por la vía dos. Sale por la vía cuatro. Si ya están en la vía dos, no pasa nada: tienen tiempo para cambiar. La vía cuatro está al final de la escalera. Repetimos: el tren a Valencia sale hoy a las dieciocho y diez, por la vía cuatro, no por la vía dos. Por favor, estén atentos a las pantallas de la estación. Sentimos mucho las molestias. Muchas gracias por su atención y buen viaje."
+   }
+  ],
+  "questions": [
+   {
+    "q_pt": "¿Cuál es el propósito principal del anuncio?",
+    "choices_pt": [
+     "Avisar de que un tren no va a salir hoy",
+     "Advertir de una escalera en obras dentro de la estación",
+     "Explicar cómo consultar los horarios en las pantallas",
+     "Comunicar cambios en la salida de un tren"
+    ],
+    "correct": 3,
+    "type": "global"
+   },
+   {
+    "q_pt": "¿A qué hora sale ahora el tren?",
+    "choices_pt": [
+     "Dieciocho y diez",
+     "Diecisiete cuarenta",
+     "Dieciocho y cuarenta",
+     "Diecisiete y diez"
+    ],
+    "correct": 0,
+    "type": "selective"
+   },
+   {
+    "q_pt": "¿Qué deben hacer los viajeros que esperan en la vía dos?",
+    "choices_pt": [
+     "Quedarse en la misma vía hasta la salida",
+     "Ir a la otra vía, pues hay tiempo",
+     "Pedir el dinero del billete en la estación",
+     "Salir de la estación por la escalera"
+    ],
+    "correct": 1,
+    "type": "detail"
+   }
+  ],
+  "title_pt": "Estación de tren"
+ },
+ {
+  "id": "ES-IL-3",
+  "sublevel": "IL",
+  "variety": "es-CO",
+  "accent": "Colombian (Bogotá / Andean)",
+  "genre": "diálogo en la recepción de un hotel",
+  "intro_pt": "Va a escuchar una conversación en la recepción de un hotel.",
+  "duration_target_s": 48,
+  "speakers": [
+   {
+    "slot": "ES_CO_F",
+    "voice_style": "voz femenina, tono conversacional natural"
+   },
+   {
+    "slot": "ES_CO_M",
+    "voice_style": "voz masculina, tono conversacional natural"
+   }
+  ],
+  "script": [
+   {
+    "slot": "ES_CO_F",
+    "text": "Buenas noches, bienvenido al hotel Los Almendros. ¿Tiene reserva?"
+   },
+   {
+    "slot": "ES_CO_M",
+    "text": "Buenas noches. Sí, a nombre de Andrés Rojas. Son tres noches."
+   },
+   {
+    "slot": "ES_CO_F",
+    "text": "Perfecto, señor Rojas. Su habitación es la trescientos doce, en el tercer piso."
+   },
+   {
+    "slot": "ES_CO_M",
+    "text": "¿Es una habitación tranquila? Mañana tengo una reunión muy temprano y necesito dormir bien."
+   },
+   {
+    "slot": "ES_CO_F",
+    "text": "Sí, señor. Está al lado del jardín, lejos de la calle."
+   },
+   {
+    "slot": "ES_CO_M",
+    "text": "Muy bien. ¿Y a qué hora es el desayuno?"
+   },
+   {
+    "slot": "ES_CO_F",
+    "text": "El desayuno es de seis y media a diez, en el restaurante del primer piso. El domingo empieza un poco más tarde, a las siete."
+   },
+   {
+    "slot": "ES_CO_M",
+    "text": "Listo. ¿El hotel tiene gimnasio?"
+   },
+   {
+    "slot": "ES_CO_F",
+    "text": "No, señor, pero tenemos piscina en la terraza. Está abierta hasta las nueve de la noche."
+   },
+   {
+    "slot": "ES_CO_M",
+    "text": "Qué bien. Me gusta mucho nadar."
+   },
+   {
+    "slot": "ES_CO_F",
+    "text": "Aquí tiene la llave. Si necesita algo, marque el nueve."
+   },
+   {
+    "slot": "ES_CO_M",
+    "text": "Muchas gracias. Muy amable."
+   },
+   {
+    "slot": "ES_CO_F",
+    "text": "Con mucho gusto, señor Rojas. Que descanse."
+   }
+  ],
+  "questions": [
+   {
+    "q_pt": "¿Qué hace el señor Rojas en esta conversación?",
+    "choices_pt": [
+     "Cambia su reserva a más noches",
+     "Se queja de una habitación ruidosa",
+     "Se registra y pregunta por los servicios",
+     "Pide ayuda para una reunión de trabajo"
+    ],
+    "correct": 2,
+    "type": "global"
+   },
+   {
+    "q_pt": "¿Dónde se sirve el desayuno?",
+    "choices_pt": [
+     "Tercer piso",
+     "La terraza",
+     "Junto al jardín",
+     "Primer piso"
+    ],
+    "correct": 3,
+    "type": "selective"
+   },
+   {
+    "q_pt": "¿A qué hora empieza el desayuno el domingo?",
+    "choices_pt": [
+     "A las siete",
+     "A las seis y media",
+     "A las diez",
+     "A las nueve"
+    ],
+    "correct": 0,
+    "type": "detail"
+   }
+  ],
+  "title_pt": "En el hotel"
+ },
+ {
+  "id": "ES-IL-4",
+  "sublevel": "IL",
+  "variety": "es-MX",
+  "accent": "Mexican (central, Mexico City)",
+  "genre": "llamada telefónica con una invitación",
+  "intro_pt": "Va a escuchar una llamada entre dos amigos.",
+  "duration_target_s": 44,
+  "speakers": [
+   {
+    "slot": "ES_MX_F",
+    "voice_style": "voz femenina, tono conversacional natural"
+   },
+   {
+    "slot": "ES_MX_M",
+    "voice_style": "voz masculina, tono conversacional natural"
+   }
+  ],
+  "script": [
+   {
+    "slot": "ES_MX_M",
+    "text": "¿Bueno?"
+   },
+   {
+    "slot": "ES_MX_F",
+    "text": "Hola, Toño, soy Carla. ¿Cómo estás?"
+   },
+   {
+    "slot": "ES_MX_M",
+    "text": "¡Carla! Muy bien, ¿y tú?"
+   },
+   {
+    "slot": "ES_MX_F",
+    "text": "Bien, gracias. Oye, el sábado es el cumpleaños de mi hermana Lupita. Vamos a hacer una comida en mi casa. ¿Quieres venir?"
+   },
+   {
+    "slot": "ES_MX_M",
+    "text": "¡Qué padre! Claro que sí. ¿A qué hora?"
+   },
+   {
+    "slot": "ES_MX_F",
+    "text": "A las tres de la tarde. Pero si puedes, llega un poco antes, a las dos y media, para ayudarme con la mesa."
+   },
+   {
+    "slot": "ES_MX_M",
+    "text": "Sí, sin problema. ¿Llevo algo?"
+   },
+   {
+    "slot": "ES_MX_F",
+    "text": "Sí, trae refrescos, por favor. Yo hago la comida y el pastel."
+   },
+   {
+    "slot": "ES_MX_M",
+    "text": "Muy bien. ¿Tu casa es la de siempre, en la colonia Roma?"
+   },
+   {
+    "slot": "ES_MX_F",
+    "text": "Sí, la de siempre."
+   },
+   {
+    "slot": "ES_MX_M",
+    "text": "Perfecto. ¿Puedo llevar a mi novia?"
+   },
+   {
+    "slot": "ES_MX_F",
+    "text": "¡Claro! Así la conocemos todos."
+   },
+   {
+    "slot": "ES_MX_M",
+    "text": "Entonces, el sábado a las dos y media, con refrescos y con mi novia."
+   },
+   {
+    "slot": "ES_MX_F",
+    "text": "Exacto. ¡Nos vemos el sábado!"
+   }
+  ],
+  "questions": [
+   {
+    "q_pt": "¿Para qué llama Carla a Toño?",
+    "choices_pt": [
+     "Para pedirle ayuda con un pastel",
+     "Para invitarlo a una comida de cumpleaños",
+     "Para avisarle de que una fiesta cambia de lugar",
+     "Para presentarle a una nueva pareja"
+    ],
+    "correct": 1,
+    "type": "global"
+   },
+   {
+    "q_pt": "¿Qué debe llevar Toño?",
+    "choices_pt": [
+     "Un pastel de cumpleaños",
+     "La comida principal",
+     "Un regalo para Lupita",
+     "Refrescos para todos"
+    ],
+    "correct": 3,
+    "type": "selective"
+   },
+   {
+    "q_pt": "¿Cuándo le pide Carla que llegue?",
+    "choices_pt": [
+     "Una hora antes de la comida",
+     "Justo a la hora de la comida",
+     "Media hora antes de la comida",
+     "Media hora después de comenzar"
+    ],
+    "correct": 2,
+    "type": "detail"
+   }
+  ],
+  "title_pt": "Una invitación"
+ },
+ {
+  "id": "ES-IL-5",
+  "sublevel": "IL",
+  "variety": "es-PE",
+  "accent": "Peruvian (Lima / coastal-Andean educated)",
+  "genre": "pronóstico del tiempo en la radio",
+  "intro_pt": "Va a escuchar el pronóstico del tiempo en la radio.",
+  "duration_target_s": 42,
+  "speakers": [
+   {
+    "slot": "ES_PE_M",
+    "voice_style": "voz masculina, locución de radio profesional"
+   }
+  ],
+  "script": [
+   {
+    "slot": "ES_PE_M",
+    "text": "Buenos días, amigos de Radio Sur. Son las siete de la mañana, y aquí está el pronóstico del tiempo para hoy martes en Arequipa. Hoy es un día de sol. No va a llover. Ahora, en la mañana, hace frío: la temperatura mínima es de siete grados. Al mediodía hace calor, y la máxima llega a veintidós grados. En la tarde hay un poco de viento, y en la noche hace frío otra vez. Lleven sombrero para el sol y una chaqueta para la noche. ¿Y mañana miércoles? Mañana el cielo va a estar nublado en la mañana, y en la tarde sale el sol otra vez. Este fue el pronóstico del tiempo en Radio Sur. Que tengan un excelente día, amigos."
+   }
+  ],
+  "questions": [
+   {
+    "q_pt": "¿De qué trata principalmente el mensaje?",
+    "choices_pt": [
+     "Del pronóstico de dos días en una ciudad",
+     "De consejos para la salud en el frío",
+     "De la ropa que conviene llevar en la semana",
+     "De la programación de la emisora para el fin de semana"
+    ],
+    "correct": 0,
+    "type": "global"
+   },
+   {
+    "q_pt": "¿Cómo va a estar el cielo mañana por la mañana?",
+    "choices_pt": [
+     "Despejado y con sol",
+     "Cubierto de nubes",
+     "Con lluvia ligera",
+     "Con viento fuerte"
+    ],
+    "correct": 1,
+    "type": "selective"
+   },
+   {
+    "q_pt": "¿Qué temperatura se espera hoy a primera hora?",
+    "choices_pt": [
+     "Siete grados a mediodía",
+     "Veintidós grados por la mañana",
+     "Siete grados por la mañana",
+     "Veintidós grados por la noche"
+    ],
+    "correct": 2,
+    "type": "detail"
+   }
+  ],
+  "title_pt": "El clima"
+ },
+ {
+  "id": "ES-IM-1",
+  "sublevel": "IM",
+  "variety": "es-MX",
+  "accent": "Mexican (central, Mexico City)",
+  "genre": "conversación entre compañeros de trabajo",
+  "intro_pt": "Va a escuchar una conversación entre dos compañeros de trabajo.",
+  "duration_target_s": 59,
+  "speakers": [
+   {
+    "slot": "ES_MX_F",
+    "voice_style": "voz femenina, tono conversacional natural"
+   },
+   {
+    "slot": "ES_MX_M",
+    "voice_style": "voz masculina, tono conversacional natural"
+   }
+  ],
+  "script": [
+   {
+    "slot": "ES_MX_F",
+    "text": "Oye, Rodrigo, ¿tienes un minuto? Es sobre la despedida de don Ernesto."
+   },
+   {
+    "slot": "ES_MX_M",
+    "text": "Sí, claro. ¿Ya tenemos fecha?"
+   },
+   {
+    "slot": "ES_MX_F",
+    "text": "Casi. Él se jubila el viernes treinta, pero los viernes la mitad del equipo trabaja desde casa. Entonces mejor el jueves, ¿no?"
+   },
+   {
+    "slot": "ES_MX_M",
+    "text": "Sí, el jueves está bien. ¿Y cuántos somos?"
+   },
+   {
+    "slot": "ES_MX_F",
+    "text": "Como veinte, con la gente de ventas."
+   },
+   {
+    "slot": "ES_MX_M",
+    "text": "¿Y dónde? ¿Aquí en la oficina?"
+   },
+   {
+    "slot": "ES_MX_F",
+    "text": "Yo digo que en el restaurante de la esquina. Tiene un salón arriba para grupos."
+   },
+   {
+    "slot": "ES_MX_M",
+    "text": "Ah, sí, lo conozco. La comida es muy buena. ¿Cuánto cuesta?"
+   },
+   {
+    "slot": "ES_MX_F",
+    "text": "Ciento ochenta pesos por persona, con comida y bebida."
+   },
+   {
+    "slot": "ES_MX_M",
+    "text": "Está bien. ¿Y el regalo?"
+   },
+   {
+    "slot": "ES_MX_F",
+    "text": "Todos quieren darle algo. A él le gusta mucho la jardinería, ¿verdad?"
+   },
+   {
+    "slot": "ES_MX_M",
+    "text": "Sí, siempre habla de sus plantas. ¿Qué tal unas herramientas buenas para el jardín?"
+   },
+   {
+    "slot": "ES_MX_F",
+    "text": "¡Me encanta la idea! Yo reservo el salón hoy, y tú juntas el dinero para el regalo, ¿va?"
+   },
+   {
+    "slot": "ES_MX_M",
+    "text": "Va. Esta tarde les mando un correo a todos."
+   },
+   {
+    "slot": "ES_MX_F",
+    "text": "Perfecto. Y no le decimos nada a don Ernesto. Es una sorpresa."
+   },
+   {
+    "slot": "ES_MX_M",
+    "text": "Claro que no. Nos vemos mañana, Mariana."
+   }
+  ],
+  "questions": [
+   {
+    "q_pt": "¿De qué hablan Mariana y Rodrigo?",
+    "choices_pt": [
+     "De repartir el trabajo del equipo de ventas",
+     "De reservar un salón para una reunión de trabajo",
+     "De acordar el horario de trabajo remoto del equipo",
+     "De organizar el homenaje a un compañero que se jubila"
+    ],
+    "correct": 3,
+    "type": "global"
+   },
+   {
+    "q_pt": "¿Por qué eligen el jueves y no el viernes?",
+    "choices_pt": [
+     "Porque muchos compañeros no están en la oficina",
+     "Porque el personal de ventas viaja ese día",
+     "Porque don Ernesto ya no trabaja ese día",
+     "Porque el restaurante no abre para grupos"
+    ],
+    "correct": 0,
+    "type": "detail"
+   },
+   {
+    "q_pt": "¿Qué van a regalarle a don Ernesto?",
+    "choices_pt": [
+     "Unas plantas para su casa",
+     "Un juego de herramientas de jardín",
+     "Una comida para todo el equipo",
+     "Un libro sobre plantas"
+    ],
+    "correct": 1,
+    "type": "detail"
+   }
+  ],
+  "title_pt": "La despedida"
+ },
+ {
+  "id": "ES-IM-2",
+  "sublevel": "IM",
+  "variety": "es-AR",
+  "accent": "Rioplatense (Buenos Aires / Rosario, voseo, sheísmo)",
+  "genre": "conversación en un negocio de alquiler de bicicletas",
+  "intro_pt": "Va a escuchar una conversación en un negocio de bicicletas.",
+  "duration_target_s": 67,
+  "speakers": [
+   {
+    "slot": "ES_AR_M",
+    "voice_style": "voz masculina, tono conversacional natural"
+   },
+   {
+    "slot": "ES_AR_F",
+    "voice_style": "voz femenina, tono conversacional natural"
+   }
+  ],
+  "script": [
+   {
+    "slot": "ES_AR_M",
+    "text": "Hola, buenas. ¿Acá alquilan bicicletas?"
+   },
+   {
+    "slot": "ES_AR_F",
+    "text": "Sí, claro. ¿Para cuándo la querés?"
+   },
+   {
+    "slot": "ES_AR_M",
+    "text": "Para el sábado. Quiero ir con mi hija por la costanera hasta la reserva ecológica."
+   },
+   {
+    "slot": "ES_AR_F",
+    "text": "Bárbaro. ¿Y tu hija qué edad tiene?"
+   },
+   {
+    "slot": "ES_AR_M",
+    "text": "Nueve años."
+   },
+   {
+    "slot": "ES_AR_F",
+    "text": "Entonces para ella te conviene una bici mediana. Tenemos varias. ¿Y para vos una grande?"
+   },
+   {
+    "slot": "ES_AR_M",
+    "text": "Sí. ¿Cuánto sale?"
+   },
+   {
+    "slot": "ES_AR_F",
+    "text": "El día completo sale ocho mil pesos cada bici, y medio día, cinco mil. Los cascos van incluidos."
+   },
+   {
+    "slot": "ES_AR_M",
+    "text": "¿Y la reserva queda lejos de acá?"
+   },
+   {
+    "slot": "ES_AR_F",
+    "text": "No, son como cuarenta minutos en bici, todo por la costanera. Es plano, así que para tu hija no es difícil. Y adentro de la reserva hay baños y un lugar para comer."
+   },
+   {
+    "slot": "ES_AR_M",
+    "text": "¿Y a qué hora abren el sábado?"
+   },
+   {
+    "slot": "ES_AR_F",
+    "text": "A las nueve. Pero te aviso una cosa: para el sábado anuncian lluvia a la tarde. Si querés, vení temprano y hacé medio día."
+   },
+   {
+    "slot": "ES_AR_M",
+    "text": "Tenés razón, mejor medio día. ¿Tengo que reservar?"
+   },
+   {
+    "slot": "ES_AR_F",
+    "text": "Sí, porque los fines de semana se van rápido. Dame tu nombre y te guardo las dos."
+   },
+   {
+    "slot": "ES_AR_M",
+    "text": "Martín Sosa."
+   },
+   {
+    "slot": "ES_AR_F",
+    "text": "Listo, Martín. Ah, y traé el documento el sábado, lo necesitamos para hacer el alquiler."
+   },
+   {
+    "slot": "ES_AR_M",
+    "text": "Perfecto. Entonces nos vemos el sábado a las nueve. Gracias."
+   }
+  ],
+  "questions": [
+   {
+    "q_pt": "¿Qué quiere hacer Martín en el negocio?",
+    "choices_pt": [
+     "Comprar una bicicleta mediana para su hija",
+     "Reservar un paseo guiado hasta una reserva natural",
+     "Alquilar bicicletas para un paseo con su hija",
+     "Preguntar por el clima del fin de semana"
+    ],
+    "correct": 2,
+    "type": "global"
+   },
+   {
+    "q_pt": "¿Por qué la empleada le sugiere ir temprano?",
+    "choices_pt": [
+     "Porque las bicicletas se agotan los sábados",
+     "Porque anuncian lluvia para la tarde",
+     "Porque el camino de ida tarda cuarenta minutos",
+     "Porque el negocio cierra por la tarde"
+    ],
+    "correct": 1,
+    "type": "detail"
+   },
+   {
+    "q_pt": "Al final, ¿cuánto pagará Martín por las bicicletas?",
+    "choices_pt": [
+     "Cinco mil pesos",
+     "Ocho mil pesos",
+     "Dieciséis mil pesos",
+     "Diez mil pesos"
+    ],
+    "correct": 3,
+    "type": "detail"
+   }
+  ],
+  "title_pt": "Alquiler de bicis"
+ },
+ {
+  "id": "ES-IM-3",
+  "sublevel": "IM",
+  "variety": "es-ES",
+  "accent": "Peninsular Spanish (central-northern Spain, distinción)",
+  "genre": "mensaje de voz de una entrenadora a las familias",
+  "intro_pt": "Va a escuchar un mensaje de voz de una entrenadora.",
+  "duration_target_s": 60,
+  "speakers": [
+   {
+    "slot": "ES_ES_F",
+    "voice_style": "voz femenina, tono conversacional natural"
+   }
+  ],
+  "script": [
+   {
+    "slot": "ES_ES_F",
+    "text": "Hola a todos, soy Elena, la entrenadora del equipo infantil de baloncesto. Os mando este audio con los cambios de este mes. Como sabéis, el polideportivo cierra dos semanas por obras en el tejado. Por eso, desde el lunes, entrenamos en el colegio San Fermín. Está muy cerca, a diez minutos andando. Los días no cambian: entrenamos martes y jueves. La hora sí cambia un poco: ahora es de seis a siete y media. La pista del colegio es nueva y muy grande, y a los chicos les va a encantar. Otra cosa: los chicos tienen que venir ya vestidos, con la ropa de deporte puesta. El sábado tenemos partido en Alcalá, a las once. Vamos todos juntos en autobús, y el autobús sale de la puerta del polideportivo a las diez menos cuarto. Los padres también podéis venir: hay sitio para todos. Y no olvidéis la camiseta azul, la de los partidos fuera de casa. Si tenéis alguna pregunta, me escribís por aquí. Muchas gracias, y nos vemos el martes en el colegio."
+   }
+  ],
+  "questions": [
+   {
+    "q_pt": "¿Para qué manda Elena este mensaje?",
+    "choices_pt": [
+     "Para comunicar cambios en el lugar y la hora de las prácticas",
+     "Para convocar a las familias a un partido en otra ciudad",
+     "Para explicar las obras que harán en el polideportivo",
+     "Para pedir que preparen el equipamiento del equipo"
+    ],
+    "correct": 0,
+    "type": "global"
+   },
+   {
+    "q_pt": "¿Qué deben llevar puesto los chicos al llegar a la pista?",
+    "choices_pt": [
+     "La camiseta azul de fuera",
+     "El uniforme del colegio",
+     "Su ropa de deporte",
+     "La equipación del club de Alcalá"
+    ],
+    "correct": 2,
+    "type": "detail"
+   },
+   {
+    "q_pt": "¿A qué hora sale el autobús el sábado?",
+    "choices_pt": [
+     "Diez y cuarto",
+     "Once en punto",
+     "Siete y media",
+     "Nueve y cuarenta y cinco"
+    ],
+    "correct": 3,
+    "type": "detail"
+   }
+  ],
+  "title_pt": "Nuevos horarios"
+ },
+ {
+  "id": "ES-IM-4",
+  "sublevel": "IM",
+  "variety": "es-CO",
+  "accent": "Colombian (Bogotá / Andean)",
+  "genre": "conversación entre amigos sobre un plan",
+  "intro_pt": "Va a escuchar una conversación entre dos amigos.",
+  "duration_target_s": 60,
+  "speakers": [
+   {
+    "slot": "ES_CO_F",
+    "voice_style": "voz femenina, tono conversacional natural"
+   },
+   {
+    "slot": "ES_CO_M",
+    "voice_style": "voz masculina, tono conversacional natural"
+   }
+  ],
+  "script": [
+   {
+    "slot": "ES_CO_F",
+    "text": "Juan, habla Laura. ¿Qué va a hacer el domingo?"
+   },
+   {
+    "slot": "ES_CO_M",
+    "text": "Nada todavía. ¿Por qué? ¿Tiene algún plan?"
+   },
+   {
+    "slot": "ES_CO_F",
+    "text": "Quiero subir a Monserrate caminando. Hace mucho que no voy."
+   },
+   {
+    "slot": "ES_CO_M",
+    "text": "Uy, eso es duro. Son como dos horas de subida."
+   },
+   {
+    "slot": "ES_CO_F",
+    "text": "Tampoco tanto. Si salimos a las seis, estamos arriba antes de las ocho."
+   },
+   {
+    "slot": "ES_CO_M",
+    "text": "¿A las seis? ¡Pero es domingo!"
+   },
+   {
+    "slot": "ES_CO_F",
+    "text": "Por eso mismo. Después de las nueve sube muchísima gente y hay que hacer fila en la entrada."
+   },
+   {
+    "slot": "ES_CO_M",
+    "text": "Bueno, tiene razón. ¿Y bajamos caminando también?"
+   },
+   {
+    "slot": "ES_CO_F",
+    "text": "No, bajamos en el teleférico. Cuesta como quince mil pesos."
+   },
+   {
+    "slot": "ES_CO_M",
+    "text": "Listo. ¿Y arriba qué hay? Yo nunca he subido."
+   },
+   {
+    "slot": "ES_CO_F",
+    "text": "Hay una iglesia, unos restaurantes y una vista increíble de toda la ciudad. Si está despejado, se ve hasta la sabana."
+   },
+   {
+    "slot": "ES_CO_M",
+    "text": "Pero para el domingo anuncian lluvia, ¿no?"
+   },
+   {
+    "slot": "ES_CO_F",
+    "text": "En la tarde. En la mañana va a estar despejado. Por eso también es mejor temprano."
+   },
+   {
+    "slot": "ES_CO_M",
+    "text": "Bueno, me convenció. ¿Nos vemos en la entrada?"
+   },
+   {
+    "slot": "ES_CO_F",
+    "text": "Sí, en la entrada del sendero. Lleve agua y una chaqueta, porque arriba hace frío."
+   },
+   {
+    "slot": "ES_CO_M",
+    "text": "Hecho. Y cuando bajemos, yo la invito a desayunar."
+   }
+  ],
+  "questions": [
+   {
+    "q_pt": "¿Qué ocurre principalmente en esta conversación?",
+    "choices_pt": [
+     "Dos amigos cancelan un plan por el mal tiempo",
+     "Una amiga convence a otro de hacer una excursión matinal",
+     "Dos amigos comparan precios de varias excursiones",
+     "Un amigo cuenta a otra su visita a un cerro"
+    ],
+    "correct": 1,
+    "type": "global"
+   },
+   {
+    "q_pt": "¿Desde qué hora se llena la subida, según Laura?",
+    "choices_pt": [
+     "A partir de las ocho",
+     "A partir de las seis",
+     "A partir de las nueve",
+     "A partir del mediodía"
+    ],
+    "correct": 2,
+    "type": "detail"
+   },
+   {
+    "q_pt": "¿Qué ofrece Juan al final de la conversación?",
+    "choices_pt": [
+     "Pagar el teleférico de los dos",
+     "Cargar el agua para los dos",
+     "Pasar por ella a las seis",
+     "Invitarla a desayunar después de bajar"
+    ],
+    "correct": 3,
+    "type": "detail"
+   }
+  ],
+  "title_pt": "El domingo"
+ },
+ {
+  "id": "ES-IM-5",
+  "sublevel": "IM",
+  "variety": "es-MX",
+  "accent": "Mexican (central, Mexico City)",
+  "genre": "anuncio publicitario en la radio",
+  "intro_pt": "Va a escuchar un anuncio en la radio.",
+  "duration_target_s": 62,
+  "speakers": [
+   {
+    "slot": "ES_MX_M",
+    "voice_style": "voz masculina, locución de radio profesional"
+   }
+  ],
+  "script": [
+   {
+    "slot": "ES_MX_M",
+    "text": "¿Te gusta el pan recién hecho? Entonces tienes que conocer Panadería El Trigal, que abre sus puertas este sábado en la avenida Juárez, frente al parque. En El Trigal hacemos el pan todos los días, con harina de productores de la región. Tenemos conchas, bolillos, orejas y, solo los fines de semana, pan de elote. ¿Y el horario? Abrimos de lunes a sábado, de siete de la mañana a nueve de la noche. Los domingos abrimos solo en la mañana, hasta las dos. Para celebrar la apertura, este sábado y domingo el café es gratis con cualquier compra. Y si traes tu propia bolsa de tela, te damos un diez por ciento de descuento durante todo el mes. ¿No puedes venir? No hay problema: con nuestra aplicación te llevamos el pan a tu casa, sin costo de envío en pedidos de más de doscientos pesos. Y para los más pequeños, todos los martes tenemos taller de pan a las cinco de la tarde; es gratis, pero hay que apartar lugar en la tienda. Panadería El Trigal: pan de verdad, cerca de ti."
+   }
+  ],
+  "questions": [
+   {
+    "q_pt": "¿Cuál es el propósito principal del anuncio?",
+    "choices_pt": [
+     "Promocionar un servicio de entrega a domicilio",
+     "Invitar a un taller de cocina para niños",
+     "Dar a conocer una nueva panadería y sus beneficios",
+     "Informar de los productos locales de la temporada"
+    ],
+    "correct": 2,
+    "type": "global"
+   },
+   {
+    "q_pt": "¿Cuánto tiempo vale la promoción de la bolsa de tela?",
+    "choices_pt": [
+     "Durante el fin de semana de apertura",
+     "Hasta terminar este mes",
+     "Cada martes por la tarde",
+     "Hasta las dos de la tarde"
+    ],
+    "correct": 1,
+    "type": "detail"
+   },
+   {
+    "q_pt": "¿A qué hora cierra la panadería el domingo?",
+    "choices_pt": [
+     "Al caer la noche",
+     "A media tarde",
+     "Al terminar la tarde",
+     "Poco después del mediodía"
+    ],
+    "correct": 3,
+    "type": "detail"
+   }
+  ],
+  "title_pt": "Panadería nueva"
+ },
+ {
+  "id": "ES-AL-1",
+  "sublevel": "AL",
+  "variety": "es-ES",
+  "accent": "Peninsular Spanish (central-northern Spain, distinción)",
+  "genre": "noticia de radio",
+  "intro_pt": "Va a escuchar una noticia en la radio.",
+  "duration_target_s": 77,
+  "speakers": [
+   {
+    "slot": "ES_ES_M",
+    "voice_style": "voz masculina, locución de radio profesional"
+   }
+  ],
+  "script": [
+   {
+    "slot": "ES_ES_M",
+    "text": "En el pequeño pueblo de Villanueva del Río, en la provincia de Teruel, hoy ha vuelto a sonar el timbre de la escuela. El colegio llevaba once años cerrado. Cuando cerró, solo quedaban cuatro alumnos, y desde entonces las familias tenían que llevar a sus hijos cada mañana a otro pueblo, a media hora en coche. La situación empezó a cambiar hace tres años. Primero, el ayuntamiento arregló varias casas vacías y las alquiló a precios bajos. Después llegó una buena conexión a internet, y con ella algunas familias jóvenes que trabajan desde casa. Muchas venían de Valencia y de Zaragoza, y buscaban una vida más tranquila y más barata. Así, poco a poco, el pueblo volvió a tener niños, y los padres pidieron abrir otra vez la escuela. Hoy han empezado las clases catorce niños, con dos maestras. Las dos maestras llegaron la semana pasada y ya viven en el pueblo. Esta mañana, a las nueve, los padres acompañaron a sus hijos hasta la puerta, y muchos vecinos mayores también salieron a la calle para verlos entrar. Durante el verano, los propios vecinos pintaron las aulas y arreglaron el patio para este día. La alcaldesa, Pilar Gómez, ha dicho que hoy es un día muy especial para todo el pueblo, porque hacía mucho tiempo que no se oían voces de niños en la plaza."
+   }
+  ],
+  "questions": [
+   {
+    "q_pt": "¿De qué trata la noticia?",
+    "choices_pt": [
+     "De los problemas de internet en el campo",
+     "Del regreso de las clases a un pueblo",
+     "De unas obras en el ayuntamiento de Teruel",
+     "De dos maestras que buscan trabajo"
+    ],
+    "correct": 1,
+    "type": "global"
+   },
+   {
+    "q_pt": "¿Por qué llegaron familias nuevas al pueblo?",
+    "choices_pt": [
+     "Por los alquileres baratos y un internet mejor",
+     "Porque el colegio del pueblo ya estaba abierto",
+     "Porque el ayuntamiento les daba trabajo en el pueblo",
+     "Por un autobús diario al colegio del pueblo vecino"
+    ],
+    "correct": 0,
+    "type": "detail"
+   },
+   {
+    "q_pt": "¿Cómo cambió el número de alumnos desde el cierre hasta hoy?",
+    "choices_pt": [
+     "Pasó de catorce alumnos a cuatro",
+     "Pasó de tres alumnos a once",
+     "Pasó de cuatro alumnos a catorce",
+     "Pasó de once alumnos a catorce"
+    ],
+    "correct": 2,
+    "type": "detail"
+   }
+  ],
+  "title_pt": "La escuela del pueblo"
+ },
+ {
+  "id": "ES-AL-2",
+  "sublevel": "AL",
+  "variety": "es-MX",
+  "accent": "Mexican (central, Mexico City)",
+  "genre": "entrevista en un mercado de artesanías",
+  "intro_pt": "Va a escuchar una entrevista en un mercado.",
+  "duration_target_s": 79,
+  "speakers": [
+   {
+    "slot": "ES_MX_M",
+    "voice_style": "voz masculina, locución de radio profesional"
+   },
+   {
+    "slot": "ES_MX_F",
+    "voice_style": "voz femenina, tono conversacional natural"
+   }
+  ],
+  "script": [
+   {
+    "slot": "ES_MX_M",
+    "text": "Estamos en el mercado de artesanías de Oaxaca con doña Rosa Méndez, que hace piezas de barro negro desde hace treinta años. Doña Rosa, ¿cómo aprendió este oficio?"
+   },
+   {
+    "slot": "ES_MX_F",
+    "text": "Con mi abuela. Yo era niña y me sentaba a su lado mientras ella trabajaba. Al principio solo miraba; después ella me dejó hacer figuritas, animalitos, y los vendíamos a los turistas en la plaza."
+   },
+   {
+    "slot": "ES_MX_M",
+    "text": "¿Y cuándo empezó a vender por su cuenta?"
+   },
+   {
+    "slot": "ES_MX_F",
+    "text": "Cuando me casé. Mi esposo y yo pusimos un puestito aquí mismo, en este mercado. Los primeros años fueron difíciles: a veces pasaba una semana entera sin vender una sola pieza."
+   },
+   {
+    "slot": "ES_MX_M",
+    "text": "¿Y qué cambió?"
+   },
+   {
+    "slot": "ES_MX_F",
+    "text": "Pues un día vino una señora que tenía una tienda en la Ciudad de México y me compró veinte jarrones de una vez. Después volvió cada tres meses, y luego otras tiendas empezaron a llamarme. Con ese dinero compramos un horno más grande, y ya pude hacer piezas grandes, como las ollas y los jarrones que ve aquí."
+   },
+   {
+    "slot": "ES_MX_M",
+    "text": "¿Y hoy vende más aquí o fuera?"
+   },
+   {
+    "slot": "ES_MX_F",
+    "text": "Fuera, sin duda. Ahora mando piezas a tres ciudades. Aquí en el mercado vendo sobre todo a turistas."
+   },
+   {
+    "slot": "ES_MX_M",
+    "text": "¿Sus hijos siguen con el oficio?"
+   },
+   {
+    "slot": "ES_MX_F",
+    "text": "Mi hija sí. Ella empezó a vender por internet y me enseñó a tomarles fotos a las piezas. Yo al principio no quería, la verdad, pero ya ve, ahora hasta me escriben de otros países."
+   }
+  ],
+  "questions": [
+   {
+    "q_pt": "¿De qué trata la entrevista?",
+    "choices_pt": [
+     "De la historia de un mercado famoso de Oaxaca",
+     "De cómo vender artesanías por internet desde casa",
+     "De una tienda de artesanía en la capital del país",
+     "De la vida y el trabajo de una artesana"
+    ],
+    "correct": 3,
+    "type": "global"
+   },
+   {
+    "q_pt": "¿Qué ayudó a doña Rosa a vender fuera de Oaxaca?",
+    "choices_pt": [
+     "Las fotos que su abuela tomaba de las piezas",
+     "Un puesto nuevo en la plaza principal",
+     "Las compras repetidas de una tienda de la capital",
+     "Un curso de ventas para artesanos de la región"
+    ],
+    "correct": 2,
+    "type": "detail"
+   },
+   {
+    "q_pt": "¿Qué opina doña Rosa de la idea de su hija?",
+    "choices_pt": [
+     "Primero no estaba de acuerdo, pero cambió de opinión",
+     "Le dijo que era mejor vender en el mercado",
+     "La ayudó desde el primer día con las fotos",
+     "Decidió dejar el oficio en manos de su hija"
+    ],
+    "correct": 0,
+    "type": "detail"
+   }
+  ],
+  "title_pt": "Barro negro"
+ },
+ {
+  "id": "ES-AL-3",
+  "sublevel": "AL",
+  "variety": "es-AR",
+  "accent": "Rioplatense (Buenos Aires / Rosario, voseo, sheísmo)",
+  "genre": "anécdota contada en un programa de radio",
+  "intro_pt": "Va a escuchar una llamada a un programa de radio.",
+  "duration_target_s": 81,
+  "speakers": [
+   {
+    "slot": "ES_AR_F",
+    "voice_style": "voz femenina, locución de radio clara y neutra"
+   },
+   {
+    "slot": "ES_AR_M",
+    "voice_style": "voz masculina, tono conversacional natural"
+   }
+  ],
+  "script": [
+   {
+    "slot": "ES_AR_F",
+    "text": "Seguimos con los llamados de los oyentes. Hoy hablamos de cosas perdidas que volvieron. Tenemos a Gustavo, de Rosario. Hola, Gustavo, ¿cómo estás?"
+   },
+   {
+    "slot": "ES_AR_M",
+    "text": "Hola, Silvina, ¿qué tal? Bien, bien. Lo mío pasó hace dos inviernos."
+   },
+   {
+    "slot": "ES_AR_F",
+    "text": "Contanos."
+   },
+   {
+    "slot": "ES_AR_M",
+    "text": "Yo volvía del trabajo en el colectivo, muy cansado, y me quedé dormido. Me desperté justo en mi parada, bajé corriendo y me olvidé la billetera en el asiento. Me di cuenta recién en la puerta de mi casa."
+   },
+   {
+    "slot": "ES_AR_F",
+    "text": "¡Qué mal momento!"
+   },
+   {
+    "slot": "ES_AR_M",
+    "text": "Terrible. Tenía el documento, las tarjetas y la plata del alquiler, porque al otro día le tenía que pagar al dueño. Llamé a la empresa de colectivos, pero me dijeron que nadie había entregado nada."
+   },
+   {
+    "slot": "ES_AR_F",
+    "text": "¿Y entonces?"
+   },
+   {
+    "slot": "ES_AR_M",
+    "text": "Al día siguiente, a la mañana, tocan el timbre. Era una señora mayor, con mi billetera en la mano. Había encontrado mi dirección en el documento y había venido en dos colectivos desde el otro lado de la ciudad. La invité a pasar, le preparé un mate y nos quedamos hablando casi una hora. Resulta que ella también había perdido una cartera de joven, y nunca la recuperó."
+   },
+   {
+    "slot": "ES_AR_F",
+    "text": "¡No te puedo creer!"
+   },
+   {
+    "slot": "ES_AR_M",
+    "text": "Sí. Y no faltaba nada, ni un peso. Le quise dar algo de plata y no aceptó. Solo me dijo: si algún día encontrás algo, devolvelo vos también."
+   },
+   {
+    "slot": "ES_AR_F",
+    "text": "Qué lindo. ¿Y tuviste la oportunidad?"
+   },
+   {
+    "slot": "ES_AR_M",
+    "text": "Sí, el año pasado encontré un celular en una plaza, y lo devolví esa misma tarde."
+   }
+  ],
+  "questions": [
+   {
+    "q_pt": "¿De qué trata la historia de Gustavo?",
+    "choices_pt": [
+     "De un robo en un colectivo de Rosario",
+     "De una desconocida que le devolvió algo perdido",
+     "De un problema para pagar el alquiler",
+     "De un celular que encontró en una plaza"
+    ],
+    "correct": 1,
+    "type": "global"
+   },
+   {
+    "q_pt": "¿Cómo supo la señora dónde vivía Gustavo?",
+    "choices_pt": [
+     "Por la compañía de colectivos",
+     "Por el chofer del colectivo",
+     "Por una búsqueda en internet",
+     "Por los datos del documento"
+    ],
+    "correct": 3,
+    "type": "detail"
+   },
+   {
+    "q_pt": "¿Por qué era grave perder la billetera ese día?",
+    "choices_pt": [
+     "Porque tenía que pagar el alquiler al otro día",
+     "Porque adentro estaba su celular nuevo",
+     "Porque no tenía plata para volver a su casa",
+     "Porque esa semana se iba de viaje"
+    ],
+    "correct": 0,
+    "type": "detail"
+   }
+  ],
+  "title_pt": "La billetera"
+ },
+ {
+  "id": "ES-AL-4",
+  "sublevel": "AL",
+  "variety": "es-CO",
+  "accent": "Colombian (Bogotá / Andean)",
+  "genre": "reportaje breve de radio",
+  "intro_pt": "Va a escuchar un reportaje en la radio.",
+  "duration_target_s": 77,
+  "speakers": [
+   {
+    "slot": "ES_CO_F",
+    "voice_style": "voz femenina, locución de radio clara y neutra"
+   }
+  ],
+  "script": [
+   {
+    "slot": "ES_CO_F",
+    "text": "En Manizales, un bus que llevaba años abandonado en un taller se convirtió en la biblioteca más visitada de la comuna San José. La idea fue de don Hernán Ospina, un conductor que se pensionó hace cuatro años. Hernán cuenta que, durante treinta años, veía desde su bus a muchos niños del barrio que no tenían dónde hacer las tareas por las tardes. Cuando el dueño del taller le ofreció el bus viejo casi gratis, pensó enseguida en esos niños. Con la ayuda de sus vecinos, quitó los asientos, puso estantes y pintó el bus de colores por dentro y por fuera. Adentro pusieron cojines en el piso y una mesa larga, donde antes estaba el pasillo. En el barrio todos lo llaman el bus de los libros. Los primeros libros llegaron de las casas del mismo barrio. Después, una editorial de Bogotá conoció el proyecto por las redes sociales y le mandó muchos libros más. Hoy el bus abre de martes a sábado por las tardes. Lo atienden dos voluntarias jóvenes, que también ayudan a los niños con las tareas. Hernán pasa por allí casi todos los días. Dice que, cuando manejaba, nunca se imaginó que su último bus iba a terminar como biblioteca. Para él, lo más importante es que ahora los niños del barrio tienen un lugar tranquilo para leer y estudiar."
+   }
+  ],
+  "questions": [
+   {
+    "q_pt": "¿De qué trata el reportaje?",
+    "choices_pt": [
+     "De un vehículo viejo convertido en biblioteca de barrio",
+     "De la jubilación de un conductor de Manizales",
+     "De una editorial que regala libros a las escuelas",
+     "De un taller que repara buses en la ciudad"
+    ],
+    "correct": 0,
+    "type": "global"
+   },
+   {
+    "q_pt": "¿De dónde salieron los libros del bus?",
+    "choices_pt": [
+     "De una biblioteca pública de la capital",
+     "De las escuelas públicas de todo el barrio",
+     "De las voluntarias jóvenes que atienden el bus",
+     "De los vecinos y luego de una editorial"
+    ],
+    "correct": 3,
+    "type": "detail"
+   },
+   {
+    "q_pt": "¿Por qué pensó Hernán en los niños cuando le ofrecieron el bus?",
+    "choices_pt": [
+     "Porque los chicos de la zona le pidieron libros",
+     "Porque una editorial de la capital se lo propuso",
+     "Porque sabía que les faltaba un sitio para estudiar",
+     "Porque el taller estaba al lado de una escuela"
+    ],
+    "correct": 2,
+    "type": "detail"
+   }
+  ],
+  "title_pt": "Un bus de libros"
+ },
+ {
+  "id": "ES-AL-5",
+  "sublevel": "AL",
+  "variety": "es-PE",
+  "accent": "Peruvian (Lima / coastal-Andean educated)",
+  "genre": "entrevista de radio sobre una feria gastronómica",
+  "intro_pt": "Va a escuchar una entrevista en la radio.",
+  "duration_target_s": 77,
+  "speakers": [
+   {
+    "slot": "ES_PE_F",
+    "voice_style": "voz femenina, locución de radio clara y neutra"
+   },
+   {
+    "slot": "ES_PE_M",
+    "voice_style": "voz masculina, tono conversacional natural"
+   }
+  ],
+  "script": [
+   {
+    "slot": "ES_PE_F",
+    "text": "Estamos con Julio Cárdenas, organizador de la feria gastronómica Sabores del Sur, que empieza este viernes en Arequipa. Julio, esta es la décima edición. ¿Cómo empezó todo?"
+   },
+   {
+    "slot": "ES_PE_M",
+    "text": "Empezó casi por casualidad. Hace diez años, un grupo de cocineras de picanterías tradicionales se juntó para vender sus platos en el patio de un colegio, un solo domingo. Esperábamos a unas trescientas personas y llegaron más de dos mil. La comida se acabó antes del mediodía."
+   },
+   {
+    "slot": "ES_PE_F",
+    "text": "¿Y así decidieron repetirlo?"
+   },
+   {
+    "slot": "ES_PE_M",
+    "text": "Claro. Al año siguiente ya fueron dos días, y después pasamos al estadio. Pero el estadio quedaba lejos del centro, y mucha gente mayor no podía llegar."
+   },
+   {
+    "slot": "ES_PE_F",
+    "text": "¿Por eso este año cambian de lugar?"
+   },
+   {
+    "slot": "ES_PE_M",
+    "text": "Exacto. Este año la feria vuelve al centro histórico, a la plaza San Francisco, y va a durar tres días, de viernes a domingo, de diez de la mañana a nueve de la noche."
+   },
+   {
+    "slot": "ES_PE_F",
+    "text": "¿Y qué novedades hay?"
+   },
+   {
+    "slot": "ES_PE_M",
+    "text": "Por primera vez vamos a tener un espacio para los productores de papa nativa de las comunidades altas. Ellos van a vender directamente, sin intermediarios. Y el sábado en la tarde hay un concurso de rocoto relleno entre picanterías. También vamos a poner mesas con sombra en toda la plaza, porque el año pasado mucha gente se quejó del sol."
+   },
+   {
+    "slot": "ES_PE_F",
+    "text": "¿La entrada es libre?"
+   },
+   {
+    "slot": "ES_PE_M",
+    "text": "Sí, la entrada es libre. Solo se paga lo que uno consume."
+   }
+  ],
+  "questions": [
+   {
+    "q_pt": "¿De qué habla Julio en la entrevista?",
+    "choices_pt": [
+     "De la cocina de su propia picantería",
+     "De la historia de una feria de comida",
+     "De un concurso de papas en la sierra",
+     "De la construcción de un estadio nuevo"
+    ],
+    "correct": 1,
+    "type": "global"
+   },
+   {
+    "q_pt": "¿Por qué la feria vuelve al centro este año?",
+    "choices_pt": [
+     "Porque el estadio está en obras este año",
+     "Porque ahora la feria dura solo un día",
+     "Porque en la plaza no se cobra la entrada",
+     "Porque a la gente mayor le costaba llegar"
+    ],
+    "correct": 3,
+    "type": "detail"
+   },
+   {
+    "q_pt": "¿Qué pasó en la primera feria?",
+    "choices_pt": [
+     "Llegó mucha más gente de la esperada",
+     "Vinieron pocas personas y sobró comida",
+     "La trasladaron a un colegio por la lluvia",
+     "Duró dos días en lugar de uno"
+    ],
+    "correct": 0,
+    "type": "detail"
+   }
+  ],
+  "title_pt": "Sabores del Sur"
+ },
+ {
+  "id": "ES-AM-1",
+  "sublevel": "AM",
+  "variety": "es-MX",
+  "accent": "Mexican (central, Mexico City)",
+  "genre": "entrevista con una médica rural",
+  "intro_pt": "Va a escuchar una entrevista con una médica.",
+  "duration_target_s": 97,
+  "speakers": [
+   {
+    "slot": "ES_MX_M",
+    "voice_style": "voz masculina, locución de radio profesional"
+   },
+   {
+    "slot": "ES_MX_F",
+    "voice_style": "voz femenina, tono conversacional natural"
+   }
+  ],
+  "script": [
+   {
+    "slot": "ES_MX_M",
+    "text": "Doctora Leticia Robles, usted trabaja desde hace ocho años en la sierra de Puebla, en comunidades que están a varias horas de un hospital. ¿Cómo es su trabajo?"
+   },
+   {
+    "slot": "ES_MX_F",
+    "text": "Atiendo once comunidades con una camioneta que funciona como consultorio, y visito cada una dos veces al mes. El problema principal nunca fue la distancia en sí, sino la información: yo me enteraba de los casos graves cuando ya era tarde."
+   },
+   {
+    "slot": "ES_MX_M",
+    "text": "¿Por qué?"
+   },
+   {
+    "slot": "ES_MX_F",
+    "text": "Porque la gente esperaba mi visita para contarme lo que pasaba, aunque faltaran dos semanas. Y una fiebre alta en un bebé no puede esperar dos semanas."
+   },
+   {
+    "slot": "ES_MX_M",
+    "text": "¿Y cómo lo resolvió?"
+   },
+   {
+    "slot": "ES_MX_F",
+    "text": "Al principio intenté lo obvio: repartí mi número de celular. No funcionó. Casi nadie llamaba, en parte por pena de molestar y en parte porque la señal allá arriba es muy débil."
+   },
+   {
+    "slot": "ES_MX_M",
+    "text": "¿Entonces?"
+   },
+   {
+    "slot": "ES_MX_F",
+    "text": "La solución vino de donde menos la esperaba. En una comunidad, las abuelas que se reúnen a bordar tenían un grupo de mensajes para vender sus bordados, y como en la plaza hay algo de señal, se juntaban ahí por las tardes. Un día una de ellas me mandó por ese grupo una foto de la garganta de su nieto. Era una infección seria, y pude enviar la medicina ese mismo día con el chofer del autobús."
+   },
+   {
+    "slot": "ES_MX_M",
+    "text": "¿Y eso se volvió un sistema?"
+   },
+   {
+    "slot": "ES_MX_F",
+    "text": "Sin que nadie lo planeara, sí. Hoy hay grupos parecidos en siete comunidades, y siempre los manejan ellas. Las familias ya no me escriben a mí directamente: le avisan a la señora del grupo, y ella decide qué es urgente y qué puede esperar a mi visita. Ellas conocen a todo el mundo, y además, a ellas a nadie le da pena preguntarles nada."
+   }
+  ],
+  "questions": [
+   {
+    "q_pt": "¿Qué cuenta la doctora en la entrevista?",
+    "choices_pt": [
+     "Cómo consiguió una camioneta nueva para su consultorio",
+     "Cómo curó una infección grave sin tener medicinas",
+     "Cómo las comunidades lograron vender más bordados",
+     "Cómo unas mujeres mayores mejoraron la atención médica"
+    ],
+    "correct": 3,
+    "type": "global"
+   },
+   {
+    "q_pt": "¿Qué hace hoy una familia cuando alguien se enferma?",
+    "choices_pt": [
+     "Le escribe a la doctora por mensaje",
+     "Avisa a la encargada del grupo",
+     "Espera la siguiente visita de la camioneta",
+     "Manda una foto al chofer del autobús"
+    ],
+    "correct": 1,
+    "type": "detail"
+   },
+   {
+    "q_pt": "¿Qué se puede deducir sobre las abuelas, según la doctora?",
+    "choices_pt": [
+     "Que ellas estudiaron enfermería hace años",
+     "Que ellas cobran por avisar a la doctora",
+     "Que la gente se siente cómoda pidiéndoles ayuda",
+     "Que prefieren que la doctora no vaya a las comunidades"
+    ],
+    "correct": 2,
+    "type": "inference"
+   }
+  ],
+  "title_pt": "Médica rural"
+ },
+ {
+  "id": "ES-AM-2",
+  "sublevel": "AM",
+  "variety": "es-ES",
+  "accent": "Peninsular Spanish (central-northern Spain, distinción)",
+  "genre": "reportaje de radio",
+  "intro_pt": "Va a escuchar un reportaje en la radio.",
+  "duration_target_s": 96,
+  "speakers": [
+   {
+    "slot": "ES_ES_F",
+    "voice_style": "voz femenina, locución de radio clara y neutra"
+   }
+  ],
+  "script": [
+   {
+    "slot": "ES_ES_F",
+    "text": "Cuando el ayuntamiento de Villaclara, un municipio de unos treinta mil habitantes en la costa de Castellón, anunció que cerraría el centro histórico al tráfico, los comerciantes fueron los primeros en protestar. Temían que, sin coches en la puerta, los clientes se marcharan a los centros comerciales de las afueras. Durante los primeros meses, de hecho, las ventas bajaron en casi todas las tiendas de la calle Mayor. Sin embargo, al cabo de un año la tendencia se había invertido: según la asociación de comerciantes, hoy se vende en el centro un doce por ciento más que antes del cierre. La explicación, dicen, está en quién compra ahora. Familias con niños y personas mayores, que antes evitaban el centro por el ruido y la falta de aceras, pasean con calma y entran más a menudo en las tiendas, aunque gasten menos en cada visita. Algunos comercios, además, han cambiado de actividad: donde antes había una tienda de recambios para coches, hoy hay una heladería con terraza. Lo que nadie había previsto fue otro efecto. Con las calles vacías de coches, los repartidores de paquetería no tenían dónde parar, y cada mañana se formaban atascos en las entradas del casco antiguo. Hubo semanas en que los vecinos se quejaban más de las furgonetas que antes de los coches. La solución llegó de un antiguo mercado cerrado: el ayuntamiento lo convirtió en un almacén donde los repartidores dejan los paquetes, y desde allí unas bicicletas de carga los llevan a su destino. El sistema, que empezó como una prueba de tres meses, ya funciona todo el año. Ahora el ayuntamiento estudia usar ese mismo almacén para que los vecinos recojan allí sus compras."
+   }
+  ],
+  "questions": [
+   {
+    "q_pt": "¿De qué trata el reportaje?",
+    "choices_pt": [
+     "De los efectos de quitar los coches del centro",
+     "De la construcción de un centro comercial en las afueras",
+     "De una protesta de repartidores de paquetería",
+     "De un mercado antiguo que vuelve a vender comida"
+    ],
+    "correct": 0,
+    "type": "global"
+   },
+   {
+    "q_pt": "¿Por qué se vende más ahora en las tiendas del centro?",
+    "choices_pt": [
+     "Porque cada cliente gasta más dinero que antes",
+     "Porque cerró un centro comercial de la zona",
+     "Porque las tiendas abren también por la noche",
+     "Porque ahora van clientes que antes lo evitaban"
+    ],
+    "correct": 3,
+    "type": "detail"
+   },
+   {
+    "q_pt": "¿Qué se deduce sobre el miedo inicial de los comerciantes?",
+    "choices_pt": [
+     "Que nunca tuvo ninguna base real",
+     "Que acertó al principio y se equivocó después",
+     "Que se confirmó con el paso del tiempo",
+     "Que se debía sobre todo a los atascos"
+    ],
+    "correct": 1,
+    "type": "inference"
+   }
+  ],
+  "title_pt": "Sin coches"
+ },
+ {
+  "id": "ES-AM-3",
+  "sublevel": "AM",
+  "variety": "es-AR",
+  "accent": "Rioplatense (Buenos Aires / Rosario, voseo, sheísmo)",
+  "genre": "fragmento de un pódcast de historias",
+  "intro_pt": "Va a escuchar un fragmento de un pódcast.",
+  "duration_target_s": 99,
+  "speakers": [
+   {
+    "slot": "ES_AR_M",
+    "voice_style": "voz masculina, locución de radio profesional"
+   }
+  ],
+  "script": [
+   {
+    "slot": "ES_AR_M",
+    "text": "En mil novecentos sesenta y ocho, Ernesto Vidal abrió una librería de libros usados en una esquina del barrio de Boedo, en Buenos Aires. Compraba bibliotecas enteras cuando alguien se mudaba o fallecía, y durante décadas el negocio alcanzó para mantener a toda la familia. Cuando su nieta Julieta se hizo cargo, hace doce años, la librería atravesaba su peor momento: las ventas por internet se habían llevado a buena parte de los clientes, y el alquiler del local subía cada año. Julieta cuenta que llegó a pensar en cerrar y vender todo el fondo a un coleccionista. Antes, sin embargo, probó varias cosas. Primero agregó una pequeña barra de café, convencida de que la gente se quedaría más tiempo y terminaría comprando algo. Funcionó a medias: se quedaban, sí, pero muchos solo pedían el café. Después empezó a vender también por internet, pero ahí competía con plataformas enormes, que ofrecían los mismos títulos más baratos. Lo que finalmente cambió la situación no fue un plan, sino un pedido. Una maestra del barrio le preguntó si podía usar el fondo del local los sábados a la mañana para leer cuentos con sus alumnos, porque la escuela no tenía biblioteca. Julieta aceptó sin pensarlo demasiado. A los pocos meses, los chicos volvían con sus padres, los padres se quedaban a tomar algo, y muchos terminaban llevándose un libro para ellos. Hoy el club de lectura infantil tiene lista de espera, se reúne tres veces por semana y es, según Julieta, lo que sostiene el negocio. Los jueves por la tarde, además, se leen cuentos para personas mayores, una idea que, curiosamente, propusieron los propios chicos. Julieta, de todos modos, insiste en que nunca lo pensó como una estrategia de ventas."
+   }
+  ],
+  "questions": [
+   {
+    "q_pt": "¿Qué se cuenta en este fragmento?",
+    "choices_pt": [
+     "Cómo funciona la venta de libros usados por internet",
+     "Cómo se fundó una escuela en el barrio de Boedo",
+     "Cómo una librería antigua encontró una salida inesperada",
+     "Cómo una maestra abrió su propia librería infantil"
+    ],
+    "correct": 2,
+    "type": "global"
+   },
+   {
+    "q_pt": "¿Por qué no dio resultado vender por internet?",
+    "choices_pt": [
+     "Porque los clientes preferían tomar café en el local",
+     "Porque otras páginas grandes vendían más barato",
+     "Porque la nieta no sabía usar las plataformas",
+     "Porque el local le costaba cada vez más"
+    ],
+    "correct": 1,
+    "type": "detail"
+   },
+   {
+    "q_pt": "¿Qué da a entender Julieta cuando dice que nunca lo pensó como estrategia de ventas?",
+    "choices_pt": [
+     "Que el éxito del club llegó sin buscarlo",
+     "Que el club infantil no le deja ganancias",
+     "Que quiere cerrar el club para vender más",
+     "Que la idea del club fue de su abuelo"
+    ],
+    "correct": 0,
+    "type": "inference"
+   }
+  ],
+  "title_pt": "La librería"
+ },
+ {
+  "id": "ES-AM-4",
+  "sublevel": "AM",
+  "variety": "es-CO",
+  "accent": "Colombian (Bogotá / Andean)",
+  "genre": "entrevista con un cartero",
+  "intro_pt": "Va a escuchar una entrevista con un cartero.",
+  "duration_target_s": 105,
+  "speakers": [
+   {
+    "slot": "ES_CO_F",
+    "voice_style": "voz femenina, locución de radio clara y neutra"
+   },
+   {
+    "slot": "ES_CO_M",
+    "voice_style": "voz masculina, tono conversacional natural"
+   }
+  ],
+  "script": [
+   {
+    "slot": "ES_CO_F",
+    "text": "Don Efraín Cárdenas lleva veinticinco años repartiendo el correo en los pueblos de Boyacá. El año pasado le tocó algo distinto: entregar un costal de cartas olvidadas hace más de veinte años. Don Efraín, ¿cómo apareció ese costal?"
+   },
+   {
+    "slot": "ES_CO_M",
+    "text": "Estaban arreglando la vieja oficina de correos de Soatá, que llevaba mucho tiempo cerrada, y cuando movieron un armario, ahí detrás estaba. Eran cartas de mil novecientos noventa y ocho. Llevaban todo ese tiempo guardadas sin que nadie lo supiera."
+   },
+   {
+    "slot": "ES_CO_F",
+    "text": "¿Y qué pensaban hacer con ellas?"
+   },
+   {
+    "slot": "ES_CO_M",
+    "text": "La empresa quería mandarlas a Bogotá para destruirlas. Yo pedí que me dejaran intentarlo primero. Me dieron plazo hasta diciembre, con una condición: lo que no lograra entregar, lo devolvía."
+   },
+   {
+    "slot": "ES_CO_F",
+    "text": "¿Y cómo se encuentra a alguien con una dirección tan vieja?"
+   },
+   {
+    "slot": "ES_CO_M",
+    "text": "Preguntando, señora. Varias veredas habían cambiado de nombre, las casas tenían otros dueños y mucha gente se había ido a la ciudad. Iba a la tienda, a la iglesia, al mercado, y casi siempre alguien conocía a la familia. Cuando la persona ya había fallecido, le entregaba la carta a un hijo o a un nieto. Había de todo: cartas de novios, fotos de bautizos, un giro que nunca se cobró."
+   },
+   {
+    "slot": "ES_CO_F",
+    "text": "¿Logró entregarlas todas?"
+   },
+   {
+    "slot": "ES_CO_M",
+    "text": "Casi todas. Unas treinta se quedaron sin dueño, y esas sí se fueron para Bogotá, como habíamos quedado."
+   },
+   {
+    "slot": "ES_CO_F",
+    "text": "Y hubo una carta muy especial para usted, ¿no?"
+   },
+   {
+    "slot": "ES_CO_M",
+    "text": "Sí. Una tarde saqué un sobre con la dirección de mis papás, en la vereda El Hatillo. Aunque la letra estaba medio borrada, la reconocí enseguida: era de mi hermano Wilson, que en esa época trabajaba en Venezuela. Mi mamá siempre contaba que aquel año Wilson no había escrito ni una vez, y que pasó la Navidad muy triste. Wilson ahora vive en Bogotá. En diciembre fui a visitarlo con mi mamá, y leímos la carta los tres juntos."
+   }
+  ],
+  "questions": [
+   {
+    "q_pt": "¿De qué habla el cartero en la entrevista?",
+    "choices_pt": [
+     "De cómo ha cambiado el correo en Boyacá con internet",
+     "De cómo entregó unas cartas que llevaban años perdidas",
+     "De la renovación de una antigua oficina de correos",
+     "De su hermano, que trabaja en Venezuela desde joven"
+    ],
+    "correct": 1,
+    "type": "global"
+   },
+   {
+    "q_pt": "¿Qué pasó con las cartas que don Efraín no pudo entregar?",
+    "choices_pt": [
+     "Se las dio a los hijos de los destinatarios",
+     "Las guardó en la iglesia del pueblo",
+     "Las envió a Bogotá, según lo acordado",
+     "Las quemó en la oficina de Soatá"
+    ],
+    "correct": 2,
+    "type": "detail"
+   },
+   {
+    "q_pt": "¿Qué se deduce de la historia de la carta de Wilson?",
+    "choices_pt": [
+     "Que Wilson volvió de Venezuela para buscar la carta",
+     "Que la carta llegó a tiempo para aquella Navidad",
+     "Que su madre ya conocía lo que decía la carta",
+     "Que su madre creyó algo falso durante años"
+    ],
+    "correct": 3,
+    "type": "inference"
+   }
+  ],
+  "title_pt": "Cartas perdidas"
+ },
+ {
+  "id": "ES-AM-5",
+  "sublevel": "AM",
+  "variety": "es-ES",
+  "accent": "Peninsular Spanish (central-northern Spain, distinción)",
+  "genre": "entrevista de radio con una pastora",
+  "intro_pt": "Va a escuchar una entrevista en la radio.",
+  "duration_target_s": 109,
+  "speakers": [
+   {
+    "slot": "ES_ES_M",
+    "voice_style": "voz masculina, locución de radio profesional"
+   },
+   {
+    "slot": "ES_ES_F",
+    "voice_style": "voz femenina, tono conversacional natural"
+   }
+  ],
+  "script": [
+   {
+    "slot": "ES_ES_M",
+    "text": "Hoy hablamos con Marta Iglesias, pastora en un pueblo de Ourense y una de las primeras participantes de un programa que paga a los ganaderos por limpiar el monte con sus animales. Marta, ¿en qué consiste?"
+   },
+   {
+    "slot": "ES_ES_F",
+    "text": "Es sencillo. Mis cabras se comen la maleza de las zonas que el ayuntamiento marca en un mapa, alrededor de las casas y de los caminos. Menos maleza significa menos combustible para un incendio. Y a cambio, recibo una cantidad por cada hectárea limpia."
+   },
+   {
+    "slot": "ES_ES_M",
+    "text": "¿Y cómo llegó usted a esto?"
+   },
+   {
+    "slot": "ES_ES_F",
+    "text": "Pues casi por necesidad. Yo tenía un rebaño pequeño y la leche no daba para vivir. Estaba pensando en venderlo cuando salió la convocatoria. Me presenté sin mucha esperanza, porque pedían experiencia y yo llevaba solo tres años."
+   },
+   {
+    "slot": "ES_ES_M",
+    "text": "¿Y la aceptaron?"
+   },
+   {
+    "slot": "ES_ES_F",
+    "text": "Sí, aunque no por mis méritos, sino porque apenas hubo candidatos. De hecho, los pastores de la zona son casi todos mayores, y muchos ya no tienen fuerzas para subir al monte a diario."
+   },
+   {
+    "slot": "ES_ES_M",
+    "text": "¿Cómo es un día normal de trabajo?"
+   },
+   {
+    "slot": "ES_ES_F",
+    "text": "Salgo con las cabras hacia las ocho y paso la mañana en la parcela que toque según el mapa. Los técnicos vienen una vez al mes a comprobar que la zona está limpia; si no lo está, esa parte no se cobra. Por la tarde, ordeño y hago algo de queso para vender en el mercado del sábado."
+   },
+   {
+    "slot": "ES_ES_M",
+    "text": "¿Ha notado resultados?"
+   },
+   {
+    "slot": "ES_ES_F",
+    "text": "Los técnicos dicen que en las parcelas ya limpias el fuego avanza mucho más despacio, porque encuentra mucho menos material para arder. El verano pasado, sin ir más lejos, hubo un incendio aquí cerca, y se detuvo justo donde empezaba una zona de pastoreo."
+   },
+   {
+    "slot": "ES_ES_M",
+    "text": "¿Y qué ha cambiado en su vida?"
+   },
+   {
+    "slot": "ES_ES_F",
+    "text": "Lo que menos esperaba. Ahora vienen jóvenes de la ciudad a preguntarme cómo empezar. Este año se han instalado en el pueblo dos chicas con sus propios rebaños, y el bar, que llevaba años cerrado, ha vuelto a abrir."
+   }
+  ],
+  "questions": [
+   {
+    "q_pt": "¿De qué trata la entrevista?",
+    "choices_pt": [
+     "De un incendio que arrasó una aldea gallega",
+     "De cómo vender leche de cabra en la ciudad",
+     "De un curso para jóvenes que quieren ser pastores",
+     "De una pastora que limpia el monte con cabras"
+    ],
+    "correct": 3,
+    "type": "global"
+   },
+   {
+    "q_pt": "¿En qué situación estaba Marta antes del programa?",
+    "choices_pt": [
+     "Trabajaba como técnica del ayuntamiento",
+     "Su rebaño era pequeño y pensaba venderlo",
+     "Tenía muchas cabras pero no tenía monte",
+     "Llevaba veinte años trabajando de pastora"
+    ],
+    "correct": 1,
+    "type": "detail"
+   },
+   {
+    "q_pt": "¿Qué sugiere Marta sobre el efecto del programa en el pueblo?",
+    "choices_pt": [
+     "Que ha provocado más incendios en la zona",
+     "Que los pastores mayores han perdido su trabajo",
+     "Que está atrayendo gente nueva y dándole vida",
+     "Que los jóvenes prefieren seguir en la ciudad"
+    ],
+    "correct": 2,
+    "type": "inference"
+   }
+  ],
+  "title_pt": "Cabras contra el fuego"
+ },
+ {
+  "id": "ES-S-1",
+  "sublevel": "S",
+  "variety": "es-ES",
+  "accent": "Peninsular Spanish (central-northern Spain, distinción)",
+  "genre": "tertulia radiofónica",
+  "intro_pt": "Va a escuchar un debate en la radio.",
+  "duration_target_s": 113,
+  "speakers": [
+   {
+    "slot": "ES_ES_M",
+    "voice_style": "voz masculina, registro académico, pausado y seguro"
+   },
+   {
+    "slot": "ES_ES_F",
+    "voice_style": "voz femenina, registro académico, pausado y seguro"
+   }
+  ],
+  "script": [
+   {
+    "slot": "ES_ES_M",
+    "text": "A mí me parece que el debate sobre la semana de cuatro días parte de una premisa discutible: que la productividad por hora se mantendrá intacta si reducimos la jornada. En algunos sectores, sin duda, será así. Pero en la hostelería, en la sanidad o en el transporte, el trabajo no se comprime: un camarero no atiende más mesas por hora porque trabaje un día menos. Ahí, reducir la jornada significa contratar más personal, y alguien tendrá que pagarlo."
+   },
+   {
+    "slot": "ES_ES_F",
+    "text": "Estoy de acuerdo en que no es una medida universal, pero creo que usted confunde dos cosas: la viabilidad y la conveniencia. Que no pueda aplicarse igual en todos los sectores no la invalida en los demás. Con esa misma lógica, nunca habríamos pasado de la jornada de seis días a la de cinco, que en su momento también parecía imposible para la industria."
+   },
+   {
+    "slot": "ES_ES_M",
+    "text": "La comparación es tentadora, pero entonces la productividad crecía a un ritmo que hoy no vemos. Si hubiéramos tenido el estancamiento actual, dudo mucho que aquella reforma hubiera prosperado. Y no olvidemos que vino acompañada de décadas de crecimiento que hoy nadie está en condiciones de garantizar."
+   },
+   {
+    "slot": "ES_ES_F",
+    "text": "O quizá la relación funcione al revés. Hay indicios de que el cansancio es precisamente una de las causas del estancamiento. Las empresas que han probado la semana corta no registran, en su mayoría, caídas de producción, y sí menos bajas por enfermedad."
+   },
+   {
+    "slot": "ES_ES_M",
+    "text": "Empresas que se presentaron voluntarias, conviene recordarlo. Es lógico que las que se apuntan a un experimento así sean precisamente las que tienen más probabilidades de éxito."
+   },
+   {
+    "slot": "ES_ES_F",
+    "text": "Ese sesgo existe, y por eso defiendo una implantación gradual, sector por sector, con evaluaciones independientes. Lo que me parece un error es descartarla de antemano con el argumento de que no sirve para todos. Ninguna reforma laboral ha servido nunca para todos a la vez, y no por eso hemos renunciado a ellas. Lo razonable sería medir los resultados en cada caso y decidir con esos datos, no con suposiciones."
+   }
+  ],
+  "questions": [
+   {
+    "q_pt": "¿Sobre qué discuten los dos participantes?",
+    "choices_pt": [
+     "Sobre si conviene reducir la semana laboral",
+     "Sobre las condiciones de trabajo en la hostelería",
+     "Sobre cómo se pasó a trabajar cinco días",
+     "Sobre las causas de las bajas por enfermedad"
+    ],
+    "correct": 0,
+    "type": "global"
+   },
+   {
+    "q_pt": "¿Qué objeción plantea él sobre las empresas que probaron la semana corta?",
+    "choices_pt": [
+     "Que la mayoría acabó produciendo menos que antes",
+     "Que casi todas eran bares, hoteles y restaurantes",
+     "Que eligieron participar, y eso puede inflar el éxito",
+     "Que no tuvieron en cuenta las bajas por enfermedad"
+    ],
+    "correct": 2,
+    "type": "detail"
+   },
+   {
+    "q_pt": "¿Qué quiere mostrar ella al recordar el paso de seis a cinco días?",
+    "choices_pt": [
+     "Que la industria siempre se ha opuesto a trabajar menos",
+     "Que lo que hoy parece inviable puede acabar aceptándose",
+     "Que la productividad hoy crece más rápido que entonces",
+     "Que la semana de cinco días fue un error económico"
+    ],
+    "correct": 1,
+    "type": "inference"
+   }
+  ],
+  "title_pt": "La semana corta"
+ },
+ {
+  "id": "ES-S-2",
+  "sublevel": "S",
+  "variety": "es-MX",
+  "accent": "Mexican (central, Mexico City)",
+  "genre": "fragmento de una clase universitaria",
+  "intro_pt": "Va a escuchar un fragmento de una clase universitaria.",
+  "duration_target_s": 110,
+  "speakers": [
+   {
+    "slot": "ES_MX_F",
+    "voice_style": "voz femenina, registro académico, pausado y seguro"
+   }
+  ],
+  "script": [
+   {
+    "slot": "ES_MX_F",
+    "text": "Quisiera empezar con una paradoja que suele desconcertar a quien se acerca por primera vez a este tema. La Ciudad de México se fundó sobre un sistema de lagos, recibe cada año más lluvia que Londres y, sin embargo, buena parte de sus colonias vive con el agua racionada. La explicación habitual es demográfica: somos demasiados para el agua disponible. Yo les propongo desconfiar de esa respuesta, no porque sea falsa, sino porque es cómoda. Nos permite hablar de escasez como si fuera un hecho natural, cuando es, en buena medida, el resultado de decisiones. Durante siglos, la ciudad trató el agua como un estorbo: desecó los lagos, entubó los ríos y construyó un drenaje monumental para expulsar la lluvia lo más rápido posible. Al mismo tiempo, extrajo tanta agua del subsuelo que en algunas zonas el terreno baja varios centímetros al año, lo que a su vez rompe las tuberías. Se calcula que cerca de un tercio del agua que se distribuye se pierde en fugas antes de llegar a una llave. Y conviene añadir un matiz incómodo: esa escasez no se reparte por igual. Mientras muchas colonias del poniente reciben agua casi todos los días, en algunas del oriente llega en camiones cisterna dos veces por semana, y a un precio mayor por litro. Piensen por un momento en lo que esto implica. Si la ciudad hubiera conservado aunque fuera una parte de sus lagos, o si hubiera invertido en captar la lluvia en lugar de desalojarla, ¿estaríamos hablando hoy de escasez? Probablemente sí, pero de otra magnitud, y sobre todo de otra naturaleza: una escasez negociable, no una fatalidad. Por eso insisto en que la pregunta pertinente no es cuánta agua hay, sino quién decide adónde va y con qué prioridades. Para el jueves, lean el informe sobre las colonias del oriente y traigan identificado un caso en que la escasez se haya presentado como natural sin serlo."
+   }
+  ],
+  "questions": [
+   {
+    "q_pt": "¿Cuál es la idea principal de la profesora?",
+    "choices_pt": [
+     "Que la ciudad debería recuperar sus antiguos lagos",
+     "Que las fugas son la causa principal del problema",
+     "Que en la ciudad vive demasiada gente",
+     "Que la escasez es más política que natural"
+    ],
+    "correct": 3,
+    "type": "global"
+   },
+   {
+    "q_pt": "Según la profesora, ¿qué relación hay entre la extracción de agua y las fugas?",
+    "choices_pt": [
+     "El hundimiento que provoca la extracción daña las tuberías",
+     "Las fugas obligan a sacar más agua de los lagos",
+     "La lluvia que no se capta termina en tuberías rotas",
+     "El drenaje expulsa por error el agua de las tuberías"
+    ],
+    "correct": 0,
+    "type": "detail"
+   },
+   {
+    "q_pt": "¿Por qué dice la profesora que la respuesta demográfica es cómoda?",
+    "choices_pt": [
+     "Porque aparece en todos los informes oficiales",
+     "Porque los datos de población son fáciles de conseguir",
+     "Porque evita cuestionar a quienes tomaron las decisiones",
+     "Porque convence a los estudiantes sin pruebas"
+    ],
+    "correct": 2,
+    "type": "inference"
+   }
+  ],
+  "title_pt": "Agua y ciudad"
+ },
+ {
+  "id": "ES-S-3",
+  "sublevel": "S",
+  "variety": "es-AR",
+  "accent": "Rioplatense (Buenos Aires / Rosario, voseo, sheísmo)",
+  "genre": "columna de opinión leída en la radio",
+  "intro_pt": "Va a escuchar una columna de opinión en la radio.",
+  "duration_target_s": 110,
+  "speakers": [
+   {
+    "slot": "ES_AR_M",
+    "voice_style": "voz masculina, registro académico, pausado y seguro"
+   }
+  ],
+  "script": [
+   {
+    "slot": "ES_AR_M",
+    "text": "Durante décadas, los chicos de toda América Latina crecimos escuchando dibujos animados en un castellano que no se hablaba en ninguna parte. Los actores de doblaje lo llamaban español neutro: nada de voseo, nada de modismos, una entonación pareja, sin ninguna marca que permitiera ubicar al hablante en un mapa. La idea era razonable desde el punto de vista comercial, ya que una sola versión podía venderse de México a Tierra del Fuego. Lo curioso es que, con el tiempo, ese idioma de laboratorio se volvió, para muchos, sinónimo de hablar bien. Conozco maestras que corregían a sus alumnos cuando decían vos, como si la forma en que hablan sus propios padres fuera un error que la televisión venía a enmendar. Ahí está, me parece, el problema de fondo. No es que el neutro sea malo; es que se presenta como la ausencia de acento, cuando en realidad es una variedad más, negociada en estudios de grabación, con sus propias preferencias y sus propias exclusiones. Que haya sido elegida por conveniencia no la convierte en la más correcta. Se podría objetar que, sin esa convención, el mercado del doblaje se habría fragmentado y muchas series nunca habrían llegado a nuestras pantallas. Es posible. Pero las plataformas actuales, que doblan por separado para cada país cuando el negocio lo justifica, sugieren que el neutro fue menos una necesidad que una decisión. Y las decisiones, a diferencia de las necesidades, pueden revisarse. Pienso, además, en nuestra propia infancia: en los dibujos doblados, los personajes usaban palabras que ningún chico decía en su casa, y aun así las entendíamos sin esfuerzo. La prueba de que se puede comprender una variedad ajena sin adoptarla la llevamos, entonces, en la memoria. No propongo abandonar el neutro; propongo dejar de confundirlo con la norma. Que los chicos escuchen historias en su propia variedad no los vuelve menos capaces de entender las demás. Probablemente los vuelva más atentos."
+   }
+  ],
+  "questions": [
+   {
+    "q_pt": "¿Qué sostiene el autor de la columna?",
+    "choices_pt": [
+     "Que el doblaje para América Latina debería desaparecer",
+     "Que el neutro no es la forma correcta del idioma",
+     "Que los chicos deberían aprender a usar el voseo en clase",
+     "Que las plataformas actuales doblan mucho peor que antes"
+    ],
+    "correct": 1,
+    "type": "global"
+   },
+   {
+    "q_pt": "¿Cómo responde el autor a la objeción sobre el mercado del doblaje?",
+    "choices_pt": [
+     "Admite que muchas series no llegaron por culpa del neutro",
+     "Explica que el doblaje neutro siempre fue más caro",
+     "Recuerda que los maestros prefieren el acento de cada país",
+     "Señala que hoy se dobla por país cuando conviene"
+    ],
+    "correct": 3,
+    "type": "detail"
+   },
+   {
+    "q_pt": "¿Qué da a entender el autor con la última frase?",
+    "choices_pt": [
+     "Que oír su propia variedad puede ayudar a los chicos",
+     "Que los chicos no entienden bien el español neutro",
+     "Que los chicos prefieren los dibujos en inglés",
+     "Que los padres deben elegir el idioma de las series"
+    ],
+    "correct": 0,
+    "type": "inference"
+   }
+  ],
+  "title_pt": "El español neutro"
+ },
+ {
+  "id": "ES-S-4",
+  "sublevel": "S",
+  "variety": "es-PE",
+  "accent": "Peruvian (Lima / coastal-Andean educated)",
+  "genre": "mesa redonda en la radio",
+  "intro_pt": "Va a escuchar parte de una mesa redonda en la radio.",
+  "duration_target_s": 113,
+  "speakers": [
+   {
+    "slot": "ES_PE_F",
+    "voice_style": "voz femenina, registro académico, pausado y seguro"
+   },
+   {
+    "slot": "ES_PE_M",
+    "voice_style": "voz masculina, registro académico, pausado y seguro"
+   }
+  ],
+  "script": [
+   {
+    "slot": "ES_PE_F",
+    "text": "Se suele decir que el auge de la cocina peruana ha sido una bendición para los pequeños agricultores, porque ahora los restaurantes valoran productos que antes nadie buscaba: la papa nativa, la quinua, los ajíes de la sierra. Yo quisiera matizar esa idea. Que un producto se vuelva famoso no significa que quien lo cultiva gane más."
+   },
+   {
+    "slot": "ES_PE_M",
+    "text": "Pero hay casos concretos en que sí ha ocurrido. Comunidades que antes le vendían al intermediario del pueblo hoy tienen contratos directos con restaurantes de Lima."
+   },
+   {
+    "slot": "ES_PE_F",
+    "text": "Los hay, sin duda, y son valiosos. Pero son la excepción, y precisamente por eso se citan tanto. En la mayoría de los casos, cuando la demanda de quinua se disparó, el precio subió tanto que muchas familias que la cultivaban dejaron de consumirla y la reemplazaron por fideos o arroz, que eran más baratos. El beneficio se quedó sobre todo en los eslabones de la cadena más cercanos al consumidor."
+   },
+   {
+    "slot": "ES_PE_M",
+    "text": "Aun así, me cuesta aceptar que el balance sea negativo. Antes del auge, muchas variedades de papa estaban a punto de desaparecer, porque nadie las compraba."
+   },
+   {
+    "slot": "ES_PE_F",
+    "text": "En eso tiene razón, y es un efecto que valoro. Pero conservar una semilla y mejorar la vida de quien la siembra son objetivos distintos, y lograr el primero no garantiza el segundo."
+   },
+   {
+    "slot": "ES_PE_M",
+    "text": "Admitamos eso. ¿Qué propone, entonces? ¿Que los cocineros dejen de usar esos productos?"
+   },
+   {
+    "slot": "ES_PE_F",
+    "text": "De ninguna manera. Propongo que dejemos de medir el éxito por la fama del plato y empecemos a medirlo por lo que recibe el agricultor. Si los restaurantes que se promocionan con productos andinos publicaran cuánto pagan por ellos y a quién, el debate sería otro."
+   },
+   {
+    "slot": "ES_PE_M",
+    "text": "Me parece una exigencia razonable, aunque difícil de cumplir para los restaurantes pequeños. Y habría que evitar que la transparencia se convierta en una estrategia más de publicidad, que es lo que suele pasar con estas iniciativas."
+   },
+   {
+    "slot": "ES_PE_F",
+    "text": "Es un riesgo real, no lo niego. Aun así, prefiero una transparencia imperfecta a un relato de éxito que nadie comprueba."
+   }
+  ],
+  "questions": [
+   {
+    "q_pt": "¿Cuál es el tema central del debate?",
+    "choices_pt": [
+     "Cómo cocinar platos nuevos con productos de la sierra",
+     "Por qué la quinua es mucho más cara en Lima",
+     "Qué restaurantes limeños compran más quinua a los productores",
+     "Si el éxito de la cocina beneficia a los agricultores"
+    ],
+    "correct": 3,
+    "type": "global"
+   },
+   {
+    "q_pt": "Según ella, ¿qué pasó con muchas familias cuando subió el precio de la quinua?",
+    "choices_pt": [
+     "Consiguieron vender sin intermediarios en la capital",
+     "La cambiaron por alimentos más baratos",
+     "Dejaron de cultivarla para sembrar arroz",
+     "Ganaron más que los restaurantes que la usaban"
+    ],
+    "correct": 1,
+    "type": "detail"
+   },
+   {
+    "q_pt": "¿Qué da a entender ella al decir que los casos de éxito se citan tanto?",
+    "choices_pt": [
+     "Que todos los agricultores acabarán teniendo contratos",
+     "Que los periodistas no conocen el campo peruano",
+     "Que dan una imagen demasiado optimista de la situación",
+     "Que esos casos son falsos y nadie los comprobó"
+    ],
+    "correct": 2,
+    "type": "inference"
+   }
+  ],
+  "title_pt": "El auge gastronómico"
+ },
+ {
+  "id": "ES-S-5",
+  "sublevel": "S",
+  "variety": "es-CO",
+  "accent": "Colombian (Bogotá / Andean)",
+  "genre": "conferencia",
+  "intro_pt": "Va a escuchar un fragmento de una conferencia.",
+  "duration_target_s": 107,
+  "speakers": [
+   {
+    "slot": "ES_CO_F",
+    "voice_style": "voz femenina, registro académico, pausado y seguro"
+   }
+  ],
+  "script": [
+   {
+    "slot": "ES_CO_F",
+    "text": "Cuando se discute el presupuesto de una ciudad, las bibliotecas públicas suelen aparecer en el capítulo de cultura, junto a los festivales y los museos. Esa ubicación, aparentemente inocente, determina su suerte: en épocas de recorte, la cultura es lo primero que se sacrifica, porque se la considera un complemento, algo deseable pero prescindible. Mi propuesta de hoy es que las pensemos, más bien, como infraestructura, en el mismo sentido en que lo son los puentes o el acueducto. Y no lo digo como una metáfora. En Medellín, durante la última década, las bibliotecas de los barrios periféricos se convirtieron en el lugar donde la gente hace trámites, consigue conexión a internet, busca empleo y, en muchos casos, simplemente encuentra un espacio seguro donde pasar la tarde. Cuando una de ellas cerró seis meses por reformas, las solicitudes de subsidios del barrio cayeron casi a la mitad. No porque hubiera menos necesidad, sino porque desapareció el lugar donde se tramitaban. Pensemos en quiénes usan esos servicios: son, en su mayoría, personas sin computador en casa, sin plan de datos o sin costumbre de hacer trámites en línea; es decir, precisamente quienes más dependen del Estado y menos alternativas tienen cuando un servicio desaparece. Se me podrá objetar que estoy describiendo funciones que no le corresponden a una biblioteca, y que el Estado debería atenderlas por otras vías. Es una objeción seria, y en teoría la comparto. Pero las políticas se diseñan para las ciudades que existen, no para las que desearíamos tener. Si esas funciones ya recaen de hecho sobre las bibliotecas, recortarlas no es un ahorro en cultura: es desmontar una red de servicios básicos sin haber construido la que debería reemplazarla. Imaginen que se cerrara un puente con el argumento de que el río debería cruzarse en barco. Nadie lo aceptaría. Les pido, simplemente, que apliquen el mismo criterio."
+   }
+  ],
+  "questions": [
+   {
+    "q_pt": "¿Qué propone la conferencista?",
+    "choices_pt": [
+     "Construir más bibliotecas en los barrios de Medellín",
+     "Pasar el presupuesto de los festivales a los museos",
+     "Considerar las bibliotecas un servicio esencial de la ciudad",
+     "Que el Estado deje de ofrecer servicios en las bibliotecas"
+    ],
+    "correct": 2,
+    "type": "global"
+   },
+   {
+    "q_pt": "¿Qué ocurrió cuando cerraron una biblioteca por reformas?",
+    "choices_pt": [
+     "Aumentaron las visitas a los museos del barrio",
+     "Bajaron las solicitudes de ayudas, aunque la necesidad seguía",
+     "Los vecinos pidieron un puente nuevo para el barrio",
+     "Los libros se llevaron a otra biblioteca cercana"
+    ],
+    "correct": 1,
+    "type": "detail"
+   },
+   {
+    "q_pt": "¿Qué quiere mostrar la conferencista con el ejemplo del puente?",
+    "choices_pt": [
+     "Que no tiene sentido quitar un servicio sin reemplazarlo",
+     "Que la ciudad necesita invertir más en transporte público",
+     "Que los ríos de Medellín deberían cruzarse en barco",
+     "Que los puentes son más importantes que las bibliotecas"
+    ],
+    "correct": 0,
+    "type": "inference"
+   }
+  ],
+  "title_pt": "Bibliotecas públicas"
+ }
+]

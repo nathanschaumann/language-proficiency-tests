@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en" class="it-app">
+<head>
+<meta charset="utf-8">
+<link rel="icon" href="data:,">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Results - Language Proficiency Practice Tests</title>
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/components.css">
+<style>
+  * , *::before, *::after { box-sizing: border-box; }
+  body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+         color: var(--text); background: var(--bg); font-size: var(--fs-base); line-height: 1.5; }
+  main { max-width: 1100px; margin: 0 auto; padding: 18px 18px 44px; }
+  h1 { font-size: var(--fs-lg); margin: 0 0 4px; }
+  h2 { font-size: 1rem; margin: 22px 0 8px; }
+  h3 { font-size: .95rem; margin: 16px 0 4px; }
+  p, li { color: var(--text); }
+  .muted { color: var(--muted); }
+  .card { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius-panel, 12px); padding: 14px 16px; margin: 12px 0; }
+  .toolbar { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; margin: 10px 0; }
+  .tbl-wrap { overflow: auto; max-height: 340px; border: 1px solid var(--border); border-radius: 10px; background: var(--card); }
+  table.hist { border-collapse: collapse; width: 100%; font-size: var(--fs-md); }
+  table.hist th, table.hist td { text-align: left; padding: 7px 10px; border-bottom: 1px solid var(--border); white-space: nowrap; }
+  table.hist th { position: sticky; top: 0; background: var(--card); cursor: pointer; user-select: none; }
+  table.hist th.sorted::after { content: " \25B2"; font-size: 10px; }
+  table.hist th.sorted.desc::after { content: " \25BC"; }
+  table.hist td.dash { color: var(--muted-2); }
+  table.hist tr.detail td { white-space: normal; background: var(--bg-2); }
+  .link { background: none; border: none; color: var(--accent-text, var(--accent)); cursor: pointer; padding: 0; font: inherit; text-decoration: underline; }
+  .transcript { border-left: 3px solid var(--border); padding-left: 10px; margin: 6px 0; }
+  a { color: var(--accent-text, var(--accent)); }
+  ul { padding-left: 20px; }
+  .empty { padding: 14px; color: var(--muted); }
+</style>
+</head>
+<body>
+<script src="js/nav.js"></script>
+<main>
+  <div id="view-results">
+    <h1>Your results</h1>
+    <p class="muted">Sittings are saved only in this browser (localStorage). Nothing is uploaded. Levels are practice estimates, not official ratings.</p>
+    <p>Want to see a graded speaking result first? <a href="speaking.html?route=speaking/sample">Open the sample result (illustrative)</a>.</p>
+    <div class="toolbar">
+      <button class="btn secondary sm" id="export-btn" type="button">Export as JSON</button>
+      <button class="btn secondary sm" id="csv-btn" type="button">Export as CSV</button>
+      <button class="btn danger sm" id="clear-btn" type="button">Clear all history</button>
+      <span class="muted" id="status"></span>
+    </div>
+    <h2>Listening and reading</h2>
+    <div class="tbl-wrap"><table class="hist" id="tbl-lr"></table></div>
+    <h2>Speaking and writing</h2>
+    <div class="tbl-wrap"><table class="hist" id="tbl-sp"></table></div>
+  </div>
+
+  <div id="view-how" hidden>
+    <h1>How it works</h1>
+    <p class="muted">A plain-English summary. The longer write-up is METHOD.md in the repository.</p>
+    <div class="card">
+      <h3>Listening and reading</h3>
+      <p>Each test is a walk through blocks of five passages at one level, with three multiple-choice questions per passage. The walk starts at Advanced Low. A strong first block sends you up a level, a weak one sends you down. After two blocks, or three when you hit the top or bottom of the range, two neighbouring blocks (30 questions) are added up and looked up in a score table to give a level from Novice Low to Superior. Listening plays each recording once, with no replay, and gives you a preview of the questions before and a short review after. Reading gives a fixed five minutes per passage and does not let you go back.</p>
+      <h3>How the passages are pitched to levels</h3>
+      <p>Every passage was written to target one level, then rated blind by several AI raters who saw only the text or transcript, never the intended level. Passages were revised until the raters agreed with the intended level about 80% of the time and were never more than one step away. Questions were then checked with a second blind test: an AI answering with the questions and choices but without the passage. The first draft banks scored 91% that way, far too high, so questions were rewritten until the banks fell inside the 50 to 70% target where they could.</p>
+      <h3>Speaking and writing</h3>
+      <p>You answer spoken or typed prompts. Claude rates the whole sample the way a human rater would: it looks for the level you can sustain across the routine questions (the floor), and for where you start to break down on the harder questions (the ceiling). Rehearsed answers are discounted, and the test form you chose in the self-assessment caps the highest level that can be printed. Practice sittings also give a level for each answer and a list of grammar and word-choice mistakes.</p>
+      <h3>What this is not</h3>
+      <p>These are practice tests. No human raters have validated them, the passages are AI-written and the audio is synthetic, and the levels are estimates. Inspired by the ACTFL Proficiency Guidelines. Not affiliated with or endorsed by ACTFL; results are not official ratings.</p>
+    </div>
+  </div>
+</main>
+<script>
+"use strict";
+const SKILL_LABELS = { listening: "Portuguese listening", reading: "Portuguese reading", "listening-ru": "Russian listening", "listening-es": "Spanish listening" };
+const LANG_NAMES = { es: "Spanish", pt: "Portuguese", ru: "Russian", hy: "Armenian" };
+const SPEAK_MODES = { speaking: "Speaking exam", "speaking-practice2": "Speaking practice", "writing-practice2": "Writing practice" };
+const RATING_NAMES = { NL: "Novice Low", NM: "Novice Mid", NH: "Novice High", IL: "Intermediate Low", IM: "Intermediate Mid",
+  IH: "Intermediate High", AL: "Advanced Low", AM: "Advanced Mid", AH: "Advanced High", S: "Superior", D: "Distinguished" };
+const LR_KEY = "lpp_listening_history", SP_KEY = "lpp_speaking_history";
+
+function esc(s) { return String(s == null ? "" : s).replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c])); }
+function load(key) { try { const a = JSON.parse(localStorage.getItem(key) || "[]"); return Array.isArray(a) ? a : []; } catch (e) { return []; } }
+function fmtDate(at) { const d = new Date(at); return isNaN(d) ? "-" : d.toLocaleString(); }
+function fmtTime(sec) { if (sec == null) return null; const m = Math.floor(sec / 60), s = Math.round(sec % 60); return m + ":" + String(s).padStart(2, "0"); }
+
+const LR_COLS = [
+  { key: "at", label: "Date", value: r => r.at, show: r => fmtDate(r.at) },
+  { key: "test", label: "Test", value: r => SKILL_LABELS[r.skill] || "Portuguese listening" },
+  { key: "rating", label: "Estimated level", value: r => r.rating || null },
+  { key: "score", label: "Pair score", value: r => r.combined == null ? null : r.combined, show: r => r.combined == null ? null : r.combined + "/30" },
+  { key: "passages", label: "Passages", value: r => r.passages },
+  { key: "time", label: "Time", value: r => r.elapsedSeconds, show: r => fmtTime(r.elapsedSeconds) }
+];
+const SP_COLS = [
+  { key: "at", label: "Date", value: r => r.at, show: r => fmtDate(r.at) },
+  { key: "mode", label: "Mode", value: r => SPEAK_MODES[r.skill] || "Speaking" },
+  { key: "language", label: "Language", value: r => LANG_NAMES[r.language || "es"] },
+  { key: "rating", label: "Estimated level", value: r => r.rating ? (RATING_NAMES[r.rating] || r.rating) : null },
+  { key: "prompts", label: "Prompts", value: r => (r.detail || []).length },
+  { key: "wpm", label: "Typed WPM", value: r => r.typedWpm == null ? null : r.typedWpm }
+];
+
+function detailLR(r) {
+  const blocks = (r.blocks || []).map((b, i) => `Block ${i + 1}: ${esc(RATING_NAMES[b.level] || b.level)}, ${b.score}/15`).join(" &middot; ");
+  const rows = (r.detail || []).map(d => `${esc(d.id)}: ${d.score}/3`).join(", ");
+  return `<div>${blocks}</div><div class="muted">${rows}</div>`;
+}
+function detailSP(r) {
+  const head = r.rationale ? `<p><b>Rationale.</b> ${esc(r.rationale)}</p>` : "";
+  const t = (r.detail || []).map(d => `<div class="transcript"><b>${d.n}.</b> ${esc(d.promptEs || "")}<br>${esc(d.transcript || "(no response)")}${d.note ? `<br><span class="muted">${esc(d.note)}</span>` : ""}</div>`).join("");
+  return head + t;
+}
+
+function makeTable(el, cols, recs, detailFn, stateKey) {
+  let st = { col: "at", desc: true };
+  try { const v = JSON.parse(localStorage.getItem("lpp_sort_" + stateKey) || "null"); if (v && cols.some(c => c.key === v.col)) st = v; } catch (e) {}
+  const open = new Set();
+  function render() {
+    if (!recs.length) { el.innerHTML = '<tbody><tr><td class="empty">Nothing here yet. Finish a sitting and it will appear.</td></tr></tbody>'; return; }
+    const col = cols.find(c => c.key === st.col) || cols[0];
+    const sorted = recs.slice().sort((a, b) => {
+      const x = col.value(a), y = col.value(b);
+      if (x == null && y == null) return 0; if (x == null) return 1; if (y == null) return -1;
+      const c = typeof x === "number" && typeof y === "number" ? x - y : String(x).localeCompare(String(y));
+      return st.desc ? -c : c;
+    });
+    let html = "<thead><tr>" + cols.map(c => `<th data-k="${c.key}" class="${c.key === st.col ? "sorted" + (st.desc ? " desc" : "") : ""}">${esc(c.label)}</th>`).join("") + "<th></th></tr></thead><tbody>";
+    sorted.forEach(r => {
+      html += "<tr>" + cols.map(c => { const v = c.show ? c.show(r) : c.value(r); return v == null || v === "" ? '<td class="dash">-</td>' : `<td>${esc(v)}</td>`; }).join("") +
+        `<td><button class="link" data-at="${esc(r.at)}">${open.has(r.at) ? "hide" : "details"}</button></td></tr>`;
+      if (open.has(r.at)) html += `<tr class="detail"><td colspan="${cols.length + 1}">${detailFn(r)}</td></tr>`;
+    });
+    el.innerHTML = html + "</tbody>";
+  }
+  el.addEventListener("click", e => {
+    const th = e.target.closest("th[data-k]");
+    if (th) {
+      const k = th.getAttribute("data-k");
+      st = { col: k, desc: st.col === k ? !st.desc : false };
+      try { localStorage.setItem("lpp_sort_" + stateKey, JSON.stringify(st)); } catch (er) {}
+      render(); return;
+    }
+    const b = e.target.closest("button[data-at]");
+    if (b) { const at = b.getAttribute("data-at"); open.has(at) ? open.delete(at) : open.add(at); render(); }
+  });
+  render();
+}
+
+function csvCell(v) { v = v == null ? "" : String(v); return /[",\n]/.test(v) ? '"' + v.replace(/"/g, '""') + '"' : v; }
+function download(name, text, type) {
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(new Blob([text], { type })); a.download = name;
+  document.body.appendChild(a); a.click(); a.remove();
+  setTimeout(() => URL.revokeObjectURL(a.href), 2000);
+}
+
+const lr = load(LR_KEY), sp = load(SP_KEY);
+makeTable(document.getElementById("tbl-lr"), LR_COLS, lr, detailLR, "lr");
+makeTable(document.getElementById("tbl-sp"), SP_COLS, sp, detailSP, "sp");
+document.getElementById("export-btn").addEventListener("click", () =>
+  download("proficiency-practice-history.json", JSON.stringify({ listeningReading: lr, speaking: sp }, null, 1), "application/json"));
+document.getElementById("csv-btn").addEventListener("click", () => {
+  const rows = [["date", "test", "level", "score_or_prompts"]];
+  lr.forEach(r => rows.push([r.at, SKILL_LABELS[r.skill] || "Portuguese listening", r.rating, r.combined]));
+  sp.forEach(r => rows.push([r.at, SPEAK_MODES[r.skill] || "Speaking", r.rating, (r.detail || []).length]));
+  download("proficiency-practice-history.csv", rows.map(r => r.map(csvCell).join(",")).join("\n"), "text/csv");
+});
+document.getElementById("clear-btn").addEventListener("click", () => {
+  if (!confirm("Delete every saved sitting from this browser?")) return;
+  try { localStorage.removeItem(LR_KEY); localStorage.removeItem(SP_KEY); } catch (e) {}
+  location.reload();
+});
+const route = window.NavBar ? window.NavBar.route() : "results";
+if (route === "how") {
+  document.getElementById("view-results").hidden = true;
+  document.getElementById("view-how").hidden = false;
+  window.NavBar.setPage("How it works");
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,2050 @@
+[
+ {
+  "id": "R-IL-1",
+  "sublevel": "IL",
+  "skill": "reading",
+  "genre": "aviso de condomínio",
+  "title_pt": "Manutenção dos elevadores",
+  "text_pt": [
+   "Aviso aos moradores do Edifício Jacarandá.",
+   "Na terça-feira, dia 12, a empresa Elevaq faz a manutenção dos dois elevadores do prédio.",
+   "Os técnicos da Elevaq chegam às 7h30.",
+   "O elevador social fica parado das 8h às 12h. O elevador de serviço fica parado das 13h às 17h. Os dois nunca ficam parados ao mesmo tempo.",
+   "Na segunda-feira e na quarta-feira, os dois elevadores funcionam normalmente.",
+   "Na terça, a portaria não recebe entrega de móveis. Cartas e pacotes pequenos continuam normais.",
+   "Moradores com dificuldade de andar podem falar com o zelador, o senhor Nivaldo. Ele fica na portaria das 7h às 15h.",
+   "O serviço custa R$ 3.400. Não tem taxa extra este mês.",
+   "A escada do prédio fica aberta o dia todo.",
+   "A limpeza da garagem também é na terça, das 14h às 16h.",
+   "O aviso também está no quadro da portaria.",
+   "Dúvidas? Fale com a administração, de segunda a sexta, das 9h às 17h, ou ligue para (11) 4002-8922.",
+   "Obrigado pela compreensão.",
+   "A Administração"
+  ],
+  "questions": [
+   {
+    "q_pt": "Qual é o assunto do aviso?",
+    "choices_pt": [
+     "Elevadores parados em turnos diferentes, com entregas de móveis suspensas",
+     "Elevadores parados juntos durante o dia, com entregas de móveis suspensas",
+     "Elevadores parados juntos durante o dia, com a escada fechada aos moradores",
+     "Elevadores parados em turnos diferentes, com a escada fechada aos moradores"
+    ],
+    "correct": 0,
+    "type": "global"
+   },
+   {
+    "q_pt": "A que horas o elevador social fica parado?",
+    "choices_pt": [
+     "Entre 8h e 12h",
+     "Entre 13h e 17h",
+     "Entre 14h e 16h",
+     "Entre 9h e 17h"
+    ],
+    "correct": 0,
+    "type": "selective"
+   },
+   {
+    "q_pt": "Até que horas o zelador Nivaldo fica na portaria?",
+    "choices_pt": [
+     "Até as 12h",
+     "Até as 16h",
+     "Até as 15h",
+     "Até as 17h"
+    ],
+    "correct": 2,
+    "type": "detail"
+   }
+  ]
+ },
+ {
+  "id": "R-IL-2",
+  "sublevel": "IL",
+  "skill": "reading",
+  "genre": "guia do visitante",
+  "title_pt": "Jardim botânico municipal",
+  "text_pt": [
+   "Jardim Botânico Municipal de Timburi — guia do visitante",
+   "O jardim fica na Estrada do Horto, 1.500.",
+   "Horário: de terça a domingo, das 8h às 17h. Na segunda-feira o jardim fica fechado.",
+   "A entrada custa R$ 8. Estudantes pagam R$ 4. Crianças de até 6 anos não pagam.",
+   "Os bilhetes são vendidos na bilheteria do portão principal. A bilheteria aceita dinheiro e Pix.",
+   "O jardim tem doze hectares e quatrocentas espécies de plantas.",
+   "São três trilhas: a azul tem 400 metros, a verde tem 1,2 quilômetro e a vermelha tem 2,5 quilômetros.",
+   "A estufa das orquídeas fica no meio do jardim. Ao lado dela tem um lago com peixes.",
+   "As visitas guiadas são no sábado, às 10h e às 15h. A inscrição é feita na bilheteria, no mesmo dia.",
+   "O café do jardim abre das 9h às 16h.",
+   "O estacionamento tem quarenta vagas e é gratuito.",
+   "Não é permitido entrar de bicicleta nem dar comida aos peixes.",
+   "Grupos de escolas marcam a visita pelo telefone (14) 3555-7080."
+  ],
+  "questions": [
+   {
+    "q_pt": "Qual é a finalidade do guia?",
+    "choices_pt": [
+     "Descrever as plantas e os ambientes do jardim, principalmente a grupos escolares",
+     "Dar informações práticas de horário, preço e regras a quem quer visitar o jardim",
+     "Dar informações práticas de horário, preço e regras, principalmente a grupos escolares",
+     "Descrever as plantas e os ambientes do jardim a quem quer visitá-lo"
+    ],
+    "correct": 1,
+    "type": "global"
+   },
+   {
+    "q_pt": "A que horas começa a primeira visita guiada?",
+    "choices_pt": [
+     "Às 8h",
+     "Às 9h",
+     "Às 10h",
+     "Às 15h"
+    ],
+    "correct": 2,
+    "type": "selective"
+   },
+   {
+    "q_pt": "Onde e quando se faz a inscrição para a visita guiada?",
+    "choices_pt": [
+     "Pelo telefone, na véspera",
+     "Na bilheteria, na véspera",
+     "Pelo telefone, no dia da visita",
+     "Na bilheteria, no dia da visita"
+    ],
+    "correct": 3,
+    "type": "detail"
+   }
+  ]
+ },
+ {
+  "id": "R-IL-3",
+  "sublevel": "IL",
+  "skill": "reading",
+  "genre": "anúncio classificado",
+  "title_pt": "Bicicleta usada",
+  "text_pt": [
+   "VENDO BICICLETA — em ótimo estado",
+   "Bicicleta urbana, cor verde, tamanho médio. Serve para pessoas de 1,60 m a 1,80 m.",
+   "Tem seis marchas, cesta na frente e bagageiro atrás.",
+   "Os pneus são novos. Os freios estão bons. A bicicleta não tem nenhum defeito.",
+   "O peso é de quatorze quilos. A cor verde é de fábrica. O selim é de couro marrom.",
+   "Tem farol na frente e refletor atrás.",
+   "Preço: R$ 650. Aceito dinheiro ou Pix. Não faço parcelamento.",
+   "Junto com a bicicleta vão um capacete branco e uma bomba de ar.",
+   "Vendo também um cadeado, por R$ 40, à parte.",
+   "Moro no bairro Santa Cecília, na Rua das Palmeiras.",
+   "A bicicleta fica na garagem do prédio.",
+   "Você pode ver a bicicleta de segunda a sexta, depois das 18h, ou no sábado o dia todo. No domingo não atendo.",
+   "Não entrego em outro bairro. O comprador busca aqui.",
+   "Falar com Rogério, no telefone (11) 98877-1234.",
+   "Aceito mensagem a qualquer hora."
+  ],
+  "questions": [
+   {
+    "q_pt": "O que este anúncio oferece?",
+    "choices_pt": [
+     "Uma bicicleta que o vendedor entrega em casa e o comprador paga em parcelas",
+     "Uma bicicleta que o vendedor entrega em casa e o comprador paga à vista",
+     "Uma bicicleta que o comprador busca no bairro do vendedor e paga em parcelas",
+     "Uma bicicleta que o comprador busca no bairro do vendedor e paga à vista"
+    ],
+    "correct": 3,
+    "type": "global"
+   },
+   {
+    "q_pt": "Quando se pode ver a bicicleta?",
+    "choices_pt": [
+     "Nos dias úteis de manhã e no domingo inteiro",
+     "De segunda a domingo, a partir das 18h",
+     "Aos sábados e domingos, depois das 18h",
+     "Nos dias úteis à noite e no sábado inteiro"
+    ],
+    "correct": 3,
+    "type": "selective"
+   },
+   {
+    "q_pt": "Que acessórios estão incluídos no preço de R$ 650?",
+    "choices_pt": [
+     "Um capacete e um cadeado para a bicicleta",
+     "Um capacete e uma bomba para os pneus",
+     "Um cadeado e uma bomba para os pneus",
+     "Um capacete, um cadeado e uma bomba"
+    ],
+    "correct": 1,
+    "type": "detail"
+   }
+  ]
+ },
+ {
+  "id": "R-IL-4",
+  "sublevel": "IL",
+  "skill": "reading",
+  "genre": "comunicado escolar",
+  "title_pt": "Recado da escola",
+  "text_pt": [
+   "Escola Municipal Vila Nova — recado para as famílias",
+   "Queridos pais e responsáveis,",
+   "Na quinta-feira, dia 20, a escola tem o Dia da Foto. Um fotógrafo vem tirar a foto de cada turma.",
+   "Neste dia, os alunos vêm com o uniforme completo: camiseta azul da escola, calça ou short escuro e tênis.",
+   "As fotos são tiradas de manhã, entre 9h e 11h, no pátio. Se chover, as fotos são no ginásio.",
+   "Cada turma fica dez minutos com o fotógrafo. A ordem das turmas está no mural da entrada.",
+   "A foto da turma custa R$ 25. O pagamento é na secretaria, na sexta-feira, dia 21.",
+   "As fotos ficam prontas em duas semanas.",
+   "As aulas seguem normais. Neste dia não tem prova.",
+   "Neste dia a merenda também é especial: bolo e suco de laranja.",
+   "Alunos com alergia devem avisar a professora até quarta-feira.",
+   "Dúvidas? Fale com a secretaria, de segunda a sexta, das 8h às 16h.",
+   "Um abraço,",
+   "Cláudia Prado, diretora"
+  ],
+  "questions": [
+   {
+    "q_pt": "Sobre o que é este recado?",
+    "choices_pt": [
+     "Um dia de fotos das turmas, com regras de roupa, de pagamento e de aviso",
+     "Um dia de passeio das turmas, com regras de roupa, de pagamento e de aviso",
+     "Um dia de festa das turmas, com regras de roupa, de pagamento e de aviso",
+     "Um dia de provas das turmas, com regras de roupa, de pagamento e de aviso"
+    ],
+    "correct": 0,
+    "type": "global"
+   },
+   {
+    "q_pt": "A quem devem avisar os pais de alunos com alergia, e até quando?",
+    "choices_pt": [
+     "À professora, até o dia seguinte ao evento",
+     "À secretaria, até a véspera do evento",
+     "À professora, até a véspera do evento",
+     "À secretaria, até o dia seguinte ao evento"
+    ],
+    "correct": 2,
+    "type": "selective"
+   },
+   {
+    "q_pt": "Quando e onde as famílias fazem o pagamento?",
+    "choices_pt": [
+     "No dia do evento, na secretaria",
+     "No dia do evento, no pátio",
+     "No dia seguinte ao evento, na secretaria",
+     "Duas semanas depois, na secretaria"
+    ],
+    "correct": 2,
+    "type": "detail"
+   }
+  ]
+ },
+ {
+  "id": "R-IL-5",
+  "sublevel": "IL",
+  "skill": "reading",
+  "genre": "cartaz de evento",
+  "title_pt": "Feira de artesanato",
+  "text_pt": [
+   "3ª Feira de Artesanato do Bairro Alto",
+   "Sábado, 14 de setembro, das 10h às 18h, na Praça dos Ipês.",
+   "Trinta artesãos do bairro vão mostrar o trabalho deles. Tem cerâmica, roupas de tricô, bolsas de couro, sabonetes e brinquedos de madeira.",
+   "A entrada é gratuita. Não precisa comprar bilhete nem fazer inscrição para entrar.",
+   "Programação: 10h, abertura da feira; 12h, apresentação do coral da escola; 15h, oficina de cerâmica para crianças; 17h, sorteio de uma cesta com produtos da feira.",
+   "A oficina de cerâmica é para crianças de 6 a 12 anos e tem vinte vagas. As inscrições para a oficina são feitas na hora, na barraca azul, a partir das 14h.",
+   "Tem comida na praça: pastel, caldo de cana, tapioca e café. Os preços vão de R$ 5 a R$ 20.",
+   "Leve a sua sacola. A feira não usa sacola plástica.",
+   "Se chover muito, a feira passa para o sábado seguinte, dia 21.",
+   "Realização: Associação de Moradores do Bairro Alto."
+  ],
+  "questions": [
+   {
+    "q_pt": "O que este cartaz anuncia?",
+    "choices_pt": [
+     "Uma feira de comida de rua, gratuita e sem inscrição",
+     "Uma feira de comida de rua, com ingresso e inscrição prévia",
+     "Uma feira de artesanato local, gratuita e sem inscrição",
+     "Uma feira de artesanato local, com ingresso e inscrição prévia"
+    ],
+    "correct": 2,
+    "type": "global"
+   },
+   {
+    "q_pt": "Quantas crianças participam da oficina e quando abrem as inscrições?",
+    "choices_pt": [
+     "Trinta crianças, desde as 14h",
+     "Trinta crianças, desde as 15h",
+     "Vinte crianças, desde as 14h",
+     "Vinte crianças, desde as 15h"
+    ],
+    "correct": 2,
+    "type": "selective"
+   },
+   {
+    "q_pt": "O que acontece se chover muito?",
+    "choices_pt": [
+     "É adiada para o dia 15, um domingo",
+     "É adiada para o sábado do mês seguinte",
+     "Fica no sábado, dia 14, dentro da escola",
+     "É adiada para o dia 21, no sábado seguinte"
+    ],
+    "correct": 3,
+    "type": "detail"
+   }
+  ]
+ },
+ {
+  "id": "R-IM-1",
+  "sublevel": "IM",
+  "skill": "reading",
+  "genre": "e-mail pessoal",
+  "title_pt": "Notícias de Curitiba",
+  "text_pt": [
+   "Oi, Téo!",
+   "Desculpa a demora para escrever.",
+   "A mudança para Curitiba correu bem. O caminhão chegou no dia combinado e não quebrou nada, só um copo. O apartamento já está organizado.",
+   "O apartamento fica no quinto andar e tem dois quartos. A janela da sala dá para um parque pequeno. De manhã sempre tem gente correndo lá.",
+   "O bairro se chama Cabral. É calmo e tem muitas árvores. A padaria da esquina abre às seis da manhã. O mercado fica a três quadras. Aqui as ruas têm nome de árvore.",
+   "O trabalho começou na segunda passada. A empresa é pequena: somos onze pessoas, todas na mesma sala. Meu horário é das nove às seis, com uma hora de almoço.",
+   "Vou a pé para o escritório. São quinze minutos de caminhada.",
+   "A parte difícil é o frio. Comprei dois casacos na primeira semana e ainda sinto frio de manhã. Todo mundo aqui diz que eu vou me acostumar.",
+   "No sábado passado conheci o mercado municipal. Comprei queijo, mel e um pão de queijo enorme.",
+   "Mandei uma foto da sala junto com este e-mail.",
+   "Você ainda pensa em vir em julho? Tem um quarto vazio esperando por você.",
+   "Me escreve quando puder.",
+   "Um abraço grande,",
+   "Henrique"
+  ],
+  "questions": [
+   {
+    "q_pt": "Qual é o assunto principal do e-mail?",
+    "choices_pt": [
+     "Henrique pede ajuda com a mudança para a cidade nova e convida Téo para uma visita",
+     "Henrique conta como foi a mudança para a cidade nova e convida Téo para uma visita",
+     "Henrique pede ajuda com a mudança para a cidade nova e convida Téo para trabalhar na empresa",
+     "Henrique conta como foi a mudança para a cidade nova e convida Téo para trabalhar na empresa"
+    ],
+    "correct": 1,
+    "type": "global"
+   },
+   {
+    "q_pt": "Como é a empresa onde Henrique trabalha agora?",
+    "choices_pt": [
+     "Pequena, com quinze pessoas em duas salas",
+     "Pequena, com nove pessoas em três salas",
+     "Pequena, com seis pessoas no quinto andar",
+     "Pequena, com onze pessoas na mesma sala"
+    ],
+    "correct": 3,
+    "type": "detail"
+   },
+   {
+    "q_pt": "O que o e-mail diz sobre a chegada das coisas de Henrique na mudança?",
+    "choices_pt": [
+     "Chegaram com um dia de atraso, sem nada quebrado",
+     "Chegaram no prazo, mas vários móveis quebraram",
+     "Chegaram com um dia de atraso e um copo quebrado",
+     "Chegaram no prazo, com só uma peça quebrada"
+    ],
+    "correct": 3,
+    "type": "detail"
+   }
+  ]
+ },
+ {
+  "id": "R-IM-2",
+  "sublevel": "IM",
+  "skill": "reading",
+  "genre": "anúncio classificado",
+  "title_pt": "Aluga-se apartamento",
+  "text_pt": [
+   "ALUGA-SE APARTAMENTO — Jardim das Acácias",
+   "Apartamento de dois quartos no quarto andar, com elevador. Tem sala, cozinha, banheiro e uma varanda pequena de frente para a rua.",
+   "O prédio tem portaria 24 horas, lavanderia coletiva e um salão de festas que os moradores usam sem pagar nada. Não tem piscina nem academia.",
+   "O apartamento está pintado e limpo, pronto para entrar. A cozinha já tem armários e fogão, mas a geladeira não está incluída.",
+   "Aluguel: R$ 1.450 por mês. Condomínio: R$ 380. O IPTU já está dentro do valor do condomínio, então não existe outra taxa anual.",
+   "O contrato é de trinta meses. Aceitamos fiador ou seguro-fiança. Não aceitamos animais de grande porte; gatos e cachorros pequenos podem.",
+   "O ponto de ônibus fica a duas quadras e a estação de metrô, a quinze minutos a pé. Na mesma rua há mercado, farmácia e uma escola.",
+   "As visitas são de segunda a sábado, com hora marcada, e duram cerca de vinte minutos. Não recebemos ninguém sem agendamento, nem aos domingos.",
+   "Fotos do apartamento são enviadas por mensagem para quem pedir.",
+   "Imobiliária Serra Azul — (11) 3344-5566 — falar com Denise ou Paulo, das 9h às 18h."
+  ],
+  "questions": [
+   {
+    "q_pt": "Qual é a oferta do texto?",
+    "choices_pt": [
+     "Um apartamento para alugar por diárias de temporada, com geladeira",
+     "Um apartamento para alugar por contrato de trinta meses, sem geladeira",
+     "Um apartamento para alugar por diárias de temporada, sem geladeira",
+     "Um apartamento para alugar por contrato de trinta meses, com geladeira"
+    ],
+    "correct": 1,
+    "type": "global"
+   },
+   {
+    "q_pt": "Como é cobrado o IPTU?",
+    "choices_pt": [
+     "Vem dentro do aluguel, sem outra taxa",
+     "Vem dentro do condomínio, sem outra taxa",
+     "É pago uma vez por ano, além do condomínio",
+     "É pago pela imobiliária, junto com o seguro"
+    ],
+    "correct": 1,
+    "type": "detail"
+   },
+   {
+    "q_pt": "Como são as visitas ao apartamento?",
+    "choices_pt": [
+     "Uns vinte minutos, em qualquer dia menos o domingo",
+     "Uns quinze minutos, em qualquer dia menos o domingo",
+     "Uns quinze minutos, em qualquer dia menos a segunda",
+     "Uns vinte minutos, em qualquer dia menos a segunda"
+    ],
+    "correct": 0,
+    "type": "detail"
+   }
+  ]
+ },
+ {
+  "id": "R-IM-3",
+  "sublevel": "IM",
+  "skill": "reading",
+  "genre": "informativo",
+  "title_pt": "Biblioteca do bairro",
+  "text_pt": [
+   "A Biblioteca Comunitária Rosa dos Ventos funciona há oito anos na Rua das Palmeiras, 210, e agora tem horário novo.",
+   "A partir de março, a biblioteca abre de terça a sexta, das 10h às 19h, e aos sábados, das 9h às 13h. Às segundas fica fechada para a organização do acervo.",
+   "O acervo tem cerca de doze mil livros. A maior parte é de literatura brasileira, mas há também livros em inglês e espanhol, gibis e uma seção de livros de receitas.",
+   "Para pegar livros emprestados é preciso fazer a carteirinha. Basta levar um documento com foto e um comprovante de endereço. A carteirinha é gratuita e fica pronta no mesmo dia.",
+   "Cada leitor pode levar até três livros por vez e ficar com eles por quinze dias. O empréstimo pode ser renovado uma vez, pela internet.",
+   "A biblioteca também tem um espaço de estudo com dez mesas e internet. Não é preciso reservar, mas aos sábados as mesas enchem cedo.",
+   "Toda quarta-feira, às 16h, há contação de histórias para crianças de quatro a nove anos. A entrada é livre e não precisa de inscrição.",
+   "A biblioteca aceita doação de livros usados em bom estado. Livros rasgados ou com páginas faltando não são aceitos.",
+   "Informações pelo telefone (21) 2555-7788 ou na própria biblioteca, nos dias de funcionamento."
+  ],
+  "questions": [
+   {
+    "q_pt": "Qual é o objetivo principal deste texto?",
+    "choices_pt": [
+     "Anunciar o novo horário de funcionamento e explicar como usar os serviços da biblioteca",
+     "Anunciar a mudança de endereço da biblioteca e explicar como usar os serviços",
+     "Anunciar a mudança de endereço da biblioteca e convocar os sócios para uma assembleia",
+     "Anunciar o novo horário de funcionamento e convocar os sócios para uma assembleia"
+    ],
+    "correct": 0,
+    "type": "global"
+   },
+   {
+    "q_pt": "Quantos livros cada leitor leva ao mesmo tempo, e por quanto tempo?",
+    "choices_pt": [
+     "Três livros, por dez dias",
+     "Quatro livros, por quinze dias",
+     "Três livros, por quinze dias",
+     "Quatro livros, por dez dias"
+    ],
+    "correct": 2,
+    "type": "detail"
+   },
+   {
+    "q_pt": "O que se exige de quem faz a carteirinha e quanto isso custa?",
+    "choices_pt": [
+     "Só uma identidade com fotografia, sem pagar nada",
+     "Identidade com fotografia e prova de residência, sem pagar nada",
+     "Só uma identidade com fotografia, com uma taxa anual",
+     "Identidade com fotografia e prova de residência, com uma taxa anual"
+    ],
+    "correct": 1,
+    "type": "detail"
+   }
+  ]
+ },
+ {
+  "id": "R-IM-4",
+  "sublevel": "IM",
+  "skill": "reading",
+  "genre": "aviso de condomínio",
+  "title_pt": "Coleta seletiva",
+  "text_pt": [
+   "COMUNICADO — Condomínio Parque das Cerejeiras",
+   "A partir do dia 1º de abril, o condomínio muda a forma de separar o lixo.",
+   "Cada andar recebe dois cestos: um cinza, para o lixo comum, e um azul, para o material reciclável. Os cestos ficam ao lado do elevador de serviço.",
+   "No cesto azul entram papel, papelão, plástico, vidro e latas. Não entram restos de comida, guardanapos usados nem fraldas.",
+   "Os moradores devem lavar rapidamente as embalagens antes de jogá-las no cesto azul. Embalagens sujas vão para o cesto cinza.",
+   "A coleta do cesto azul é feita às terças e quintas, de manhã. A do cesto cinza continua todos os dias, no fim da tarde.",
+   "A cooperativa de reciclagem Novo Rumo compra o material do cesto azul. Esse dinheiro será usado na pintura da área de lazer.",
+   "Cada apartamento recebe dois sacos azuis por semana, na portaria.",
+   "Nas duas primeiras semanas, um funcionário fica ao lado dos cestos, das 8h às 10h, para tirar dúvidas.",
+   "Quem tiver móveis velhos ou aparelhos eletrônicos para descartar deve avisar a portaria. Esse material não pode ficar nos cestos.",
+   "O síndico apresenta o resultado da coleta na reunião de junho.",
+   "A Administração"
+  ],
+  "questions": [
+   {
+    "q_pt": "Qual é o assunto do comunicado?",
+    "choices_pt": [
+     "Uma troca da empresa de coleta, cujo material reciclável rende dinheiro para a área de lazer",
+     "Uma troca da empresa de coleta, cujo material reciclável rende dinheiro para a taxa de condomínio",
+     "Uma nova separação do lixo, cujo material reciclável rende dinheiro para a taxa de condomínio",
+     "Uma nova separação do lixo, cujo material reciclável rende dinheiro para a área de lazer"
+    ],
+    "correct": 3,
+    "type": "global"
+   },
+   {
+    "q_pt": "Para onde vai uma embalagem que não foi lavada antes de ser jogada fora?",
+    "choices_pt": [
+     "No cesto cinza, com o reciclável, recolhido em dois dias da semana",
+     "No cesto azul, com o reciclável, recolhido em dois dias da semana",
+     "No cesto cinza, com o lixo comum, recolhido todos os dias",
+     "No cesto azul, com o lixo comum, recolhido todos os dias"
+    ],
+    "correct": 2,
+    "type": "detail"
+   },
+   {
+    "q_pt": "Nas duas primeiras semanas, quem fica ao lado dos cestos e em que período do dia?",
+    "choices_pt": [
+     "O síndico, de manhã",
+     "O síndico, ao entardecer",
+     "Um funcionário, de manhã",
+     "Um funcionário, ao entardecer"
+    ],
+    "correct": 2,
+    "type": "detail"
+   }
+  ]
+ },
+ {
+  "id": "R-IM-5",
+  "sublevel": "IM",
+  "skill": "reading",
+  "genre": "anúncio de evento",
+  "title_pt": "Caminhada da Primavera",
+  "text_pt": [
+   "2ª Caminhada da Primavera — Parque do Lago",
+   "Domingo, 22 de setembro, às 8h. A saída é em frente ao portão principal do Parque do Lago.",
+   "São dois percursos: um de 3 km, plano, para quem quer passear em família, e outro de 7 km, com uma subida no meio, para quem já caminha com frequência. Os dois terminam no mesmo lugar.",
+   "A inscrição custa R$ 30 e dá direito a uma camiseta e a uma garrafa de água. Crianças até dez anos não pagam, mas também não recebem camiseta.",
+   "As inscrições vão até 18 de setembro, pelo site da prefeitura ou na secretaria de esportes, de segunda a sexta. Não há inscrição no dia do evento.",
+   "No ano passado a caminhada teve setecentos participantes e a organização ficou sem camisetas antes do fim, por isso este ano foram encomendadas mil e duzentas.",
+   "Ao longo do percurso haverá três pontos de água e uma equipe de primeiros socorros. Cachorros podem participar, desde que estejam na guia.",
+   "Todo o dinheiro das inscrições vai para o hospital infantil do município.",
+   "Se chover forte, o evento passa para o domingo seguinte. O aviso é publicado no site da prefeitura até as 6h.",
+   "Realização: Prefeitura de Vila Ramos e Clube Passo Firme."
+  ],
+  "questions": [
+   {
+    "q_pt": "Qual é o objetivo do texto?",
+    "choices_pt": [
+     "Convidar para uma caminhada com inscrição paga, cuja renda vai ao hospital infantil",
+     "Convidar para uma caminhada com inscrição paga, cuja renda vai ao clube organizador",
+     "Convidar para uma caminhada sem inscrição paga, custeada pelo hospital infantil",
+     "Convidar para uma caminhada sem inscrição paga, custeada pelo clube organizador"
+    ],
+    "correct": 0,
+    "type": "global"
+   },
+   {
+    "q_pt": "Por que foram encomendadas mil e duzentas camisetas este ano?",
+    "choices_pt": [
+     "Porque faltaram camisetas para alguns na edição anterior",
+     "Porque as crianças de dez anos ou menos passaram a receber camiseta",
+     "Porque a inscrição ficou mais barata e deve atrair mais gente",
+     "Porque a prefeitura quer vender as sobras para o hospital de crianças"
+    ],
+    "correct": 0,
+    "type": "detail"
+   },
+   {
+    "q_pt": "O que acontece se chover forte no dia da caminhada?",
+    "choices_pt": [
+     "Cancela a edição, com aviso no site até as 6h",
+     "Adia uma semana, com aviso no site até as 6h",
+     "Adia uma semana, com aviso no setor de esportes na véspera",
+     "Cancela a edição, com aviso no setor de esportes na véspera"
+    ],
+    "correct": 1,
+    "type": "detail"
+   }
+  ]
+ },
+ {
+  "id": "R-AL-1",
+  "sublevel": "AL",
+  "skill": "reading",
+  "genre": "notícia de jornal",
+  "title_pt": "O teatro reabre",
+  "text_pt": [
+   "Depois de quatro anos fechado, o Teatro Santa Helena volta a receber público nesta sexta-feira, às 20h, com uma apresentação da companhia local Pé no Palco.",
+   "O teatro foi inaugurado em 1932 e funcionou sem interrupção até fevereiro de 2021. Naquele mês, uma tempestade derrubou parte do telhado durante a madrugada. Ninguém se feriu, porque o teatro estava vazio. A chuva atingiu o palco e a instalação elétrica, e a casa fechou no dia seguinte.",
+   "A reforma custou R$ 8,2 milhões. O governo do estado pagou pouco mais da metade, e o restante saiu do orçamento da prefeitura. O telhado e a rede elétrica foram refeitos por inteiro.",
+   "A plateia também foi refeita. O teatro tinha 620 lugares e agora tem 540. O número caiu porque os corredores ficaram mais largos e porque foram criados lugares para cadeiras de rodas, que antes não existiam. As poltronas novas são de tecido vermelho, da mesma cor das antigas. Foram instalados também ar-condicionado e um elevador entre a entrada e o segundo andar.",
+   "Nos três primeiros dias, os ingressos são gratuitos. Eles são distribuídos na bilheteria uma hora antes de cada sessão, por ordem de chegada. Depois desses três dias, o ingresso passa a custar R$ 20. A bilheteria abre todos os dias às 14h.",
+   "O diretor artístico, Vicente Barroso, disse que o teatro também vai abrir de manhã. Às terças e quintas, a casa vai receber turmas de escolas municipais para assistir aos ensaios e participar de oficinas. “Queremos atender também quem não pode vir à noite”, afirmou."
+  ],
+  "questions": [
+   {
+    "q_pt": "Qual é a ideia central da notícia?",
+    "choices_pt": [
+     "A reabertura do teatro depois de uma reforma longa e cara",
+     "A história do Teatro Santa Helena desde a inauguração, em 1932",
+     "A divergência entre a prefeitura e o governo do estado sobre a obra",
+     "O programa de ensaios abertos para as escolas municipais"
+    ],
+    "correct": 0,
+    "type": "global"
+   },
+   {
+    "q_pt": "Por que o teatro passou a ter menos lugares do que antes?",
+    "choices_pt": [
+     "Porque parte da plateia virou depósito durante os quatro anos de obra",
+     "Porque o telhado novo é mais baixo do que o antigo",
+     "Porque os corredores ficaram mais largos e foram criados lugares para cadeiras de rodas",
+     "Porque a prefeitura pediu a redução para diminuir o custo total da reforma"
+    ],
+    "correct": 2,
+    "type": "detail"
+   },
+   {
+    "q_pt": "Como o público consegue entrar nos espetáculos dos primeiros dias?",
+    "choices_pt": [
+     "Pagando R$ 20 na bilheteria, uma hora antes da sessão",
+     "Fazendo reserva antecipada pelo site da prefeitura",
+     "Comprando ingresso na semana anterior à reabertura",
+     "Pegando ingresso gratuito na bilheteria uma hora antes da sessão"
+    ],
+    "correct": 3,
+    "type": "detail"
+   }
+  ]
+ },
+ {
+  "id": "R-AL-2",
+  "sublevel": "AL",
+  "skill": "reading",
+  "genre": "carta formal",
+  "title_pt": "Resposta a uma reclamação",
+  "text_pt": [
+   "Eletrolar Comércio de Eletrodomésticos Ltda.",
+   "Av. dos Bandeirantes, 1.240 — Campinas, SP",
+   "Campinas, 9 de maio de 2025",
+   "Prezada Senhora Marlene Tavares,",
+   "Recebemos em 2 de maio a reclamação que a senhora registrou em nosso atendimento a respeito do pedido nº 44-7182, e agradecemos a paciência com que aguardou nossa apuração.",
+   "Confirmamos o que a senhora relatou. A geladeira comprada em 18 de abril deveria ter sido entregue em até cinco dias úteis. O caminhão que fazia a rota do seu bairro apresentou defeito no dia previsto e a entrega foi remarcada sem que ninguém a avisasse. Quando o aparelho finalmente chegou, em 30 de abril, a porta apresentava um amassado na parte inferior. Reconhecemos que houve falha em duas etapas do nosso processo, e não apenas atraso.",
+   "Providenciamos a troca do aparelho por outro da mesma linha, já separado em nosso depósito. A entrega será feita na quinta-feira, 15 de maio, em um dos dois períodos que a senhora escolher: das 8h às 12h ou das 13h às 18h. Basta responder a esta carta ou ligar para a central indicando a preferência. A equipe retira a geladeira antiga na mesma visita, e não é necessário guardar a embalagem original.",
+   "O valor do frete, de R$ 180, será devolvido integralmente na mesma forma de pagamento utilizada na compra, em até dez dias úteis, independentemente da troca. Além disso, registramos em seu cadastro um crédito de R$ 150 para uso em qualquer de nossas lojas, sem prazo de validade.",
+   "Lamentamos o transtorno e permanecemos à disposição.",
+   "Atenciosamente,",
+   "Rui Sampaio — Gerência de Atendimento ao Cliente"
+  ],
+  "questions": [
+   {
+    "q_pt": "Qual é o objetivo principal da carta?",
+    "choices_pt": [
+     "Responder a uma reclamação, reconhecer as falhas e apresentar uma solução",
+     "Informar a cliente de que o pedido dela foi cancelado",
+     "Cobrar da cliente o valor do frete de uma entrega",
+     "Divulgar um crédito promocional válido em todas as lojas"
+    ],
+    "correct": 0,
+    "type": "global"
+   },
+   {
+    "q_pt": "Segundo a carta, o que exatamente deu errado no pedido da cliente?",
+    "choices_pt": [
+     "O aparelho entregue era de outra linha e chegou muito fora do prazo",
+     "O caminhão quebrou, a cliente não foi avisada e o aparelho chegou amassado",
+     "A cliente escolheu um período de entrega que a empresa não conseguiu cumprir",
+     "A embalagem original foi perdida no depósito e a entrega precisou ser remarcada"
+    ],
+    "correct": 1,
+    "type": "detail"
+   },
+   {
+    "q_pt": "O que acontece com o valor do frete?",
+    "choices_pt": [
+     "Vira um crédito de R$ 150 para uso nas lojas da empresa",
+     "É descontado do preço da geladeira nova",
+     "É devolvido por inteiro, mesmo que a troca não ocorra",
+     "Só é devolvido depois que a geladeira antiga for retirada"
+    ],
+    "correct": 2,
+    "type": "detail"
+   }
+  ]
+ },
+ {
+  "id": "R-AL-3",
+  "sublevel": "AL",
+  "skill": "reading",
+  "genre": "perfil de revista",
+  "title_pt": "A apicultora da serra",
+  "text_pt": [
+   "Quem sobe a estrada de terra que sai de Aiuruoca, no sul de Minas, encontra depois de meia hora um portão azul e um aviso escrito à mão: “Abelhas trabalhando, feche o portão”. É a propriedade de Anésia Ferraz, 63 anos, que produz mel na serra há doze anos.",
+   "Não foi o plano dela. Anésia trabalhou vinte e dois anos como enfermeira em Juiz de Fora e voltou para a terra da família quando a mãe adoeceu. Ficou para cuidar dela e, para ocupar as manhãs, aceitou de um vizinho quatro caixas de abelhas que ele ia descartar. “Eu achava que aquilo ia durar um verão”, conta.",
+   "Hoje são sessenta caixas espalhadas por três pontos da encosta, escolhidos pela floração: as mais altas ficam perto de um trecho de mata que dá flor em julho, as do meio acompanham o eucalipto e as mais baixas, o cafezal do vizinho. Cada mudança de ponto rende um mel de cor e sabor diferentes, e é essa diferença que Anésia vende.",
+   "A produção sai por uma cooperativa de doze famílias, criada em 2019 para dividir o custo do laboratório de análise. Antes disso, cada produtor vendia na beira da estrada e recebia o preço que o comprador oferecesse. Com o selo da cooperativa, o mel passou a chegar a lojas de São Paulo e o preço quase dobrou.",
+   "O filho mais novo, Tiago, voltou de Belo Horizonte no ano passado e cuida agora da parte que a mãe menos gosta: notas fiscais, rótulos e o perfil da cooperativa na internet. Anésia planeja, para o próximo inverno, montar uma sala de extração na própria fazenda. “Aí eu paro de emprestar a do compadre”, diz, rindo, “e passo a emprestar a minha.”"
+  ],
+  "questions": [
+   {
+    "q_pt": "Qual é o assunto central do texto?",
+    "choices_pt": [
+     "A história da cooperativa de apicultores do sul de Minas",
+     "As dificuldades de vender mel na beira da estrada",
+     "A trajetória de uma apicultora e o crescimento da produção dela",
+     "A volta de um jovem de Belo Horizonte para a fazenda da família"
+    ],
+    "correct": 2,
+    "type": "global"
+   },
+   {
+    "q_pt": "Como Anésia começou a trabalhar com abelhas?",
+    "choices_pt": [
+     "Comprou as primeiras caixas com o dinheiro que juntou como enfermeira em Juiz de Fora",
+     "Aceitou de um vizinho quatro caixas que ele ia jogar fora",
+     "Herdou da mãe as caixas que já existiam na propriedade da família",
+     "Entrou na cooperativa de doze famílias e recebeu delas caixas emprestadas"
+    ],
+    "correct": 1,
+    "type": "detail"
+   },
+   {
+    "q_pt": "O que mudou para os produtores depois da criação da cooperativa?",
+    "choices_pt": [
+     "Passaram a produzir um único tipo de mel, com cor e sabor padronizados o ano todo",
+     "Deixaram de precisar do laboratório de análise que dividiam entre si",
+     "Passaram a vender na beira da estrada pelo preço que quisessem",
+     "Ganharam um selo, chegaram a lojas de São Paulo e viram o preço quase dobrar"
+    ],
+    "correct": 3,
+    "type": "detail"
+   }
+  ]
+ },
+ {
+  "id": "R-AL-4",
+  "sublevel": "AL",
+  "skill": "reading",
+  "genre": "relatório",
+  "title_pt": "Programa Ler Junto",
+  "text_pt": [
+   "Relatório anual do programa Ler Junto — exercício de 2024",
+   "O Ler Junto é um programa de leitura mantido pelo Instituto Aurora em parceria com sete escolas municipais de Governador Valadares. O objetivo é aumentar o tempo de leitura fora da sala de aula entre alunos do quarto e do quinto anos.",
+   "Em 2024 o programa atendeu 1.180 alunos, contra 940 no ano anterior. O crescimento se deve à entrada de duas escolas novas em março. O número de voluntários subiu menos: passou de 62 para 71. Assim, cada voluntário passou a atender mais alunos do que em 2023.",
+   "As atividades seguiram o formato dos anos anteriores. Cada turma recebe uma caixa com quarenta títulos, trocada a cada dois meses, e um encontro semanal de quarenta minutos conduzido por um voluntário. A novidade do ano foi o empréstimo de livros para casa nos fins de semana, adotado a partir de agosto em quatro das sete escolas.",
+   "A avaliação aplicada em novembro mostrou avanço na compreensão de textos narrativos e resultado estável em textos informativos. Entre as escolas que adotaram o empréstimo de fim de semana, o avanço foi maior.",
+   "A principal dificuldade do ano foi a saída de voluntários: 24 deixaram o programa antes de completar seis meses, quase todos por conflito de horário.",
+   "Para 2025, o instituto propõe encontros em dois turnos, a extensão do empréstimo de fim de semana às sete escolas e a contratação de um coordenador de campo em tempo integral."
+  ],
+  "questions": [
+   {
+    "q_pt": "O que este relatório apresenta?",
+    "choices_pt": [
+     "Um pedido de recursos para levar o programa a novas cidades do estado",
+     "O balanço de um ano do programa de leitura e os planos para o ano seguinte",
+     "Uma comparação entre as sete escolas municipais e as escolas particulares da cidade",
+     "Uma pesquisa sobre os hábitos de leitura dos alunos do quarto e do quinto anos"
+    ],
+    "correct": 1,
+    "type": "global"
+   },
+   {
+    "q_pt": "O que aconteceu com o número de alunos por voluntário em 2024?",
+    "choices_pt": [
+     "Aumentou, porque os alunos cresceram mais do que os voluntários",
+     "Diminuiu, porque entraram duas escolas novas em março",
+     "Ficou igual ao de 2023, porque os dois números subiram juntos",
+     "Aumentou, porque as caixas de livros passaram a ser trocadas a cada dois meses"
+    ],
+    "correct": 0,
+    "type": "detail"
+   },
+   {
+    "q_pt": "Qual foi a principal dificuldade do programa em 2024?",
+    "choices_pt": [
+     "A falta de livros novos para as caixas das turmas",
+     "A entrada de duas escolas novas em março",
+     "A saída de voluntários antes de completar seis meses",
+     "A queda no número de alunos atendidos pelo programa"
+    ],
+    "correct": 2,
+    "type": "detail"
+   }
+  ]
+ },
+ {
+  "id": "R-AL-5",
+  "sublevel": "AL",
+  "skill": "reading",
+  "genre": "notícia de jornal",
+  "title_pt": "Um acervo de fotografias",
+  "text_pt": [
+   "O Museu da Cidade recebeu na semana passada a doação do acervo de fotografias de Osvaldo Lemes, morto em 2023 aos 91 anos. São cerca de doze mil negativos, quase todos feitos entre 1958 e 1994. As caixas estão guardadas numa sala do segundo andar do museu.",
+   "Lemes trabalhou quarenta anos para um jornal da região e fotografou enchentes, greves, festas de igreja e a construção da avenida central. Usou a mesma câmera durante quase toda a carreira. Ao se aposentar, levou para casa os negativos que o jornal ia jogar fora e guardou tudo em caixas de sapato, numeradas a lápis.",
+   "Foram essas caixas que a filha, a professora Íris Lemes, encontrou ao esvaziar o apartamento do pai. Ela procurou primeiro a universidade, que não tinha espaço, e depois o museu. A negociação levou oito meses. O museu aceitou a única condição da família: as fotografias ficam disponíveis para consulta gratuita.",
+   "O museu calcula dois anos para limpar, digitalizar e organizar os negativos. O trabalho começa pelos anos 1960, período de que a instituição tem menos imagens. Cada negativo será fotografado em alta resolução e receberá um número de registro. Duas pessoas foram contratadas para essa tarefa.",
+   "Uma primeira exposição está prevista para o segundo semestre do ano que vem, com cerca de oitenta imagens. A entrada será gratuita. A maior parte dessas fotografias nunca foi publicada: o jornal usava uma foto por matéria e devolvia o resto ao arquivo. “Vamos mostrar imagens que ninguém viu”, disse a diretora do museu, Neide Portela."
+  ],
+  "questions": [
+   {
+    "q_pt": "De que trata a notícia?",
+    "choices_pt": [
+     "Da doação de um acervo de fotografias a um museu e do que será feito com ele",
+     "Do fechamento do jornal para o qual o fotógrafo trabalhou quarenta anos",
+     "Da vida do fotógrafo Osvaldo Lemes, desde a estreia no jornal até a morte, em 2023",
+     "Da contratação de duas pessoas para limpar e digitalizar negativos antigos"
+    ],
+    "correct": 0,
+    "type": "global"
+   },
+   {
+    "q_pt": "Como os negativos foram parar na casa do fotógrafo?",
+    "choices_pt": [
+     "A filha os comprou do jornal depois da morte do pai",
+     "O museu os emprestou a ele para uma exposição que não aconteceu",
+     "Ele os levou ao se aposentar, porque o jornal ia jogá-los fora",
+     "A universidade os devolveu à família por falta de espaço"
+    ],
+    "correct": 2,
+    "type": "detail"
+   },
+   {
+    "q_pt": "Por que a maior parte dessas imagens nunca foi publicada?",
+    "choices_pt": [
+     "Porque os negativos estavam danificados e ainda precisam ser limpos",
+     "Porque o jornal não tinha condições técnicas de imprimir tantas fotografias",
+     "Porque a família proibiu a publicação durante os oito meses de negociação",
+     "Porque o jornal publicava uma foto por matéria e arquivava as demais"
+    ],
+    "correct": 3,
+    "type": "detail"
+   }
+  ]
+ },
+ {
+  "id": "R-AM-1",
+  "sublevel": "AM",
+  "skill": "reading",
+  "genre": "reportagem",
+  "title_pt": "Árvores na calçada",
+  "text_pt": [
+   "Em 2019, a prefeitura de Marituba anunciou que plantaria trinta mil árvores nas calçadas da cidade em cinco anos. A espécie escolhida foi a ficus, comum na arborização urbana brasileira porque cresce depressa e forma copa densa em poucos anos.",
+   "Foi exatamente o que aconteceu. Ao fim do terceiro ano, bairros inteiros haviam passado de calçadas escaldantes a ruas sombreadas. Uma medição feita pela universidade registrou, nas vias com árvores, temperaturas de superfície até 6 °C menores do que nas ruas vizinhas sem árvores.",
+   "O problema apareceu por baixo. As raízes da ficus são rasas e fortes. Em 2023, a secretaria de obras já contava mais de quatro mil metros de calçada levantada e dezenove entupimentos em canos de esgoto. O custo dos reparos, somado ao das podas embaixo dos fios de energia, ficou acima do valor gasto no plantio. A prefeitura recebeu 612 reclamações sobre calçadas em 2023, contra 47 em 2019. Em três bairros, moradores idosos passaram a andar pela rua para não tropeçar nas calçadas quebradas.",
+   "A prefeitura suspendeu o programa por seis meses. Ele voltou com uma lista de doze espécies de porte menor e raiz profunda, distribuídas conforme a largura da calçada e a presença de fios. As mudas novas vêm de dois viveiros municipais. As ficus adultas, porém, não foram arrancadas: um estudo encomendado pela secretaria concluiu que trocá-las custaria três vezes mais do que refazer as calçadas em volta delas, com um espaço maior de terra ao redor do tronco.",
+   "Hoje o programa soma dezoito mil árvores, bem abaixo da meta. Desde 2024, cada muda só é plantada depois que a equipe mede a largura da calçada e a distância até os canos de esgoto e anota os dois números na ficha do plantio. Essa medição não era feita nos quatro primeiros anos do programa."
+  ],
+  "questions": [
+   {
+    "q_pt": "Qual é a ideia central da reportagem?",
+    "choices_pt": [
+     "Um programa de plantio de árvores esfriou as ruas, estragou as calçadas e teve de ser mudado",
+     "A ficus é uma espécie inadequada para a arborização de cidades brasileiras",
+     "A prefeitura de Marituba não cumpriu a meta de trinta mil árvores por falta de dinheiro",
+     "As calçadas mais largas são a melhor solução para o plantio de árvores nas cidades"
+    ],
+    "correct": 0,
+    "type": "global"
+   },
+   {
+    "q_pt": "Por que as ficus adultas não foram arrancadas?",
+    "choices_pt": [
+     "Porque as podas embaixo dos fios de energia deixaram de ser necessárias",
+     "Porque a medição da universidade mostrou que elas reduziram a temperatura das ruas",
+     "Porque um estudo mostrou que trocá-las custaria três vezes mais do que refazer as calçadas",
+     "Porque a lista das doze espécies de porte menor ainda não estava pronta em 2023"
+    ],
+    "correct": 2,
+    "type": "detail"
+   },
+   {
+    "q_pt": "O que a medição adotada em 2024 indica sobre os primeiros anos do programa?",
+    "choices_pt": [
+     "Que a prefeitura pretende voltar a plantar ficus nas ruas mais largas",
+     "Que as mudas eram plantadas sem verificar se a calçada comportava a árvore",
+     "Que a meta de trinta mil árvores foi abandonada por falta de dinheiro",
+     "Que os moradores escolhiam a espécie plantada em frente à casa deles"
+    ],
+    "correct": 1,
+    "type": "inference"
+   }
+  ]
+ },
+ {
+  "id": "R-AM-2",
+  "sublevel": "AM",
+  "skill": "reading",
+  "genre": "artigo de revista",
+  "title_pt": "O defeso da baía",
+  "text_pt": [
+   "Em 2016, as sessenta famílias que pescam na baía de Itaporanga aceitaram algo que os órgãos ambientais vinham propondo sem sucesso havia uma década: fechar a pesca do camarão por quatro meses ao ano, de dezembro a março.",
+   "A adesão não veio de um argumento técnico. Veio de uma planilha. Um pesquisador da universidade estadual passou dois anos registrando, com os próprios pescadores, o peso e o tamanho do que entrava nos barcos. Ao fim, mostrou que o camarão desembarcado em 2015 era, em média, um terço menor do que o de 2005, e que o número de horas no mar para encher o mesmo caixote havia dobrado. “Eles não precisavam da minha conclusão”, diz o pesquisador, Aldo Bezerra. “Precisavam ver o próprio número.”",
+   "Os dois primeiros anos foram duros. Sem o defeso pago pelo governo federal, que só saiu em 2018, muitas famílias viveram de biscate e de dívida no mercado da vila. Onze desistiram e venderam o barco, e a colônia chegou a discutir o fim do acordo em duas assembleias seguidas.",
+   "A partir de 2019, o desembarque de camarão voltou a subir e hoje está 40% acima do de 2015. O resultado mais comentado na baía, porém, não é o camarão. É a pescada-amarela, espécie que quase não aparecia nas redes e que se tornou o principal item de renda no período fechado, justamente por se alimentar de camarão jovem.",
+   "Esse ganho inesperado trouxe consigo um impasse que os pescadores discutem em assembleia desde o ano passado: parte do grupo quer estender o defeso a cinco meses para proteger também a pescada, e parte teme que qualquer mês a mais reabra as feridas de 2017. A discussão, observa Bezerra, deixou de ser sobre biologia."
+  ],
+  "questions": [
+   {
+    "q_pt": "Qual é a ideia principal do artigo?",
+    "choices_pt": [
+     "A pescada-amarela substituiu o camarão como principal fonte de renda da baía",
+     "O defeso pago pelo governo federal foi decisivo para o sucesso do acordo",
+     "Um acordo de defeso funcionou, mas a custos altos e com efeitos que ninguém previa",
+     "A universidade estadual convenceu os pescadores com um argumento técnico consistente"
+    ],
+    "correct": 2,
+    "type": "global"
+   },
+   {
+    "q_pt": "O que fez os pescadores aceitarem o defeso depois de dez anos recusando?",
+    "choices_pt": [
+     "A promessa de que o governo federal pagaria o período parado",
+     "Os dados sobre o próprio desembarque, levantados por eles junto com o pesquisador",
+     "A desistência de onze famílias, que reduziu a pressão sobre a baía",
+     "O crescimento da pescada-amarela observado nos primeiros anos"
+    ],
+    "correct": 1,
+    "type": "detail"
+   },
+   {
+    "q_pt": "Ao dizer que a discussão deixou de ser sobre biologia, o que o pesquisador quer indicar?",
+    "choices_pt": [
+     "Que os dados sobre a pescada-amarela ainda não foram confirmados pela universidade estadual",
+     "Que os pescadores deixaram de confiar no trabalho técnico do pesquisador e da universidade",
+     "Que o defeso de quatro meses já não produz efeito sobre o estoque de camarão",
+     "Que o que decide o impasse agora é o risco que cada família aceita correr"
+    ],
+    "correct": 3,
+    "type": "inference"
+   }
+  ]
+ },
+ {
+  "id": "R-AM-3",
+  "sublevel": "AM",
+  "skill": "reading",
+  "genre": "relato biográfico",
+  "title_pt": "O engenheiro das nascentes",
+  "text_pt": [
+   "Quando se aposentou do departamento de estradas, em 2011, Jorge Anselmo comprou um GPS de mão e começou a passar as manhãs andando pelo mato. Não era exercício. Ele estava fazendo um cadastro das nascentes que ainda restavam na região onde nasceu.",
+   "Anselmo cresceu numa fazenda que hoje é bairro e ouvia dos mais velhos os nomes de nascentes que já tinham secado. O plano inicial era modesto: marcar as que sobravam na bacia do córrego Sabiá, uma área de doze quilômetros quadrados nos fundos da cidade. O trabalho levou seis anos e resultou em cento e quarenta pontos. Cada ponto tem foto, coordenada, uma medida de quanta água sai por minuto, feita com balde e cronômetro, e uma ficha escrita à mão sobre o terreno em volta.",
+   "O levantamento circulou entre vizinhos, depois numa reunião de bairro e por fim num seminário da universidade. Ali, uma professora de hidrologia comparou os pontos com o mapa oficial da empresa de água e viu que quatro deles não apareciam no mapa. Os quatro ficavam acima do nível do reservatório que abastece o município. Procurada, a empresa confirmou a falha.",
+   "O que veio depois ninguém esperava. Um desses quatro pontos ficava dentro da área de um bairro novo, já aprovado pela prefeitura três anos antes, com as máquinas previstas para o mês seguinte. A obra foi parada e o desenho das ruas teve de ser refeito. O projeto perdeu onze lotes e a área de lazer mudou de lugar. Depois de recorrer duas vezes, a construtora doou a faixa de terra ao município como área de preservação.",
+   "Anselmo tem hoje 74 anos e continua saindo de casa às seis da manhã. Recusou dois convites para assessorar a prefeitura. No mesmo mês em que recusou o segundo, comprou um GPS novo."
+  ],
+  "questions": [
+   {
+    "q_pt": "Qual é a ideia central do texto?",
+    "choices_pt": [
+     "Um levantamento feito por conta própria acabou tendo consequências muito maiores do que o plano inicial",
+     "A cidade perdeu a maior parte de suas nascentes por causa de bairros novos irregulares",
+     "A universidade e a empresa de água corrigiram os mapas oficiais do município",
+     "Um engenheiro aposentado dedicou seis anos a um hobby sem utilidade prática"
+    ],
+    "correct": 0,
+    "type": "global"
+   },
+   {
+    "q_pt": "Como o trabalho de Anselmo chegou a ter efeito sobre o bairro novo?",
+    "choices_pt": [
+     "A prefeitura o contratou como assessor e ele revisou os projetos que já tinham sido aprovados três anos antes",
+     "Ele entregou o levantamento à empresa de água, que pediu a parada imediata da obra do bairro",
+     "Numa reunião de bairro, os vizinhos identificaram a nascente ameaçada e recorreram à justiça contra a obra",
+     "Uma professora viu no seminário que quatro pontos faltavam no mapa, e um ficava dentro do bairro novo"
+    ],
+    "correct": 3,
+    "type": "detail"
+   },
+   {
+    "q_pt": "O que a última frase do texto sugere sobre Anselmo?",
+    "choices_pt": [
+     "Que ele guarda mágoa da prefeitura, que só o procurou depois da repercussão",
+     "Que ele pretende cobrar da construtora pelos onze lotes perdidos",
+     "Que ele prefere continuar o trabalho de campo a ocupar um cargo",
+     "Que ele considera encerrada a sua contribuição para a cidade onde nasceu"
+    ],
+    "correct": 2,
+    "type": "inference"
+   }
+  ]
+ },
+ {
+  "id": "R-AM-4",
+  "sublevel": "AM",
+  "skill": "reading",
+  "genre": "reportagem econômica",
+  "title_pt": "Onde moram os alunos do campus",
+  "text_pt": [
+   "Em 2018, o governo do estado confirmou a instalação de um campus universitário em Itapira, cidade de trinta e nove mil habitantes, e a prefeitura começou a preparar a chegada dos alunos. Em dois anos aprovou catorze prédios de quitinetes no bairro São Judas, ao lado do terreno do campus: trezentas e doze unidades. Entre 2018 e 2021, o preço médio de um quarto na cidade subiu de R$ 380 para R$ 620.",
+   "O campus abriu em março de 2021, com cinco cursos e novecentas vagas. Todas as vagas foram preenchidas desde então: em 2023 havia novecentos e quatro matriculados e lista de espera em dois cursos.",
+   "O que a cidade não previu apareceu na lista de endereços da secretaria acadêmica. Em 2023, 61% dos alunos moravam em Mogi Guaçu, a trinta e quatro quilômetros, e faziam o trajeto todos os dias. Apenas cento e noventa tinham alugado em Itapira. As aulas dos cinco cursos são das 19h às 22h40, e 72% dos matriculados trabalham durante o dia, quase todos na cidade vizinha.",
+   "Um levantamento da associação de proprietários registrou 40% das quitinetes vazias em 2023. O preço médio do quarto caiu para R$ 360, abaixo do valor de 2018, e mesmo assim os alunos não se mudaram. Metade dos proprietários do bairro São Judas passou a alugar por diária a acompanhantes de pacientes do hospital regional.",
+   "O transporte entre as duas cidades cresceu. Três empresas de van fazem hoje o trajeto, e as viagens noturnas passaram de seis para trinta e uma por dia entre 2021 e 2024. A linha intermunicipal criou dois horários depois das 23h. Em 2024, a prefeitura entregou, em frente ao portão do campus, um ponto coberto com sessenta lugares e uma área de embarque para as vans. O plano do bairro São Judas, aprovado em 2019, previa uma praça nesse mesmo terreno."
+  ],
+  "questions": [
+   {
+    "q_pt": "Qual é a ideia central da reportagem?",
+    "choices_pt": [
+     "O campus aberto em 2021 não conseguiu preencher as vagas dos seus cinco cursos noturnos",
+     "A cidade se preparou para receber os alunos como moradores, mas eles continuaram morando na cidade vizinha",
+     "As empresas de van substituíram a linha intermunicipal no transporte dos alunos entre as duas cidades",
+     "A alta do aluguel impediu que os alunos do campus alugassem quartos no bairro São Judas"
+    ],
+    "correct": 1,
+    "type": "global"
+   },
+   {
+    "q_pt": "Segundo a reportagem, por que a maioria dos alunos não se mudou para Itapira?",
+    "choices_pt": [
+     "Porque o preço médio do quarto na cidade subiu para R$ 620 entre 2018 e 2021",
+     "Porque os catorze prédios de quitinetes do bairro São Judas ficaram prontos depois de 2023",
+     "Porque trabalham de dia na cidade vizinha e as aulas do campus são à noite",
+     "Porque as vans e a linha intermunicipal criaram horários de viagem depois das 23h"
+    ],
+    "correct": 2,
+    "type": "detail"
+   },
+   {
+    "q_pt": "O que as obras entregues em 2024 em frente ao campus dão a entender?",
+    "choices_pt": [
+     "Que a prefeitura pretende aprovar novos prédios de quitinetes no bairro São Judas",
+     "Que a cidade passou a planejar para alunos que moram em outro município",
+     "Que as empresas de van deixaram de atender o trajeto entre as duas cidades",
+     "Que o campus vai passar a oferecer os cinco cursos também durante o dia"
+    ],
+    "correct": 1,
+    "type": "inference"
+   }
+  ]
+ },
+ {
+  "id": "R-AM-5",
+  "sublevel": "AM",
+  "skill": "reading",
+  "genre": "relatório técnico",
+  "title_pt": "Entregas noturnas no centro",
+  "text_pt": [
+   "Entre março e novembro de 2024, a Secretaria de Mobilidade realizou um projeto-piloto de entregas noturnas em nove quadras do centro histórico de Piraquara. Quarenta e dois estabelecimentos passaram a receber mercadorias entre 22h e 5h, em vez do horário comercial. O objetivo era reduzir os congestionamentos do fim da tarde.",
+   "Os números de trânsito melhoraram. O tempo médio de travessia das quadras monitoradas caiu 22% entre 8h e 18h, e o número de multas por parada em fila dupla caiu quase pela metade. Os comerciantes também relataram uma redução no tempo de descarga, já que os caminhões passaram a encontrar as vagas livres.",
+   "A partir do quarto mês, apareceu um efeito que o projeto não previa. A central de atendimento da prefeitura passou a receber reclamações de moradores das ruas Bento Ferraz e Marechal Lima, onde o piloto coincidia com prédios residenciais. Foram 137 registros em cinco meses, quase todos sobre o barulho de portas de aço, de carrinhos de carga e de conversa alta na calçada. Duas medições noturnas encontraram picos de 71 decibéis na frente dos prédios, acima do limite de 55 decibéis fixado para a zona.",
+   "As reclamações se concentraram em poucas empresas. Das quarenta e duas empresas participantes, nove concentraram 84% dos registros, e nenhuma delas havia adaptado o equipamento. Os três estabelecimentos que instalaram, por conta própria, roldanas de borracha nas portas e rampas revestidas não geraram nenhuma reclamação.",
+   "A secretaria vai manter o programa em 2025 com três exigências novas: uma vistoria de ruído antes da entrada de cada estabelecimento, a proibição de operar em ruas só de moradia e um canal direto de reclamação, com resposta em 48 horas. A ampliação para outras regiões da cidade fica suspensa até o fim de uma segunda fase de monitoramento."
+  ],
+  "questions": [
+   {
+    "q_pt": "O que o relatório conclui sobre o projeto-piloto?",
+    "choices_pt": [
+     "Que ele deve ser encerrado, porque o barulho noturno superou os ganhos no trânsito",
+     "Que ele deve ser ampliado imediatamente às demais regiões da cidade, sem novas exigências",
+     "Que ele não permitiu conclusões, porque as duas medições de ruído foram insuficientes",
+     "Que ele melhorou o trânsito e vai continuar, com novas exigências contra o barulho"
+    ],
+    "correct": 3,
+    "type": "global"
+   },
+   {
+    "q_pt": "O que as nove empresas que concentraram as reclamações tinham em comum?",
+    "choices_pt": [
+     "Todas ficavam nas ruas Bento Ferraz e Marechal Lima",
+     "Nenhuma delas havia adaptado o equipamento",
+     "Todas entraram no piloto a partir do quarto mês",
+     "Todas receberam multa por parada em fila dupla"
+    ],
+    "correct": 1,
+    "type": "detail"
+   },
+   {
+    "q_pt": "O que se depreende do texto sobre a escolha das nove quadras do piloto?",
+    "choices_pt": [
+     "Que ela não levou em conta a presença de moradores",
+     "Que o horário das 22h às 5h era curto demais para quarenta e duas empresas",
+     "Que a secretaria já esperava as reclamações de ruído desde o início",
+     "Que o piloto deveria ter durado mais de nove meses para produzir dados confiáveis"
+    ],
+    "correct": 0,
+    "type": "inference"
+   }
+  ]
+ },
+ {
+  "id": "R-S-1",
+  "sublevel": "S",
+  "skill": "reading",
+  "genre": "editorial",
+  "title_pt": "O centro e o trabalho remoto",
+  "text_pt": [
+   "Poucas previsões foram feitas com tanta segurança, e tão cedo, quanto a do esvaziamento definitivo dos centros urbanos. Bastaram alguns trimestres de escritórios fechados para que se anunciasse o fim de uma forma de cidade que levou dois séculos para se constituir. Convém, cinco anos depois, examinar o que exatamente foi previsto — e o que se está observando.",
+   "O argumento tinha uma premissa razoável: se a proximidade física deixasse de ser condição do trabalho de escritório, o preço que se paga por ela deixaria de se justificar. Dessa premissa, porém, extraiu-se uma conclusão que ela não sustenta. Que a proximidade se torne dispensável para uma tarefa não implica que se torne indiferente para todas as demais. O centro nunca foi apenas o lugar onde se datilografava; foi, e continua sendo, o único ponto de uma região metropolitana onde encontros não planejados são estatisticamente prováveis.",
+   "É essa probabilidade — e não a mesa — que sustenta o valor do solo urbano. Ela explica por que os escritórios encolheram sem que os aluguéis desabassem, por que a vacância se concentrou em edifícios antigos e periféricos ao próprio centro, e por que empresas que anunciaram a dispersão total acabaram por manter um endereço menor no mesmo quarteirão. O que se contraiu não foi a centralidade: foi a metragem por funcionário.",
+   "Nada disso garante um final feliz. Se a redução de área se aprofundar sem que outros usos ocupem o espaço vago, teremos centros com menos gente durante o dia e nenhuma gente à noite — a pior das combinações possíveis. A hipótese que merece atenção não é a do esvaziamento, mas a da monofuncionalidade sobrevivente: um centro que continua caro, continua movimentado às onze da manhã e permanece deserto às oito da noite.",
+   "É aí que a política urbana teria algo a fazer, e é justamente aí que ela tem feito menos. Discute-se com afinco o percentual de dias presenciais das empresas, assunto sobre o qual nenhuma prefeitura decide coisa alguma, enquanto a conversão de andares vazios em moradia continua travada por exigências redigidas quando o problema era outro. Não é o trabalho remoto que ameaça o centro. É a nossa disposição de tratá-lo como se ainda fosse 2015."
+  ],
+  "questions": [
+   {
+    "q_pt": "Qual é a tese central do editorial?",
+    "choices_pt": [
+     "A previsão de esvaziamento partiu de uma inferência falha; o risco real é um centro caro e monofuncional",
+     "O trabalho remoto esvaziou os centros urbanos e a política pública não soube reagir a tempo",
+     "A vacância dos escritórios se explica apenas pela idade dos edifícios, e não pelo trabalho remoto",
+     "As prefeituras deveriam regular o percentual de dias presenciais que as empresas exigem de seus funcionários"
+    ],
+    "correct": 0,
+    "type": "global"
+   },
+   {
+    "q_pt": "Que evidências o texto apresenta para sustentar que a centralidade não se contraiu?",
+    "choices_pt": [
+     "Os aluguéis não desabaram, a vacância se concentrou em prédios antigos e as empresas ficaram no quarteirão",
+     "O número de trabalhadores presentes no centro voltou exatamente aos níveis anteriores à pandemia",
+     "A conversão de andares vazios em moradia avançou bem mais rápido do que se previa",
+     "A metragem por funcionário voltou a crescer nos edifícios mais bem localizados do centro"
+    ],
+    "correct": 0,
+    "type": "detail"
+   },
+   {
+    "q_pt": "Qual é a atitude do autor em relação ao debate público sobre o tema?",
+    "choices_pt": [
+     "Considera-o equilibrado, ainda que dependente de dados que só o tempo poderá fornecer",
+     "Considera-o alarmista, mas útil, por ter antecipado um risco que agora começa a se confirmar",
+     "Considera-o mal dirigido: discute-se o que não se decide e ignora-se o que se poderia mudar",
+     "Considera-o irrelevante, já que o próprio mercado corrigirá sozinho a vacância dos escritórios"
+    ],
+    "correct": 2,
+    "type": "inference"
+   }
+  ]
+ },
+ {
+  "id": "R-S-2",
+  "sublevel": "S",
+  "skill": "reading",
+  "genre": "ensaio de revista acadêmica",
+  "title_pt": "O arquivo e o esquecimento",
+  "text_pt": [
+   "Há um consenso confortável segundo o qual digitalizar é preservar. Ele repousa numa analogia com o objeto físico: como o papel se deteriora e o arquivo digital não se deteriora do mesmo modo, transferir o conteúdo de um suporte para o outro pareceria resolver o problema da duração. A analogia é sedutora e, no essencial, equivocada.",
+   "O documento em papel dispensa mediação. Um manuscrito do século XVII sobrevive à indiferença de dez gerações e volta a ser legível assim que alguém o abre. O arquivo digital, ao contrário, só existe enquanto houver quem o migre: um formato depende de um programa, o programa de um sistema, o sistema de um hardware, e cada elo dessa cadeia tem uma vida útil medida em anos. A preservação digital não é um estado, é um verbo no presente contínuo. O que se chama de acervo é, na verdade, uma obrigação recorrente que alguém precisa continuar assumindo.",
+   "Daí decorre uma consequência que raramente se enuncia. A escolha do que digitalizar não é uma escolha técnica de ordem, é uma escolha material sobre o que continuará a existir. Cada seleção institui uma hierarquia, e a hierarquia se torna invisível assim que o catálogo fica pronto: quem consulta o repositório encontra o que foi digitalizado e conclui, sem má-fé, que aquilo é o que havia. O arquivo digital não apenas preserva; ele produz o esquecimento daquilo que deixou de fora, e o produz com uma eficiência que o arquivo de papel jamais teve, porque não deixa prateleira vazia à vista.",
+   "Seria injusto ler nisso uma condenação da digitalização. O ponto é outro: nenhuma tecnologia de preservação é neutra quanto ao que preserva, e a nossa tem a peculiaridade de apagar os próprios vestígios da seleção. O arquivo de papel exibia suas lacunas; o digital as dissolve na aparência de completude.",
+   "Se essa análise procede, então o critério de avaliação de uma política de acervos precisa mudar de lugar. Não se deve perguntar quantos itens foram digitalizados — número que cresce sempre e nada informa —, mas se a instituição documentou o que decidiu não digitalizar, e por quê. Um repositório sem esse registro é, no sentido próprio do termo, um arquivo sem memória."
+  ],
+  "questions": [
+   {
+    "q_pt": "Qual é o argumento principal do ensaio?",
+    "choices_pt": [
+     "Que a digitalização de acervos deveria ser interrompida até que os formatos se estabilizem",
+     "Que o papel é um suporte mais confiável e deve continuar sendo o padrão dos arquivos",
+     "Que digitalizar não equivale a preservar, e que a seleção envolvida produz um esquecimento que se torna invisível",
+     "Que as instituições digitalizam pouco e precisam ampliar o número de itens de seus repositórios"
+    ],
+    "correct": 2,
+    "type": "global"
+   },
+   {
+    "q_pt": "Em que consiste, segundo o texto, a diferença decisiva entre o documento em papel e o arquivo digital?",
+    "choices_pt": [
+     "O papel é mais barato de armazenar e dispensa qualquer forma de catálogo",
+     "O papel volta a ser legível sozinho; o digital só subsiste se alguém o migrar continuamente",
+     "O papel permite apenas a consulta presencial, ao passo que o digital permite a remota",
+     "O papel se deteriora com rapidez previsível, ao passo que o digital não se deteriora"
+    ],
+    "correct": 1,
+    "type": "detail"
+   },
+   {
+    "q_pt": "O que o autor pretende ao encerrar chamando um repositório sem registro de exclusões de “arquivo sem memória”?",
+    "choices_pt": [
+     "Sugerir que tais repositórios acabam perdendo seus dados por falta de manutenção contínua",
+     "Marcar um paradoxo: o lugar que guarda memória é o que menos registra as próprias escolhas",
+     "Reconhecer que nenhuma instituição consegue documentar por inteiro aquilo que decide excluir",
+     "Recomendar que os repositórios passem a arquivar também os catálogos antigos que foram feitos em papel"
+    ],
+    "correct": 1,
+    "type": "inference"
+   }
+  ]
+ },
+ {
+  "id": "R-S-3",
+  "sublevel": "S",
+  "skill": "reading",
+  "genre": "nota de programa de congresso",
+  "title_pt": "XII Congresso de Estudos da Tradução",
+  "text_pt": [
+   "Nota de abertura — Comissão Científica",
+   "O tema desta edição, “Fidelidade sem original”, propõe deslocar uma discussão que a área vem repetindo há três décadas sem alterar-lhe os termos. Enquanto a tradução automática ocupava a posição de auxiliar imperfeito, era possível manter intacta a oposição herdada entre versão fiel e versão livre, atribuindo à máquina o erro e ao humano o critério. Essa divisão de trabalho tornou-se insustentável.",
+   "Não porque os sistemas tenham alcançado a competência que se lhes atribui — as sessões da manhã de quinta-feira examinarão, com dados, o quanto essa atribuição antecipa resultados —, mas por uma razão de outra ordem. Quando a maior parte dos textos que circulam numa língua já passou, em algum ponto de sua cadeia de produção, por um sistema automático, a noção de original deixa de ter o estatuto de ponto de partida e passa a ser uma hipótese reconstruída a posteriori. Traduzir deixa de ser transportar um sentido dado e passa a ser arbitrar entre versões cuja anterioridade é, ela própria, incerta.",
+   "As implicações não são apenas teóricas. Se o original é uma reconstrução, a atribuição de autoria, a responsabilidade jurídica por um enunciado e os critérios de avaliação de uma tradução profissional perdem simultaneamente seu ancoradouro. O simpósio de sexta-feira reúne pesquisadores de três campos que raramente se encontram — teoria da tradução, direito autoral e linguística de corpus — na expectativa, talvez otimista, de que o desconforto compartilhado produza mais do que a soma de três diagnósticos.",
+   "A Comissão registra que a proposta encontrou resistência. Parte dos pareceristas considerou o recorte precipitado e observou que a área já viveu inflexões anunciadas com igual ênfase e absorvidas sem consequência. Registre-se que nenhum parecer contestou o diagnóstico; o que se contestou foi a pressa. A objeção é pertinente e foi deliberadamente mantida no programa: a mesa-redonda de encerramento é composta, em sua maioria, por quem a formulou.",
+   "Aos participantes recomenda-se a leitura prévia dos dois textos de referência disponíveis no sítio do congresso. Nenhum deles defende a posição aqui esboçada; ambos a tornam discutível, que é o que se espera de um texto de referência."
+  ],
+  "questions": [
+   {
+    "q_pt": "Qual é a proposta central da nota?",
+    "choices_pt": [
+     "Demonstrar que os sistemas de tradução automática já superaram a competência do tradutor humano",
+     "Apresentar o programa das sessões e as recomendações práticas dirigidas aos participantes do congresso",
+     "Defender o retorno da oposição entre versão fiel e versão livre como critério de avaliação",
+     "Sustentar que a tradução automática desfaz a noção de original e obriga a área a rever critérios"
+    ],
+    "correct": 3,
+    "type": "global"
+   },
+   {
+    "q_pt": "Segundo a nota, por que a oposição entre versão fiel e versão livre se tornou insustentável?",
+    "choices_pt": [
+     "Porque os sistemas automáticos passaram a cometer menos erros do que os tradutores humanos",
+     "Porque o texto de partida deixou de ser um ponto seguro e passou a ser reconstrução posterior",
+     "Porque as três áreas reunidas no simpósio de sexta-feira não chegam a um critério comum",
+     "Porque o direito autoral deixou de reconhecer a tradução profissional como obra derivada"
+    ],
+    "correct": 1,
+    "type": "detail"
+   },
+   {
+    "q_pt": "O que a Comissão dá a entender ao compor a mesa de encerramento majoritariamente com quem criticou o recorte do congresso?",
+    "choices_pt": [
+     "Que pretende encerrar o evento com um consenso já negociado entre as partes",
+     "Que considera a crítica válida e trata a própria tese como algo a testar",
+     "Que a Comissão recuou de sua proposta inicial depois de ler os pareceres",
+     "Que os pareceristas críticos foram os únicos disponíveis para compor a mesa final"
+    ],
+    "correct": 1,
+    "type": "inference"
+   }
+  ]
+ },
+ {
+  "id": "R-S-4",
+  "sublevel": "S",
+  "skill": "reading",
+  "genre": "artigo de opinião",
+  "title_pt": "Ranking não é diagnóstico",
+  "text_pt": [
+   "Toda vez que sai a lista, repete-se o mesmo ritual. As escolas bem colocadas mandam imprimir cartazes, as mal colocadas produzem notas de esclarecimento e a secretaria promete estudar o caso das últimas colocadas. Ninguém pergunta, em nenhum dos três movimentos, o que exatamente a lista mede.",
+   "Ela mede, em essência, a composição do alunado. Isso não é uma suspeita: é o resultado mais robusto e mais reiteradamente confirmado da pesquisa educacional das últimas cinco décadas. Entre 60% e 80% da variação de desempenho entre escolas é explicada por características que os alunos trazem consigo ao atravessar o portão. Ordenar escolas pela média de saída é, portanto, uma operação que devolve com uma casa decimal a mesma desigualdade que se pretendia investigar.",
+   "A objeção previsível é que o ranking, ainda que imperfeito, ao menos oferece informação a quem não tem nenhuma. Mas informação equivocada não é uma versão pior de informação: é um objeto distinto, com efeitos próprios. Uma família que escolhe a escola pela posição na lista está escolhendo, sem saber, os colegas do filho; uma diretora que precisa subir posições descobre rapidamente que o caminho mais curto não passa pelo ensino, e sim pela matrícula. Onde o indicador se torna meta, ele deixa de medir o que media — proposição conhecida há meio século e sistematicamente redescoberta com espanto.",
+   "Existe alternativa, e ela não é abolir a avaliação. Modelos de valor agregado comparam cada escola consigo mesma ao longo do tempo, medindo o quanto seus alunos avançaram em relação ao ponto em que chegaram. São mais caros, exigem acompanhamento individual e produzem resultados desconfortáveis: uma escola de elite pode aparecer estagnada e uma escola periférica, entre as que mais ensinam. Nenhuma secretaria mandou imprimir cartaz com um resultado desse tipo. Talvez seja precisamente esse desconforto que explique por que, sendo tecnicamente viáveis há anos, permanecem em nota de rodapé.",
+   "Não há nada de errado em querer saber se uma escola vai bem. Há algo profundamente errado em aceitar, como resposta, um número que informa sobretudo quem estuda ali."
+  ],
+  "questions": [
+   {
+    "q_pt": "Qual é a tese que o artigo defende?",
+    "choices_pt": [
+     "Que os rankings medem sobretudo o perfil dos alunos e não servem como diagnóstico",
+     "Que a avaliação de escolas deveria ser abandonada por produzir e reforçar desigualdade",
+     "Que as escolas periféricas ensinam mais do que as escolas de elite bem colocadas",
+     "Que as famílias deveriam escolher a escola pelos colegas, e não pela posição na lista"
+    ],
+    "correct": 0,
+    "type": "global"
+   },
+   {
+    "q_pt": "Por que, segundo o texto, os modelos de valor agregado não se impuseram?",
+    "choices_pt": [
+     "Porque ainda não são tecnicamente viáveis em larga escala",
+     "Porque exigem que as escolas sejam comparadas entre si a cada ano",
+     "Porque custam mais, exigem acompanhamento individual e produzem resultados que incomodam",
+     "Porque a pesquisa educacional das últimas décadas os desautorizou"
+    ],
+    "correct": 2,
+    "type": "detail"
+   },
+   {
+    "q_pt": "Ao escrever que a proposição é “sistematicamente redescoberta com espanto”, o autor manifesta que atitude?",
+    "choices_pt": [
+     "Admiração pela capacidade da área de renovar continuamente os próprios achados",
+     "Neutralidade: registra apenas que o resultado vem sendo confirmado com frequência",
+     "Cautela, por considerar que a proposição ainda carece de confirmação empírica",
+     "Impaciência com um debate que ignora o que já se sabe"
+    ],
+    "correct": 3,
+    "type": "inference"
+   }
+  ]
+ },
+ {
+  "id": "R-S-5",
+  "sublevel": "S",
+  "skill": "reading",
+  "genre": "ensaio crítico",
+  "title_pt": "A indústria da saudade",
+  "text_pt": [
+   "Nunca se produziu tanto passado. As reedições comemorativas se multiplicam, os catálogos são revirados à procura de gravações inéditas que os próprios artistas haviam descartado por bons motivos, e a estreia mais aguardada da temporada é, com frequência, a de algo que já estreou. Diante disso, a reação crítica habitual é o lamento sobre a falta de imaginação — reação que tem a vantagem de ser fácil e o defeito de explicar pouco.",
+   "Convém observar que a nostalgia não é o produto: é o método de distribuição do risco. Um lançamento inteiramente novo exige que se construa, do zero, a disposição do público em prestar atenção; uma reedição já a encontra pronta, medida e segmentada por faixa etária. O que se vende não é a lembrança, é a previsibilidade da demanda — e é por isso que o fenômeno se intensifica exatamente nos setores em que o custo de produção subiu e a tolerância ao fracasso caiu.",
+   "Segue-se daí uma consequência menos óbvia do que a decadência criativa. O passado que assim se distribui não é o passado: é a sua fração rentável. Reedita-se o que vendeu, e o que vendeu era já, em seu tempo, o que menos incomodava. A operação retroativamente edita a década que diz celebrar, devolvendo-a mais lisa, mais consensual e consideravelmente mais bem gravada do que jamais foi. A saudade que se experimenta ao ouvi-la é autêntica; seu objeto, não.",
+   "Nada disso decorre de má-fé de quem produz. Decorre de um mecanismo que dispensa intenção: catálogos são ativos, ativos precisam render, e a maneira mais segura de fazer render um catálogo é reencontrar quem já o comprou uma vez.",
+   "Resta perguntar o que se perde. Não é a novidade — ela continua sendo feita, em condições piores e com menos alcance. Perde-se a possibilidade de que uma década seja lembrada por aquilo que nela era estranho, incômodo ou minoritário, isto é, por aquilo que a distinguia das outras. Uma cultura que só revisita seus êxitos acaba com um arquivo impecável e um passado inteiramente sem surpresas. Espera-se, imagino, que ninguém repare."
+  ],
+  "questions": [
+   {
+    "q_pt": "Qual é o argumento central do ensaio?",
+    "choices_pt": [
+     "Que a produção cultural contemporânea perdeu por completo a capacidade de inventar formas novas",
+     "Que as reedições comemorativas dão ao público um acesso valioso a obras injustamente esquecidas",
+     "Que a reedição reduz risco e acaba por reescrever o passado que celebra",
+     "Que os artistas deveriam recusar a publicação das gravações que um dia descartaram"
+    ],
+    "correct": 2,
+    "type": "global"
+   },
+   {
+    "q_pt": "Por que, segundo o autor, a década reeditada aparece mais consensual do que de fato foi?",
+    "choices_pt": [
+     "Porque as gravações antigas foram remasterizadas com uma técnica muito superior à do original",
+     "Porque só se reedita o que vendeu, e o que vendia já era o que menos incomodava",
+     "Porque o público que a consome hoje é em boa parte o mesmo que a consumiu na época",
+     "Porque os artistas descartaram, na época, justamente as gravações que mais incomodavam"
+    ],
+    "correct": 1,
+    "type": "detail"
+   },
+   {
+    "q_pt": "Que efeito o autor busca com a frase final, “Espera-se, imagino, que ninguém repare”?",
+    "choices_pt": [
+     "Reconhecer com humildade que a sua própria análise pode passar despercebida",
+     "Encerrar com ironia, atribuindo à indústria um cálculo que ela nunca admitiria em voz alta",
+     "Fazer um apelo direto ao leitor para que denuncie a prática das reedições",
+     "Admitir que o problema descrito é pequeno demais para merecer atenção"
+    ],
+    "correct": 1,
+    "type": "inference"
+   }
+  ]
+ },
+ {
+  "id": "R-AL-b2-1",
+  "sublevel": "AL",
+  "skill": "reading",
+  "genre": "notícia de jornal",
+  "title_pt": "Feira noturna no mercado",
+  "text_pt": [
+   "O Mercado Municipal de Londrina passou a abrir também nas noites de quinta-feira, das 18h às 23h. A primeira feira noturna foi no dia 6 de março e recebeu, segundo a administração, cerca de mil e duzentas pessoas.",
+   "A ideia partiu dos próprios permissionários. O mercado sempre fechou às 14h, e o movimento da manhã vinha caindo havia três anos. Em outubro, doze dos trinta e quatro boxes assinaram um pedido e o entregaram à prefeitura. A autorização saiu em janeiro, com uma condição: a energia e a limpeza do período noturno seriam pagas por quem abrisse.",
+   "Nem todos aceitaram. Na primeira quinta abriram dezenove boxes; na quarta já eram vinte e seis. Os açougues foram os últimos a aderir, porque precisavam de um funcionário a mais no turno da noite.",
+   "A feira ocupa dois corredores. No primeiro estão as bancas de sempre, com frutas, queijos, peixe e temperos. O segundo foi liberado para dez mesas de comida pronta, distribuídas por sorteio a cada dois meses. O sorteio foi adotado porque apareceram setenta candidatos para as dez mesas.",
+   "Três músicos se apresentam por noite, num palco montado perto da entrada da rua Paraná. O cachê é pago pela prefeitura, que também manteve duas viagens a mais na linha do centro depois das 22h30.",
+   "A administração calcula que as quintas-feiras já respondem por um quinto do que o mercado vende na semana. Para julho está prevista a abertura também às sextas, se pelo menos trinta boxes se inscreverem."
+  ],
+  "questions": [
+   {
+    "q_pt": "Qual é o assunto central da notícia?",
+    "choices_pt": [
+     "Uma feira noturna surgiu por iniciativa dos comerciantes e vem crescendo",
+     "Uma feira noturna foi imposta pela prefeitura e perde comerciantes",
+     "Uma feira noturna surgiu por iniciativa dos comerciantes, mas perde adesão",
+     "Uma feira noturna foi criada pela prefeitura e cresce com dinheiro público"
+    ],
+    "correct": 0,
+    "type": "global"
+   },
+   {
+    "q_pt": "Na quarta edição, quantos boxes do mercado ainda não abriam à noite?",
+    "choices_pt": [
+     "Oito",
+     "Dez",
+     "Dezenove",
+     "Doze"
+    ],
+    "correct": 0,
+    "type": "detail"
+   },
+   {
+    "q_pt": "Quem arca com o cachê dos músicos e com a limpeza da noite, respectivamente?",
+    "choices_pt": [
+     "Os boxes que abrem; os boxes que abrem",
+     "A prefeitura; os boxes que abrem",
+     "Os boxes que abrem; a prefeitura",
+     "A prefeitura; a prefeitura"
+    ],
+    "correct": 1,
+    "type": "detail"
+   }
+  ]
+ },
+ {
+  "id": "R-AL-b2-2",
+  "sublevel": "AL",
+  "skill": "reading",
+  "genre": "verbete de enciclopédia",
+  "title_pt": "Farinhada",
+  "text_pt": [
+   "Farinhada é o nome dado, no Norte e no Nordeste do Brasil, ao trabalho coletivo de transformar a raiz da mandioca em farinha. A palavra indica tanto o processo quanto a época do ano em que ele acontece, em geral entre maio e setembro, depois da colheita.",
+   "O trabalho é feito na chamada casa de farinha, uma construção simples que abriga três equipamentos: um ralador movido a motor ou a manivela, uma prensa de madeira e um forno redondo de cobre ou de barro. Poucas famílias possuem os três. Por isso, o mais comum é que uma única casa atenda a um grupo de vizinhos, que se revezam durante as semanas da safra.",
+   "O processo tem quatro etapas. A raiz é descascada, tarefa quase sempre feita por mulheres sentadas em roda; depois é ralada; a massa vai para a prensa, que retira o líquido; por fim ela é espalhada no forno e mexida sem parar com um rodo de madeira até secar. De cem quilos de raiz saem cerca de trinta quilos de farinha.",
+   "O líquido retirado na prensa não é jogado fora. Dele se obtém a goma, com que se faz a tapioca, e o tucupi, caldo amarelo muito usado na cozinha paraense, que precisa ferver por horas antes de ir à mesa.",
+   "Até meados do século XX, a farinhada era também uma ocasião social: os vizinhos passavam a noite descascando, com comida e música, e recebiam parte da farinha como pagamento. Com a chegada dos raladores elétricos, o serviço ficou muito mais curto e essas noites quase desapareceram. Em alguns municípios, a farinhada virou festa de calendário, com concurso de farinha e visita de escolas."
+  ],
+  "questions": [
+   {
+    "q_pt": "Sobre o que é este verbete?",
+    "choices_pt": [
+     "Uma festividade anual com concursos, transformada pelas máquinas elétricas",
+     "Um trabalho coletivo de fazer farinha de mandioca, transformado pelas máquinas elétricas",
+     "Um trabalho coletivo de fazer farinha de mandioca, praticado igual há séculos",
+     "Uma festividade anual com concursos, praticada igual há séculos"
+    ],
+    "correct": 1,
+    "type": "global"
+   },
+   {
+    "q_pt": "Por que uma casa de farinha costuma servir a várias famílias?",
+    "choices_pt": [
+     "Porque cada família cuida de uma etapa e depois divide o resultado",
+     "Porque a safra dura poucas semanas e exige muitas mãos",
+     "Porque poucas famílias têm o conjunto completo de equipamentos",
+     "Porque os vizinhos levam uma parte da farinha em troca"
+    ],
+    "correct": 2,
+    "type": "detail"
+   },
+   {
+    "q_pt": "O que os vizinhos recebiam em troca de ajudar na farinhada, antigamente?",
+    "choices_pt": [
+     "Uma parte da farinha produzida no dia",
+     "Uma parte da goma e do tucupi feitos",
+     "Uma parte das raízes ainda sem descascar",
+     "Uma quantia em dinheiro no fim da safra"
+    ],
+    "correct": 0,
+    "type": "detail"
+   }
+  ]
+ },
+ {
+  "id": "R-AL-b2-3",
+  "sublevel": "AL",
+  "skill": "reading",
+  "genre": "carta formal",
+  "title_pt": "Carta aos moradores sobre a obra",
+  "text_pt": [
+   "Associação de Moradores do Bairro Alto Alegre",
+   "Rua Quinze de Novembro, 320 — Pelotas, RS",
+   "Pelotas, 4 de agosto de 2025",
+   "Prezados moradores,",
+   "Na assembleia de 28 de julho, os moradores aprovaram o acordo com a prefeitura para o recapeamento das ruas Sete Lagoas, Ipê e Dom Bosco. Esta carta conta o que ficou decidido e o que a associação pede.",
+   "A obra começa na segunda-feira, 18 de agosto, e dura três semanas, uma por rua: a Sete Lagoas fica fechada de 18 a 22 de agosto, a Ipê de 25 a 29 de agosto e a Dom Bosco de 1º a 5 de setembro. Como o asfalto novo leva dois dias para secar, nenhuma rua abre antes do fim da sua semana, e a associação avisa cada rua por bilhete dois dias antes.",
+   "A associação pede duas providências. A primeira é tirar o carro da rua na véspera do fechamento, porque as máquinas chegam de madrugada e precisam da rua vazia. A segunda é deixar o lixo na esquina com a avenida Bento Gonçalves, já que o caminhão não entra em rua interditada. Quem não tem garagem pode usar o pátio da igreja.",
+   "O ponto de ônibus da rua Ipê muda na semana de fechamento: nesses dias funciona na esquina da rua Sete Lagoas e, terminada a obra, volta para onde está hoje. A empresa já colocou um cartaz no abrigo.",
+   "A obra é paga integralmente pela prefeitura e os moradores não pagam nada. A sede atende de terça a sexta, das 14h às 18h. Contamos com a paciência de todos: são três semanas de transtorno em troca de um asfalto esperado há dez anos.",
+   "Atenciosamente,",
+   "Sônia Vasques — Diretoria da Associação de Moradores"
+  ],
+  "questions": [
+   {
+    "q_pt": "Qual é a finalidade desta carta?",
+    "choices_pt": [
+     "Propor uma decisão a ser votada e pedir providências aos moradores",
+     "Comunicar uma decisão já tomada e pedir contribuição em dinheiro aos moradores",
+     "Propor uma decisão a ser votada e pedir contribuição em dinheiro aos moradores",
+     "Comunicar uma decisão já tomada e pedir providências aos moradores"
+    ],
+    "correct": 3,
+    "type": "global"
+   },
+   {
+    "q_pt": "Em que semana da obra a rua Ipê fica fechada?",
+    "choices_pt": [
+     "Na primeira semana",
+     "Na terceira semana",
+     "Na segunda semana",
+     "Nas três semanas seguidas"
+    ],
+    "correct": 2,
+    "type": "detail"
+   },
+   {
+    "q_pt": "Onde pode deixar o carro, na véspera, quem não tem garagem?",
+    "choices_pt": [
+     "Na sede da associação",
+     "Na avenida Bento Gonçalves",
+     "Na calçada da rua Dom Bosco",
+     "No pátio da igreja"
+    ],
+    "correct": 3,
+    "type": "detail"
+   }
+  ]
+ },
+ {
+  "id": "R-AL-b2-4",
+  "sublevel": "AL",
+  "skill": "reading",
+  "genre": "reportagem de viagem",
+  "title_pt": "Quatro dias a pé na serra",
+  "text_pt": [
+   "Quem chega a Urubici, na serra catarinense, encontra na praça um mapa de madeira com o desenho da Trilha do Rio Preto: quatro dias de caminhada até o distrito de Aparecida, oitenta e dois quilômetros, quase todos em estrada de chão.",
+   "O percurso foi marcado em 2017 por um grupo de sete moradores que queria aproveitar as pousadas vazias fora do verão. Hoje a trilha recebe cerca de mil e quatrocentos caminhantes por ano, a maioria entre abril e julho, quando chove menos e o campo fica limpo.",
+   "Dorme-se na casa de famílias do caminho. São onze casas cadastradas, e o pagamento é feito direto ao dono, em dinheiro: cinquenta reais a diária, com café da manhã e jantar. O almoço fica por conta do caminhante, que sai de manhã com um lanche preparado na casa onde passou a noite.",
+   "O segundo dia é o mais duro. São vinte e nove quilômetros, os últimos oito numa subida constante até o alto do morro do Facão. Entre o café da manhã e a chegada não há torneira, comércio nem atalho: quem sai depois das sete costuma terminar o trecho no escuro.",
+   "Não é preciso guia. As marcas amarelas nas cercas e nos postes são repintadas duas vezes por ano por voluntários, e a associação manda por mensagem, na véspera, a previsão do tempo e o telefone das casas do dia seguinte. Quem desiste no meio do caminho pega uma carona combinada com o dono da casa, o que acontece com dez ou doze pessoas por temporada."
+  ],
+  "questions": [
+   {
+    "q_pt": "O texto trata principalmente de quê?",
+    "choices_pt": [
+     "Uma trilha criada por moradores, com hospedagem em casas e sem guia",
+     "Uma trilha criada por moradores, com hospedagem em casas e guia obrigatório",
+     "Uma trilha criada pela prefeitura, com hospedagem em casas e sem guia",
+     "Uma trilha criada pela prefeitura, com hospedagem em casas e guia obrigatório"
+    ],
+    "correct": 0,
+    "type": "global"
+   },
+   {
+    "q_pt": "Como fica resolvido o almoço de quem faz a trilha?",
+    "choices_pt": [
+     "Almoça na casa de outra família, com o valor incluído na diária",
+     "Leva o lanche preparado pela família anfitriã",
+     "Compra a comida em comércios do caminho",
+     "Recebe o almoço de um carro de apoio da associação"
+    ],
+    "correct": 1,
+    "type": "detail"
+   },
+   {
+    "q_pt": "Como volta quem desiste no meio do caminho?",
+    "choices_pt": [
+     "De van, enviada pela associação",
+     "A pé, até a casa cadastrada mais próxima",
+     "De carona, acertada com quem hospeda",
+     "De ônibus, numa parada marcada na estrada"
+    ],
+    "correct": 2,
+    "type": "detail"
+   }
+  ]
+ },
+ {
+  "id": "R-AL-b2-5",
+  "sublevel": "AL",
+  "skill": "reading",
+  "genre": "perfil de jornal",
+  "title_pt": "A escadaria de cacos",
+  "text_pt": [
+   "A escadaria que liga a rua Almirante Barroso ao alto do bairro Conquista, em Ilhéus, tem noventa e seis degraus e nenhum trecho igual ao outro. Os degraus estão cobertos de cacos de azulejo branco, azul, verde e amarelo, que formam peixes, barcos e letras.",
+   "O trabalho é de Aristides Duarte, pedreiro aposentado de setenta e nove anos, morador do quarto sobrado da escada. Ele começou em 2013, sem avisar ninguém, pelo degrau em frente de casa. “Estava quebrado e eu tinha meia lata de cimento”, conta.",
+   "Os primeiros cacos vieram de sobras de obras em que ele havia trabalhado e que guardava no quintal havia anos. Quando esse material acabou, em 2016, vizinhos passaram a deixar azulejo quebrado no portão. Depois de uma reportagem no jornal da cidade, uma loja de material de construção do centro passou a separar para ele as caixas de peças trincadas que não podia vender.",
+   "A prefeitura demorou a se decidir. Em 2018, a secretaria de obras o notificou e mandou parar o serviço, por se tratar de via pública. A notificação foi recolhida três meses depois, diante de um abaixo-assinado com quatrocentas assinaturas. Em 2021, a mesma secretaria passou a fornecer o cimento e instalou um corrimão de ferro no lado direito da escada.",
+   "Aristides cobriu o último degrau em 2024, onze anos depois do primeiro. Agora trabalha nos muros laterais, mais baixos, porque diz que os joelhos não sobem mais. A escadaria virou ponto de fotografia e entrou no mapa turístico distribuído no aeroporto."
+  ],
+  "questions": [
+   {
+    "q_pt": "Qual é o fio condutor do texto?",
+    "choices_pt": [
+     "Uma obra que a prefeitura encomendou ao morador e que primeiro barrou e depois apoiou",
+     "Uma obra que o morador começou por conta própria e que a prefeitura sempre apoiou",
+     "Uma obra que o morador começou por conta própria e que a prefeitura primeiro barrou e depois apoiou",
+     "Uma obra que a prefeitura encomendou ao morador e que sempre apoiou"
+    ],
+    "correct": 2,
+    "type": "global"
+   },
+   {
+    "q_pt": "Quantos anos depois de o trabalho começar a prefeitura passou a fornecer cimento?",
+    "choices_pt": [
+     "Oito anos",
+     "Cinco anos",
+     "Onze anos",
+     "Três anos"
+    ],
+    "correct": 0,
+    "type": "detail"
+   },
+   {
+    "q_pt": "Por que a notificação da secretaria deixou de valer?",
+    "choices_pt": [
+     "Foi recolhida depois de um pedido assinado por moradores",
+     "Foi recolhida após uma reportagem na imprensa local",
+     "Foi trocada por um corrimão metálico na escada",
+     "Foi recolhida depois que a prefeitura passou a dar o cimento"
+    ],
+    "correct": 0,
+    "type": "detail"
+   }
+  ]
+ },
+ {
+  "id": "R-AM-b2-1",
+  "sublevel": "AM",
+  "skill": "reading",
+  "genre": "reportagem",
+  "title_pt": "O galpão das fardas",
+  "text_pt": [
+   "Em 2019, a Confecções Rio Claro empregava quarenta e duas costureiras num galpão às margens da rodovia, em Caruaru, e tinha um único cliente relevante: a rede de escolas particulares da região, para a qual fazia uniformes. O contrato era renovado em novembro e garantia o ano inteiro.",
+   "Em abril de 2020, com as escolas fechadas, o pedido não veio. A dona, Ivete Camelo, obteve em três semanas a certificação exigida para costurar aventais e propés de hospital e passou a produzir para duas distribuidoras do Recife. A margem era menor, mas o volume compensava: a fábrica fechou aquele ano com faturamento 12% maior do que o de 2019. As duas distribuidoras pagavam à vista, e Ivete quitou nesse período duas máquinas compradas a prazo em 2018.",
+   "O uniforme escolar voltou em 2022, e com ele um problema novo. Durante a ausência, três das escolas haviam passado a comprar de um fornecedor de Santa Catarina, por um preço abaixo do que Caruaru conseguia praticar. O pedido daquele ano foi 40% menor do que o de 2019, e a linha hospitalar caiu quase a zero no mesmo período.",
+   "O que sustentou o galpão não estava em nenhum dos dois planos. Desde 2021, a fábrica aceitava pequenos serviços de ajuste e conserto para as próprias distribuidoras — barras, bordado de nome, troca de zíper —, que ninguém no Sul fazia por valer tão pouco. Em 2024, esse trabalho respondia por 55% do faturamento, com dezesseis costureiras. As peças chegam por transportadora, ficam prontas em até quatro dias e voltam com uma etiqueta de conferência assinada pela costureira que fez o serviço.",
+   "O quadro hoje é de trinta e uma costureiras, onze a menos do que em 2019. A máquina de bordar trabalha em dois turnos; a de corte, em um só, e apenas três dias por semana."
+  ],
+  "questions": [
+   {
+    "q_pt": "Qual é a ideia central da reportagem?",
+    "choices_pt": [
+     "Uma fábrica trocou uniformes por aventais e usou os ajustes só como complemento",
+     "Uma fábrica encolheu pela concorrência de outro estado e os ajustes não bastaram",
+     "Uma fábrica perdeu dois mercados e se manteve com ajustes para as distribuidoras",
+     "Uma fábrica recuperou os uniformes ao baixar o preço e deixou os ajustes de lado"
+    ],
+    "correct": 2,
+    "type": "global"
+   },
+   {
+    "q_pt": "Em 2024, quantas costureiras da fábrica não trabalhavam nos ajustes?",
+    "choices_pt": [
+     "Onze",
+     "Dezesseis",
+     "Quarenta e duas",
+     "Quinze"
+    ],
+    "correct": 3,
+    "type": "detail"
+   },
+   {
+    "q_pt": "O que o texto dá a entender sobre por que as distribuidoras mandavam o serviço de ajustes a Caruaru?",
+    "choices_pt": [
+     "Que o serviço exigia a certificação hospitalar, e só a fábrica de Caruaru a tinha",
+     "Que o serviço vinha das escolas, e as distribuidoras apenas o repassavam a Caruaru",
+     "Que o serviço valia pouco demais para compensar a quem estava no Sul, e Caruaru o aceitava",
+     "Que o serviço servia para a fábrica tomar o mercado do fornecedor catarinense"
+    ],
+    "correct": 2,
+    "type": "inference"
+   }
+  ]
+ },
+ {
+  "id": "R-AM-b2-2",
+  "sublevel": "AM",
+  "skill": "reading",
+  "genre": "reportagem",
+  "title_pt": "A sala do fim da linha",
+  "text_pt": [
+   "O posto de saúde do bairro Nova Esperança fica no ponto final da linha 312, em Teresina, a cinquenta minutos do hospital regional. Em março de 2022, uma das três salas do posto foi equipada com computador, câmera e uma conexão própria, para consultas a distância com especialistas do hospital.",
+   "A meta era clara: reduzir os deslocamentos. No primeiro ano, o posto registrou mil e novecentos atendimentos na sala, e a secretaria calculou uma economia de quatro mil viagens de ida e volta. A sala atende de terça a sexta, das 7h às 13h, com agenda aberta no balcão e três horários por dia reservados a encaixe.",
+   "O uso, porém, não foi o previsto. As consultas com especialista, que deveriam ser a maior parte, ficaram em 28%. O restante se dividiu entre duas coisas que ninguém havia programado: a leitura de resultados de exame com um médico do hospital, que os pacientes antes levavam meses para entender, e a renovação de receitas de uso contínuo, que até então exigia uma ida à capital. Juntas, essas duas finalidades somaram quase mil e quatrocentos atendimentos no primeiro ano.",
+   "O efeito mais visível também não foi o que se media. A enfermeira responsável pela sala, Márcia Sobral, passou a telefonar na véspera para confirmar cada horário e, quando a viagem era mesmo necessária, a combinar carona no carro do posto. A carona leva no máximo quatro pessoas e sai sempre às seis da manhã. A taxa de faltas dos moradores do bairro nas consultas presenciais do hospital caiu de 34% para 9% em dois anos.",
+   "A secretaria pretende levar salas iguais a outros seis postos. O modelo, contudo, foi redesenhado antes da cópia: a sala nova prevê, além do equipamento, meio período de uma enfermeira dedicada à confirmação e ao transporte, item que não constava do projeto de 2022."
+  ],
+  "questions": [
+   {
+    "q_pt": "Qual é a ideia central da reportagem?",
+    "choices_pt": [
+     "A sala poupou quatro mil viagens no primeiro ano, mas sem efeito nas faltas, e a cópia foi adiada",
+     "A sala reduziu deslocamentos por usos e cuidados imprevistos, e a cópia incorpora esses cuidados",
+     "A sala superou a meta pela tecnologia, e a cópia dispensa o acompanhamento de uma enfermeira",
+     "A sala reduziu deslocamentos sobretudo pelas consultas previstas, e a cópia repete o projeto de 2022"
+    ],
+    "correct": 1,
+    "type": "global"
+   },
+   {
+    "q_pt": "Que parcela dos atendimentos da sala foi de consultas com especialista no primeiro ano?",
+    "choices_pt": [
+     "Vinte e oito por cento",
+     "Trinta e quatro por cento",
+     "Nove por cento",
+     "Setenta e dois por cento"
+    ],
+    "correct": 0,
+    "type": "detail"
+   },
+   {
+    "q_pt": "O que o texto sugere sobre a previsão de meio período de enfermeira na sala nova?",
+    "choices_pt": [
+     "Que a secretaria quer controlar o uso da sala, hoje desigual entre os pacientes",
+     "Que o acompanhamento pesou no resultado, e o equipamento sozinho não o explicaria",
+     "Que a secretaria quer ampliar as consultas com especialistas, hoje minoria",
+     "Que o equipamento pesou no resultado, e o acompanhamento só o completou"
+    ],
+    "correct": 1,
+    "type": "inference"
+   }
+  ]
+ },
+ {
+  "id": "R-AM-b2-3",
+  "sublevel": "AM",
+  "skill": "reading",
+  "genre": "relato biográfico",
+  "title_pt": "A oficina de instrumentos",
+  "text_pt": [
+   "Neide Sartori chegou à construção de instrumentos por um desvio. Contratada em 1996 como auxiliar administrativa de um projeto municipal de orquestra infantil em Bauru, passou a levar para casa os violinos que voltavam quebrados das aulas, porque mandar consertar na capital custava mais do que o próprio instrumento.",
+   "Aprendeu com um manual traduzido e com um marceneiro aposentado do bairro, que lhe ensinou a escolher madeira e a preparar cola quente. O manual, em inglês, era lido com um dicionário ao lado; o marceneiro cobrava as aulas em almoço de domingo. Em três anos consertava sozinha os oitenta instrumentos do projeto. Em 2004 pediu demissão e abriu uma oficina de dois cômodos, com quatro aprendizes.",
+   "A oficina formou trinta e um aprendizes em vinte anos. Neide esperava que eles construíssem instrumentos; a maioria não construiu. Sete vivem hoje de afinação de piano, nove trabalham com som e montagem de palco, três abriram lojas e apenas quatro fazem instrumentos novos. O curso dura três anos e nunca teve mensalidade: paga-se com dois dias de trabalho por semana na bancada.",
+   "Isso poderia ter fechado a oficina e acabou mantendo-a aberta. São os ex-aprendizes espalhados por casas de show, escolas e igrejas que mandam para Bauru o serviço que não sabem resolver: um braço empenado, uma rachadura na tampa, um arco sem crina. Metade do movimento de 2024 chegou por indicação de alguém que passou pela oficina.",
+   "Neide tem hoje sessenta e um anos e três bancadas. Numa delas, junto à janela, ficam os instrumentos novos, dois por ano, encomendados com dois anos de espera. As outras duas são de conserto e estão sempre cheias. A lista de espera dos instrumentos novos tem nove nomes, três deles de ex-aprendizes. No ano passado ela contratou mais uma pessoa — para o conserto."
+  ],
+  "questions": [
+   {
+    "q_pt": "Qual é a ideia central do texto?",
+    "choices_pt": [
+     "Uma oficina que nasceu de um improviso e hoje vive do conserto que os ex-aprendizes indicam",
+     "Uma oficina que nasceu de um improviso e hoje vive dos instrumentos novos que vende",
+     "Uma oficina que nasceu de um contrato com a prefeitura e hoje vive do conserto que os ex-aprendizes indicam",
+     "Uma oficina que nasceu de um contrato com a prefeitura e hoje vive dos instrumentos novos que vende"
+    ],
+    "correct": 0,
+    "type": "global"
+   },
+   {
+    "q_pt": "Como os aprendizes pagavam o curso na oficina?",
+    "choices_pt": [
+     "Com um almoço de domingo, como ela pagou ao mestre",
+     "Com parte do que ganham nos consertos indicados",
+     "Com dois dias por semana de serviço na oficina",
+     "Com uma mensalidade que só cobre os materiais"
+    ],
+    "correct": 2,
+    "type": "detail"
+   },
+   {
+    "q_pt": "O que o texto sugere sobre a relação dos ex-aprendizes com a oficina?",
+    "choices_pt": [
+     "Que a transformaram em escola, pois a maioria construiu instrumentos",
+     "Que continuam ligados a ela, pois lhe mandam os casos que eles não conseguem resolver",
+     "Que se afastaram dela, pois montaram estruturas próprias de conserto",
+     "Que competem com ela, pois abriram lojas no mesmo ramo em Bauru"
+    ],
+    "correct": 1,
+    "type": "inference"
+   }
+  ]
+ },
+ {
+  "id": "R-AM-b2-4",
+  "sublevel": "AM",
+  "skill": "reading",
+  "genre": "reportagem",
+  "title_pt": "A quadra do morro",
+  "text_pt": [
+   "A quadra coberta do morro do Cruzeiro, em Vitória, foi entregue em maio de 2021, no terreno de uma caixa d'água desativada. Custou R$ 1,9 milhão, dos quais R$ 700 mil foram gastos não na quadra, mas no acesso a ela: duzentos e quarenta degraus de concreto, corrimão dos dois lados e vinte e dois postes de luz ao longo da subida.",
+   "A quadra funcionou. No primeiro ano foram abertas nove turmas de futsal e vôlei, com quatrocentos e dez inscritos, número que se manteve estável desde então. As turmas são gratuitas e têm dois professores cedidos pela secretaria de esportes, um deles morador da parte alta. Os campeonatos de fim de semana enchem a arquibancada de cento e vinte lugares.",
+   "O que ninguém havia previsto estava do lado de fora. A escada, construída apenas para chegar à quadra, virou o caminho principal entre a parte alta e a parte baixa do morro, e é usada todo dia por quem nunca entrou na quadra. Uma contagem feita pela universidade federal em 2023 registrou três mil e duzentas passagens por dia útil, diante dos quatrocentos e dez matriculados.",
+   "Os efeitos apareceram longe do esporte. O posto de saúde da parte baixa passou a receber pacientes da parte alta, que antes iam a outro bairro. Duas linhas de van encurtaram o itinerário, porque os passageiros passaram a descer a pé. Três pequenos comércios abriram nos patamares da escada, dois deles de moradores que antes vendiam dentro de casa. Os socorristas do posto passaram a subir a maca pelos degraus, em vez de contornar o morro pela estrada.",
+   "A prefeitura anunciou quatro quadras iguais em outros morros. O projeto das quatro repete o modelo — quadra, arquibancada e escada iluminada — e, em três deles, a escada ligará dois pontos que já são atravessados diariamente por atalhos de terra."
+  ],
+  "questions": [
+   {
+    "q_pt": "Qual é a ideia central da reportagem?",
+    "choices_pt": [
+     "A quadra ficou aquém do esperado, e o efeito maior veio do atendimento médico local",
+     "A quadra cumpriu o papel esperado, mas o efeito maior veio da escada, que virou passagem do morro",
+     "A quadra superou o esperado em inscritos, e o efeito maior veio dos torneios de sábado e domingo",
+     "A quadra cumpriu o papel esperado, mas o custo do acesso inviabiliza novas obras iguais"
+    ],
+    "correct": 1,
+    "type": "global"
+   },
+   {
+    "q_pt": "Como a escada mudou o trabalho dos socorristas do posto?",
+    "choices_pt": [
+     "Passaram a atender moradores de outro bairro, atraídos pela escada",
+     "Passaram a usar linhas de van para buscar os moradores de cima",
+     "Passaram a dar a volta no morro pela estrada, porque a escada é estreita",
+     "Passaram a levar o paciente escada acima, sem dar a volta no morro"
+    ],
+    "correct": 3,
+    "type": "detail"
+   },
+   {
+    "q_pt": "O que o projeto das quatro novas quadras dá a entender?",
+    "choices_pt": [
+     "Que a prefeitura passou a projetar a escada como ligação entre pontos, e não só como acesso à quadra",
+     "Que a prefeitura decidiu fazer escadas só nos morros sem nenhum atalho de terra",
+     "Que a prefeitura quer repetir as quadras onde a procura por futsal já é maior",
+     "Que a prefeitura passou a tratar a escada como custo a cortar, e a quadra como o que importa"
+    ],
+    "correct": 0,
+    "type": "inference"
+   }
+  ]
+ },
+ {
+  "id": "R-AM-b2-5",
+  "sublevel": "AM",
+  "skill": "reading",
+  "genre": "artigo de revista",
+  "title_pt": "O trem dos sábados",
+  "text_pt": [
+   "O trem turístico de Jaguariaíva, no norte do Paraná, sai aos sábados de manhã e percorre trinta e dois quilômetros de uma linha de carga desativada em 1998. Atravessa campos, passa por duas estações de madeira e cruza o rio numa ponte de ferro antes de voltar no fim da tarde. Quem opera o passeio é uma associação de voluntários, criada em 2009 por ex-funcionários da antiga ferrovia.",
+   "A autorização custou três anos de conversa. A empresa dona da via cedeu o trecho para os sábados e feriados, sem cobrar nada. Em troca, a associação ficou responsável pela conservação: trocar os dormentes, limpar o mato do leito e revisar as pontes. O primeiro passeio foi em 2014, com uma locomotiva a diesel e dois carros de passageiros que o próprio grupo recuperou.",
+   "O ingresso custa sessenta reais. Esse dinheiro nunca foi suficiente: o combustível, o seguro e a manutenção da linha custam mais do que a bilheteria rende. No vagão do meio há um balcão, onde se vende café e bolo de fubá, e a maior parte dos passageiros chega de Curitiba em ônibus fretados por escolas e por grupos de idosos.",
+   "O que paga a diferença é a oficina. Para recuperar os próprios carros, o grupo montou no pátio da estação uma oficina de marcenaria e solda, e logo começou a receber serviço de fora. Museus, prefeituras e outras associações mandam para Jaguariaíva vagões antigos, bancos de madeira e relógios de estação. Hoje é esse trabalho, e não o passeio, que sustenta a associação.",
+   "São doze voluntários, e são os mesmos que atendem a oficina e que viajam no trem aos sábados. Em 2025 a associação cancelou quatro passeios de um mesmo mês. Não faltaram passageiros: havia uma entrega marcada na oficina para aquelas semanas. Os quatro sábados foram remarcados para março do ano seguinte."
+  ],
+  "questions": [
+   {
+    "q_pt": "Qual é a ideia central do artigo?",
+    "choices_pt": [
+     "Um passeio mantido pelo dinheiro da dona da linha, e não pelo da oficina",
+     "Um passeio mantido pelo dinheiro da bilheteria, e não pelo da oficina",
+     "Um passeio mantido pelo dinheiro da dona da linha, e não pelo da bilheteria",
+     "Um passeio mantido pelo dinheiro da oficina, e não pelo da bilheteria"
+    ],
+    "correct": 3,
+    "type": "global"
+   },
+   {
+    "q_pt": "O que a associação dá à dona da linha em troca do uso do trecho?",
+    "choices_pt": [
+     "O conserto dos vagões da empresa na oficina do pátio",
+     "Um aluguel simbólico pago nos sábados e feriados",
+     "A conservação da via, com dormentes, mato e pontes",
+     "Uma parte do ingresso de sessenta reais"
+    ],
+    "correct": 2,
+    "type": "detail"
+   },
+   {
+    "q_pt": "O que o cancelamento de quatro passeios em 2025 revela?",
+    "choices_pt": [
+     "Que o passeio passa à frente do serviço da oficina quando os dois competem",
+     "Que o número de passageiros caiu depois do aumento do ingresso",
+     "Que a dona da linha suspendeu o uso da via naquele mês",
+     "Que o serviço da oficina passa à frente do passeio quando os dois competem"
+    ],
+    "correct": 3,
+    "type": "inference"
+   }
+  ]
+ },
+ {
+  "id": "R-S-b2-1",
+  "sublevel": "S",
+  "skill": "reading",
+  "genre": "editorial",
+  "title_pt": "A torneira e a tubulação",
+  "text_pt": [
+   "Toda estiagem prolongada produz, com a pontualidade de um calendário, a mesma peça publicitária: um rosto preocupado, um copo pela metade e a recomendação de fechar a torneira ao escovar os dentes. A campanha é irrepreensível quanto ao conteúdo e reveladora quanto ao recorte. Vale examinar o que ela pede, a quem pede e o que deixa de pedir.",
+   "A premissa é correta: água desperdiçada em casa é água perdida, e não há argumento sério contra economizá-la. Dela, porém, extrai-se uma conclusão que ela não acompanha — a de que o comportamento doméstico seja a variável decisiva do abastecimento. O consumo residencial responde por uma fração do total distribuído, e a parcela que se pode efetivamente suprimir sem prejuízo de higiene e saúde é menor ainda. Já a perda entre a estação de tratamento e o hidrômetro consome, em boa parte das cidades brasileiras, algo próximo de um terço do que se produz. Pedir ao morador aquilo que a tubulação dispensa é uma escolha de destinatário, não uma estratégia técnica.",
+   "Objeta-se que as duas coisas não se excluem, e de fato não se excluem. Competem, contudo, por aquilo que é genuinamente escasso: atenção pública e crédito político. Uma campanha rende manchete em uma semana; a substituição de redes antigas rende obra em seis anos, sem inauguração fotogênica e com rua interditada no meio do caminho. Onde a primeira está disponível, a segunda tende a ser adiada — e o adiamento se apresenta, invariavelmente, sob o nome de responsabilidade compartilhada.",
+   "Convém ainda observar o critério de sucesso adotado. A campanha se avalia pela adesão declarada, e não pelo volume que deixa de ser captado: mede-se quanto a população diz ter mudado, não quanto o sistema deixou de perder. Um indicador que depende de quem o responde, e não de quem o causa, não é um indicador ruim; é um indicador de outra coisa.",
+   "Nada disso recomenda silêncio sobre o consumo doméstico. Recomenda apenas que a ordem dos pedidos guarde alguma proporção com a ordem das perdas. Enquanto essa proporção não for buscada, o morador seguirá fechando a torneira com a consciência tranquila, enquanto a rua ao lado escorre há três meses e o cano, esse, ninguém filma."
+  ],
+  "questions": [
+   {
+    "q_pt": "Qual é a tese central do editorial?",
+    "choices_pt": [
+     "Que a campanha acerta no conteúdo, mas pede ao morador o que caberia à rede e ajuda a adiar a obra",
+     "Que a campanha e a obra são compatíveis, e por isso avançam juntas sem prejuízo para nenhuma",
+     "Que a campanha acerta no conteúdo, mas é inútil, pois o indicador que a avalia é ruim",
+     "Que a campanha erra no conteúdo, porque o consumo doméstico é irrelevante para o abastecimento"
+    ],
+    "correct": 0,
+    "type": "global"
+   },
+   {
+    "q_pt": "Que prazos o autor compara ao contrastar a campanha e a substituição das redes?",
+    "choices_pt": [
+     "Seis anos para a campanha e uma semana para a obra",
+     "Uma semana para a campanha e três meses para a obra",
+     "Uma semana para a campanha e seis anos para a obra",
+     "Três meses para a campanha e seis anos para a obra"
+    ],
+    "correct": 2,
+    "type": "detail"
+   },
+   {
+    "q_pt": "O que o autor dá a entender ao dizer, no fim, que ninguém filma o cano?",
+    "choices_pt": [
+     "Que a imprensa esconde de propósito o desperdício da rede para poupar as empresas",
+     "Que o desperdício da rede é menos visível e, por isso, menos cobrado do que o do morador",
+     "Que o desperdício da rede é grande demais para que uma obra o resolva",
+     "Que o desperdício do morador é o mais grave, mas o menos visível para as câmeras"
+    ],
+    "correct": 1,
+    "type": "inference"
+   }
+  ]
+ },
+ {
+  "id": "R-S-b2-2",
+  "sublevel": "S",
+  "skill": "reading",
+  "genre": "ensaio de revista acadêmica",
+  "title_pt": "O que a palavra resiliência carrega",
+  "text_pt": [
+   "Poucos termos migraram com tanta facilidade entre campos quanto resiliência. Nascido na física dos materiais, onde nomeia a capacidade de um corpo de absorver energia e retomar a forma, passou à ecologia, depois à psicologia e, na última década, ao vocabulário corrente das políticas públicas. A cada travessia perdeu precisão e ganhou prestígio, o que costuma ser o mesmo movimento observado duas vezes.",
+   "A metáfora de origem supõe duas coisas que quase nunca se examinam quando o termo é aplicado a pessoas e cidades. Supõe que exista uma forma anterior à qual convenha retornar, e supõe que a energia aplicada seja um acidente externo ao corpo que a recebe. Nenhuma das duas se sustenta diante de uma enchente urbana: a forma anterior do bairro inundado é precisamente aquilo que o tornou inundável, e a água não é um acontecimento estranho ao modo como a cidade tratou seus rios. Restituir a forma é, nesse caso, restituir a vulnerabilidade.",
+   "Daí decorre uma consequência que o entusiasmo pelo termo tende a encobrir. Medir resiliência é medir a capacidade de suportar, e aquilo que se mede acaba sendo aquilo que se pede. Uma população que atravessa três enchentes e se reergue três vezes aparece, no indicador, como exemplar; a mesma população aparece, em qualquer descrição honesta da situação, como abandonada. O elogio à resistência de quem suporta é indistinguível, na prática administrativa, do adiamento daquilo que dispensaria a necessidade de suportar.",
+   "Não se trata de descartar o conceito. Ele descreve algo real, e há contextos — a recuperação de um ecossistema, o curso de uma doença — em que a analogia com o material é legítima e produtiva. O problema aparece quando o termo é transposto para situações cuja causa é distributiva: ali ele converte uma questão sobre exposição desigual em uma questão sobre virtude individual, e o faz sem precisar afirmar coisa alguma, apenas pela escolha da palavra.",
+   "Se a observação procede, o teste de qualquer política que se anuncie como promotora de resiliência é simples de formular, ainda que incômodo de aplicar: pergunta-se quanto ela reduz a exposição, e não quanto amplia a capacidade de aguentar. Onde a resposta à primeira pergunta for nula, o termo não está descrevendo a política. Está ocupando o lugar daquilo que ela não faz."
+  ],
+  "questions": [
+   {
+    "q_pt": "Qual é o argumento principal do ensaio?",
+    "choices_pt": [
+     "Que o termo, ao sair da física, passou a tratar como virtude de quem aguenta o que é desigualdade de exposição",
+     "Que o termo, ao sair da física, perdeu o sentido e deve ser abandonado em todos os campos",
+     "Que o termo, ao sair da física, ganhou precisão na ecologia e na psicologia, mas falha nas cidades",
+     "Que o termo, ao sair da física, mede bem quem sofre mais enchentes, mas não indica quem se recupera"
+    ],
+    "correct": 0,
+    "type": "global"
+   },
+   {
+    "q_pt": "Que pergunta o autor propõe como teste de uma política dessas?",
+    "choices_pt": [
+     "Quanto a política devolve o bairro à forma que tinha antes",
+     "Quanto a política diminui a exposição das pessoas ao risco",
+     "Quanto a política absorve o choque sem perder a estrutura",
+     "Quanto a política amplia a capacidade das pessoas de aguentar"
+    ],
+    "correct": 1,
+    "type": "detail"
+   },
+   {
+    "q_pt": "O que o autor dá a entender sobre a forma anterior do bairro inundado?",
+    "choices_pt": [
+     "Que os moradores a escolheram sabendo do risco de enchentes",
+     "Que o problema está no indicador, que não capta o que o bairro era antes",
+     "Que a metáfora vale para o bairro, pois o corpo absorve a água e recupera a forma",
+     "Que restituí-la pode reproduzir a causa do dano"
+    ],
+    "correct": 3,
+    "type": "inference"
+   }
+  ]
+ },
+ {
+  "id": "R-S-b2-3",
+  "sublevel": "S",
+  "skill": "reading",
+  "genre": "artigo de opinião",
+  "title_pt": "O exame que encontra demais",
+  "text_pt": [
+   "A frase circula como evidência de bom senso: quanto mais cedo se descobre, melhor. Aplicada a uma pessoa doente que procura um médico, é verdadeira e dispensa defesa. Aplicada a uma população inteira de pessoas sem sintoma algum, deixa de ser óbvia e passa a ser uma hipótese — que às vezes se confirma e às vezes não.",
+   "A razão é estatística e pouco intuitiva. Um exame aplicado a quem não tem queixa encontra três tipos de coisa: o que faria mal e foi interrompido a tempo, o que faria mal e seria encontrado igualmente depois, sem prejuízo, e o que nunca faria mal algum. A terceira categoria não é pequena nem hipotética; em certos rastreamentos, é a maior das três. Como nenhum laudo informa a qual delas pertence o achado, todos acabam tratados, e o tratamento tem custo próprio: cirurgia, medicação contínua, a condição permanente de paciente.",
+   "Há um efeito colateral que é também um artifício de medição. Antecipar o diagnóstico alonga o intervalo entre o achado e o desfecho, e é esse intervalo que as estatísticas de sobrevivência registram. Um programa pode, portanto, melhorar todos os seus números sem que uma única morte tenha sido evitada. A mortalidade — indicador que não se deixa enganar por antecipação — é a única resposta pertinente, e é justamente a que raramente aparece nas divulgações.",
+   "A objeção previsível é humana antes de ser técnica: diante da dúvida, é preferível saber. Mas saber, aqui, não é um estado neutro; é a entrada em um percurso com consequências físicas. A escolha não se dá entre informação e ignorância, e sim entre dois riscos desiguais, dos quais apenas um é visível. Quem teve removido um tumor que nunca teria incomodado acredita, com inteira sinceridade, que foi salvo por ele, e jamais saberá que não corria perigo. Quem foi prejudicado por um tratamento desnecessário não tem como demonstrar que o exame esteve na origem.",
+   "Nada disso é argumento contra rastrear. É argumento contra rastrear sem dizer o que se sabe. Programas bem desenhados existem, têm faixa etária, intervalo e critério definidos por evidência, e nenhum deles se beneficia de ser apresentado como gesto de cuidado indiscutível. A pergunta que uma campanha honesta responderia não é quantas pessoas foram examinadas — número que depende apenas da campanha —, mas quantas deixaram de morrer. Se a resposta não existe, convém dizê-lo antes do slogan."
+  ],
+  "questions": [
+   {
+    "q_pt": "Qual é a tese do artigo?",
+    "choices_pt": [
+     "Que rastrear quem não tem sintoma melhora a sobrevivência e portanto salva vidas",
+     "Que rastrear quem não tem sintoma é sempre prejudicial e os programas devem acabar",
+     "Que rastrear quem não tem sintoma só se justifica se evitar mortes, e essa prova costuma faltar",
+     "Que rastrear quem não tem sintoma vale para todos, pois saber é sempre melhor que ignorar"
+    ],
+    "correct": 2,
+    "type": "global"
+   },
+   {
+    "q_pt": "Por que um programa pode melhorar suas estatísticas de sobrevivência sem evitar mortes?",
+    "choices_pt": [
+     "Porque o intervalo entre a descoberta e o desfecho encurta com a antecipação",
+     "Porque a mortalidade é um indicador que se deixa enganar pela antecipação",
+     "Porque os laudos separam os achados que nunca fariam mal dos que fariam",
+     "Porque achar a doença mais cedo alonga o tempo entre a descoberta e o desfecho"
+    ],
+    "correct": 3,
+    "type": "detail"
+   },
+   {
+    "q_pt": "O que o autor sugere com o contraste entre as duas pessoas do quarto parágrafo?",
+    "choices_pt": [
+     "Que o benefício é percebido por quem o recebe e o dano não, o que distorce a discussão",
+     "Que o dano é percebido por quem o sofre e o benefício não, o que distorce a discussão",
+     "Que as duas pessoas provam que o exame acerta e erra na mesma proporção",
+     "Que a maioria dos operados sofre danos que ninguém consegue provar"
+    ],
+    "correct": 0,
+    "type": "inference"
+   }
+  ]
+ },
+ {
+  "id": "R-S-b2-4",
+  "sublevel": "S",
+  "skill": "reading",
+  "genre": "ensaio crítico",
+  "title_pt": "A fachada e o que ficou atrás dela",
+  "text_pt": [
+   "Percorre-se hoje, em várias cidades brasileiras, uma paisagem curiosa: quarteirões inteiros em que as fachadas do século XIX permanecem de pé, escoradas por estruturas metálicas, enquanto atrás delas se ergue um edifício que nada tem a ver com o que elas anunciam. O procedimento é legal, por vezes exemplar do ponto de vista técnico, e quase sempre elogiado como conciliação entre memória e desenvolvimento. É essa unanimidade que merece exame.",
+   "O tombamento protege aquilo que é possível descrever num processo. Descrevem-se bem a altura, o ritmo das janelas, a ornamentação, a cor. Descreve-se mal, ou não se descreve, aquilo que fazia daquele conjunto o que ele era: o tipo de comércio que ocupava o térreo, a relação entre quem morava em cima e quem trabalhava embaixo, o horário em que a rua se enchia. A norma protege a aparência porque a aparência é o que ela consegue enunciar — e o que não entra no texto não é destruído por decisão, mas por omissão.",
+   "Disso resulta uma inversão pouco notada. A fachada preservada não conserva a memória do lugar; substitui-a por uma imagem estável e, ao fazê-lo, encerra a discussão. Um prédio demolido por inteiro deixa um vazio que incomoda e que pode um dia ser reivindicado; uma fachada mantida produz a sensação de dever cumprido, e essa sensação é definitiva. Preservar a casca é o modo mais eficaz de tornar a perda invisível, porque não deixa nenhuma lacuna à vista.",
+   "Seria fácil, e injusto, ler nisso má-fé dos arquitetos ou dos órgãos de patrimônio, que trabalham com os instrumentos que a lei lhes deu. O ponto é sobre os instrumentos. Uma legislação que sabe descrever molduras e não sabe descrever usos produzirá, com técnicos honestos e processos corretos, exatamente esse resultado — cidades cujo passado é visível e inacessível, como a vitrine de uma loja fechada.",
+   "Há alternativas, e não são utópicas: condicionar a aprovação à permanência de determinados usos no térreo, exigir que parte da área conserve a escala original, tratar o inquilino antigo como elemento do conjunto protegido. Todas são mais difíceis de fiscalizar do que uma cor de parede, e essa dificuldade explica sua raridade melhor do que qualquer argumento de princípio. Enquanto não forem tentadas, seguiremos chamando de preservação aquilo que é, com rigor, taxidermia."
+  ],
+  "questions": [
+   {
+    "q_pt": "Qual é o argumento central do ensaio?",
+    "choices_pt": [
+     "Que manter só a fachada resulta de má-fé de quem cuida do patrimônio, que prefere a aparência",
+     "Que manter só a fachada encerra a discussão sobre a perda, pois não deixa lacuna à vista",
+     "Que manter só a fachada é uma conciliação legítima, pois protege o que a norma consegue descrever",
+     "Que manter só a fachada é injusto com os donos, pois os obriga a conservar o que não usam"
+    ],
+    "correct": 1,
+    "type": "global"
+   },
+   {
+    "q_pt": "A quem o autor atribui o resultado que critica?",
+    "choices_pt": [
+     "Aos arquitetos, que preferem a fachada por interesse próprio",
+     "À legislação, que descreve bem as molduras e mal os usos, mesmo com técnicos honestos",
+     "Aos moradores, que aceitam trocar o comércio pela aparência",
+     "Aos técnicos do patrimônio, que fiscalizam mal os tombamentos"
+    ],
+    "correct": 1,
+    "type": "detail"
+   },
+   {
+    "q_pt": "O que o autor sugere sobre a raridade das alternativas que propõe?",
+    "choices_pt": [
+     "Que ela vem mais de razões de princípio do que da dificuldade de fiscalizá-las",
+     "Que ela vem de os arquitetos as considerarem utópicas",
+     "Que ela vem de o custo superar o de preservar só a fachada",
+     "Que ela vem mais da dificuldade de fiscalizá-las do que de razões de princípio"
+    ],
+    "correct": 3,
+    "type": "inference"
+   }
+  ]
+ },
+ {
+  "id": "R-S-b2-5",
+  "sublevel": "S",
+  "skill": "reading",
+  "genre": "resenha crítica",
+  "title_pt": "Uma história das estradas",
+  "text_pt": [
+   "Caminhos de Terra, de Vilma Orsi, é o tipo de livro que a história da infraestrutura no Brasil vinha esperando e que, por um motivo que vale discutir, entrega menos do que reuniu. São seiscentas páginas construídas sobre arquivos de nove departamentos estaduais de estradas, orçamentos municipais e uma coleção rara de relatórios de engenheiros de campo entre 1920 e 1980. A pesquisa é irrepreensível. É a arquitetura do argumento que merece reparo.",
+   "A tese central é enunciada na introdução com admirável clareza: a estrada brasileira teria sido menos um instrumento de integração do que um dispositivo de captura, traçada para levar a produção ao porto e, apenas incidentalmente, pessoas umas às outras. Os três primeiros capítulos sustentam a afirmação com um rigor que convence — mapas de traçado sobrepostos a mapas de exportação, orçamentos que revelam prioridades não declaradas, relatórios em que engenheiros discutem, sem constrangimento, a inutilidade de um ramal para os moradores da região.",
+   "A partir do quarto capítulo, porém, a metáfora da captura deixa de ser hipótese e passa a funcionar como chave universal. Toda estrada, em qualquer contexto, é lida como extração; quando um trecho evidentemente beneficia quem vive à sua margem, o benefício é apresentado como efeito colateral de um desígnio que permanece o mesmo. Uma tese que explica todos os casos com igual força explica, a rigor, um número menor deles do que parece.",
+   "O custo dessa escolha aparece no próprio material que a autora reuniu. Os relatórios de campo dos anos 1950, os documentos mais vivos do livro, estão repletos de disputas entre engenheiros, prefeitos e proprietários sobre para onde a estrada deveria ir — disputas cujo desfecho variou. São elas que sustentariam uma explicação mais interessante e menos elegante, na qual o traçado resulta de um conflito com vencedores locais, e não de uma intenção única. Orsi as cita como ilustração e segue adiante.",
+   "Vale dizer o óbvio: um livro que se critica por ser menos ambíguo do que suas fontes é um livro sério, e Caminhos de Terra o é. Sua contribuição permanecerá, provavelmente, menos pela tese do que pelo arquivo que tornou consultável e pelas perguntas que deixou formuladas contra a própria vontade. Não é o pior destino para uma obra de fôlego; é apenas um destino diferente daquele que a introdução promete."
+  ],
+  "questions": [
+   {
+    "q_pt": "Qual é a avaliação central da resenha?",
+    "choices_pt": [
+     "Que a tese é convincente do começo ao fim, mas o arquivo reunido é curto demais para tanto",
+     "Que o arquivo é valioso, mas a tese virou chave universal e explica menos do que parece",
+     "Que a tese é convincente nos três primeiros capítulos, mas depois a autora a abandona",
+     "Que o arquivo é valioso e a tese também, mas o livro se alonga demais para o tema"
+    ],
+    "correct": 1,
+    "type": "global"
+   },
+   {
+    "q_pt": "Como Orsi trata as disputas dos relatórios dos anos 1950?",
+    "choices_pt": [
+     "Reduz-as a um capítulo, onde as contrapõe aos orçamentos",
+     "Descarta-as como pouco autênticas, por serem documentos de engenheiros em obra",
+     "Usa-as como base de uma explicação por conflito local",
+     "Cita-as como ilustração da tese e segue adiante"
+    ],
+    "correct": 3,
+    "type": "detail"
+   },
+   {
+    "q_pt": "O que o resenhista sugere sobre a contribuição duradoura do livro?",
+    "choices_pt": [
+     "Que será esquecido, pois a tese e o arquivo se contradizem entre si",
+     "Que será valorizado pela tese, embora o arquivo tenha fragilidades",
+     "Que será valorizado pela tese e pelo arquivo, embora as perguntas fiquem sem resposta",
+     "Que será valorizado pelo arquivo e pelas questões que deixa, mais do que pela tese"
+    ],
+    "correct": 3,
+    "type": "inference"
+   }
+  ]
+ }
+]

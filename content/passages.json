@@ -1,0 +1,2831 @@
+[
+ {
+  "id": "IL-v2-1",
+  "sublevel": "IL",
+  "genre": "previsão do tempo",
+  "intro_pt": "Você vai ouvir a previsão do tempo no rádio.",
+  "duration_target_s": 56,
+  "speakers": [
+   {
+    "slot": "F1",
+    "voice_style": "voz feminina adulta, clara e versátil, registro neutro brasileiro"
+   }
+  ],
+  "script": [
+   {
+    "slot": "F1",
+    "text": "E agora, a previsão do tempo para a cidade do Recife. Hoje o dia começa com sol. De manhã, sol e algumas nuvens. A temperatura máxima de hoje fica em trinta e um graus. A mínima fica em vinte e quatro graus. À tarde, a chance de chuva aumenta. A chuva vem principalmente perto da praia. Quem sair depois das quatro horas, leve o guarda-chuva. Amanhã o dia é bem diferente de hoje: em vez de chuva à tarde, o sol fica o dia inteiro, e o vento fica mais fraco. Quem vai para a praia amanhã pode ir tranquilo, mas leve protetor solar, porque o sol fica forte depois das dez. No sábado e no domingo, o calor continua. Sábado e domingo: sol e calor, sem chuva. Essa foi a previsão do tempo para o Recife. Tenha um bom dia."
+   }
+  ],
+  "questions": [
+   {
+    "q_pt": "Qual é o resumo da previsão para o Recife?",
+    "choices_pt": [
+     "Chuva pela manhã e sol à tarde hoje, e depois sol no fim de semana",
+     "Sol pela manhã e chuva à tarde hoje, e depois sol no fim de semana",
+     "Sol pela manhã e chuva à tarde hoje, e depois chuva no fim de semana",
+     "Chuva pela manhã e sol à tarde hoje, e depois chuva no fim de semana"
+    ],
+    "correct": 1,
+    "type": "global"
+   },
+   {
+    "q_pt": "O que a previsão diz sobre o vento de amanhã?",
+    "choices_pt": [
+     "Fica mais forte do que hoje",
+     "Fica mais fraco do que hoje",
+     "Fica igual ao de hoje",
+     "Sopra só durante a noite"
+    ],
+    "correct": 1,
+    "type": "selective"
+   },
+   {
+    "q_pt": "Qual é a temperatura máxima prevista para hoje, em graus?",
+    "choices_pt": [
+     "Vinte e quatro",
+     "Trinta e um",
+     "Vinte e oito",
+     "Trinta e quatro"
+    ],
+    "correct": 1,
+    "type": "detail"
+   }
+  ],
+  "title_pt": "Recife"
+ },
+ {
+  "id": "IL-v2-2",
+  "sublevel": "IL",
+  "genre": "diálogo marcando horário num salão",
+  "intro_pt": "Você vai ouvir uma cliente ligando para um salão de beleza.",
+  "duration_target_s": 57,
+  "speakers": [
+   {
+    "slot": "F2",
+    "voice_style": "voz feminina adulta jovem, tom natural e coloquial"
+   },
+   {
+    "slot": "M1",
+    "voice_style": "voz masculina adulta, clara e versátil, registro neutro brasileiro"
+   }
+  ],
+  "script": [
+   {
+    "slot": "F2",
+    "text": "Alô, boa tarde. É do Salão Estrela?"
+   },
+   {
+    "slot": "M1",
+    "text": "É sim, boa tarde. Em que posso ajudar?"
+   },
+   {
+    "slot": "F2",
+    "text": "Eu queria marcar um corte de cabelo para essa semana."
+   },
+   {
+    "slot": "M1",
+    "text": "Deixa eu ver aqui. Tenho um horário na quinta à tarde e outro na sexta de manhã."
+   },
+   {
+    "slot": "F2",
+    "text": "Na sexta de manhã é melhor. Na quinta eu saio tarde do trabalho."
+   },
+   {
+    "slot": "M1",
+    "text": "Sexta, então, às dez horas, com a Dani."
+   },
+   {
+    "slot": "F2",
+    "text": "Ela pode fazer só o corte? Eu não quero pintar o cabelo agora."
+   },
+   {
+    "slot": "M1",
+    "text": "Pode sim. Só o corte custa setenta reais."
+   },
+   {
+    "slot": "F2",
+    "text": "Tudo bem. E vocês aceitam cartão?"
+   },
+   {
+    "slot": "M1",
+    "text": "Aceitamos cartão e dinheiro, como a senhora preferir."
+   },
+   {
+    "slot": "F2",
+    "text": "Ótimo. Eu nunca fui aí. O salão fica perto do mercado?"
+   },
+   {
+    "slot": "M1",
+    "text": "Fica na mesma rua do mercado, do lado da farmácia. A porta é azul."
+   },
+   {
+    "slot": "F2",
+    "text": "Já sei onde é. Muito obrigada!"
+   },
+   {
+    "slot": "M1",
+    "text": "De nada. Só peço que a senhora chegue uns dez minutos antes. Até sexta!"
+   }
+  ],
+  "questions": [
+   {
+    "q_pt": "Qual é o assunto da ligação?",
+    "choices_pt": [
+     "Uma cliente que nunca foi ao salão marca um corte de cabelo",
+     "Uma cliente habitual do salão marca um corte de cabelo",
+     "Uma cliente que nunca foi ao salão marca uma tintura de cabelo",
+     "Uma cliente habitual do salão marca uma tintura de cabelo"
+    ],
+    "correct": 0,
+    "type": "global"
+   },
+   {
+    "q_pt": "Que dia e hora ficam combinados?",
+    "choices_pt": [
+     "Sexta, às dez horas da manhã",
+     "Quinta, às quatro horas da tarde",
+     "Sexta, às três horas da tarde",
+     "Quinta, às dez horas da manhã"
+    ],
+    "correct": 0,
+    "type": "selective"
+   },
+   {
+    "q_pt": "Por que ela escolhe esse dia?",
+    "choices_pt": [
+     "Porque na sexta a Dani atende sem fila",
+     "Porque na quinta ela sai tarde do expediente",
+     "Porque na sexta o corte custa menos",
+     "Porque na sexta o salão aceita cartão"
+    ],
+    "correct": 1,
+    "type": "detail"
+   }
+  ],
+  "title_pt": "No salão"
+ },
+ {
+  "id": "IL-v2-3",
+  "sublevel": "IL",
+  "genre": "telefonema com um convite",
+  "intro_pt": "Você vai ouvir um telefonema entre dois amigos.",
+  "duration_target_s": 47,
+  "speakers": [
+   {
+    "slot": "M2",
+    "voice_style": "voz masculina adulta jovem, tom natural e coloquial"
+   },
+   {
+    "slot": "F2",
+    "voice_style": "voz feminina adulta jovem, tom natural e coloquial"
+   }
+  ],
+  "script": [
+   {
+    "slot": "M2",
+    "text": "Oi, Bruna! É o Téo. Tudo bem?"
+   },
+   {
+    "slot": "F2",
+    "text": "Oi, Téo! Tudo ótimo. Você sumiu, hein!"
+   },
+   {
+    "slot": "M2",
+    "text": "Andei trabalhando demais. Por isso mesmo eu estou ligando: sábado vai ter um almoço lá em casa."
+   },
+   {
+    "slot": "F2",
+    "text": "Que ideia boa. Sábado eu estou livre depois das onze."
+   },
+   {
+    "slot": "M2",
+    "text": "Então dá certo. A gente pretende comer lá pela uma da tarde."
+   },
+   {
+    "slot": "F2",
+    "text": "Uma da tarde é ótimo pra mim. Eu posso levar alguma coisa?"
+   },
+   {
+    "slot": "M2",
+    "text": "Se você trouxer a sobremesa, ajuda bastante. O resto a gente já resolveu."
+   },
+   {
+    "slot": "F2",
+    "text": "Eu faço aquele pudim que vocês gostam, então."
+   },
+   {
+    "slot": "M2",
+    "text": "Fechado. Aí é só subir: o apartamento é o cento e dois, no primeiro andar."
+   },
+   {
+    "slot": "F2",
+    "text": "E qual é a porta?"
+   },
+   {
+    "slot": "M2",
+    "text": "A da esquerda, do lado do elevador."
+   },
+   {
+    "slot": "F2",
+    "text": "Anotei. Até sábado, Téo!"
+   }
+  ],
+  "questions": [
+   {
+    "q_pt": "Qual é o assunto da conversa?",
+    "choices_pt": [
+     "Um amigo convida uma amiga para um jantar e combina o que ela leva",
+     "Um amigo convida uma amiga para um almoço e combina quem vai buscá-la",
+     "Um amigo convida uma amiga para um almoço e combina o que ela leva",
+     "Um amigo convida uma amiga para um jantar e combina quem vai buscá-la"
+    ],
+    "correct": 2,
+    "type": "global"
+   },
+   {
+    "q_pt": "Como a Bruna vai achar o apartamento?",
+    "choices_pt": [
+     "Apartamento cento e dois, porta da direita",
+     "Apartamento cento e vinte, porta da esquerda",
+     "Apartamento cento e vinte, porta da direita",
+     "Apartamento cento e dois, porta da esquerda"
+    ],
+    "correct": 3,
+    "type": "selective"
+   },
+   {
+    "q_pt": "Por que o Téo passou um tempo sem dar notícias?",
+    "choices_pt": [
+     "Porque ele esteve doente",
+     "Porque ele viajou de férias",
+     "Porque o trabalho tomou o tempo dele",
+     "Porque ele se mudou de cidade"
+    ],
+    "correct": 2,
+    "type": "detail"
+   }
+  ],
+  "title_pt": "Um telefonema"
+ },
+ {
+  "id": "IL-v2-4",
+  "sublevel": "IL",
+  "genre": "diálogo na recepção de um hotel",
+  "intro_pt": "Você vai ouvir um hóspede chegando à recepção de um hotel.",
+  "duration_target_s": 59,
+  "speakers": [
+   {
+    "slot": "M2",
+    "voice_style": "voz masculina adulta jovem, tom natural e coloquial"
+   },
+   {
+    "slot": "F1",
+    "voice_style": "voz feminina adulta, clara e versátil, registro neutro brasileiro"
+   }
+  ],
+  "script": [
+   {
+    "slot": "M2",
+    "text": "Boa tarde. Eu tenho uma reserva no nome de Rafael Bento."
+   },
+   {
+    "slot": "F1",
+    "text": "Boa tarde, senhor Rafael. Achei aqui: duas noites, quarto de casal."
+   },
+   {
+    "slot": "M2",
+    "text": "Isso mesmo. Eu vim para um congresso e volto no domingo."
+   },
+   {
+    "slot": "F1",
+    "text": "O seu quarto é o duzentos e dez. Fica no segundo andar, nos fundos, que é o lado mais silencioso."
+   },
+   {
+    "slot": "M2",
+    "text": "Melhor ainda. Eu durmo mal quando tem barulho de rua."
+   },
+   {
+    "slot": "F1",
+    "text": "Então o senhor vai gostar. O café da manhã é no restaurante do térreo, das sete às dez."
+   },
+   {
+    "slot": "M2",
+    "text": "Eu saio cedo. Tem algum jeito de tomar um café antes das sete?"
+   },
+   {
+    "slot": "F1",
+    "text": "Tem sim. Antes das sete a gente serve café e pão aqui na recepção mesmo."
+   },
+   {
+    "slot": "M2",
+    "text": "Isso resolve o meu problema. E onde eu deixo o carro?"
+   },
+   {
+    "slot": "F1",
+    "text": "O estacionamento fica atrás do hotel e é gratuito para os hóspedes."
+   },
+   {
+    "slot": "M2",
+    "text": "Perfeito. Muito obrigado."
+   },
+   {
+    "slot": "F1",
+    "text": "Aqui está a sua chave. Qualquer coisa, é só ligar para a recepção."
+   }
+  ],
+  "questions": [
+   {
+    "q_pt": "Qual é a situação dessa conversa?",
+    "choices_pt": [
+     "Um hóspede com reserva chega ao hotel e recebe orientações sobre a estadia",
+     "Um hóspede com reserva reclama de um problema no hotel e pede compensação",
+     "Um hóspede sem reserva chega ao hotel e negocia o preço da estadia",
+     "Um hóspede com reserva quer mudar a data da estadia e pede informações"
+    ],
+    "correct": 0,
+    "type": "global"
+   },
+   {
+    "q_pt": "Onde fica o quarto do hóspede?",
+    "choices_pt": [
+     "Na frente, no segundo andar",
+     "Nos fundos, no segundo andar",
+     "Nos fundos, no terceiro andar",
+     "Na frente, no terceiro andar"
+    ],
+    "correct": 1,
+    "type": "selective"
+   },
+   {
+    "q_pt": "Onde e em que condição ele deixa o carro?",
+    "choices_pt": [
+     "Atrás do hotel, com taxa por diária",
+     "No térreo do prédio, sem custo para hóspedes",
+     "No térreo do prédio, com taxa por diária",
+     "Atrás do hotel, sem custo para hóspedes"
+    ],
+    "correct": 3,
+    "type": "detail"
+   }
+  ],
+  "title_pt": "Na recepção"
+ },
+ {
+  "id": "IL-v2-5",
+  "sublevel": "IL",
+  "genre": "anúncio de promoção em loja",
+  "intro_pt": "Você vai ouvir um anúncio dentro de uma loja de roupas.",
+  "duration_target_s": 58,
+  "speakers": [
+   {
+    "slot": "M1",
+    "voice_style": "voz masculina adulta, clara e versátil, registro neutro brasileiro"
+   }
+  ],
+  "script": [
+   {
+    "slot": "M1",
+    "text": "Atenção, clientes da Loja Verano. Hoje começa a nossa semana de inverno. Todos os casacos estão com trinta por cento de desconto, e as jaquetas também entram na promoção. O motivo é simples: a coleção nova chega no mês que vem e a gente precisa de espaço na loja. O desconto já sai na hora, no caixa. Não precisa de cupom nem de cadastro. A promoção vale só até domingo. Quem levar duas peças ganha uma sacola de pano da loja. Os casacos ficam no segundo andar, ao lado dos provadores. Não achou o seu tamanho na arara? Fale com a nossa equipe. A gente procura no estoque, e o que não tiver aqui a gente traz da loja do centro em dois dias. As peças da promoção também podem ser trocadas: você tem quinze dias e é só trazer a nota fiscal. Boas compras!"
+   }
+  ],
+  "questions": [
+   {
+    "q_pt": "O que o anúncio comunica?",
+    "choices_pt": [
+     "Um desconto em roupas de inverno porque a loja vai mudar de endereço",
+     "Um desconto em roupas de inverno por causa de peças com defeito",
+     "Um desconto em roupas de inverno para abrir espaço à coleção seguinte",
+     "Um desconto em roupas de inverno para comemorar o aniversário da loja"
+    ],
+    "correct": 2,
+    "type": "global"
+   },
+   {
+    "q_pt": "Em quanto tempo chega da outra loja uma peça que falta no estoque?",
+    "choices_pt": [
+     "Em dois dias",
+     "Em quinze dias",
+     "Em uma semana",
+     "Em um mês"
+    ],
+    "correct": 0,
+    "type": "selective"
+   },
+   {
+    "q_pt": "O que o cliente precisa fazer para levar o desconto?",
+    "choices_pt": [
+     "Apresentar um cupom que a loja distribui na entrada",
+     "Nada além de ir ao caixa, onde o abatimento já sai",
+     "Fazer um cadastro no balcão e esperar a aprovação",
+     "Levar duas peças, senão o desconto não vale"
+    ],
+    "correct": 1,
+    "type": "detail"
+   }
+  ],
+  "title_pt": "Loja Verano"
+ },
+ {
+  "id": "IM-v2-1",
+  "sublevel": "IM",
+  "genre": "recado de voz com instruções de caminho",
+  "intro_pt": "Você vai ouvir um recado de voz sobre como chegar a um encontro.",
+  "duration_target_s": 63,
+  "speakers": [
+   {
+    "slot": "F1",
+    "voice_style": "voz feminina adulta, clara e versátil, registro neutro brasileiro"
+   }
+  ],
+  "script": [
+   {
+    "slot": "F1",
+    "text": "Oi, pessoal, é a Renata, da organização do encontro. Estou deixando esse recado para explicar como chegar no sítio no sábado. São duas instruções: uma para quem vem de carro e uma para quem vem de ônibus. Quem vier de carro: pegue a estrada velha e siga por vinte minutos. Vinte minutos depois do posto de gasolina. Aí você vai ver uma placa de madeira do lado esquerdo. Na placa está escrito Recanto das Flores. É ali. A entrada é de terra, então entre devagar, porque choveu essa semana. Quem vier de ônibus: o ônibus para na praça do centro. A praça do centro é o ponto final. A gente busca vocês na praça, de carro. Só me avisem o horário do ônibus até sexta-feira. Até sexta, tá? Se avisarem depois, fica difícil organizar as caronas. Então é isso: de carro, a placa de madeira; de ônibus, a praça do centro. Qualquer dúvida, me liguem. Até sábado!"
+   }
+  ],
+  "questions": [
+   {
+    "q_pt": "Qual é o objetivo do recado?",
+    "choices_pt": [
+     "Pedir carona para o sábado",
+     "Explicar como chegar ao lugar do encontro",
+     "Convidar as pessoas para o encontro",
+     "Avisar que o encontro foi adiado"
+    ],
+    "correct": 1,
+    "type": "global"
+   },
+   {
+    "q_pt": "O que o motorista vai ver do lado esquerdo?",
+    "choices_pt": [
+     "Uma placa de madeira",
+     "Um posto de gasolina",
+     "A praça do centro",
+     "Uma loja de flores"
+    ],
+    "correct": 0,
+    "type": "detail"
+   },
+   {
+    "q_pt": "O que a Renata pede para quem vier de ônibus?",
+    "choices_pt": [
+     "Ir de carro até a praça",
+     "Avisar o horário até sexta-feira",
+     "Descer no posto de gasolina",
+     "Chegar vinte minutos antes"
+    ],
+    "correct": 1,
+    "type": "detail"
+   }
+  ],
+  "title_pt": "O sítio"
+ },
+ {
+  "id": "IM-v2-2",
+  "sublevel": "IM",
+  "genre": "conversa entre amigos",
+  "intro_pt": "Você vai ouvir dois amigos combinando um programa.",
+  "duration_target_s": 67,
+  "speakers": [
+   {
+    "slot": "F2",
+    "voice_style": "voz feminina adulta jovem, tom natural e coloquial"
+   },
+   {
+    "slot": "M2",
+    "voice_style": "voz masculina adulta jovem, tom natural e coloquial"
+   }
+  ],
+  "script": [
+   {
+    "slot": "F2",
+    "text": "E aí, já pensou no que a gente faz no domingo?"
+   },
+   {
+    "slot": "M2",
+    "text": "Pensei. Que tal a feira de artesanato do bairro? Esse mês ela é na praça grande, e não no estacionamento de sempre."
+   },
+   {
+    "slot": "F2",
+    "text": "Mudou de lugar? Melhor assim, na praça tem sombra. Só que de manhã eu não posso: levo a minha mãe no médico às nove."
+   },
+   {
+    "slot": "M2",
+    "text": "Sem problema, a feira fica aberta até as seis. A gente vai depois do almoço."
+   },
+   {
+    "slot": "F2",
+    "text": "Então tá. Só que eu queria passar primeiro na barraca da moça que faz cerâmica. As peças dela acabam rápido."
+   },
+   {
+    "slot": "M2",
+    "text": "A gente começa por ela, então."
+   },
+   {
+    "slot": "F2",
+    "text": "E leva dinheiro, viu? Na feira quase ninguém aceita cartão."
+   },
+   {
+    "slot": "M2",
+    "text": "Verdade. Vou no banco no sábado, porque no domingo as agências fecham."
+   },
+   {
+    "slot": "F2",
+    "text": "Boa. E tem barraca de comida na feira esse ano, então a gente lancha lá mesmo."
+   },
+   {
+    "slot": "M2",
+    "text": "Ótimo. A gente vai a pé, né? Estacionar perto da praça é complicado."
+   },
+   {
+    "slot": "F2",
+    "text": "Vamos a pé. É só dez minutos da minha casa."
+   },
+   {
+    "slot": "M2",
+    "text": "Então eu passo na tua casa umas duas horas."
+   }
+  ],
+  "questions": [
+   {
+    "q_pt": "Sobre o que os dois estão conversando?",
+    "choices_pt": [
+     "Sobre a consulta médica da mãe dela",
+     "Sobre o horário do banco no fim de semana",
+     "Sobre um passeio no domingo",
+     "Sobre uma barraca de comida que eles querem montar"
+    ],
+    "correct": 2,
+    "type": "global"
+   },
+   {
+    "q_pt": "Por que ela quer ir primeiro à barraca de cerâmica?",
+    "choices_pt": [
+     "Porque as peças da moça acabam rápido",
+     "Porque a barraca fecha antes das seis",
+     "Porque a barraca fica na sombra da praça",
+     "Porque ela combinou de encontrar a moça lá"
+    ],
+    "correct": 0,
+    "type": "detail"
+   },
+   {
+    "q_pt": "Por que ele vai ao banco no sábado, e não no domingo?",
+    "choices_pt": [
+     "Porque na feira quase ninguém aceita cartão",
+     "Porque no domingo eles vão à feira depois do almoço",
+     "Porque no domingo ele passa na casa dela às duas horas",
+     "Porque no domingo as agências fecham"
+    ],
+    "correct": 3,
+    "type": "detail"
+   }
+  ],
+  "title_pt": "Entre amigos"
+ },
+ {
+  "id": "IM-v2-3",
+  "sublevel": "IM",
+  "genre": "conversa de podcast",
+  "intro_pt": "Você vai ouvir o começo de um episódio de podcast.",
+  "duration_target_s": 70,
+  "speakers": [
+   {
+    "slot": "M1",
+    "voice_style": "voz masculina adulta, clara e versátil, registro neutro brasileiro"
+   },
+   {
+    "slot": "F2",
+    "voice_style": "voz feminina adulta jovem, tom natural e coloquial"
+   }
+  ],
+  "script": [
+   {
+    "slot": "M1",
+    "text": "Oi, gente, bem-vindos ao Café da Segunda. Eu sou o Aldo, e hoje eu estou com a Bia. Oi, Bia!"
+   },
+   {
+    "slot": "F2",
+    "text": "Oi, Aldo! Oi, gente!"
+   },
+   {
+    "slot": "M1",
+    "text": "Bia, você trabalha como cozinheira, né? Conta pra gente como é o teu dia."
+   },
+   {
+    "slot": "F2",
+    "text": "Eu trabalho num restaurante pequeno, no centro de Curitiba. O restaurante abre só no almoço."
+   },
+   {
+    "slot": "M1",
+    "text": "Só no almoço? Então o teu dia começa cedo."
+   },
+   {
+    "slot": "F2",
+    "text": "Começa muito cedo. Às seis da manhã eu já estou na feira, escolhendo os legumes."
+   },
+   {
+    "slot": "M1",
+    "text": "Às seis da manhã na feira! E depois?"
+   },
+   {
+    "slot": "F2",
+    "text": "Depois eu volto para o restaurante, umas oito horas, e fico na cozinha até as três da tarde."
+   },
+   {
+    "slot": "M1",
+    "text": "Até as três da tarde. E aí o dia acabou?"
+   },
+   {
+    "slot": "F2",
+    "text": "Aí o dia acabou. A minha tarde fica livre. Eu descanso, tomo um café, fico com os meus filhos."
+   },
+   {
+    "slot": "M1",
+    "text": "E você não cansa de cozinhar?"
+   },
+   {
+    "slot": "F2",
+    "text": "Canso, sim! Todo mundo cansa. Mas eu gosto muito do que eu faço."
+   },
+   {
+    "slot": "M1",
+    "text": "E o que você mais gosta?"
+   },
+   {
+    "slot": "F2",
+    "text": "Eu gosto de ver o prato voltando vazio. Prato vazio é elogio."
+   },
+   {
+    "slot": "M1",
+    "text": "Prato vazio é elogio! Boa, Bia."
+   }
+  ],
+  "questions": [
+   {
+    "q_pt": "Sobre o que a Bia fala nessa conversa?",
+    "choices_pt": [
+     "Sobre uma viagem que ela fez",
+     "Sobre a história do restaurante",
+     "Sobre como abrir um restaurante",
+     "Sobre a rotina de trabalho dela"
+    ],
+    "correct": 3,
+    "type": "global"
+   },
+   {
+    "q_pt": "O que ela faz às seis da manhã?",
+    "choices_pt": [
+     "Grava o podcast com o Aldo",
+     "Vai à feira escolher os legumes",
+     "Abre o restaurante para o almoço",
+     "Descansa em casa com os filhos"
+    ],
+    "correct": 1,
+    "type": "detail"
+   },
+   {
+    "q_pt": "Até que horas ela fica na cozinha?",
+    "choices_pt": [
+     "Até as três da tarde",
+     "Até as seis da manhã",
+     "Até as oito da manhã",
+     "Até o fim da noite"
+    ],
+    "correct": 0,
+    "type": "detail"
+   }
+  ],
+  "title_pt": "Café da Segunda"
+ },
+ {
+  "id": "IM-v2-4",
+  "sublevel": "IM",
+  "genre": "recado de voz de uma professora de natação",
+  "intro_pt": "Você vai ouvir um recado de voz de uma professora de natação.",
+  "duration_target_s": 62,
+  "speakers": [
+   {
+    "slot": "F2",
+    "voice_style": "voz feminina adulta jovem, tom natural e coloquial"
+   }
+  ],
+  "script": [
+   {
+    "slot": "F2",
+    "text": "Oi, Marcela, aqui é a Suelen, professora de natação do Clube Águas Claras. Você me perguntou ontem sobre as aulas do segundo semestre, então deixa eu te explicar como ficou. As inscrições abrem na segunda-feira, de manhã, na secretaria do clube. Pelo que você me contou do horário do seu filho, a turma de terça e quinta de manhã é a melhor para ele: as crianças dessa turma são todas da idade dele. A aula dura quarenta e cinco minutos e começa às nove horas. A mensalidade é cento e vinte reais, e você paga no dia da inscrição, ali mesmo na secretaria. Ah, e uma coisa importante: leva a carteirinha do clube e um atestado do médico. Sem esses dois papéis a secretaria não faz a inscrição. As aulas começam no dia quatro de agosto. No primeiro dia, o seu filho precisa levar touca e óculos de natação. Um beijo, Marcela, e até segunda!"
+   }
+  ],
+  "questions": [
+   {
+    "q_pt": "Qual é o objetivo do recado?",
+    "choices_pt": [
+     "Explicar como funcionam as inscrições das aulas de natação",
+     "Avisar que o filho da Marcela perdeu a vaga",
+     "Cobrar a mensalidade atrasada do clube",
+     "Convidar a Marcela para nadar no clube"
+    ],
+    "correct": 0,
+    "type": "global"
+   },
+   {
+    "q_pt": "Por que a Suelen recomenda a turma de terça e quinta de manhã?",
+    "choices_pt": [
+     "Porque é a única turma que ainda tem vaga",
+     "Porque a mensalidade dessa turma é mais barata",
+     "Porque a Marcela trabalha à tarde",
+     "Porque as crianças dessa turma são todas da idade do filho dela"
+    ],
+    "correct": 3,
+    "type": "detail"
+   },
+   {
+    "q_pt": "O que a Marcela precisa levar na secretaria?",
+    "choices_pt": [
+     "A mensalidade em dinheiro",
+     "A touca e os óculos de natação",
+     "A carteirinha do clube e um atestado do médico",
+     "O nome da turma escolhida"
+    ],
+    "correct": 2,
+    "type": "detail"
+   }
+  ],
+  "title_pt": "Clube Águas Claras"
+ },
+ {
+  "id": "IM-v2-5",
+  "sublevel": "IM",
+  "genre": "conversa entre vizinhos",
+  "intro_pt": "Você vai ouvir dois vizinhos conversando sobre um aviso do prédio.",
+  "duration_target_s": 68,
+  "speakers": [
+   {
+    "slot": "F2",
+    "voice_style": "voz feminina adulta jovem, tom natural e coloquial"
+   },
+   {
+    "slot": "M1",
+    "voice_style": "voz masculina adulta, clara e versátil, registro neutro brasileiro"
+   }
+  ],
+  "script": [
+   {
+    "slot": "F2",
+    "text": "Oi, seu Carlos! O senhor viu o aviso no elevador?"
+   },
+   {
+    "slot": "M1",
+    "text": "Vi de manhã, mas li correndo. É sobre a pintura da fachada, né?"
+   },
+   {
+    "slot": "F2",
+    "text": "É. Começa na segunda que vem, e o síndico calcula uns três meses de obra."
+   },
+   {
+    "slot": "M1",
+    "text": "Três meses. Isso me preocupa, porque eu trabalho em casa e a minha janela dá para a frente do prédio."
+   },
+   {
+    "slot": "F2",
+    "text": "Pois é, a poeira é o que mais incomoda. Por isso ele pediu para a gente manter as janelas fechadas das sete ao meio-dia, que é quando eles lixam a parede."
+   },
+   {
+    "slot": "M1",
+    "text": "A manhã inteira, então. Vou ter que trabalhar de ventilador ligado."
+   },
+   {
+    "slot": "F2",
+    "text": "E tem outra: a garagem dos visitantes vai ficar fechada enquanto durar a obra, porque é lá que eles vão montar o andaime."
+   },
+   {
+    "slot": "M1",
+    "text": "Puxa. Os meus filhos vêm me visitar no fim do mês, e a rua aqui vive cheia."
+   },
+   {
+    "slot": "F2",
+    "text": "Eles podem deixar o carro na garagem do mercado. Cobra dez reais o dia e fica a uma quadra daqui."
+   },
+   {
+    "slot": "M1",
+    "text": "Boa ideia. Vou avisar eles hoje mesmo. Obrigado, viu?"
+   }
+  ],
+  "questions": [
+   {
+    "q_pt": "Sobre o que os vizinhos estão conversando?",
+    "choices_pt": [
+     "Sobre o barulho do elevador do prédio",
+     "Sobre uma obra que vai começar no prédio",
+     "Sobre a visita dos filhos dele",
+     "Sobre o preço da garagem do mercado"
+    ],
+    "correct": 1,
+    "type": "global"
+   },
+   {
+    "q_pt": "Por que o síndico pediu para fechar as janelas de manhã?",
+    "choices_pt": [
+     "Porque é de manhã que eles lixam a parede",
+     "Porque o seu Carlos trabalha em casa",
+     "Porque a garagem dos visitantes vai ficar fechada",
+     "Porque a obra começa na segunda-feira"
+    ],
+    "correct": 0,
+    "type": "detail"
+   },
+   {
+    "q_pt": "O que a vizinha sugere para os filhos do seu Carlos?",
+    "choices_pt": [
+     "Estacionar na garagem dos visitantes",
+     "Vir visitar depois do fim da obra",
+     "Pedir uma vaga ao síndico",
+     "Deixar o carro na garagem do mercado"
+    ],
+    "correct": 3,
+    "type": "detail"
+   }
+  ],
+  "title_pt": "Entre vizinhos"
+ },
+ {
+  "id": "AL-v2-1",
+  "sublevel": "AL",
+  "genre": "notícia de rádio",
+  "intro_pt": "Você vai ouvir uma notícia num jornal de rádio.",
+  "duration_target_s": 87,
+  "speakers": [
+   {
+    "slot": "F1",
+    "voice_style": "voz feminina adulta, clara e versátil, registro neutro brasileiro"
+   }
+  ],
+  "script": [
+   {
+    "slot": "F1",
+    "text": "Boa noite. A chuva que caiu na madrugada de ontem deixou o bairro Santa Efigênia debaixo d'água pela terceira vez neste ano. Segundo a Defesa Civil do município, choveu em seis horas o equivalente ao esperado para um mês inteiro. A água subiu rápido, por volta das três da manhã, e boa parte dos moradores foi acordada pelos vizinhos. Cerca de quarenta famílias precisaram deixar as suas casas e passaram o resto da noite na escola municipal Duarte Coelho, aberta às pressas para recebê-las. Ninguém ficou ferido, mas dezenove veículos foram danificados e duas ruas continuam interditadas. Ainda na manhã de hoje, moradores de bairros vizinhos organizaram uma campanha para arrecadar colchões, roupas e água potável. Em menos de oito horas o ginásio da praça central já estava cheio de doações, e a coordenação da campanha pediu que as pessoas parassem de levar roupas e passassem a levar produtos de limpeza. No fim da tarde, a prefeitura informou que vai enviar máquinas para limpar o córrego que corta o bairro, uma obra que os moradores pedem desde o ano passado. A associação de moradores, no entanto, afirma que o problema não se resolve com limpeza: para eles, a solução exige uma obra de drenagem que nunca saiu do papel. A previsão é de mais chuva até quinta-feira."
+   }
+  ],
+  "questions": [
+   {
+    "q_pt": "Qual é o assunto principal da notícia?",
+    "choices_pt": [
+     "Um alagamento num bairro e a reação dos moradores",
+     "A construção de uma escola nova no bairro",
+     "Uma campanha para arrecadar dinheiro para a prefeitura",
+     "A previsão do tempo para o fim de semana"
+    ],
+    "correct": 0,
+    "type": "global"
+   },
+   {
+    "q_pt": "Como a campanha de doações mudou ao longo do dia?",
+    "choices_pt": [
+     "Começou de manhã e foi encerrada por falta de doações",
+     "Começou pedindo colchões e roupas e passou a pedir produtos de limpeza",
+     "Começou na escola municipal e foi transferida para o ginásio",
+     "Começou com produtos de limpeza e passou a pedir água potável"
+    ],
+    "correct": 1,
+    "type": "detail"
+   },
+   {
+    "q_pt": "Em que a prefeitura e a associação de moradores discordam?",
+    "choices_pt": [
+     "Em quantos dias ainda vai chover no bairro",
+     "Na solução: limpar o córrego ou fazer uma obra de drenagem",
+     "No número de famílias que tiveram de sair de casa",
+     "Em quem deve receber as doações do ginásio"
+    ],
+    "correct": 1,
+    "type": "detail"
+   }
+  ],
+  "title_pt": "Santa Efigênia"
+ },
+ {
+  "id": "AL-v2-2",
+  "sublevel": "AL",
+  "genre": "entrevista de rádio numa feira",
+  "intro_pt": "Você vai ouvir a entrevista de um repórter com uma vendedora de doces.",
+  "duration_target_s": 95,
+  "speakers": [
+   {
+    "slot": "M1",
+    "voice_style": "voz masculina adulta, clara e versátil, registro neutro brasileiro"
+   },
+   {
+    "slot": "F2",
+    "voice_style": "voz feminina adulta jovem, tom natural e coloquial"
+   }
+  ],
+  "script": [
+   {
+    "slot": "M1",
+    "text": "Estamos na feira do Alto do Cedro com a dona Marlene, que vende doces caseiros há mais de vinte anos. Dona Marlene, como começou esse negócio?"
+   },
+   {
+    "slot": "F2",
+    "text": "Começou por necessidade, meu filho. Eu tinha sido demitida da fábrica de tecidos e passei quase um ano sem encontrar trabalho. Aí uma vizinha me encomendou um bolo para a festa de quinze anos da filha dela. Eu fiz o bolo numa quinta-feira, entreguei no sábado, e na segunda já tinha três encomendas novas."
+   },
+   {
+    "slot": "M1",
+    "text": "Três encomendas de onde?"
+   },
+   {
+    "slot": "F2",
+    "text": "De gente que tinha provado o bolo na festa e pediu o meu telefone para a vizinha. Foi de boca em boca."
+   },
+   {
+    "slot": "M1",
+    "text": "E hoje a senhora trabalha sozinha?"
+   },
+   {
+    "slot": "F2",
+    "text": "Não, hoje somos quatro. No começo era só eu, na cozinha de casa. Depois a minha irmã largou o emprego dela e veio me ajudar, e há uns cinco anos entraram duas moças do bairro. A gente produz de terça a sexta e vende aqui na feira, aos sábados."
+   },
+   {
+    "slot": "M1",
+    "text": "E o que mudou nesses vinte anos?"
+   },
+   {
+    "slot": "F2",
+    "text": "Mudou o gosto do freguês. Antigamente o pessoal levava o doce bem docinho mesmo: quanto mais açúcar, melhor. Hoje muita gente chega pedindo com menos açúcar. Eu resisti um tempo, achei que ia estragar a receita da minha mãe, mas acabei aprendendo."
+   },
+   {
+    "slot": "M1",
+    "text": "E o que a senhora diria para quem quer começar agora?"
+   },
+   {
+    "slot": "F2",
+    "text": "Que comece pequeno e não desista no primeiro mês. O primeiro ano é o mais difícil."
+   }
+  ],
+  "questions": [
+   {
+    "q_pt": "Do que trata a entrevista?",
+    "choices_pt": [
+     "Da trajetória de uma vendedora de doces",
+     "Da história da feira do bairro Alto do Cedro",
+     "Do preço dos doces caseiros na feira",
+     "De um curso de confeitaria para iniciantes"
+    ],
+    "correct": 0,
+    "type": "global"
+   },
+   {
+    "q_pt": "O que aconteceu entre o primeiro bolo e as três encomendas seguintes?",
+    "choices_pt": [
+     "A filha da vizinha passou a trabalhar com ela na cozinha",
+     "A dona Marlene levou os bolos que sobraram para vender na feira",
+     "Convidados provaram o bolo na festa e pediram o telefone dela à vizinha",
+     "A vizinha indicou a dona Marlene para a antiga fábrica de tecidos"
+    ],
+    "correct": 2,
+    "type": "detail"
+   },
+   {
+    "q_pt": "Como a equipe dela chegou a quatro pessoas?",
+    "choices_pt": [
+     "Ela contratou as quatro no primeiro ano do negócio",
+     "As três sócias trabalhavam com ela na fábrica de tecidos",
+     "As duas moças do bairro entraram antes da irmã dela",
+     "Primeiro veio a irmã, que largou o emprego, e depois duas moças do bairro"
+    ],
+    "correct": 3,
+    "type": "detail"
+   }
+  ],
+  "title_pt": "Na feira"
+ },
+ {
+  "id": "AL-v2-3",
+  "sublevel": "AL",
+  "genre": "reportagem de rádio",
+  "intro_pt": "Você vai ouvir uma reportagem sobre uma obra numa cidade.",
+  "duration_target_s": 87,
+  "speakers": [
+   {
+    "slot": "M1",
+    "voice_style": "voz masculina adulta, clara e versátil, registro neutro brasileiro"
+   }
+  ],
+  "script": [
+   {
+    "slot": "M1",
+    "text": "A cidade de Feira do Norte inaugurou no último domingo os primeiros oito quilômetros de ciclovia ligando o centro ao distrito industrial. A obra levou quatorze meses, dois a mais do que o previsto, e custou cerca de nove milhões de reais, todo o dinheiro vindo do orçamento municipal. Na cerimônia de abertura, cerca de trezentas pessoas percorreram o trajeto de bicicleta, acompanhadas por agentes de trânsito e pela banda de uma escola da região. Segundo a secretaria de mobilidade, mais de seis mil trabalhadores fazem esse percurso todos os dias, e boa parte deles usava a pista principal, dividindo espaço com os caminhões que saem das fábricas de madrugada. Nos últimos três anos foram registrados vinte e dois acidentes envolvendo ciclistas nesse trecho, três deles graves. Durante as obras, comerciantes da avenida reclamaram da perda de vagas de estacionamento e chegaram a entregar um abaixo-assinado à prefeitura. A secretaria respondeu que as vagas retiradas foram substituídas em ruas paralelas, e afirma que o movimento nas lojas voltou ao normal duas semanas depois da entrega. A segunda etapa do projeto, que vai ligar a ciclovia ao terminal de ônibus e acrescentar mais seis quilômetros, ainda não tem data para começar: depende de um repasse do governo do estado prometido em março e que até agora não chegou."
+   }
+  ],
+  "questions": [
+   {
+    "q_pt": "Qual é o assunto da reportagem?",
+    "choices_pt": [
+     "Um acidente grave numa avenida movimentada",
+     "O abaixo-assinado dos comerciantes de uma avenida",
+     "A compra de ônibus novos para a cidade",
+     "A inauguração de uma ciclovia e o que ela mudou"
+    ],
+    "correct": 3,
+    "type": "global"
+   },
+   {
+    "q_pt": "Por que essa ciclovia era considerada necessária?",
+    "choices_pt": [
+     "O terminal de ônibus da cidade estava lotado de madrugada",
+     "A cidade precisava gastar o repasse do governo do estado",
+     "Milhares de trabalhadores dividiam a pista com caminhões, e houve vinte e dois acidentes em três anos",
+     "A avenida seria fechada para carros durante o dia"
+    ],
+    "correct": 2,
+    "type": "detail"
+   },
+   {
+    "q_pt": "Como terminou a reclamação dos comerciantes?",
+    "choices_pt": [
+     "As lojas perderam movimento e a obra ficou parada duas semanas",
+     "O abaixo-assinado atrasou a entrega da obra em dois meses",
+     "As vagas foram substituídas em ruas paralelas e, segundo a secretaria, o movimento voltou ao normal",
+     "A prefeitura devolveu as vagas na própria avenida depois do abaixo-assinado"
+    ],
+    "correct": 2,
+    "type": "detail"
+   }
+  ],
+  "title_pt": "Obra na avenida"
+ },
+ {
+  "id": "AL-v2-4",
+  "sublevel": "AL",
+  "genre": "entrevista de rádio sobre um evento cultural",
+  "intro_pt": "Você vai ouvir uma repórter entrevistando o coordenador de um festival.",
+  "duration_target_s": 90,
+  "speakers": [
+   {
+    "slot": "F1",
+    "voice_style": "voz feminina adulta, clara e versátil, registro neutro brasileiro"
+   },
+   {
+    "slot": "M2",
+    "voice_style": "voz masculina adulta jovem, tom natural e coloquial"
+   }
+  ],
+  "script": [
+   {
+    "slot": "F1",
+    "text": "Começa nesta quinta-feira a décima edição do Festival de Inverno de Vila Serrana, no sul de Minas Gerais. Para falar do festival, estou com o Otávio Prado, que coordena a programação. Otávio, o que muda nesta edição?"
+   },
+   {
+    "slot": "M2",
+    "text": "A grande novidade são as oficinas de manhã. Nas nove edições anteriores a gente só tinha os shows à noite, e a cidade ficava parada durante o dia. Este ano, artistas convidados dão aulas de percussão, cerâmica e fotografia para moradores da região."
+   },
+   {
+    "slot": "F1",
+    "text": "E houve procura?"
+   },
+   {
+    "slot": "M2",
+    "text": "Houve muito mais do que a gente imaginava. As vagas foram preenchidas em dois dias, e a lista de espera tem quase quatrocentos nomes. No ano que vem a gente vai dobrar o número de turmas."
+   },
+   {
+    "slot": "F1",
+    "text": "Vocês esperam quantos visitantes?"
+   },
+   {
+    "slot": "M2",
+    "text": "Trinta mil ao longo dos quatro dias. Para você ter uma ideia, a população de Vila Serrana é de onze mil habitantes, então a cidade quase triplica de tamanho. Hotéis e pousadas já estão com noventa e cinco por cento de ocupação."
+   },
+   {
+    "slot": "F1",
+    "text": "E como fica o trânsito no centro histórico?"
+   },
+   {
+    "slot": "M2",
+    "text": "As ruas do centro ficam fechadas para carros durante todo o festival. Por isso a prefeitura montou ônibus saindo da rodoviária de meia em meia hora. É de graça, como todas as atrações do festival."
+   },
+   {
+    "slot": "F1",
+    "text": "Otávio, obrigada. O festival vai até domingo, com uma apresentação da orquestra formada por alunos das escolas municipais."
+   }
+  ],
+  "questions": [
+   {
+    "q_pt": "Do que trata a entrevista?",
+    "choices_pt": [
+     "De um curso de cerâmica e fotografia para artistas",
+     "De um festival de arte que começa esta semana",
+     "Do aniversário de uma cidade histórica de Minas Gerais",
+     "Da falta de hotéis numa cidade pequena"
+    ],
+    "correct": 1,
+    "type": "global"
+   },
+   {
+    "q_pt": "O que mostra que as oficinas fizeram sucesso?",
+    "choices_pt": [
+     "O festival chegou à décima edição este ano",
+     "As vagas acabaram em dois dias e a lista de espera tem quase quatrocentos nomes",
+     "A cidade quase triplica de tamanho durante o festival",
+     "Os hotéis estão com noventa e cinco por cento de ocupação"
+    ],
+    "correct": 1,
+    "type": "detail"
+   },
+   {
+    "q_pt": "Por que a cidade precisou de um esquema especial de transporte?",
+    "choices_pt": [
+     "Porque o centro fica fechado para carros e a cidade recebe quase o triplo da sua população",
+     "Porque a rodoviária fica muito longe do centro histórico",
+     "Porque os hotéis lotados ficam todos fora da cidade",
+     "Porque os ônibus da cidade passaram a ser gratuitos"
+    ],
+    "correct": 0,
+    "type": "detail"
+   }
+  ],
+  "title_pt": "Vila Serrana"
+ },
+ {
+  "id": "AL-v2-5",
+  "sublevel": "AL",
+  "genre": "entrevista num quadro de rádio",
+  "intro_pt": "Você vai ouvir um apresentador entrevistando uma ouvinte sobre uma viagem.",
+  "duration_target_s": 93,
+  "speakers": [
+   {
+    "slot": "M1",
+    "voice_style": "voz masculina adulta, clara e versátil, registro neutro brasileiro"
+   },
+   {
+    "slot": "F2",
+    "voice_style": "voz feminina adulta jovem, tom natural e coloquial"
+   }
+  ],
+  "script": [
+   {
+    "slot": "M1",
+    "text": "No quadro de hoje, histórias de viagem. A Sílvia mandou a dela e está aqui no estúdio. Sílvia, o que aconteceu?"
+   },
+   {
+    "slot": "F2",
+    "text": "Foi a minha primeira viagem sozinha. Eu tinha vinte e dois anos e resolvi conhecer uma cidadezinha no interior de Minas, dessas de rua de pedra. Comprei a passagem com um mês de antecedência e reservei uma pousada bem simples, perto da igreja."
+   },
+   {
+    "slot": "M1",
+    "text": "E deu tudo errado, pelo que eu li aqui."
+   },
+   {
+    "slot": "F2",
+    "text": "Deu. Eu tinha anotado no caderno que o ônibus saía às sete da noite. Cheguei na rodoviária às seis, de mochila nas costas, toda animada. O rapaz do guichê olhou a passagem e falou: moça, esse ônibus saiu às sete da manhã, faz onze horas."
+   },
+   {
+    "slot": "M1",
+    "text": "Ou seja..."
+   },
+   {
+    "slot": "F2",
+    "text": "Ou seja, eu estava na rodoviária onze horas depois da hora certa. Chorei um pouco no banco da rodoviária, confesso. Depois comprei outra passagem para o dia seguinte e dormi na casa de uma amiga que mora ali perto."
+   },
+   {
+    "slot": "M1",
+    "text": "E a viagem, no fim?"
+   },
+   {
+    "slot": "F2",
+    "text": "No fim foi melhor assim. Naquela mesma noite caiu uma chuva muito forte e alagou a estrada. O ônibus que eu ia pegar ficou quatro horas parado no meio do caminho, e eu só fiquei sabendo disso no dia seguinte, quando cheguei na pousada e o dono me contou."
+   },
+   {
+    "slot": "M1",
+    "text": "E ficou alguma lição?"
+   },
+   {
+    "slot": "F2",
+    "text": "Ficou. Desde então eu confiro o horário três vezes, e eu voltaria àquela cidade amanhã mesmo."
+   }
+  ],
+  "questions": [
+   {
+    "q_pt": "O que a Sílvia conta na entrevista?",
+    "choices_pt": [
+     "Como ela economizou dinheiro para poder viajar",
+     "Como ela perdeu o ônibus na primeira viagem que fez sozinha",
+     "Como ela escolheu a pousada onde ficou hospedada",
+     "Como foi a chuva que alagou a estrada naquela noite"
+    ],
+    "correct": 1,
+    "type": "global"
+   },
+   {
+    "q_pt": "Por que ela perdeu o ônibus?",
+    "choices_pt": [
+     "Ela tinha anotado sete da noite, mas o ônibus saía às sete da manhã",
+     "Ela chegou uma hora atrasada na rodoviária",
+     "A chuva alagou a estrada antes da saída",
+     "Ela comprou a passagem para o dia seguinte"
+    ],
+    "correct": 0,
+    "type": "detail"
+   },
+   {
+    "q_pt": "Por que ela diz que no fim foi melhor assim?",
+    "choices_pt": [
+     "Ela pôde ficar mais tempo na casa da amiga",
+     "A passagem do dia seguinte custou bem menos",
+     "A pousada perto da igreja estava cheia naquela noite",
+     "O ônibus que ela pegaria ficou quatro horas parado numa estrada alagada"
+    ],
+    "correct": 3,
+    "type": "detail"
+   }
+  ],
+  "title_pt": "Histórias de viagem"
+ },
+ {
+  "id": "AM-v2-1",
+  "sublevel": "AM",
+  "genre": "notícia de rádio",
+  "intro_pt": "Você vai ouvir uma notícia sobre uma obra numa cidade do interior.",
+  "duration_target_s": 100,
+  "speakers": [
+   {
+    "slot": "M1",
+    "voice_style": "voz masculina adulta, clara e versátil, registro neutro brasileiro"
+   }
+  ],
+  "script": [
+   {
+    "slot": "M1",
+    "text": "Uma decisão tomada às pressas pela prefeitura de Monte Claro acabou tendo um resultado que ninguém esperava. No começo do ano, a administração anunciou que ia transformar um terreno abandonado no centro em um estacionamento de trezentas vagas. O terreno pertencia à cidade havia quase quarenta anos, estava tomado pelo entulho e virara motivo de reclamação dos comerciantes da rua. A obra foi licitada em fevereiro e as máquinas entraram no terreno em março. Foi aí que os operários encontraram, embaixo do entulho, o piso de pedra e as paredes de uma antiga estação ferroviária, desativada nos anos setenta e que quase todo mundo na cidade tinha esquecido. O engenheiro responsável mandou parar tudo e chamou o instituto de patrimônio, apesar da pressão para que a obra continuasse. Depois de dois meses de estudo, os técnicos concluíram que a estrutura estava em bom estado e podia ser recuperada. Nesse meio tempo, uma professora aposentada apareceu na prefeitura com fotografias da estação em funcionamento, e essas fotos acabaram nos jornais do estado. O estacionamento foi cancelado. No lugar dele, a prefeitura anunciou na semana passada um projeto de restauração que vai transformar a antiga estação em um centro cultural, com biblioteca e sala de cinema. A obra deve custar o dobro do estacionamento e ficar pronta em dois anos. O secretário de obras, que no início defendia o estacionamento e chegou a chamar o terreno de buraco inútil, disse ontem que a cidade ganhou muito mais do que trezentas vagas."
+   }
+  ],
+  "questions": [
+   {
+    "q_pt": "O que aconteceu com o projeto do estacionamento?",
+    "choices_pt": [
+     "Foi cancelado, e no lugar vai surgir um centro cultural",
+     "Foi cancelado, e no lugar vai surgir uma praça com feira",
+     "Foi reduzido, e ao lado vai surgir um centro cultural",
+     "Foi reduzido, e ao lado vai surgir uma praça com feira"
+    ],
+    "correct": 0,
+    "type": "global"
+   },
+   {
+    "q_pt": "O que aconteceu entre a chegada das máquinas e o anúncio do novo projeto?",
+    "choices_pt": [
+     "Operários acharam uma estação antiga, técnicos a estudaram por dois meses e a consideraram recuperável",
+     "Operários acharam uma estação antiga, técnicos a estudaram por dois meses e a consideraram irrecuperável",
+     "Uma professora achou uma estação antiga, técnicos a estudaram por dois meses e a consideraram recuperável",
+     "Uma professora achou uma estação antiga, técnicos a estudaram por dois meses e a consideraram irrecuperável"
+    ],
+    "correct": 0,
+    "type": "detail"
+   },
+   {
+    "q_pt": "O que dá para concluir sobre a posição do secretário de obras no final da história?",
+    "choices_pt": [
+     "Que ele continuou defendendo o estacionamento, apesar de aceitar o novo projeto",
+     "Que ele aceitou o novo projeto só porque a obra sairia mais barata",
+     "Que ele passou a valorizar o terreno, ao contrário do que pensava no início",
+     "Que ele seguiu tratando o terreno como algo sem valor"
+    ],
+    "correct": 2,
+    "type": "inference"
+   }
+  ],
+  "title_pt": "Monte Claro"
+ },
+ {
+  "id": "AM-v2-2",
+  "sublevel": "AM",
+  "genre": "entrevista com um professor",
+  "intro_pt": "Você vai ouvir uma entrevista com um professor sobre um projeto na escola dele.",
+  "duration_target_s": 114,
+  "speakers": [
+   {
+    "slot": "F1",
+    "voice_style": "voz feminina adulta, clara e versátil, registro neutro brasileiro"
+   },
+   {
+    "slot": "M2",
+    "voice_style": "voz masculina adulta jovem, tom natural e coloquial"
+   }
+  ],
+  "script": [
+   {
+    "slot": "F1",
+    "text": "Professor Elias, o senhor começou um projeto de horta na escola e acabou chegando a outro lugar. Conta para a gente como foi."
+   },
+   {
+    "slot": "M2",
+    "text": "Olha, a ideia inicial era bem simples. Eu dou aula de ciências para o sexto ano e queria que os alunos vissem uma planta crescer do começo ao fim. Consegui um canteiro no fundo da escola e a gente plantou alface, cebolinha, essas coisas."
+   },
+   {
+    "slot": "F1",
+    "text": "E funcionou?"
+   },
+   {
+    "slot": "M2",
+    "text": "Funcionou por umas três semanas. Aí veio uma seca braba, a cidade entrou em rodízio e a escola teve a água reduzida pela metade. A horta secou quase toda num fim de semana. Eu confesso que fiquei arrasado, cheguei a pensar em encerrar o projeto."
+   },
+   {
+    "slot": "F1",
+    "text": "E o que aconteceu depois?"
+   },
+   {
+    "slot": "M2",
+    "text": "Aconteceu uma coisa que eu não tinha planejado. Numa segunda-feira, um aluno perguntou por que a água tinha acabado. Eu não soube responder direito, e essa pergunta virou a aula. A gente foi medir quanto de água a escola gastava por dia, olhou torneira por torneira e achou três vazamentos nos banheiros, um deles correndo havia meses."
+   },
+   {
+    "slot": "F1",
+    "text": "E os alunos fizeram o quê com isso?"
+   },
+   {
+    "slot": "M2",
+    "text": "Montaram um relatório de quatro páginas, com as contas dos últimos seis meses, e levaram para a direção. Eu não escrevi uma linha."
+   },
+   {
+    "slot": "F1",
+    "text": "E a direção fez alguma coisa?"
+   },
+   {
+    "slot": "M2",
+    "text": "Fez, e rápido. Consertou os vazamentos e trocou as torneiras dos dois banheiros."
+   },
+   {
+    "slot": "F1",
+    "text": "E deu resultado na conta?"
+   },
+   {
+    "slot": "M2",
+    "text": "Deu. No mês seguinte a conta caiu quase um terço."
+   },
+   {
+    "slot": "F1",
+    "text": "E a horta, professor?"
+   },
+   {
+    "slot": "M2",
+    "text": "Aí a direção liberou parte dessa economia para comprar uma caixa d'água só para o canteiro. A horta voltou, e está lá até hoje. Mas, sinceramente, se alguém me perguntar o que aquele canteiro produziu, eu não vou falar de alface."
+   }
+  ],
+  "questions": [
+   {
+    "q_pt": "O que o professor conta na entrevista?",
+    "choices_pt": [
+     "Como a falta de água acabou com uma horta e a escola trocou o projeto por um estudo",
+     "Como uma horta ensinou os alunos a economizar água e recebeu verba da prefeitura",
+     "Como a falta de água prejudicou uma horta e acabou levando a escola a economizar",
+     "Como os alunos criaram uma horta para reduzir a conta de água da escola"
+    ],
+    "correct": 2,
+    "type": "global"
+   },
+   {
+    "q_pt": "Como a escola foi da pergunta de um aluno até uma economia na conta?",
+    "choices_pt": [
+     "Alunos e professor mediram o consumo, acharam vazamentos nas salas de aula, a direção os consertou e a despesa recuou perto da metade",
+     "Técnicos da prefeitura mediram o consumo, acharam vazamentos nos banheiros, a direção os consertou e a despesa recuou perto da metade",
+     "Técnicos da prefeitura mediram o consumo, acharam vazamentos nas salas de aula, a direção os consertou e a despesa recuou perto de um terço",
+     "Alunos e professor mediram o consumo, acharam vazamentos nos banheiros, a direção os consertou e a despesa recuou perto de um terço"
+    ],
+    "correct": 3,
+    "type": "detail"
+   },
+   {
+    "q_pt": "O que o professor deixa entender ao dizer que não falaria de alface?",
+    "choices_pt": [
+     "Que o canteiro rendeu amizades entre alunos de turmas diferentes",
+     "Que o canteiro rendeu uma economia que beneficiou a escola inteira",
+     "Que o canteiro rendeu o hábito de comer verduras entre os alunos",
+     "Que o canteiro rendeu uma fama que ele prefere não comentar"
+    ],
+    "correct": 1,
+    "type": "inference"
+   }
+  ],
+  "title_pt": "Na escola"
+ },
+ {
+  "id": "AM-v2-3",
+  "sublevel": "AM",
+  "genre": "entrevista em podcast de negócios",
+  "intro_pt": "Você vai ouvir uma empresária contando a história do negócio dela.",
+  "duration_target_s": 105,
+  "speakers": [
+   {
+    "slot": "M1",
+    "voice_style": "voz masculina adulta, clara e versátil, registro neutro brasileiro"
+   },
+   {
+    "slot": "F2",
+    "voice_style": "voz feminina adulta jovem, tom natural e coloquial"
+   }
+  ],
+  "script": [
+   {
+    "slot": "M1",
+    "text": "Bem-vindos ao Ponto de Virada. Hoje eu converso com a Néia Fontes, da Trilho Impressos. Néia, o negócio não começou com esse nome, né?"
+   },
+   {
+    "slot": "F2",
+    "text": "Não começou. Quando eu abri, em dois mil e dezenove, era Papelaria Trilho, e o plano era vender caderno, caneta e material escolar. Ponto. Aluguei uma sala pequena perto de duas escolas, e o primeiro ano foi razoável."
+   },
+   {
+    "slot": "M1",
+    "text": "E aí veio dois mil e vinte."
+   },
+   {
+    "slot": "F2",
+    "text": "Aí as escolas fecharam por meses e eu passei um bom tempo vendendo quase nada, com o estoque parado na prateleira. Foi quando um cliente me pediu para imprimir uma apostila. Eu tinha uma impressora velha nos fundos, aceitei sem pensar muito e cobrei quase nada por aquilo."
+   },
+   {
+    "slot": "M1",
+    "text": "E aquilo cresceu."
+   },
+   {
+    "slot": "F2",
+    "text": "No mês seguinte eram vinte apostilas. No outro, oitenta. Sem que eu percebesse, a papelaria tinha virado uma gráfica."
+   },
+   {
+    "slot": "M1",
+    "text": "E você percebeu quando?"
+   },
+   {
+    "slot": "F2",
+    "text": "Tarde. Eu resisti bastante, viu? Eu dizia para a minha sócia que a gente era papelaria, que impressão era só um serviço extra. Só que os números não mentiam: no fim de dois mil e vinte e um a impressão já respondia por setenta por cento do faturamento, e o material escolar encalhava na prateleira."
+   },
+   {
+    "slot": "M1",
+    "text": "E a decisão?"
+   },
+   {
+    "slot": "F2",
+    "text": "Veio em dois mil e vinte e dois. A gente liquidou o estoque de material escolar, comprou duas impressoras profissionais e mudou o nome para Trilho Impressos. Hoje somos seis pessoas e o nosso maior cliente é uma rede de cursinhos."
+   },
+   {
+    "slot": "M1",
+    "text": "Arrependimento nenhum?"
+   },
+   {
+    "slot": "F2",
+    "text": "Nenhum. Às vezes eu penso que o negócio escolheu o caminho dele, e que eu só demorei a aceitar."
+   }
+  ],
+  "questions": [
+   {
+    "q_pt": "O que ela conta nessa conversa?",
+    "choices_pt": [
+     "A empresa virou gráfica por acaso, e ela demorou a aceitar a mudança",
+     "A empresa virou gráfica por acaso, e ela comemorou a mudança desde o início",
+     "A empresa virou gráfica por estratégia, e ela demorou a aceitar a mudança",
+     "A empresa virou gráfica por estratégia, e ela comemorou a mudança desde o início"
+    ],
+    "correct": 0,
+    "type": "global"
+   },
+   {
+    "q_pt": "Como a impressão deixou de ser um serviço extra?",
+    "choices_pt": [
+     "Um pedido de um cliente, cobrado por preço cheio, foi crescendo até a impressão somar cerca de metade da receita",
+     "Um pedido de uma escola, cobrado por quase nada, foi crescendo até a impressão somar cerca de metade da receita",
+     "Um pedido de um cliente, cobrado por quase nada, foi crescendo até a impressão somar cerca de sete décimos da receita",
+     "Um pedido de uma escola, cobrado por preço cheio, foi crescendo até a impressão somar cerca de sete décimos da receita"
+    ],
+    "correct": 2,
+    "type": "detail"
+   },
+   {
+    "q_pt": "O que a decisão de liquidar o estoque escolar mostra sobre ela em dois mil e vinte e dois?",
+    "choices_pt": [
+     "Que ela ainda via a impressão como um serviço extra e provisório",
+     "Que ela pretendia abrir uma segunda papelaria em outro bairro",
+     "Que ela já aceitava a impressão como o centro do negócio",
+     "Que a rede de cursinhos exigiu o fim do material escolar"
+    ],
+    "correct": 2,
+    "type": "inference"
+   }
+  ],
+  "title_pt": "Papelaria Trilho"
+ },
+ {
+  "id": "AM-v2-4",
+  "sublevel": "AM",
+  "genre": "reportagem de rádio",
+  "intro_pt": "Você vai ouvir uma reportagem sobre um mutirão de limpeza numa praia.",
+  "duration_target_s": 108,
+  "speakers": [
+   {
+    "slot": "M1",
+    "voice_style": "voz masculina adulta, clara e versátil, registro neutro brasileiro"
+   }
+  ],
+  "script": [
+   {
+    "slot": "M1",
+    "text": "O mutirão de limpeza organizado no último sábado na Praia do Cordão, no litoral norte, terminou de um jeito bem diferente do que os organizadores esperavam. A ação tinha sido marcada por um grupo de moradores incomodados com o lixo deixado pelos turistas no fim do verão, e a expectativa era modesta: reunir umas trinta pessoas e limpar a faixa central da praia. Acabaram se inscrevendo cento e vinte voluntários, entre eles alunos de duas escolas da região, e em quatro horas de trabalho foram recolhidos setecentos quilos de resíduos, a maior parte plástico e restos de embalagens. Perto do meio-dia, porém, um grupo que limpava a parte norte, um trecho que nem constava no plano do dia, encontrou uma faixa de areia com marcas estranhas e chamou os organizadores. Uma bióloga que participava como voluntária, sem nenhum papel oficial, reconheceu na hora: eram rastros de tartaruga marinha, e havia dois ninhos ali, a poucos metros de onde os banhistas costumam estender as cadeiras. A limpeza foi interrompida naquele trecho e a área foi isolada no mesmo dia, com estacas cedidas por um comerciante da orla. Desde então, o grupo que tinha se formado apenas para recolher lixo virou outra coisa: os voluntários se organizaram em escalas de duas pessoas por noite para vigiar os ninhos até o nascimento dos filhotes, previsto para o mês que vem. A prefeitura, que não havia apoiado o mutirão, prometeu instalar placas informativas, e a bióloga já treinou dezoito moradores para reconhecer os rastros. Os organizadores dizem que o próximo mutirão já tem duzentos inscritos, e que agora ninguém fala mais em lixo."
+   }
+  ],
+  "questions": [
+   {
+    "q_pt": "O que aconteceu nesse mutirão?",
+    "choices_pt": [
+     "Uma limpeza com muita gente revelou ninhos de tartaruga e mudou o foco do grupo",
+     "Uma limpeza com muita gente revelou uma nascente contaminada e mudou o foco do grupo",
+     "Uma limpeza com pouca gente revelou ninhos de tartaruga e mudou o foco do grupo",
+     "Uma limpeza com pouca gente revelou uma nascente contaminada e mudou o foco do grupo"
+    ],
+    "correct": 0,
+    "type": "global"
+   },
+   {
+    "q_pt": "Quem identificou o achado no trecho norte, e como a área foi isolada?",
+    "choices_pt": [
+     "Um técnico da prefeitura, com estacas doadas por um comerciante",
+     "Uma bióloga voluntária, com fitas fornecidas pela prefeitura",
+     "Um aluno das escolas, com fitas doadas por um comerciante",
+     "Uma bióloga voluntária, com estacas doadas por um comerciante"
+    ],
+    "correct": 3,
+    "type": "detail"
+   },
+   {
+    "q_pt": "O que a reação da prefeitura sugere sobre a origem da iniciativa?",
+    "choices_pt": [
+     "Que a prefeitura passou a comandar a vigilância na praia",
+     "Que a prefeitura já tinha planejado a proteção da praia antes do mutirão",
+     "Que a iniciativa partiu dos moradores, e o poder público veio depois",
+     "Que a prefeitura desistiu de qualquer apoio depois do achado"
+    ],
+    "correct": 2,
+    "type": "inference"
+   }
+  ],
+  "title_pt": "Praia do Cordão"
+ },
+ {
+  "id": "AM-v2-5",
+  "sublevel": "AM",
+  "genre": "entrevista de rádio sobre um posto de saúde",
+  "intro_pt": "Você vai ouvir a entrevista de um repórter com a coordenadora de um posto de saúde.",
+  "duration_target_s": 105,
+  "speakers": [
+   {
+    "slot": "M1",
+    "voice_style": "voz masculina adulta, clara e versátil, registro neutro brasileiro"
+   },
+   {
+    "slot": "F2",
+    "voice_style": "voz feminina adulta jovem, tom natural e coloquial"
+   }
+  ],
+  "script": [
+   {
+    "slot": "M1",
+    "text": "Faz seis meses que o posto de saúde do bairro Aurora acabou com a fila da madrugada e passou a marcar consulta por telefone e pelo aplicativo. Está comigo a enfermeira Cláudia Weber, que coordena o posto. Cláudia, funcionou?"
+   },
+   {
+    "slot": "F2",
+    "text": "Funcionou em parte, e eu vou contar o que aconteceu. Antes, as pessoas chegavam às quatro da manhã e sentavam na calçada para pegar uma das trinta senhas do dia. Tinha gente idosa dormindo na fila, no frio. Isso acabou no primeiro dia, e foi um alívio para todo mundo."
+   },
+   {
+    "slot": "M1",
+    "text": "Mas..."
+   },
+   {
+    "slot": "F2",
+    "text": "Mas a fila não sumiu. Ela virou uma fila de telefone. As linhas abriam às sete e ficavam ocupadas até as sete e dez. Quem tinha internet marcava pelo aplicativo em meio minuto. Quem não tinha ficava apertando o botão de rediscar."
+   },
+   {
+    "slot": "M1",
+    "text": "E quem ficava de fora?"
+   },
+   {
+    "slot": "F2",
+    "text": "Os nossos pacientes mais antigos. No segundo mês eu olhei para a sala de espera e quase não vi cabelo branco. A dona Marlene, que vinha toda semana medir a pressão, passou dois meses sem aparecer. Quando ela voltou, me contou que tinha tentado ligar umas dez vezes e desistido."
+   },
+   {
+    "slot": "M1",
+    "text": "E o que vocês fizeram?"
+   },
+   {
+    "slot": "F2",
+    "text": "Separamos dez das trinta vagas do dia para quem marca no balcão, à tarde, sem fila de madrugada e sem telefone. A dona Marlene apareceu na semana seguinte, e a sala de espera voltou a ficar com a cara de antes."
+   },
+   {
+    "slot": "M1",
+    "text": "Então o sistema antigo tinha alguma coisa boa."
+   },
+   {
+    "slot": "F2",
+    "text": "Tinha. Para marcar uma consulta, antes bastava aparecer. Hoje a gente mantém os dois caminhos abertos, e ninguém mais dorme na calçada."
+   }
+  ],
+  "questions": [
+   {
+    "q_pt": "Do que trata a entrevista?",
+    "choices_pt": [
+     "A mudança na marcação resolveu um problema, criou outro e foi corrigida com mais atendentes ao telefone",
+     "A mudança na marcação resolveu um problema, criou outro e foi corrigida com vagas no balcão",
+     "A mudança na marcação resolveu um problema, criou outro e foi corrigida adiando a abertura das linhas",
+     "A mudança na marcação resolveu um problema, criou outro e foi corrigida voltando à fila da madrugada"
+    ],
+    "correct": 1,
+    "type": "global"
+   },
+   {
+    "q_pt": "Quantas vezes dona Marlene tentou ligar, e por quanto tempo ficou sem ir ao posto?",
+    "choices_pt": [
+     "Cerca de dez vezes, e ficou dois meses sem ir",
+     "Cerca de trinta vezes, e ficou dois meses sem ir",
+     "Cerca de dez vezes, e ficou seis meses sem ir",
+     "Cerca de trinta vezes, e ficou seis meses sem ir"
+    ],
+    "correct": 0,
+    "type": "detail"
+   },
+   {
+    "q_pt": "O que a enfermeira quer dizer ao afirmar que, antes, bastava aparecer?",
+    "choices_pt": [
+     "Que, antes, todos que chegassem eram atendidos, sem limite de senhas por dia",
+     "Que, antes, os pacientes marcavam a consulta pelo telefone com mais facilidade",
+     "Que, antes, bastava ir pessoalmente, sem depender de telefone nem de internet",
+     "Que, antes, o posto abria à tarde e recebia quem chegasse a qualquer hora"
+    ],
+    "correct": 2,
+    "type": "inference"
+   }
+  ],
+  "title_pt": "Bairro Aurora"
+ },
+ {
+  "id": "S-v2-1",
+  "sublevel": "S",
+  "genre": "editorial de rádio",
+  "intro_pt": "Você vai ouvir um editorial sobre financiamento público à cultura.",
+  "duration_target_s": 120,
+  "speakers": [
+   {
+    "slot": "M1",
+    "voice_style": "voz masculina adulta, clara e versátil, registro neutro brasileiro"
+   }
+  ],
+  "script": [
+   {
+    "slot": "M1",
+    "text": "Editorial. Sempre que se discute financiamento público à cultura, o debate resvala para uma pergunta que parece de bom senso e é, na verdade, uma armadilha: por que o Estado deve sustentar aquilo que o público não sustenta sozinho? Formulada assim, a questão já contém a resposta que se quer ouvir. Ela pressupõe que a bilheteria é o único termômetro legítimo de valor e que o que não se paga não se justifica. Ora, se levássemos esse critério às últimas consequências, teríamos de fechar bibliotecas, extinguir arquivos e considerar supérflua a preservação de acervos que ninguém visita em massa, mas sem os quais uma sociedade perde a capacidade de se explicar a si mesma. O argumento econômico, curiosamente, é o que menos convém a quem o invoca. Estudos setoriais mostram, com regularidade suficiente para não serem acaso, que cada real aplicado em produção cultural retorna multiplicado em cadeias inteiras: transporte, hospedagem, alimentação, serviços técnicos. Um festival de médio porte movimenta mais empregos temporários do que várias obras públicas de orçamento equivalente. Isso não é caridade estatal, é política industrial com outro nome. Concedo que a crítica à execução tem fundamento. Editais mal formulados premiam quem sabe preencher formulário, e não necessariamente quem tem obra. A concentração regional persiste, e o mesmo punhado de produtores costuma reaparecer nas listas de aprovados. Nada disso, porém, é argumento contra a existência da política; é argumento a favor de transparência, avaliação e rodízio. Confundir má gestão com ilegitimidade do gasto é o velho expediente de quem quer jogar fora a criança junto com a água do banho. Se o incômodo fosse mesmo com o rigor no uso do dinheiro público, ele apareceria com a mesma indignação em outras rubricas do orçamento, onde os valores são muito maiores e a fiscalização, francamente, muito menor."
+   }
+  ],
+  "questions": [
+   {
+    "q_pt": "Qual é a tese central do editorial?",
+    "choices_pt": [
+     "Que o financiamento cultural compensa porque a bilheteria prova o valor das obras",
+     "Que o financiamento cultural deve ser suspenso até os editais serem refeitos",
+     "Que o financiamento cultural é legítimo, e os problemas de execução pedem reforma",
+     "Que o financiamento cultural deve continuar, mas só para bibliotecas e arquivos"
+    ],
+    "correct": 2,
+    "type": "global"
+   },
+   {
+    "q_pt": "Que argumento econômico o editorialista apresenta?",
+    "choices_pt": [
+     "O dinheiro aplicado volta multiplicado em várias atividades, e um festival médio gera mais impostos do que bibliotecas e arquivos",
+     "O dinheiro aplicado volta na forma de bilheteria, e um festival médio gera mais vagas temporárias do que bibliotecas e arquivos",
+     "O dinheiro aplicado volta na forma de bilheteria, e um festival médio gera mais impostos do que obras públicas de custo semelhante",
+     "O dinheiro aplicado volta multiplicado em várias atividades, e um festival médio gera mais vagas temporárias do que obras públicas de custo semelhante"
+    ],
+    "correct": 3,
+    "type": "detail"
+   },
+   {
+    "q_pt": "Por que o autor cita, no final, as outras rubricas do orçamento?",
+    "choices_pt": [
+     "Para admitir que a cultura tem mais problemas de execução do que as demais rubricas",
+     "Para propor que a verba da cultura seja redirecionada a essas rubricas",
+     "Para argumentar que o orçamento cultural é pequeno demais para gerar retorno",
+     "Para sugerir que a crítica ao gasto cultural é seletiva, e não zelo com o dinheiro"
+    ],
+    "correct": 3,
+    "type": "inference"
+   }
+  ],
+  "title_pt": "Editorial"
+ },
+ {
+  "id": "S-v2-2",
+  "sublevel": "S",
+  "genre": "trecho de aula universitária",
+  "intro_pt": "Você vai ouvir um trecho de uma aula de história econômica.",
+  "duration_target_s": 116,
+  "speakers": [
+   {
+    "slot": "F1",
+    "voice_style": "voz feminina adulta, clara e versátil, registro neutro brasileiro"
+   }
+  ],
+  "script": [
+   {
+    "slot": "F1",
+    "text": "E é aqui que a comparação costuma escorregar. Quando falamos da urbanização brasileira do século vinte, a tentação é lê-la pelo modelo europeu: primeiro a indústria, depois a cidade, e a população migrando na velocidade que as fábricas conseguem absorver. No caso brasileiro, essa sequência se inverte em vários pontos. A cidade cresce antes, e bem mais rápido, do que a capacidade de absorção do emprego formal. Entre mil novecentos e quarenta e mil novecentos e oitenta, a população urbana salta de cerca de trinta por cento para mais de dois terços do total. Nenhum parque industrial do mundo absorveria esse fluxo em quatro décadas. O que se costuma chamar de informalidade, portanto, não é um resíduo, um atraso à espera de correção. É a forma que a economia encontrou de funcionar sob essas condições, e eu peço que vocês suspendam por um momento o juízo moral que a palavra carrega. Suponhamos, como exercício, que a industrialização brasileira tivesse ocorrido meio século antes, em ritmo comparável ao inglês. Teríamos, ainda assim, a mesma configuração urbana? Provavelmente não a mesma, mas tampouco a europeia, porque outras variáveis pesam: a estrutura fundiária herdada, a abolição tardia sem política de integração, o desenho do sistema de transporte. A historiografia dos anos noventa insistiu num fator único, ora a dependência externa, ora o Estado, conforme a escola. Hoje trabalhamos com uma explicação mais modesta e, a meu ver, mais honesta: um conjunto de determinações que se reforçam. Para a próxima aula, quero que vocês leiam o capítulo três e localizem no texto o ponto exato em que o autor troca, sem avisar, a descrição pela prescrição. É um vício comum, e o exercício de identificá-lo vale mais do que qualquer resumo que eu faça aqui."
+   }
+  ],
+  "questions": [
+   {
+    "q_pt": "Qual é o argumento central da professora?",
+    "choices_pt": [
+     "A cidade cresceu antes do emprego, e a informalidade é um modo de funcionar",
+     "A cidade cresceu seguindo o modelo europeu, e a informalidade é um resíduo do atraso",
+     "A cidade cresceu por plano do Estado, e a informalidade é um erro de gestão",
+     "A cidade cresceu por dependência externa, e a informalidade é um efeito dela"
+    ],
+    "correct": 0,
+    "type": "global"
+   },
+   {
+    "q_pt": "Que fatores ela aponta, além da industrialização, como pesando na configuração urbana?",
+    "choices_pt": [
+     "Dependência externa, abolição tardia sem integração e desenho dos transportes",
+     "Terra herdada, abolição tardia sem integração e desenho dos transportes",
+     "Terra herdada, industrialização acelerada e política estatal de moradia",
+     "Dependência externa, industrialização acelerada e política estatal de moradia"
+    ],
+    "correct": 1,
+    "type": "detail"
+   },
+   {
+    "q_pt": "O que o exercício de imaginar a industrialização meio século antes mostra?",
+    "choices_pt": [
+     "Que a cidade brasileira seria hoje idêntica à inglesa",
+     "Que a cidade brasileira teria a mesma configuração de hoje",
+     "Que, mesmo assim, a cidade brasileira não seria igual à europeia",
+     "Que a informalidade teria desaparecido por completo"
+    ],
+    "correct": 2,
+    "type": "inference"
+   }
+  ],
+  "title_pt": "Urbanização brasileira"
+ },
+ {
+  "id": "S-v2-3",
+  "sublevel": "S",
+  "genre": "mesa-redonda sobre música e tecnologia",
+  "intro_pt": "Você vai ouvir dois convidados de uma mesa-redonda sobre música e tecnologia.",
+  "duration_target_s": 111,
+  "speakers": [
+   {
+    "slot": "M2",
+    "voice_style": "voz masculina adulta jovem, tom natural e coloquial"
+   },
+   {
+    "slot": "F2",
+    "voice_style": "voz feminina adulta jovem, tom natural e coloquial"
+   }
+  ],
+  "script": [
+   {
+    "slot": "M2",
+    "text": "Eu vou ser o chato da mesa. Essa ideia de que o streaming democratizou a música é uma meia verdade que virou dogma. Democratizou o acesso do ouvinte, isso sim. Para o artista, o que se democratizou foi a possibilidade de publicar, que não é a mesma coisa que ser ouvido. Publicar hoje custa quase nada; ser ouvido custa mais do que nunca."
+   },
+   {
+    "slot": "F2",
+    "text": "Concordo com a distinção, mas ela me parece incompleta. Antes do streaming, a barreira não era o algoritmo, era um diretor artístico numa gravadora decidindo o que o país inteiro escutaria naquele ano. Nós trocamos um filtro por outro, e o de agora, com todos os seus defeitos, ao menos responde ao comportamento de quem escuta."
+   },
+   {
+    "slot": "M2",
+    "text": "Responde, ou fabrica? Essa é a pergunta que eu não consigo resolver. Quando a plataforma recomenda, ela mede um gosto que já existia ou constrói o gosto que ela consegue medir? Suspeito que as duas coisas ao mesmo tempo, o que torna o dado circular."
+   },
+   {
+    "slot": "F2",
+    "text": "Aí você tem razão. Mas veja o que aconteceu com os gêneros regionais na última década. Cenas que não passavam da fronteira do estado viraram fenômeno nacional sem nenhuma gravadora carimbar. Isso não é pouco."
+   },
+   {
+    "slot": "M2",
+    "text": "Não é pouco, e eu celebro. Faço só uma ressalva: viraram fenômeno pagando o preço de se ajustarem ao formato de dois minutos e meio, com o refrão logo na abertura. A canção sobreviveu, mas de coleira."
+   },
+   {
+    "slot": "F2",
+    "text": "Toda tecnologia cobra esse pedágio. O rádio cobrou, o disco de vinil cobrou com a duração do lado A. A diferença é de grau, não de natureza."
+   },
+   {
+    "slot": "M2",
+    "text": "Justo. Fico apenas com o direito de achar que dessa vez o pedágio saiu caro."
+   }
+  ],
+  "questions": [
+   {
+    "q_pt": "Que dúvida o primeiro debatedor a falar diz não conseguir resolver?",
+    "choices_pt": [
+     "Se a recomendação da plataforma reflete o que o público já queria ou molda esse querer",
+     "Se o formato curto das canções empobrece a música regional ou apenas a adapta",
+     "Se o fim do diretor artístico beneficiou mais o ouvinte do que o próprio artista",
+     "Se o preço pago pela música regional é maior do que o pago pelo rádio antigo"
+    ],
+    "correct": 0,
+    "type": "global"
+   },
+   {
+    "q_pt": "Que exemplos ela dá de tecnologias que também cobraram um preço?",
+    "choices_pt": [
+     "O rádio e a fita cassete",
+     "O disco de vinil e a televisão",
+     "O rádio e o disco de vinil",
+     "A televisão e a fita cassete"
+    ],
+    "correct": 2,
+    "type": "detail"
+   },
+   {
+    "q_pt": "O que ele quer dizer ao afirmar que a canção sobreviveu, mas de coleira?",
+    "choices_pt": [
+     "Que a canção regional permaneceu, mas sob controle direto das gravadoras",
+     "Que a canção regional permaneceu, mas sob limites impostos pelo modelo da plataforma",
+     "Que a canção regional permaneceu, mas sob restrições do rádio e do vinil",
+     "Que a canção regional permaneceu, mas sob a vigilância do público local"
+    ],
+    "correct": 1,
+    "type": "inference"
+   }
+  ],
+  "title_pt": "Mesa-redonda"
+ },
+ {
+  "id": "S-v2-4",
+  "sublevel": "S",
+  "genre": "crônica",
+  "intro_pt": "Você vai ouvir uma crônica lida pelo próprio autor.",
+  "duration_target_s": 115,
+  "speakers": [
+   {
+    "slot": "M2",
+    "voice_style": "voz masculina adulta jovem, tom natural e coloquial"
+   }
+  ],
+  "script": [
+   {
+    "slot": "M2",
+    "text": "Comprei uma agenda. Não uma agenda qualquer: uma agenda com espaço para metas trimestrais, hábitos diários e um quadradinho para pintar toda vez que eu cumprisse alguma coisa. O vendedor me garantiu que era o sistema definitivo. Eu já tinha ouvido isso a respeito de outros três sistemas definitivos, todos hoje empilhados na gaveta, mas a esperança, como se sabe, é a última que desiste de organizar a vida alheia. Na primeira semana eu fui exemplar. Acordei cedo, pintei quadradinhos, senti aquele orgulho discreto de quem está finalmente no controle. Na segunda semana, percebi que estava dedicando quarenta minutos por dia a registrar o que fazia nos outros minutos. Na terceira, cheguei ao ponto de anotar, entre as tarefas concluídas, a tarefa de preencher a agenda. Foi aí que eu desconfiei que alguma coisa tinha se invertido. Nós fomos convencidos de que o tempo livre é um espaço vazio que precisa ser preenchido com algo produtivo, sob pena de desperdício. Ninguém mais tem uma tarde à toa: tem uma tarde de recuperação, de descanso ativo, de recarga para render melhor na segunda-feira. Até o ócio virou insumo. O curioso é que a palavra lazer, no dicionário, ainda guarda a ideia de folga, de licença. Folga em relação a quê? Em relação exatamente a essa contabilidade. O meu avô passava as tardes de domingo sentado numa cadeira, olhando a rua. Ninguém na família jamais perguntou o que ele estava produzindo com aquilo, e desconfio que a resposta seria constrangedora para todos nós: nada. Ele estava olhando a rua. Guardei a agenda na gaveta, junto com as outras três. Devo dizer que a gaveta é hoje o meu sistema mais bem-sucedido, porque é o único que nunca me cobrou nada."
+   }
+  ],
+  "questions": [
+   {
+    "q_pt": "Qual é a ideia central da crônica?",
+    "choices_pt": [
+     "Que a lógica da produtividade invadiu até o tempo de folga",
+     "Que quem se organiza melhor aproveita mais o tempo livre",
+     "Que os bons hábitos só duram quando anotados numa agenda",
+     "Que o descanso precisa ser planejado para render mais depois"
+    ],
+    "correct": 0,
+    "type": "global"
+   },
+   {
+    "q_pt": "Quanto tempo o cronista gastava por dia anotando o que fazia, e quantos sistemas definitivos anteriores ele tinha na gaveta?",
+    "choices_pt": [
+     "Quarenta minutos e quatro sistemas",
+     "Uma hora e três sistemas",
+     "Uma hora e quatro sistemas",
+     "Quarenta minutos e três sistemas"
+    ],
+    "correct": 3,
+    "type": "detail"
+   },
+   {
+    "q_pt": "Por que o cronista conta a história do avô olhando a rua?",
+    "choices_pt": [
+     "Para mostrar que o avô se organizava bem sem precisar de agenda",
+     "Para lamentar que a família nunca tenha incentivado o avô a produzir",
+     "Para mostrar um tempo em que ficar à toa não pedia justificativa",
+     "Para provar que os domingos eram mais produtivos antigamente"
+    ],
+    "correct": 2,
+    "type": "inference"
+   }
+  ],
+  "title_pt": "A agenda"
+ },
+ {
+  "id": "S-v2-5",
+  "sublevel": "S",
+  "genre": "debate sobre turismo e moradia",
+  "intro_pt": "Você vai ouvir dois convidados de um debate sobre aluguel por temporada em centros históricos.",
+  "duration_target_s": 130,
+  "speakers": [
+   {
+    "slot": "F2",
+    "voice_style": "voz feminina adulta jovem, tom natural e coloquial"
+   },
+   {
+    "slot": "M2",
+    "voice_style": "voz masculina adulta jovem, tom natural e coloquial"
+   }
+  ],
+  "script": [
+   {
+    "slot": "F2",
+    "text": "Semana passada voltei a Olinda depois de cinco anos e tomei um susto. A rua onde eu morava tem hoje mais fechadura eletrônica de temporada do que campainha. E digo isso sem nostalgia barata: aquele casario estava mesmo caindo aos pedaços."
+   },
+   {
+    "slot": "M2",
+    "text": "Pois é aí que eu queria chegar. Antes de decretarmos o desastre, convém lembrar de onde partimos. Casarão que ia virar ruína virou pousada. O dinheiro que quarenta anos de política de patrimônio não conseguiram mobilizar, o mercado mobilizou em cinco. Isso não é detalhe."
+   },
+   {
+    "slot": "F2",
+    "text": "Não é, e eu não nego. O que eu contesto é a conclusão que se costuma tirar daí. O dinheiro entrou por uma porta e o morador saiu pela outra. O aluguel residencial na área subiu num ritmo que nenhum salário local acompanha, e a conta desse ajuste foi paga por quem tinha menos margem para pagá-la."
+   },
+   {
+    "slot": "M2",
+    "text": "Mas repare no que você descreve: o mercado funcionando exatamente como se espera. Se o imóvel rende três vezes mais como hospedagem, o proprietário aluga como hospedagem. Chamar isso de perversão é confundir o termômetro com a febre."
+   },
+   {
+    "slot": "F2",
+    "text": "Concordo com o diagnóstico e discordo do que ele autoriza. A pergunta nunca foi se o mercado funciona; é se aceitamos o resultado. Um bairro sem padaria, sem escola, sem gente que acorda ali todo dia. E aqui está a ironia que ninguém quer encarar: quando o morador vai embora, some junto exatamente aquilo que o turista foi ver."
+   },
+   {
+    "slot": "M2",
+    "text": "Nesse ponto eu cedo, sem ressalva. O produto se consome ao ser vendido."
+   },
+   {
+    "slot": "F2",
+    "text": "Se ele se consome, regular deixa de ser interferência no mercado e passa a ser preservação da mercadoria. Suponha que a cidade limitasse os dias de locação por ano, como fizeram algumas europeias, ou taxasse a diária e devolvesse aquilo em habitação. Nenhuma delas proibiu nada."
+   },
+   {
+    "slot": "M2",
+    "text": "Concedo que sejam razoáveis. Só peço que ninguém as apresente como gratuitas: alguém deixa de ganhar, e é bom que esse alguém apareça no debate."
+   }
+  ],
+  "questions": [
+   {
+    "q_pt": "Sobre o que exatamente os dois divergem?",
+    "choices_pt": [
+     "Sobre se o casario devia ter sido restaurado pelo poder público",
+     "Sobre se o mercado de hospedagem funciona como se espera",
+     "Sobre se a cidade deveria proibir as locações de temporada",
+     "Sobre se o resultado do mercado de hospedagem deve ser aceito como está"
+    ],
+    "correct": 3,
+    "type": "global"
+   },
+   {
+    "q_pt": "Segundo a debatedora, quem arcou com o custo da mudança na área, e por quê?",
+    "choices_pt": [
+     "Os moradores, porque o restauro dos casarões saiu do bolso deles",
+     "Os proprietários, porque o aluguel subiu além dos salários locais",
+     "Os proprietários, porque o restauro dos casarões saiu do bolso deles",
+     "Os moradores, porque o aluguel subiu além dos salários locais"
+    ],
+    "correct": 3,
+    "type": "detail"
+   },
+   {
+    "q_pt": "O que ele deixa entender ao pedir que as medidas não sejam apresentadas como gratuitas?",
+    "choices_pt": [
+     "Que as medidas trazem perdas para algum grupo, e isso deve ser reconhecido",
+     "Que as medidas só seriam aceitáveis se fossem pagas pelos moradores",
+     "Que as medidas são caras demais para os cofres da cidade",
+     "Que as medidas favorecem os proprietários acima dos demais grupos"
+    ],
+    "correct": 0,
+    "type": "inference"
+   }
+  ],
+  "title_pt": "Centro histórico"
+ },
+ {
+  "id": "AL-b2-1",
+  "sublevel": "AL",
+  "genre": "notícia de rádio",
+  "intro_pt": "Você vai ouvir uma notícia sobre um programa da prefeitura.",
+  "duration_target_s": 94,
+  "speakers": [
+   {
+    "slot": "M1",
+    "voice_style": "voz masculina adulta, clara e versátil, registro neutro brasileiro"
+   }
+  ],
+  "script": [
+   {
+    "slot": "M1",
+    "text": "Completou um ano nesta semana o programa municipal que recolhe o óleo de cozinha usado nas casas de Pontalvo. A ideia nasceu pequena: no começo, as garrafas eram entregues em apenas três escolas, e quase ninguém aparecia. Hoje a cidade tem vinte e dois pontos de entrega, entre eles o terminal rodoviário e dois mercados de bairro. Ao longo desses doze meses foram recolhidos trinta mil litros. Todo esse material segue para uma cooperativa instalada em Baixa Verde, que transforma o óleo em sabão e vende o produto em lojas da região. Parte do dinheiro dessa venda volta para as escolas que mais arrecadam, na forma de material esportivo. Antes do programa, o costume era jogar o óleo na pia, com prejuízo para a rede de esgoto. A companhia de água informou que os chamados por cano entupido caíram um quinto nos bairros que ganharam ponto de entrega. Nem tudo, porém, caminha no mesmo ritmo, e os próprios cooperados reconhecem isso. A cooperativa conta com um único veículo para buscar as garrafas, e por isso os pontos mais distantes do centro só são atendidos uma vez por mês. Os cooperados pediram à prefeitura uma segunda van, e a resposta foi que o pedido entra na discussão do orçamento do ano que vem. A partir do mês que vem, além das escolas e dos mercados, os postos de saúde também passam a receber o óleo dos moradores."
+   }
+  ],
+  "questions": [
+   {
+    "q_pt": "Qual é o assunto principal da notícia?",
+    "choices_pt": [
+     "Um ano de um programa de coleta de óleo, com resultados bons e queixas de vizinhos",
+     "Um ano de um programa de coleta de óleo, com resultados bons e limites de estrutura",
+     "Um ano de um programa de coleta de óleo, com resultados bons e disputa entre escolas",
+     "Um ano de um programa de coleta de óleo, com resultados bons e dívida da cooperativa"
+    ],
+    "correct": 1,
+    "type": "global"
+   },
+   {
+    "q_pt": "Como o programa cresceu ao longo do ano?",
+    "choices_pt": [
+     "Saiu de três escolas para vinte e dois pontos e vai incluir os postos de saúde no ano que vem",
+     "Saiu de três mercados para vinte e dois pontos e vai incluir os postos de saúde no mês que vem",
+     "Saiu de três escolas para vinte e dois pontos e vai incluir os postos de saúde no mês que vem",
+     "Saiu de três mercados para vinte e dois pontos e vai incluir os postos de saúde no ano que vem"
+    ],
+    "correct": 2,
+    "type": "detail"
+   },
+   {
+    "q_pt": "Por que alguns pontos ficam um mês sem coleta?",
+    "choices_pt": [
+     "Porque a cooperativa fica longe, em Baixa Verde",
+     "Porque os postos ainda não recebem o óleo",
+     "Porque poucos moradores entregam garrafas nesses pontos",
+     "Porque um único veículo faz a coleta de todos os pontos"
+    ],
+    "correct": 3,
+    "type": "detail"
+   }
+  ],
+  "title_pt": "Óleo usado"
+ },
+ {
+  "id": "AL-b2-2",
+  "sublevel": "AL",
+  "genre": "entrevista de rádio com um treinador",
+  "intro_pt": "Você vai ouvir uma repórter entrevistando o treinador de um time de futebol.",
+  "duration_target_s": 94,
+  "speakers": [
+   {
+    "slot": "F1",
+    "voice_style": "voz feminina adulta, clara e versátil, registro neutro brasileiro"
+   },
+   {
+    "slot": "M2",
+    "voice_style": "voz masculina adulta jovem, tom natural e coloquial"
+   }
+  ],
+  "script": [
+   {
+    "slot": "F1",
+    "text": "O time de futebol feminino do Jardim Lins completa dois anos neste sábado. Para contar a história, estou com o treinador, Wanderson Prates. Wanderson, como tudo começou?"
+   },
+   {
+    "slot": "M2",
+    "text": "Começou com onze meninas e nenhum campo disponível. A minha filha reclamava que ninguém chamava as meninas para jogar, e eu resolvi marcar um treino num sábado de manhã. Apareceram onze. O campo do clube, porém, estava sempre reservado para os times adultos, e por isso a gente treinou os primeiros seis meses no estacionamento de um supermercado, com as traves pintadas na parede."
+   },
+   {
+    "slot": "F1",
+    "text": "E hoje, onde vocês treinam?"
+   },
+   {
+    "slot": "M2",
+    "text": "No campo do clube, nas manhãs de sábado. Essa mudança veio depois de uma reunião da associação de moradores, no ano passado, quando as mães das jogadoras foram lá e pediram o horário."
+   },
+   {
+    "slot": "F1",
+    "text": "Quantas atletas vocês têm agora?"
+   },
+   {
+    "slot": "M2",
+    "text": "Sessenta, divididas em três categorias de idade. E olha que, no primeiro campeonato, a gente perdeu todas as partidas que disputou, sem marcar um único gol."
+   },
+   {
+    "slot": "F1",
+    "text": "E no ano seguinte?"
+   },
+   {
+    "slot": "M2",
+    "text": "No ano seguinte a gente levantou o troféu do torneio regional, contra adversárias de cidades bem maiores. Foi a virada. Depois daquele domingo, apareceu muita menina nova procurando a inscrição."
+   },
+   {
+    "slot": "F1",
+    "text": "E o que falta agora?"
+   },
+   {
+    "slot": "M2",
+    "text": "Faltam duas coisas: um segundo treinador, porque sozinho eu não dou conta de três categorias, e transporte para os jogos fora da cidade. Hoje a gente depende de carona, em carro de pai e de mãe."
+   }
+  ],
+  "questions": [
+   {
+    "q_pt": "Do que trata a entrevista?",
+    "choices_pt": [
+     "Um time de meninas que cresceu em dois anos e agora briga pelo campo com o clube",
+     "Um time de meninas que cresceu em dois anos e ainda depende de estrutura",
+     "Um time de meninas que cresceu em dois anos e agora perde jogadoras para outro time",
+     "Um time de meninas que cresceu em dois anos e agora busca patrocínio de empresas"
+    ],
+    "correct": 1,
+    "type": "global"
+   },
+   {
+    "q_pt": "Quem pediu o horário no campo do clube, e onde o time treinava antes?",
+    "choices_pt": [
+     "O treinador, num estacionamento",
+     "As mães das jogadoras, numa quadra da escola",
+     "As mães das jogadoras, num estacionamento",
+     "O treinador, numa quadra da escola"
+    ],
+    "correct": 2,
+    "type": "detail"
+   },
+   {
+    "q_pt": "Como está o time hoje?",
+    "choices_pt": [
+     "Sessenta atletas e um só treinador para as três categorias",
+     "Sessenta atletas e dois treinadores para as três categorias",
+     "Onze atletas e um só treinador para as três categorias",
+     "Onze atletas e dois treinadores para as três categorias"
+    ],
+    "correct": 0,
+    "type": "detail"
+   }
+  ],
+  "title_pt": "Meninas em campo"
+ },
+ {
+  "id": "AL-b2-3",
+  "sublevel": "AL",
+  "genre": "relato pessoal num quadro de rádio",
+  "intro_pt": "Você vai ouvir um ouvinte contando uma história no rádio.",
+  "duration_target_s": 83,
+  "speakers": [
+   {
+    "slot": "M2",
+    "voice_style": "voz masculina adulta jovem, tom natural e coloquial"
+   }
+  ],
+  "script": [
+   {
+    "slot": "M2",
+    "text": "Há três anos eu encontrei um violão no depósito de lixo do meu prédio. Estava sem cordas, com uma rachadura no fundo, mas o braço estava inteiro. Levei numa oficina de instrumentos ali perto, e o moço me disse que o conserto custava mais do que o violão valia. Eu poderia ter desistido, só que aquele violão tinha um desenho de flor no tampo que me lembrava o da minha tia. Então eu decidi consertar sozinho, aprendendo por vídeo. Levei oito meses. A rachadura foi a parte mais difícil: eu colei, esperei uma semana, e a cola abriu de novo. Colei outra vez, e da segunda vez pegou. Quando terminei, notei um nome escrito a lápis dentro do instrumento. Perguntei ao porteiro, e ele reconheceu na hora: era a dona do apartamento cinquenta e dois. Fui bater na porta dela com o violão na mão. Ela contou que tinha jogado o instrumento fora depois que o marido morreu, porque não suportava mais ver aquilo em casa. Não quis o violão de volta, mas pediu uma coisa: que eu tocasse no aniversário dela, em agosto. Toquei. Hoje, aos sábados, eu ensino quatro crianças do prédio no salão de festas, e o violão é delas quando eu não estou lá."
+   }
+  ],
+  "questions": [
+   {
+    "q_pt": "O que o ouvinte conta no relato?",
+    "choices_pt": [
+     "Um violão achado no lixo foi consertado e trocado com a antiga dona por outro instrumento",
+     "Um violão achado no lixo foi consertado e vendido para pagar aulas de música",
+     "Um violão achado no lixo foi consertado e doado à oficina que ajudou no reparo",
+     "Um violão achado no lixo foi consertado e acabou virando aula para crianças do prédio"
+    ],
+    "correct": 3,
+    "type": "global"
+   },
+   {
+    "q_pt": "Por que a antiga dona tinha se desfeito do violão?",
+    "choices_pt": [
+     "Porque ele a lembrava do marido que morreu",
+     "Porque a rachadura tornou o violão impossível de tocar",
+     "Porque ela se mudou de apartamento e não tinha espaço",
+     "Porque ela ganhou um instrumento melhor"
+    ],
+    "correct": 0,
+    "type": "detail"
+   },
+   {
+    "q_pt": "Como ele chegou até a dona do violão?",
+    "choices_pt": [
+     "Pelo nome anotado dentro do violão, que o moço da oficina reconheceu",
+     "Pelo nome anotado dentro do violão, que o porteiro reconheceu",
+     "Pela flor desenhada no topo, que o porteiro reconheceu",
+     "Pela flor desenhada no topo, que o moço da oficina reconheceu"
+    ],
+    "correct": 1,
+    "type": "detail"
+   }
+  ],
+  "title_pt": "O violão"
+ },
+ {
+  "id": "AL-b2-4",
+  "sublevel": "AL",
+  "genre": "reportagem de rádio com depoimento",
+  "intro_pt": "Você vai ouvir uma reportagem sobre um terreno que virou quadra.",
+  "duration_target_s": 85,
+  "speakers": [
+   {
+    "slot": "M1",
+    "voice_style": "voz masculina adulta, clara e versátil, registro neutro brasileiro"
+   },
+   {
+    "slot": "F2",
+    "voice_style": "voz feminina adulta jovem, tom natural e coloquial"
+   }
+  ],
+  "script": [
+   {
+    "slot": "M1",
+    "text": "Durante quase quinze anos, o terreno da esquina da rua Tenente Bastos, no Jardim Bandeirantes, serviu de depósito de entulho. Quem passava ali à noite atravessava para a outra calçada. Em janeiro, um grupo de moradores decidiu que aquilo ia mudar. Foram seis fins de semana de mutirão e trinta caminhões de entulho retirados. A prefeitura entrou com a areia e com as traves; a pintura das linhas ficou por conta dos próprios moradores. A quadra foi aberta em março."
+   },
+   {
+    "slot": "F2",
+    "text": "Antes a gente não deixava criança nem chegar perto daqui. Agora eu venho buscar a minha filha às nove da noite e encontro a rua cheia de gente conversando."
+   },
+   {
+    "slot": "M1",
+    "text": "De manhã, o espaço é usado pela escola municipal que fica a duas quadras. À noite, por times do bairro. O problema agora é outro: não há iluminação, e por isso as partidas da noite precisam terminar às sete. A associação de moradores entregou um pedido de postes à prefeitura em maio. A secretaria de obras respondeu que o projeto de iluminação está pronto e que só falta contratar a empresa que vai executar o serviço. Enquanto isso, a segunda etapa já saiu do papel: no mês passado foram plantadas doze árvores num canto do terreno, onde vão ficar bancos para os mais velhos."
+   }
+  ],
+  "questions": [
+   {
+    "q_pt": "Qual é o assunto da reportagem?",
+    "choices_pt": [
+     "Um terreno de entulho virou quadra por esforço da escola e ainda espera obras",
+     "Um terreno de entulho virou quadra por esforço dos moradores e já está concluído",
+     "Um terreno de entulho virou quadra por esforço da prefeitura e já está concluído",
+     "Um terreno de entulho virou quadra por esforço dos moradores e ainda espera obras"
+    ],
+    "correct": 3,
+    "type": "global"
+   },
+   {
+    "q_pt": "Como foi dividido o trabalho entre moradores e prefeitura?",
+    "choices_pt": [
+     "Moradores cuidaram da limpeza e das traves; a prefeitura, da areia e da pintura das linhas",
+     "Moradores cuidaram da areia e da pintura das linhas; a prefeitura, da limpeza e das traves",
+     "Moradores cuidaram da limpeza e da areia; a prefeitura, das traves e da pintura das linhas",
+     "Moradores cuidaram da limpeza e da pintura das linhas; a prefeitura, da areia e das traves"
+    ],
+    "correct": 3,
+    "type": "detail"
+   },
+   {
+    "q_pt": "O que a segunda etapa já realizou, e para que serve?",
+    "choices_pt": [
+     "Plantou árvores ao redor da quadra, para dar sombra aos times do bairro",
+     "Plantou árvores num trecho do terreno, para abrir espaço a bancos para os idosos",
+     "Instalou bancos junto à quadra, para as crianças da escola municipal",
+     "Comprou postes para o terreno, para os jogos da noite"
+    ],
+    "correct": 1,
+    "type": "detail"
+   }
+  ],
+  "title_pt": "A quadra"
+ },
+ {
+  "id": "AL-b2-5",
+  "sublevel": "AL",
+  "genre": "entrevista de rádio sobre a reabertura de um cinema",
+  "intro_pt": "Você vai ouvir uma repórter entrevistando o dono de um cinema de rua.",
+  "duration_target_s": 94,
+  "speakers": [
+   {
+    "slot": "F1",
+    "voice_style": "voz feminina adulta, clara e versátil, registro neutro brasileiro"
+   },
+   {
+    "slot": "M2",
+    "voice_style": "voz masculina adulta jovem, tom natural e coloquial"
+   }
+  ],
+  "script": [
+   {
+    "slot": "F1",
+    "text": "O Cine Guarani, fechado desde mil novecentos e noventa e oito, voltou a funcionar no ano passado. Estou com Elias Ribas, o dono. Elias, o que era esse prédio antes?"
+   },
+   {
+    "slot": "M2",
+    "text": "Era um depósito de móveis. Ficou assim uns quinze anos, com as poltronas empilhadas no fundo, debaixo de plástico. Meu pai foi projetorista aqui a vida inteira, então eu conhecia cada canto desse prédio de olhos fechados."
+   },
+   {
+    "slot": "F1",
+    "text": "E de onde veio o dinheiro da reforma?"
+   },
+   {
+    "slot": "M2",
+    "text": "Veio de dois lugares, metade de cada um. Uma parte a gente juntou numa campanha na internet, com doação de quem frequentava o cinema antigamente. A outra metade foi um prêmio de cultura do governo do estado, que a gente disputou em dois mil e vinte e três."
+   },
+   {
+    "slot": "F1",
+    "text": "As poltronas antigas ficaram?"
+   },
+   {
+    "slot": "M2",
+    "text": "Ficaram. A gente só trocou o tecido. São as mesmas de quando meu pai trabalhava aqui."
+   },
+   {
+    "slot": "F1",
+    "text": "E como foi o primeiro ano?"
+   },
+   {
+    "slot": "M2",
+    "text": "Foi bom, mas teve um susto. Na primeira chuva forte depois da reabertura, o telhado abriu numa parte e a água entrou na sala. A gente teve que fechar por três semanas para arrumar aquilo. Perdemos público, perdemos dinheiro, e ainda por cima era época de férias."
+   },
+   {
+    "slot": "F1",
+    "text": "E os planos para este ano?"
+   },
+   {
+    "slot": "M2",
+    "text": "Em março começam as sessões de tarde para escolas, de segunda a quinta. E a quarta-feira segue sendo o dia do ingresso mais barato, que é quando vem mais gente do bairro."
+   }
+  ],
+  "questions": [
+   {
+    "q_pt": "Do que trata a entrevista?",
+    "choices_pt": [
+     "A volta de um cinema antigo, paga com um empréstimo bancário, e o susto de uma chuva",
+     "A volta de um cinema antigo, paga pela prefeitura, e o susto de uma chuva",
+     "A volta de um cinema antigo, paga com doações e um prêmio, e o susto de uma chuva",
+     "A volta de um cinema antigo, paga por um sócio investidor, e o susto de uma chuva"
+    ],
+    "correct": 2,
+    "type": "global"
+   },
+   {
+    "q_pt": "O que se pode dizer das poltronas de hoje em relação ao tempo do pai do dono?",
+    "choices_pt": [
+     "São modelos novos, pagos com o prêmio do governo estadual",
+     "São as mesmas do tempo do pai, mas com a estrutura reforçada",
+     "Foram vendidas e substituídas por cadeiras de outro cinema",
+     "São as mesmas do tempo do pai, só com o tecido novo"
+    ],
+    "correct": 3,
+    "type": "detail"
+   },
+   {
+    "q_pt": "O que atrapalhou o primeiro ano depois da reabertura?",
+    "choices_pt": [
+     "A chuva forte danificou o telhado e a sala ficou parada três meses",
+     "A chuva forte molhou as poltronas e a sala ficou parada três semanas",
+     "A chuva forte molhou as poltronas e a sala ficou parada três meses",
+     "A chuva forte danificou o telhado e a sala ficou parada três semanas"
+    ],
+    "correct": 3,
+    "type": "detail"
+   }
+  ],
+  "title_pt": "O cinema"
+ },
+ {
+  "id": "IM-b2-1",
+  "sublevel": "IM",
+  "genre": "conversa com um técnico de eletrodomésticos",
+  "intro_pt": "Você vai ouvir uma conversa entre uma moradora e um técnico.",
+  "duration_target_s": 61,
+  "speakers": [
+   {
+    "slot": "M1",
+    "voice_style": "voz masculina adulta, clara e versátil, registro neutro brasileiro"
+   },
+   {
+    "slot": "F2",
+    "voice_style": "voz feminina adulta jovem, tom natural e coloquial"
+   }
+  ],
+  "script": [
+   {
+    "slot": "F2",
+    "text": "Bom dia, seu Adilson. Obrigada por vir hoje. A máquina molha o chão toda vez que eu lavo roupa."
+   },
+   {
+    "slot": "M1",
+    "text": "Bom dia, dona Cleide. Deixa eu olhar atrás dela."
+   },
+   {
+    "slot": "F2",
+    "text": "Pode puxar. O chão é de pedra, não estraga."
+   },
+   {
+    "slot": "M1",
+    "text": "Pronto, já sei o que é. A mangueira de trás está furada. A água sai por esse furo."
+   },
+   {
+    "slot": "F2",
+    "text": "E dá para trocar hoje mesmo?"
+   },
+   {
+    "slot": "M1",
+    "text": "Dá. Eu tenho uma mangueira nova na van. Em meia hora eu resolvo."
+   },
+   {
+    "slot": "F2",
+    "text": "Que bom. E quanto fica?"
+   },
+   {
+    "slot": "M1",
+    "text": "Cento e vinte reais, já com a visita."
+   },
+   {
+    "slot": "F2",
+    "text": "Tudo bem. Eu pago no cartão."
+   },
+   {
+    "slot": "M1",
+    "text": "Pode ser. Tem mais uma coisa, dona Cleide. O filtro está cheio de sujeira."
+   },
+   {
+    "slot": "F2",
+    "text": "E isso faz mal?"
+   },
+   {
+    "slot": "M1",
+    "text": "Faz. Com o filtro sujo, o motor trabalha demais. A senhora tira o filtro e lava na torneira uma vez por mês."
+   },
+   {
+    "slot": "F2",
+    "text": "Uma vez por mês. Vou anotar aqui na geladeira."
+   },
+   {
+    "slot": "M1",
+    "text": "Isso mesmo. E a peça nova tem três meses de garantia."
+   }
+  ],
+  "questions": [
+   {
+    "q_pt": "Qual é o assunto da visita?",
+    "choices_pt": [
+     "Um técnico troca uma peça que aquece demais e orienta sobre a limpeza de outra",
+     "Um técnico conserta uma peça que vaza e orienta sobre a limpeza de outra",
+     "Um técnico conserta uma peça que vaza e orienta sobre a compra de outra",
+     "Um técnico conserta uma peça que vaza e orienta sobre o uso do sabão"
+    ],
+    "correct": 1,
+    "type": "global"
+   },
+   {
+    "q_pt": "Como ficam o preço e a garantia?",
+    "choices_pt": [
+     "Cento e vinte, com garantia de um mês na peça nova",
+     "Cento e vinte, com garantia de três meses na peça nova",
+     "Oitenta, com garantia de três meses na peça nova",
+     "Oitenta, com garantia de um mês na peça nova"
+    ],
+    "correct": 1,
+    "type": "detail"
+   },
+   {
+    "q_pt": "O que o técnico diz que acontece com a máquina quando o filtro está sujo?",
+    "choices_pt": [
+     "A roupa sai manchada de sujeira",
+     "A água acaba vazando pela porta",
+     "O motor precisa trabalhar mais",
+     "A máquina gasta mais sabão"
+    ],
+    "correct": 2,
+    "type": "detail"
+   }
+  ],
+  "title_pt": "A máquina"
+ },
+ {
+  "id": "IM-b2-2",
+  "sublevel": "IM",
+  "genre": "anúncio de rádio de uma biblioteca de bairro",
+  "intro_pt": "Você vai ouvir um anúncio sobre uma biblioteca de bairro.",
+  "duration_target_s": 70,
+  "speakers": [
+   {
+    "slot": "F1",
+    "voice_style": "voz feminina adulta, clara e versátil, registro neutro brasileiro"
+   }
+  ],
+  "script": [
+   {
+    "slot": "F1",
+    "text": "Atenção, moradores do bairro do Cravo. Aqui é a Neide, da biblioteca do bairro. A biblioteca agora funciona no centro comunitário da rua das Palmeiras, porque tem duas vezes mais livros e a sala antiga é pequena demais. A sala nova é ampla e tem oito mesas para quem quer estudar. A biblioteca abre de terça a sábado, das nove da manhã às cinco da tarde. A entrada é de graça, e a carteirinha também. Para fazer a carteirinha, é preciso levar um documento com foto e uma conta de luz recente. Com a carteirinha, você leva dois livros para casa por quinze dias. Quem devolve o livro atrasado fica uma semana sem poder pegar outro. Na sala nova tem quatro computadores com internet, e o uso é de uma hora por pessoa. Quem não consegue sair de casa pede o livro por telefone e recebe em casa. No sábado de manhã tem hora do conto para as crianças. E a gente recebe doação de livros nas terças-feiras. Apareça para conhecer a sala nova."
+   }
+  ],
+  "questions": [
+   {
+    "q_pt": "Qual é o objetivo do anúncio?",
+    "choices_pt": [
+     "Avisar que a biblioteca mudou de lugar e explicar como usá-la",
+     "Avisar que a biblioteca vai ampliar o horário e explicar como usá-la",
+     "Avisar que a biblioteca passou a cobrar carteirinha e explicar como usá-la",
+     "Avisar que a biblioteca ganhou uma sala nova no mesmo prédio e explicar como usá-la"
+    ],
+    "correct": 0,
+    "type": "global"
+   },
+   {
+    "q_pt": "Como funciona o empréstimo?",
+    "choices_pt": [
+     "Pode ficar com dois títulos durante quinze dias",
+     "Pode ficar com dois títulos durante uma semana",
+     "Pode ficar com quatro títulos durante quinze dias",
+     "Pode ficar com quatro títulos durante uma semana"
+    ],
+    "correct": 0,
+    "type": "detail"
+   },
+   {
+    "q_pt": "O que é preciso levar para fazer a carteirinha?",
+    "choices_pt": [
+     "Documento com foto e comprovante de matrícula",
+     "Documento com foto e taxa de inscrição",
+     "Documento com foto e conta de luz recente",
+     "Documento com foto e carta de indicação"
+    ],
+    "correct": 2,
+    "type": "detail"
+   }
+  ],
+  "title_pt": "Biblioteca do Cravo"
+ },
+ {
+  "id": "IM-b2-3",
+  "sublevel": "IM",
+  "genre": "conversa no veterinário",
+  "intro_pt": "Você vai ouvir uma conversa entre uma veterinária e o dono de um cachorro.",
+  "duration_target_s": 70,
+  "speakers": [
+   {
+    "slot": "F1",
+    "voice_style": "voz feminina adulta, clara e versátil, registro neutro brasileiro"
+   },
+   {
+    "slot": "M2",
+    "voice_style": "voz masculina adulta jovem, tom natural e coloquial"
+   }
+  ],
+  "script": [
+   {
+    "slot": "F1",
+    "text": "Bom dia. Então esse aqui é o Pipoca. Que bonito ele é."
+   },
+   {
+    "slot": "M2",
+    "text": "Bom dia, doutora. Esse é o Pipoca mesmo. Ele tem dois anos."
+   },
+   {
+    "slot": "F1",
+    "text": "Vamos pesar ele. Ele está com onze quilos."
+   },
+   {
+    "slot": "M2",
+    "text": "E onze quilos é muito para o tamanho dele?"
+   },
+   {
+    "slot": "F1",
+    "text": "É um pouco demais. Para o tamanho dele, o peso bom é nove quilos."
+   },
+   {
+    "slot": "M2",
+    "text": "Entendi."
+   },
+   {
+    "slot": "F1",
+    "text": "O que ele come em casa?"
+   },
+   {
+    "slot": "M2",
+    "text": "Ração. E ele come também um pouco do nosso almoço. O pote dele fica cheio o dia inteiro."
+   },
+   {
+    "slot": "F1",
+    "text": "O problema está aí. O senhor dá a comida duas vezes por dia, sempre na mesma medida."
+   },
+   {
+    "slot": "M2",
+    "text": "Duas vezes por dia. Está bom, eu faço assim."
+   },
+   {
+    "slot": "F1",
+    "text": "Agora eu vou olhar os dentes e as orelhas dele."
+   },
+   {
+    "slot": "M2",
+    "text": "Pode olhar. Ele é bem calmo."
+   },
+   {
+    "slot": "F1",
+    "text": "Os dentes estão bons. As orelhas estão limpas também."
+   },
+   {
+    "slot": "M2",
+    "text": "Ele sai comigo todo dia de manhã. A gente anda uns vinte minutos."
+   },
+   {
+    "slot": "F1",
+    "text": "O passeio ajuda bastante."
+   },
+   {
+    "slot": "M2",
+    "text": "E a consulta, quanto fica?"
+   },
+   {
+    "slot": "F1",
+    "text": "Cem reais. O pagamento é ali na recepção."
+   },
+   {
+    "slot": "M2",
+    "text": "Tudo bem. Obrigado, doutora."
+   },
+   {
+    "slot": "F1",
+    "text": "De nada. Traga ele de novo no mês que vem."
+   }
+  ],
+  "questions": [
+   {
+    "q_pt": "Sobre o que os dois conversam?",
+    "choices_pt": [
+     "O cachorro está acima do peso, e a causa é a falta de exercício",
+     "O cachorro está acima do peso, e a causa é o que ele come",
+     "O cachorro está abaixo do peso, e a causa é o que ele come",
+     "O cachorro está abaixo do peso, e a causa é a falta de exercício"
+    ],
+    "correct": 1,
+    "type": "global"
+   },
+   {
+    "q_pt": "Quanto o cachorro pesa e qual seria o peso bom para o tamanho dele?",
+    "choices_pt": [
+     "Onze quilos, com nove como peso bom",
+     "Nove quilos, com onze como peso bom",
+     "Onze quilos, com dez como peso bom",
+     "Doze quilos, com nove como peso bom"
+    ],
+    "correct": 0,
+    "type": "detail"
+   },
+   {
+    "q_pt": "Quanto custa a consulta e quando ele deve voltar?",
+    "choices_pt": [
+     "Cem reais, com retorno daqui a um mês",
+     "Cem reais, com retorno daqui a uma semana",
+     "Oitenta reais, com retorno daqui a um mês",
+     "Oitenta reais, com retorno daqui a uma semana"
+    ],
+    "correct": 0,
+    "type": "detail"
+   }
+  ],
+  "title_pt": "No veterinário"
+ },
+ {
+  "id": "IM-b2-4",
+  "sublevel": "IM",
+  "genre": "recado de voz descrevendo um apartamento",
+  "intro_pt": "Você vai ouvir um recado de voz de uma amiga sobre o apartamento novo dela.",
+  "duration_target_s": 64,
+  "speakers": [
+   {
+    "slot": "F2",
+    "voice_style": "voz feminina adulta jovem, tom natural e coloquial"
+   }
+  ],
+  "script": [
+   {
+    "slot": "F2",
+    "text": "Oi, Bruna! Estou te mandando esse recado para te contar como é a minha casa nova. O apartamento fica na rua Sete de Abril, no terceiro andar. O prédio é antigo e não tem elevador. A sala é a parte que eu mais gosto. A janela da sala é enorme e dá para uma praça. Na sala tem um sofá e a estante dos livros. Mesa eu ainda não tenho. A cozinha é pequena, mas cabe a máquina de lavar. O fogão já veio com o apartamento. O quarto fica no fundo, longe da rua, e de noite é bem silencioso. No quarto cabe a minha cama e o guarda-roupa, e mais nada. O banheiro é todo branco e o chuveiro é bom. Tem uma área de serviço pequena, com um varal. O aluguel é mil e duzentos reais, já com o condomínio. A vizinha do lado tem um cachorro, mas ele late pouco. Vem me visitar no domingo!"
+   }
+  ],
+  "questions": [
+   {
+    "q_pt": "Qual é o objetivo do recado?",
+    "choices_pt": [
+     "Contar como é o apartamento novo e convidar a amiga para morar junto",
+     "Contar como é o apartamento novo e pedir à amiga que ajude na mudança",
+     "Contar como é o apartamento novo e pedir dicas para decorar",
+     "Contar como é o apartamento novo e convidar a amiga para uma visita"
+    ],
+    "correct": 3,
+    "type": "global"
+   },
+   {
+    "q_pt": "Como é o quarto?",
+    "choices_pt": [
+     "Fica nos fundos e comporta também a estante de livros",
+     "Dá para a praça e comporta apenas a cama e o armário",
+     "Fica nos fundos e comporta apenas a cama e o armário",
+     "Dá para a praça e comporta também a estante de livros"
+    ],
+    "correct": 2,
+    "type": "detail"
+   },
+   {
+    "q_pt": "Quanto ele paga de aluguel?",
+    "choices_pt": [
+     "Mil e duzentos, mais o condomínio à parte",
+     "Mil e quinhentos, com o condomínio incluído",
+     "Mil e quinhentos, mais o condomínio à parte",
+     "Mil e duzentos, com o condomínio incluído"
+    ],
+    "correct": 3,
+    "type": "detail"
+   }
+  ],
+  "title_pt": "Apartamento novo"
+ },
+ {
+  "id": "IM-b2-5",
+  "sublevel": "IM",
+  "genre": "conversa entre colegas de trabalho",
+  "intro_pt": "Você vai ouvir dois colegas conversando sobre uma novidade no trabalho.",
+  "duration_target_s": 64,
+  "speakers": [
+   {
+    "slot": "F2",
+    "voice_style": "voz feminina adulta jovem, tom natural e coloquial"
+   },
+   {
+    "slot": "M2",
+    "voice_style": "voz masculina adulta jovem, tom natural e coloquial"
+   }
+  ],
+  "script": [
+   {
+    "slot": "F2",
+    "text": "Você viu o e-mail que a Dalva mandou agora de manhã?"
+   },
+   {
+    "slot": "M2",
+    "text": "Vi o título só. É sobre o horário novo?"
+   },
+   {
+    "slot": "F2",
+    "text": "É sobre a sexta-feira. A partir do mês que vem, o nosso time trabalha de casa às sextas."
+   },
+   {
+    "slot": "M2",
+    "text": "Sério? Só o nosso time?"
+   },
+   {
+    "slot": "F2",
+    "text": "Por enquanto sim. O pessoal de vendas continua vindo todo dia."
+   },
+   {
+    "slot": "M2",
+    "text": "Que boa notícia. Eu gasto uma hora e meia no trânsito toda sexta."
+   },
+   {
+    "slot": "F2",
+    "text": "Pois é. E as reuniões de sexta passam para quinta à tarde."
+   },
+   {
+    "slot": "M2",
+    "text": "Quinta à tarde. Eu anoto na minha agenda hoje."
+   },
+   {
+    "slot": "F2",
+    "text": "Anota mesmo. O calendário novo está no fim do e-mail."
+   },
+   {
+    "slot": "M2",
+    "text": "E o meu monitor?"
+   },
+   {
+    "slot": "F2",
+    "text": "A empresa empresta monitor. É só falar com a Dalva e entrar na lista."
+   },
+   {
+    "slot": "M2",
+    "text": "Que bom. Em casa eu só tenho o notebook. A tela é pequena demais."
+   },
+   {
+    "slot": "F2",
+    "text": "Fala com ela hoje, porque a lista fecha na sexta."
+   },
+   {
+    "slot": "M2",
+    "text": "Vou lá agora. A mesa dela é aquela perto da janela, né?"
+   },
+   {
+    "slot": "F2",
+    "text": "É essa mesma. Ela chega sempre umas nove horas."
+   }
+  ],
+  "questions": [
+   {
+    "q_pt": "Sobre o que os colegas conversam?",
+    "choices_pt": [
+     "O time passa a trabalhar de casa a semana toda, e a empresa empresta equipamento",
+     "O time passa a trabalhar de casa um dia por semana, e a empresa empresta equipamento",
+     "O time passa a trabalhar de casa um dia por semana, e cada um paga o próprio equipamento",
+     "Todas as equipes passam a trabalhar de casa um dia por semana, e a empresa empresta equipamento"
+    ],
+    "correct": 1,
+    "type": "global"
+   },
+   {
+    "q_pt": "Quanto tempo ele gasta no trânsito às sextas, e quando a novidade começa?",
+    "choices_pt": [
+     "Noventa minutos; a novidade começa no mês que vem",
+     "Noventa minutos; a novidade começa na semana que vem",
+     "Quarenta e cinco minutos; a novidade começa no mês que vem",
+     "Quarenta e cinco minutos; a novidade começa na semana que vem"
+    ],
+    "correct": 0,
+    "type": "detail"
+   },
+   {
+    "q_pt": "Quando fecha a lista dos monitores emprestados, e onde fica a mesa da Dalva?",
+    "choices_pt": [
+     "Na quinta; perto da janela",
+     "Na sexta; perto da porta",
+     "Na quinta; perto da porta",
+     "Na sexta; perto da janela"
+    ],
+    "correct": 3,
+    "type": "detail"
+   }
+  ],
+  "title_pt": "Sexta em casa"
+ }
+]

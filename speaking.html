@@ -1,0 +1,2512 @@
+<!doctype html>
+<html lang="en" class="it-app">
+<head>
+<meta charset="utf-8">
+<link rel="icon" href="data:,">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Speaking Practice - Language Proficiency Practice Tests</title>
+<link rel="stylesheet" href="css/tokens.css">
+
+<link rel="stylesheet" href="css/components.css">
+<style>
+
+  * , *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { height: 100%; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+    color: var(--text); background: var(--bg);
+    height: 100dvh; overflow: hidden;
+    font-size: var(--fs-base);
+  }
+  button { font: inherit; color: inherit; }
+  input, select, textarea { font: inherit; color: inherit; }
+
+  .screen { display: none; height: calc(100% - var(--nav-h, 62px)); flex-direction: column; }
+  .screen.active { display: flex; }
+  body.in-test .screen { height: 100%; }
+
+  .tag {
+    display: inline-block; font-size: var(--fs-sm); font-weight: 700; padding: 2px 8px; border-radius: var(--radius-pill);
+    background: var(--accent-soft); color: var(--accent-text);
+  }
+  .tag.muted { background: var(--bg-2); color: var(--muted); border: 1px solid var(--border); }
+  .tag.warn { background: var(--warn-soft); color: var(--warn-text); }
+  .tag.danger { background: var(--danger-soft); color: var(--danger-text); }
+  .tag.good { background: var(--good-soft); color: var(--good-text); }
+
+  .btn-end-test {
+    margin-left: auto; border: 1px solid var(--border); background: transparent;
+    color: var(--muted); border-radius: var(--radius-md); padding: 4px 12px; font-size: var(--fs-sm);
+    font-weight: 600; cursor: pointer; white-space: nowrap;
+    transition: color .12s, border-color .12s;
+  }
+  .btn-end-test:hover { color: var(--danger-text); border-color: var(--danger); }
+  .end-test-confirm {
+    display: none; flex-direction: column; gap: 10px;
+    background: var(--card); border: 1px solid var(--danger); border-radius: var(--radius-btn);
+    padding: 14px 16px; font-size: var(--fs-base);
+  }
+  .end-test-confirm b { color: var(--danger-text); }
+  .end-test-confirm-actions { display: flex; gap: 10px; justify-content: flex-end; }
+
+  .app-header {
+    flex: none; display: flex; align-items: baseline; justify-content: space-between;
+    gap: 16px; padding: 20px 36px 0;
+  }
+
+  .app-header h1 { font-size: var(--fs-lg); font-weight: 700; }
+  .app-header .sub { color: var(--muted); font-size: var(--fs-base); margin-top: 3px; }
+  .dashboard-link {
+    flex: none; color: var(--muted); font-size: var(--fs-sm); text-decoration: none;
+    border: 1px solid var(--border); border-radius: var(--radius-pill); padding: 4px 12px;
+    transition: color .12s, border-color .12s;
+  }
+  .dashboard-link:hover { color: var(--text); border-color: var(--accent); }
+
+  .header-links { flex: none; display: flex; gap: 8px; align-items: center; }
+
+  .card {
+    background: var(--card); border: 1px solid var(--border); border-radius: var(--radius-card);
+    padding: 20px 24px;
+  }
+
+  .step-body {
+    flex: 1; min-height: 0; display: flex; flex-direction: column;
+    max-width: 1520px; width: 100%; margin: 14px auto 0; padding: 0 36px 20px;
+    gap: 14px;
+  }
+  .step-scroll { flex: 1; min-height: 0; overflow-y: auto; display: flex; flex-direction: column; gap: 14px; padding-right: 4px; }
+  .step-footer { flex: none; display: flex; justify-content: space-between; align-items: center; gap: 14px; padding-top: 6px; }
+  .step-footer .hint { color: var(--muted-2); font-size: var(--fs-md); }
+
+  .step-footer .nav-back-btn { margin-right: auto; }
+
+  .rules-list { list-style: none; display: flex; flex-direction: column; gap: 9px; margin-top: 10px; }
+  .rules-list li { position: relative; padding-left: 20px; font-size: var(--fs-base); line-height: 1.45; }
+  .rules-list li::before { content: "▸"; color: var(--accent); font-size: var(--fs-md); position: absolute; left: 4px; top: 0.15em; }
+  .start-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .card h2 { font-size: var(--fs-sm); text-transform: uppercase; letter-spacing: 0.6px; color: var(--muted); font-weight: 700; margin-bottom: 10px; }
+  .card p.lede { color: var(--muted); font-size: var(--fs-base); line-height: 1.5; }
+
+  .sa-options { display: flex; flex-direction: column; gap: 10px; }
+  .sa-opt {
+    display: flex; gap: 12px; align-items: flex-start; background: var(--bg-2);
+    border: 1px solid var(--border); border-radius: var(--radius-btn); padding: 12px 14px;
+    cursor: pointer; transition: border-color .12s, background .12s;
+  }
+  .sa-opt:hover { border-color: #b9c3d9; }
+  .sa-opt:has(input:checked) { border-color: var(--accent); background: var(--accent-soft); }
+  .sa-opt input { accent-color: var(--accent); margin-top: 3px; flex: none; }
+  .sa-num {
+    flex: none; width: 24px; height: 24px; border-radius: 50%; background: var(--card-2);
+    border: 1px solid var(--border); display: flex; align-items: center; justify-content: center;
+    font-weight: 700; font-size: var(--fs-md); color: var(--muted);
+  }
+  .sa-opt:has(input:checked) .sa-num { background: var(--accent); border-color: var(--accent); color: #fff; }
+  .sa-text { font-size: var(--fs-base); line-height: 1.45; }
+
+  .mic-row { display: flex; align-items: center; gap: 14px; }
+  .mic-status { font-size: var(--fs-base); color: var(--muted); }
+  .mic-status.ok { color: var(--good-text); }
+  .mic-status.err { color: var(--warn-text); }
+  .level-meter {
+    flex: 1; max-width: 240px; height: 10px; background: var(--bg-2); border: 1px solid var(--border);
+    border-radius: var(--radius-pill); overflow: hidden;
+  }
+  .level-meter-fill { height: 100%; width: 0%; background: var(--good); transition: width .08s linear; }
+
+  #screen-test .step-body, #screen-setup-sample .step-body { max-width: 760px; }
+  .prompt-topline { flex: none; display: flex; align-items: baseline; justify-content: space-between; }
+  .prompt-progress { font-weight: 700; font-size: var(--fs-lg); }
+  .prompt-timer { font-family: var(--mono); font-size: var(--fs-xl); font-weight: 700; min-width: 3.4em; text-align: right; }
+  .prompt-timer.urgent { color: var(--danger-text); }
+  .prompt-card { flex: 1; min-height: 0; display: flex; flex-direction: column; gap: 16px; overflow-y: auto; }
+  .prompt-kicker { font-size: var(--fs-sm); text-transform: uppercase; letter-spacing: 0.6px; color: var(--muted); font-weight: 700; }
+  .prompt-text { font-size: var(--fs-xl); line-height: 1.5; font-weight: 600; }
+  .prompt-context { color: var(--muted); font-size: var(--fs-base); line-height: 1.45; margin-top: 6px; padding: 10px 12px; background: var(--bg-2); border-radius: var(--radius-md); border: 1px solid var(--border-soft); }
+  .prompt-gloss-btn {
+    flex: none; align-self: flex-start; border: 1px solid var(--border); background: transparent;
+    color: var(--muted); border-radius: var(--radius-pill); width: 26px; height: 26px; font-weight: 700;
+    cursor: pointer; font-size: var(--fs-base);
+  }
+  .prompt-gloss-btn:hover { color: var(--text); border-color: var(--accent); }
+  .prompt-gloss { display: none; color: var(--muted); font-size: var(--fs-base); line-height: 1.45; margin-top: 6px; }
+  .prompt-gloss.show { display: block; }
+  .rec-status { display: flex; align-items: center; gap: 8px; font-size: var(--fs-base); color: var(--muted); }
+  .rec-dot { width: 9px; height: 9px; border-radius: 50%; background: var(--muted-2); flex: none; }
+  .rec-dot.live { background: var(--danger); animation: rec-pulse 1.2s infinite; }
+
+  .rec-dot.warn { background: var(--warn); animation: rec-pulse 1.2s infinite; }
+  @keyframes rec-pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.35; } }
+  .transcript-wrap { flex: none; display: flex; flex-direction: column; gap: 6px; }
+  .transcript-label { display: flex; justify-content: space-between; align-items: center; font-size: var(--fs-sm); color: var(--muted); text-transform: uppercase; letter-spacing: 0.5px; font-weight: 700; }
+
+  .transcript-wrap textarea {
+    width: 100%; min-height: 54px; resize: vertical;
+    background: var(--card-2); color: var(--text);
+    border: 1px solid var(--border); border-radius: var(--radius-md);
+    padding: 9px 11px; line-height: 1.45;
+  }
+  .transcript-wrap textarea::placeholder { color: var(--muted-2); }
+  .transcript-wrap textarea:focus {
+    outline: none; border-color: var(--accent); background: var(--card);
+  }
+  #prompt-transcript {
+    width: 100%; min-height: 90px; resize: vertical; background: var(--bg-2); border: 1px solid var(--border);
+    border-radius: var(--radius-md); padding: 10px 12px; color: var(--text); line-height: 1.45; font-size: var(--fs-lg);
+  }
+  #prompt-transcript:focus { outline: none; border-color: var(--accent); }
+  .practice-badge { color: var(--warn-text); font-size: var(--fs-sm); font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; }
+
+  .mode-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 16px; }
+
+  #screen-start .mode-grid { grid-template-columns: repeat(3, 1fr); }
+  .mode-card {
+    display: flex; flex-direction: column; gap: 8px; text-align: left;
+    background: var(--card); border: 1px solid var(--border); border-radius: var(--radius-card);
+    padding: 16px 20px; cursor: pointer; font: inherit; color: inherit;
+    transition: border-color .12s, background .12s;
+  }
+  .mode-card:hover { border-color: var(--accent); background: var(--card-2); }
+  .mode-card-primary { border-color: var(--accent); background: var(--accent-soft); }
+  .mode-card-primary:hover { background: var(--accent-soft); border-color: var(--accent-text); }
+  .mode-card-title { font-size: var(--fs-lg); font-weight: 700; display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+  .mode-card-desc { color: var(--muted); font-size: var(--fs-base); line-height: 1.45; margin: 0; }
+
+  #screen-practice2 .step-body { max-width: 760px; }
+
+  .practice2-mic-msg, .rec-msg {
+    color: var(--warn-text); background: var(--warn-soft); border: 1px solid var(--warn);
+    border-radius: var(--radius-md); padding: 8px 12px; font-size: var(--fs-base); line-height: 1.4;
+  }
+
+  .p2-finish-row { margin-top: 18px; text-align: center; }
+  .p2-write-box {
+    width: 100%; box-sizing: border-box; margin-top: 12px; resize: vertical;
+    min-height: 190px; padding: 12px 14px; font: inherit; line-height: 1.5;
+    color: inherit; background: var(--card-2);
+    border: 1px solid var(--border); border-radius: var(--radius-btn);
+  }
+  .p2-write-box:focus { outline: none; border-color: var(--accent); }
+  .mistake-item { padding: 10px 0; border-bottom: 1px solid var(--border-soft); }
+  .mistake-item:last-child { border-bottom: none; }
+  .mistake-quote { font-style: italic; font-size: var(--fs-base); }
+  .mistake-issue { color: var(--muted); font-size: var(--fs-base); margin-top: 4px; }
+  .mistake-correction { color: var(--good-text); font-size: var(--fs-base); margin-top: 2px; }
+
+  .mistake-group { padding: 4px 0 10px; border-top: 1px solid var(--border); margin-top: 12px; }
+  .mistake-group:first-child { border-top: none; margin-top: 0; }
+  .mistake-group-head {
+    display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 10px; margin-bottom: 2px;
+  }
+  .mistake-group-n {
+    font-size: var(--fs-sm); font-weight: 700; letter-spacing: 0.06em;
+    text-transform: uppercase; color: var(--muted); white-space: nowrap;
+  }
+  .mistake-group-q { font-size: var(--fs-base); font-weight: 600; min-width: 0; }
+  .mistake-pending { color: var(--muted); font-size: var(--fs-base); margin: 4px 0 0; }
+
+  @media (max-width: 560px) {
+    .start-grid, .mode-grid { grid-template-columns: 1fr; }
+    #screen-start .mode-grid { grid-template-columns: 1fr; }
+    .app-header { flex-wrap: wrap; row-gap: 10px; }
+
+    .step-body { padding: 0 10px 14px; }
+    .card { padding: 14px 14px; }
+  }
+
+  #screen-results .step-body,
+  #screen-practice2-results .step-body { max-width: 1520px; }
+
+  body:has(#screen-results.active),
+  body:has(#screen-practice2-results.active) { overflow-y: auto; }
+
+  #screen-practice2-results .step-scroll { overflow-y: visible; }
+
+  #screen-practice2-results .step-body { flex: none; }
+  .results-body { display: flex; flex-direction: column; gap: 16px; width: 100%; }
+  .results-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 20px; flex-wrap: wrap; }
+  .results-rating-block { display: flex; flex-direction: column; gap: 4px; }
+  .results-rating { font-size: 2rem; font-weight: 800; letter-spacing: -0.5px; }
+  .results-rating .band-tag { font-size: var(--fs-base); color: var(--muted); font-weight: 600; margin-left: 10px; }
+  .results-crosswalk { color: var(--muted); font-size: var(--fs-base); }
+  .results-crosswalk b { color: var(--accent-text); }
+
+  .results-floor-ceiling { color: var(--text); font-size: var(--fs-base); margin-top: 2px; }
+  .results-floor-ceiling b { color: var(--accent-text); }
+  .results-actions { display: flex; gap: 10px; flex: none; flex-wrap: wrap; }
+  .rating-pending { display: flex; align-items: center; gap: 10px; color: var(--muted); font-size: var(--fs-lg); }
+  .dots span { animation: dot-pulse 1.2s infinite; opacity: 0.2; }
+  .dots span:nth-child(2) { animation-delay: .2s; } .dots span:nth-child(3) { animation-delay: .4s; }
+  @keyframes dot-pulse { 0%,100% { opacity: 0.2; } 50% { opacity: 1; } }
+  .rating-error { color: var(--danger-text); background: var(--danger-soft); border: 1px solid var(--danger); border-radius: var(--radius-btn); padding: 12px 14px; font-size: var(--fs-base); line-height: 1.5; }
+  .rating-nokey { color: var(--warn-text); background: var(--warn-soft); border: 1px solid var(--warn); border-radius: var(--radius-btn); padding: 12px 14px; font-size: var(--fs-base); line-height: 1.5; }
+
+  .rcard { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius-card); padding: 16px 20px; }
+  .rcard h3 { font-size: var(--fs-sm); text-transform: uppercase; letter-spacing: 0.6px; color: var(--muted); font-weight: 700; margin-bottom: 10px; }
+  .blurb-text { font-size: var(--fs-base); line-height: 1.5; color: var(--text); }
+
+  .results-rationale { max-width: 70ch; }
+
+  .evidence-wrap { overflow-x: auto; border-radius: var(--radius-md); border: 1px solid var(--border-soft); }
+  table.evidence { width: 100%; border-collapse: collapse; font-size: var(--fs-md); table-layout: fixed; }
+
+  table.evidence col.ec-n { width: 46px; }
+  table.evidence col.ec-level { width: 96px; }
+  table.evidence col.ec-type { width: 122px; }
+  table.evidence col.ec-kind { width: 104px; }
+  table.evidence col.ec-response { width: 230px; }
+  table.evidence.evidence-compact col.ec-response { width: auto; }
+  table.evidence thead th {
+    position: sticky; top: 0; background: var(--card-2); text-align: left; padding: 7px 9px;
+    color: var(--muted); font-weight: 700; font-size: var(--fs-xs); text-transform: uppercase; letter-spacing: 0.4px;
+    border-bottom: 1px solid var(--border); z-index: 2;
+  }
+  table.evidence td, table.evidence th { overflow-wrap: anywhere; }
+  table.evidence td { padding: 7px 9px; border-bottom: 1px solid var(--border-soft); vertical-align: top; }
+  table.evidence tr:last-child td { border-bottom: none; }
+  .meets-fully { color: var(--good-text); font-weight: 700; }
+  .meets-minimally { color: var(--warn-text); font-weight: 700; }
+  .meets-not { color: var(--danger-text); font-weight: 700; }
+  .transcript-cell { color: var(--muted-2); font-size: var(--fs-sm); }
+
+  .evidence td .tag { margin-top: 2px; }
+
+  .evidence-cards { display: none; flex-direction: column; gap: 10px; }
+  .evidence-card { border: 1px solid var(--border-soft); border-radius: var(--radius-btn); padding: 10px 12px; background: var(--card-2); overflow-wrap: anywhere; }
+  .evidence-card-top { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; font-size: var(--fs-md); font-weight: 600; }
+  .evidence-card-n { color: var(--muted); font-weight: 700; }
+  .evidence-card-meta { color: var(--muted); font-weight: 400; }
+  .evidence-card-response { margin-top: 4px; font-size: var(--fs-sm); color: var(--muted-2); line-height: 1.4; }
+  @media (max-width: 900px) {
+    .evidence-wrap { display: none; }
+    .evidence-cards { display: flex; }
+    .results-top { flex-direction: column; }
+    .results-rating { font-size: var(--fs-2xl); }
+  }
+
+  #screen-error { align-items: center; justify-content: center; padding: 30px; }
+  .error-card { width: min(640px, 100%); max-height: 100%; overflow: auto; background: var(--card); border: 1px solid var(--danger); border-radius: var(--radius-panel); padding: 26px 28px; }
+
+  .error-card h1 { font-size: var(--fs-lg); font-weight: 700; color: var(--danger-text); margin-bottom: 8px; }
+  .error-card p { font-size: var(--fs-base); line-height: 1.5; color: var(--text); margin-bottom: 12px; }
+
+  .save-toast {
+    position: fixed; left: 50%; bottom: 24px; transform: translateX(-50%) translateY(12px);
+    background: var(--card); border: 1px solid var(--good); border-radius: var(--radius-btn);
+    padding: 10px 16px; font-size: var(--fs-base); font-weight: 600; color: var(--text);
+    box-shadow: var(--shadow-pop); opacity: 0; pointer-events: none;
+    transition: opacity .18s ease, transform .18s ease; z-index: 50; max-width: min(420px, calc(100vw - 32px));
+    text-align: center;
+  }
+  .save-toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+
+  .mic-modal-overlay {
+    position: fixed; inset: 0; background: rgba(20,26,44,0.45);
+    display: none; align-items: center; justify-content: center;
+    z-index: 60; padding: 20px;
+  }
+  .mic-modal-overlay.show { display: flex; }
+  .mic-modal {
+    width: min(420px, 100%); background: var(--card); border-radius: var(--radius-panel);
+    border: 1px solid var(--border); padding: 22px 24px;
+    box-shadow: var(--shadow-pop);
+  }
+  .mic-modal h2 { font-size: var(--fs-lg); font-weight: 700; margin-bottom: 6px; }
+  .mic-modal p.lede { font-size: var(--fs-base); color: var(--muted); line-height: 1.5; margin-bottom: 14px; }
+  .mic-modal .mic-row { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; }
+  .mic-modal .level-meter { flex: 1; height: 10px; border-radius: var(--radius-sm); background: var(--bg-2); overflow: hidden; }
+  .mic-modal .level-meter-fill { height: 100%; width: 0%; background: var(--accent); transition: width .08s linear; }
+  .mic-modal .mic-status { font-size: var(--fs-md); color: var(--muted-2); min-width: 0; }
+  .mic-modal .mic-actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+</style>
+
+</head>
+<body>
+
+<script src="js/nav.js"></script>
+<script src="js/grading.js"></script>
+
+
+
+
+
+
+<div class="save-toast" id="save-toast" role="status" aria-live="polite"></div>
+
+<div class="mic-modal-overlay" id="mic-modal-overlay" role="dialog" aria-modal="true" aria-labelledby="mic-modal-title">
+  <div class="mic-modal">
+    <h2 id="mic-modal-title">Mic check</h2>
+    <p class="lede" id="mic-modal-lede">Record a few seconds of your voice — the level meter below confirms your microphone is picking up sound before you start.</p>
+    <div class="mic-row">
+      <div class="level-meter"><div class="level-meter-fill" id="mic-modal-level-fill"></div></div>
+      <span class="mic-status" id="mic-modal-status">Not started.</span>
+    </div>
+    <div class="mic-actions" id="mic-modal-actions">
+      <button class="btn sm secondary" id="mic-modal-retry-btn" type="button" style="display:none;">Try again</button>
+      <button class="btn sm" id="mic-modal-continue-btn" type="button" style="display:none;">Mic works, continue</button>
+    </div>
+  </div>
+</div>
+
+<div class="screen" id="screen-practice2-count">
+  <div class="app-header"><div><h1 id="practice2-count-title">Speaking Practice</h1><p class="sub">How many questions do you want to do?</p></div></div>
+  <div class="step-body">
+    <div class="step-scroll">
+      <div class="mode-grid" id="practice2-count-grid"></div>
+    </div>
+    <div class="step-footer">
+      <button class="btn sm secondary" id="practice2-count-mic-check-btn" type="button">🎤 Mic check</button>
+      <span class="hint"></span>
+      <button class="btn sm secondary nav-back-btn" id="practice2-count-back-btn" type="button">&larr; Back</button>
+    </div>
+  </div>
+</div>
+
+<div class="screen" id="screen-practice2">
+  <div class="app-header">
+    <div>
+      <h1 id="practice2-title">Speaking Practice</h1>
+      <p class="sub" id="practice2-sub">Random questions, text only. Each gives you 90 seconds; the mic
+        starts the instant the question appears.</p>
+    </div>
+    <button class="btn sm nav-back-btn" id="practice2-back-btn" type="button">&larr; Back</button>
+  </div>
+  <div class="step-body">
+    <div class="prompt-topline">
+      <span class="prompt-progress" id="practice2-progress"></span>
+      <span class="prompt-timer" id="practice2-timer">1:30</span>
+    </div>
+    <div class="prompt-card card" id="practice2-prompt-mount"></div>
+  </div>
+</div>
+
+<div class="screen" id="screen-practice2-results">
+  <div class="app-header"><div><h1 id="practice2-results-title">Speaking Practice — Results</h1><p class="sub" id="practice2-results-sub"></p></div></div>
+  <div class="step-body">
+    <div class="step-scroll">
+
+      <div id="practice2-rating-mount"></div>
+      <div class="card">
+        <h2 id="practice2-wpm-title">Average speaking speed</h2>
+        <div class="results-rating" id="practice2-wpm">—</div>
+        <p class="lede" id="practice2-wpm-note"></p>
+      </div>
+
+      <div class="pg-wrap" id="practice2-gate-wrap">
+        <div class="card">
+          <h2>Grammar &amp; word-choice mistakes</h2>
+          <div id="practice2-mistakes-loading" class="rating-pending">Checking your transcripts<span class="dots"><span>.</span><span>.</span><span>.</span></span></div>
+          <div id="practice2-mistakes-nokey" class="rating-nokey" style="display:none;"></div>
+          <div id="practice2-mistakes-error" class="rating-error" style="display:none;"></div>
+          <div id="practice2-mistakes-list" style="display:none;"></div>
+        </div>
+      </div>
+    </div>
+    <div class="step-footer">
+      <span class="hint"></span>
+      <button class="btn nav-back-btn" id="practice2-results-back-btn" type="button">&larr; Back</button>
+    </div>
+  </div>
+</div>
+
+<div class="screen" id="screen-profile-choice">
+  <div class="app-header"><div><h1>Saved self-assessment found</h1><p class="sub" id="profile-choice-sub">You picked a self-assessment level before. Use it again, or pick again.</p></div></div>
+  <div class="step-body">
+    <div class="step-scroll">
+      <div class="mode-grid">
+        <button class="mode-card mode-card-primary" id="profile-choice-use-btn" type="button">
+          <div class="mode-card-title">Use my saved answer</div>
+          <p class="mode-card-desc" id="profile-choice-use-desc">Skip straight ahead — no need to pick again.</p>
+        </button>
+        <button class="mode-card" id="profile-choice-redo-btn" type="button">
+          <div class="mode-card-title">Pick again</div>
+          <p class="mode-card-desc">Go through the Self-Assessment again and pick a different level.</p>
+        </button>
+      </div>
+    </div>
+    <div class="step-footer">
+      <span class="hint"></span>
+      <button class="btn sm secondary nav-back-btn" id="profile-choice-back-btn" type="button">&larr; Back</button>
+    </div>
+  </div>
+</div>
+
+<div class="screen" id="screen-exam-ranout">
+  <div class="app-header"><div><h1>Speaking Exam</h1><p class="sub">Not enough unused questions left for a full exam.</p></div></div>
+  <div class="step-body">
+    <div class="step-scroll">
+      <div class="card"><p class="lede">Not enough unused questions left for a full exam.</p></div>
+    </div>
+    <div class="step-footer">
+      <span class="hint"></span>
+      <button class="btn" id="exam-ranout-back-btn" type="button">&larr; Back to hub</button>
+    </div>
+  </div>
+</div>
+
+<div class="screen" id="screen-selfassessment">
+  <div class="app-header"><div><h1>Self-Assessment</h1><p class="sub">Choose the description that best fits your Spanish-speaking ability. This picks your test form.</p></div></div>
+  <div class="step-body">
+    <div class="step-scroll">
+      <div class="card">
+        <div class="sa-options" id="sa-options"></div>
+      </div>
+    </div>
+    <div class="step-footer">
+      <button class="btn sm secondary nav-back-btn" id="sa-back-btn" type="button">&larr; Back</button>
+      <span class="hint" id="sa-form-hint"></span>
+      <button class="btn" id="sa-continue-btn" type="button" disabled>Continue</button>
+    </div>
+  </div>
+</div>
+
+<div class="screen" id="screen-setup">
+  <div class="app-header"><div><h1>Setup</h1><p class="sub">Check your microphone, then try one unrated sample question.</p></div></div>
+  <div class="step-body">
+    <div class="step-scroll">
+      <div class="card">
+        <h2>Microphone check</h2>
+
+        <div class="mic-row">
+          <button class="btn" id="setup-mic-check-modal-btn" type="button">🎤 Check your microphone</button>
+          <span class="mic-status" id="mic-status">Not checked yet.</span>
+        </div>
+        <p class="lede" style="margin-top:10px;">No microphone, or prefer not to use one? You can still take the
+          whole test — type your answers in the transcript box on each question.</p>
+      </div>
+      <div class="card" id="setup-sample-card" style="display:none;">
+        <h2>Sample question <span class="practice-badge">practice — not scored</span></h2>
+        <div id="setup-sample-mount"></div>
+      </div>
+    </div>
+    <div class="step-footer">
+      <button class="btn sm secondary nav-back-btn" id="setup-back-btn" type="button">&larr; Back</button>
+      <span class="hint">The sample question doesn't count toward your rating.</span>
+      <button class="btn" id="setup-skip-btn" type="button">Skip sample</button>
+      <button class="btn" id="setup-start-test-btn" type="button" style="display:none;">Begin the test</button>
+    </div>
+  </div>
+</div>
+
+<div class="screen" id="screen-test">
+  <div class="app-header"><div><h1>Speaking Test</h1><p class="sub" id="test-form-sub"></p></div></div>
+  <div class="step-body">
+
+    <div class="prompt-topline">
+      <span class="prompt-progress" id="test-progress">Question 1 of 14</span>
+      <span class="prompt-timer" id="test-timer">0:00</span>
+      <button class="btn-end-test" id="test-end-btn" type="button">End test</button>
+    </div>
+    <div class="end-test-confirm" id="test-end-confirm">
+      <p>End the exam now? <b>An ended exam is not saved</b> — it will not be rated and it will not appear in your Results.</p>
+      <div class="end-test-confirm-actions">
+        <button class="btn sm secondary" id="test-end-cancel-btn" type="button">Cancel</button>
+        <button class="btn sm danger" id="test-end-confirm-btn" type="button">End exam</button>
+      </div>
+    </div>
+    <div class="prompt-card card" id="test-prompt-mount"></div>
+  </div>
+</div>
+
+<div class="screen" id="screen-results">
+  <div class="app-header"><div><h1>Results</h1><p class="sub" id="results-sub"></p></div></div>
+
+  <div class="step-body" id="results-rating-mount"></div>
+</div>
+
+
+<div class="screen" id="screen-error">
+  <div class="error-card">
+    <h1 id="error-title">Couldn't load the app</h1>
+    <p id="error-message"></p>
+    <button class="btn" id="error-restart-btn" type="button">Reload</button>
+  </div>
+</div>
+
+<script>
+"use strict";
+
+
+const SPK_LANGUAGE = "es";
+const SPK_SPEECH_LANG = "es-ES";
+
+const SPK_LANGUAGE_HY = "hy";
+
+const SPK_LANGUAGE_RU = "ru";
+const SPK_LANGUAGES = {
+  es: { code: "es", bank: "content/prompts.json",    speechLang: "es-ES", label: "Spanish" },
+  hy: { code: "hy", bank: "content/prompts-hy.json", speechLang: "hy-AM", label: "Armenian" },
+  ru: { code: "ru", bank: "content/prompts-ru.json", speechLang: "ru-RU", label: "Russian" }
+};
+function spkLangCfg(code) { return SPK_LANGUAGES[code] || SPK_LANGUAGES[SPK_LANGUAGE]; }
+
+const RATING_NAMES = {
+  NL: "Novice Low", NM: "Novice Mid", NH: "Novice High",
+  IL: "Intermediate Low", IM: "Intermediate Mid", IH: "Intermediate High",
+  AL: "Advanced Low", AM: "Advanced Mid", AH: "Advanced High", S: "Superior"
+};
+const BAND_OF = {
+  NL: "Novice", NM: "Novice", NH: "Novice", IL: "Intermediate", IM: "Intermediate", IH: "Intermediate",
+  AL: "Advanced", AM: "Advanced", AH: "Advanced", S: "Superior"
+};
+const BAND_BLURBS = {
+  Novice: "Novice-level speakers use isolated words, short memorized phrases and lists. They can name familiar people, objects and places, but do not yet build original sentences.",
+  Intermediate: "Intermediate-level speakers build their own sentences. They ask and answer simple questions and handle everyday topics such as family, routines and immediate needs, though not always accurately.",
+  Advanced: "Advanced-level speakers narrate and describe across past, present and future in connected paragraphs. They handle a complication in a familiar situation and discuss topics of personal and general interest.",
+  Superior: "Superior-level speakers discuss topics at length and in the abstract, support opinions, build hypotheses and cope with unfamiliar situations. Their errors are rare and follow no pattern."
+};
+const FORM_INFO = {
+  1: { label: "Form 1", range: "Novice Low – Intermediate Low" },
+  2: { label: "Form 2", range: "Novice Low – Intermediate High" },
+  3: { label: "Form 3", range: "Novice Low – Advanced Low" },
+  4: { label: "Form 4", range: "Intermediate High – Advanced High" },
+  5: { label: "Form 5", range: "Advanced Low – Superior" }
+};
+
+function escapeHtml(s) {
+  return String(s).replace(/[&<>"']/g, c => ({ "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;" }[c]));
+}
+
+function spkMistakeGroupsHtml(questions, byIndex) {
+  const asked = Array.isArray(questions) ? questions : [];
+  const got = byIndex || {};
+  return asked.map((q, i) => {
+    const mistakes = got[i];
+    const prompt = (q && (q.promptEs || q.prompt)) || "";
+    let body;
+    if (!Array.isArray(mistakes)) {
+      body = `<p class="lede mistake-pending">Checking<span class="dots"><span>.</span><span>.</span><span>.</span></span></p>`;
+    } else if (!mistakes.length) {
+      body = `<p class="lede">No mistakes found — nice work.</p>`;
+    } else {
+      body = mistakes.map(m => `
+      <div class="mistake-item">
+        <div class="mistake-quote">"${escapeHtml(m.quote || "")}"</div>
+        <div class="mistake-issue">${escapeHtml(m.issue || "")}</div>
+        <div class="mistake-correction">&rarr; <span class="xl-src" data-xl-text="${escapeHtml(m.correction || "")}">${escapeHtml(m.correction || "")}</span></div>
+      </div>`).join("");
+    }
+    return `<div class="mistake-group"><div class="mistake-group-head">` +
+      `<span class="mistake-group-n">Question ${i + 1}</span>` +
+      (prompt ? `<span class="mistake-group-q">${escapeHtml(prompt)}</span>` : "") +
+      `</div>${body}</div>`;
+  }).join("");
+}
+
+function spkMistakesByQuestion(mistakes, count) {
+  const out = [];
+  for (let i = 0; i < count; i++) out.push([]);
+  for (const m of (Array.isArray(mistakes) ? mistakes : [])) {
+    const q = m && typeof m.q === "number" && m.q >= 0 && m.q < count ? m.q : 0;
+    if (out[q]) out[q].push(m);
+  }
+  return out;
+}
+
+function fmtClock(seconds) {
+  const s = Math.max(0, Math.ceil(seconds));
+  const m = Math.floor(s / 60), r = s % 60;
+  return `${m}:${String(r).padStart(2, "0")}`;
+}
+function pickN(arr, n, exclude) {
+  exclude = exclude || [];
+  const pool = arr.filter(x => !exclude.includes(x));
+  const copy = pool.slice();
+  const out = [];
+  while (out.length < n && copy.length) {
+    const i = Math.floor(Math.random() * copy.length);
+    out.push(copy.splice(i, 1)[0]);
+  }
+  return out;
+}
+
+function wordCount(text) {
+  const trimmed = (text || "").trim();
+  return trimmed ? trimmed.split(/\s+/).length : 0;
+}
+
+const SELF_ASSESSMENT_OPTIONS = [
+  "I can name everyday things such as objects, colors, foods and numbers, but I cannot yet make a full sentence or ask a question.",
+  "I can share basic facts about myself, my work and my routine in simple sentences, and ask a few simple questions.",
+  "I can hold simple conversations on familiar topics, tell what happened, and handle everyday errands, although my verb forms are sometimes wrong.",
+  "I can take full part in conversations about home, work, school and my interests, talk about past, present and future, explain my points, and handle a small unexpected problem.",
+  "I can discuss personal, general and professional topics in detail, argue a view, weigh hypotheticals, and speak at length with accurate grammar and precise vocabulary."
+];
+
+const PROFILE_KEY = "lpp_speaking_profile";
+function loadProfile() {
+  try {
+    const obj = JSON.parse(localStorage.getItem(PROFILE_KEY) || "null");
+    return (obj && typeof obj === "object") ? obj : null;
+  } catch (e) { return null; }
+}
+function saveProfile(profile) {
+  try { localStorage.setItem(PROFILE_KEY, JSON.stringify(profile)); }
+  catch (e) { console.error("[speaking] failed to persist lpp_speaking_profile:", e); }
+}
+
+const COMBO_TOPICS = [
+  "movies", "parks", "concerts", "cooking", "music", "sports", "travel",
+  "theater", "museums", "camping", "beach", "games", "pets", "gardening", "dancing", "homeimprovement",
+  "weather", "housing", "transportation", "restaurants", "technology", "health", "holidays", "shopping",
+
+  "neighbors", "volunteering",
+
+  "nightlife", "carmaintenance", "kids", "writing", "art", "crafts",
+
+  "banking", "libraries", "coffeeshops", "birthdayparties", "familygatherings", "farmersmarket",
+  "laundry", "cleaning", "traffic", "recyclinghabits", "babysitting", "houseguests",
+  "streetmarkets", "deliveries", "weekendplans", "neighborhoodevents", "parking",
+  "weekendchores", "onlinecourses", "houseplants",
+
+  "queues", "photography", "podcasts", "hairsalon", "mornings", "clothing", "gifts", "zoos",
+  "collecting", "fishing"
+];
+
+const ROLEPLAY_TOPICS = [
+  "cellphone", "apartment", "movietickets", "hotel", "doctor", "restaurant", "package", "interview",
+
+  "gym", "pharmacy", "bank", "library", "airport", "carrental", "internet", "dentist",
+  "locksmith", "passport"
+];
+const ROLEPLAY_ID_PREFIX = {
+  cellphone: "cellphone", apartment: "recycle", movietickets: "tickets",
+  hotel: "hotel", doctor: "doctor", restaurant: "restaurant",
+  package: "package", interview: "interview",
+  gym: "gym", pharmacy: "pharmacy", bank: "bank", library: "library",
+  airport: "airport", carrental: "carrental", internet: "internet", dentist: "dentist",
+  locksmith: "locksmith", passport: "passport"
+};
+const KIND_BY_TYPE = {
+  description: "level_check", routine: "level_check", roleplay_ask: "level_check",
+  experience: "probe", comparison: "probe", roleplay_solve: "probe", roleplay_experience: "probe",
+  opinion: "probe", hypothesize: "probe"
+};
+
+const TOPIC_GROUPS = {
+  restaurant: "restaurants", bank: "banking", library: "libraries", movietickets: "movies",
+  actors: "movies", musicians: "music", athletes: "sports", artists: "art", chefs: "cooking",
+  writers: "writing", teachers: "education", fame: "famouspeople"
+};
+
+function topicKey(x) {
+  const t = typeof x === "string" ? x : ((x && x.topic) || "");
+  return TOPIC_GROUPS[t] || t;
+}
+
+const USED_BY_BOTH = "both", USED_BY_PRACTICE = "practice";
+
+function examBank(bank) {
+  return (bank || []).filter(p => p.usedBy === USED_BY_BOTH);
+}
+
+function drillBankOf(bank) {
+  return (bank || []).filter(p => p.usedBy === USED_BY_BOTH || p.usedBy === USED_BY_PRACTICE);
+}
+
+function distinctTopicCount(pool) {
+  return new Set(pool.map(topicKey)).size;
+}
+
+function pickTopicDistinct(pool, n, usedKeys) {
+  const used = usedKeys || new Set();
+  const copy = pool.slice();
+  const out = [];
+  while (out.length < n && copy.length) {
+    const p = copy.splice(Math.floor(Math.random() * copy.length), 1)[0];
+    if (used.has(topicKey(p))) continue;
+    used.add(topicKey(p));
+    out.push(p);
+  }
+  return out;
+}
+
+function eligibleComboTopics(bank, askedIds) {
+  const byId = id => bank.find(p => p.id === id);
+  return COMBO_TOPICS.filter(topic =>
+    ["desc", "routine", "exp"].every(suf => {
+      const p = byId(`${topic}-${suf}`);
+      return p && !askedIds.has(p.id);
+    })
+  );
+}
+
+function eligibleRoleplayTopics(bank, askedIds) {
+  const byId = id => bank.find(p => p.id === id);
+  return ROLEPLAY_TOPICS.filter(topic => {
+    const prefix = ROLEPLAY_ID_PREFIX[topic];
+    return ["ask", "solve", "experience"].every(suf => {
+      const p = byId(`${prefix}-${suf}`);
+      return p && !askedIds.has(p.id);
+    });
+  });
+}
+
+function composeSitting(bank, surveyTopics, form, askedIds) {
+  bank = examBank(bank);
+  askedIds = askedIds || new Set();
+  const byId = id => bank.find(p => p.id === id);
+  const comboPrompts = topic => ["desc", "routine", "exp"].map(suf => byId(`${topic}-${suf}`)).filter(Boolean);
+  const used = new Set();
+  const takeTopic = (...pools) => {
+    const pool = pools.map(ts => ts.filter(t => !used.has(topicKey(t)))).find(ts => ts.length) || [];
+    const t = pickN(pool, 1)[0];
+    if (t) used.add(topicKey(t));
+    return t;
+  };
+
+  const eligibleTopics = eligibleComboTopics(bank, askedIds);
+  if (eligibleTopics.length < 3) return null;
+
+  const selected = eligibleTopics.filter(t => surveyTopics.includes(t));
+  const unselected = eligibleTopics.filter(t => !surveyTopics.includes(t));
+  const combo1Topic = takeTopic(selected, eligibleTopics);
+  const combo2Topic = takeTopic(selected, eligibleTopics);
+  const combo3Topic = takeTopic(unselected, eligibleTopics);
+  if (!combo1Topic || !combo2Topic || !combo3Topic) return null;
+
+  const roleplayTopic = takeTopic(eligibleRoleplayTopics(bank, askedIds));
+  if (!roleplayTopic) return null;
+  const roleplayIdPrefix = ROLEPLAY_ID_PREFIX[roleplayTopic];
+  const roleplayPrompts = ["ask", "solve", "experience"].map(suf => byId(`${roleplayIdPrefix}-${suf}`)).filter(Boolean);
+
+  let tail;
+  if (form >= 3) {
+    const unasked = type => bank.filter(p => p.type === type && !askedIds.has(p.id));
+    const q14 = pickTopicDistinct(unasked("comparison"), 1, used)[0];
+    const q15 = pickTopicDistinct(unasked(form === 5 ? "hypothesize" : "opinion"), 1, used)[0];
+    if (!q14 || !q15) return null;
+    tail = [q14, q15];
+  } else {
+    const fillTopic = takeTopic(eligibleTopics);
+    if (!fillTopic) return null;
+    tail = ["desc", "routine"].map(suf => byId(`${fillTopic}-${suf}`)).filter(Boolean);
+    if (tail.length < 2) return null;
+  }
+
+  const sequence = []
+    .concat(comboPrompts(combo1Topic), comboPrompts(combo2Topic), comboPrompts(combo3Topic), roleplayPrompts, tail)
+    .filter(Boolean);
+  if (sequence.length !== 14) return null;
+
+  return sequence.map((p, i) => ({
+    ...p, n: i + 1, kind: KIND_BY_TYPE[p.type] || "level_check"
+  }));
+}
+
+function deriveRelevantPool(bank, surveyTopics, form, askedIds) {
+  bank = examBank(bank);
+  askedIds = askedIds || new Set();
+  const byId = id => bank.find(p => p.id === id);
+  const chosenTopics = COMBO_TOPICS.filter(t => surveyTopics.includes(t));
+  const topicPool = chosenTopics.length ? chosenTopics : COMBO_TOPICS;
+
+  const ids = new Set();
+  const add = p => { if (p) ids.add(p.id); };
+
+  topicPool.forEach(topic => ["desc", "routine", "exp"].forEach(suf => add(byId(`${topic}-${suf}`))));
+  ROLEPLAY_TOPICS.forEach(topic => {
+    const prefix = ROLEPLAY_ID_PREFIX[topic];
+    ["ask", "solve", "experience"].forEach(suf => add(byId(`${prefix}-${suf}`)));
+  });
+  if (form >= 3) {
+    bank.filter(p => p.type === "comparison").forEach(add);
+    const tailPool = form === 5 ? bank.filter(p => p.type === "hypothesize") : bank.filter(p => p.type === "opinion");
+    tailPool.forEach(add);
+  }
+
+  return bank.filter(p => ids.has(p.id) && !askedIds.has(p.id));
+}
+
+const ROLEPLAY_TYPES = new Set(["roleplay_ask", "roleplay_solve", "roleplay_experience"]);
+
+function primaryText(p) { return p.promptEs; }
+function glossText(p) { return p.promptEn; }
+function glossLabel(p) { return "English gloss"; }
+
+function loadHistoryLocal() {
+  try { const arr = JSON.parse(localStorage.getItem("lpp_speaking_history") || "[]"); return Array.isArray(arr) ? arr : []; }
+  catch (e) { return []; }
+}
+function saveHistoryLocal(rec) {
+  try {
+    const arr = loadHistoryLocal().filter(r => r.at !== rec.at);
+    arr.push(rec);
+    while (arr.length > 100) arr.shift();
+    localStorage.setItem("lpp_speaking_history", JSON.stringify(arr));
+  } catch (e) { console.error("[speaking] failed to persist lpp_speaking_history:", e); }
+}
+const SPEECH_RETRY = {
+
+  delaysMs: [250, 500, 1000, 2000, 4000],
+
+  healthyMs: 4000,
+
+  maxRestarts: 40,
+
+  fatalErrors: ["not-allowed", "service-not-allowed"]
+};
+
+function startVoiceCapture(stream, opts) {
+  opts = opts || {};
+  let recorder = null;
+  const chunks = [];
+  let stopped = false;
+
+  const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
+  const Scribe = null;
+
+  const serverSTT = !!(Scribe && Scribe.shouldUseServerSTT(SR, opts.speechLang));
+
+  if (stream) {
+    try {
+
+      const mime = Scribe ? Scribe.pickMimeType() : "";
+      recorder = mime ? new MediaRecorder(stream, { mimeType: mime }) : new MediaRecorder(stream);
+      recorder.ondataavailable = (e) => { if (e.data && e.data.size) chunks.push(e.data); };
+      recorder.start(Scribe ? Scribe.TIMESLICE_MS : undefined);
+    } catch (e) { recorder = null; }
+  }
+
+  let recognition = null;
+  let finalText = "";
+  let restarts = 0;
+  let consecutive = 0;
+  let restartTimer = null;
+  let givenUp = false;
+  let lastStatus = null;
+
+  function emitStatus(s) {
+    if (stopped || s === lastStatus) return;
+    lastStatus = s;
+    if (opts.onRecognitionStatus) { try { opts.onRecognitionStatus(s); } catch (e) {} }
+  }
+
+  function restartDelayMs() {
+    const d = SPEECH_RETRY.delaysMs;
+    return d[Math.min(Math.max(consecutive, 1), d.length) - 1];
+  }
+
+  function giveUp() {
+    givenUp = true;
+    recognition = null;
+    emitStatus("lost");
+  }
+
+  function scheduleRestart() {
+    if (stopped || givenUp || restartTimer) return;
+    if (restarts >= SPEECH_RETRY.maxRestarts) { giveUp(); return; }
+    restarts += 1;
+    consecutive += 1;
+    emitStatus("restarting");
+    restartTimer = setTimeout(() => {
+      restartTimer = null;
+      if (stopped || givenUp) return;
+      if (!openRecognition()) scheduleRestart();
+    }, restartDelayMs());
+  }
+
+  function openRecognition() {
+    if (!SR || stopped || givenUp) return false;
+    try {
+      const inst = new SR();
+
+      inst.lang = opts.speechLang || SPK_SPEECH_LANG;
+      inst.continuous = true;
+      inst.interimResults = true;
+      const startedAt = Date.now();
+      let sawResult = false;
+      let handedOff = false;
+
+      function relinquish() {
+        if (handedOff) return false;
+        handedOff = true;
+        if (recognition === inst) recognition = null;
+        if (typeof inst.abort === "function") { try { inst.abort(); } catch (e) {} }
+        if (sawResult || (Date.now() - startedAt) >= SPEECH_RETRY.healthyMs) consecutive = 0;
+        return true;
+      }
+      inst.onresult = (ev) => {
+        if (inst !== recognition) return;
+        sawResult = true;
+        let interim = "";
+        for (let i = ev.resultIndex; i < ev.results.length; i++) {
+          const r = ev.results[i];
+          if (r.isFinal) finalText += r[0].transcript + " ";
+          else interim += r[0].transcript;
+        }
+        if (opts.onTranscript) opts.onTranscript((finalText + interim).trim());
+      };
+
+      inst.onerror = (ev) => {
+        if (stopped) return;
+        const fatal = SPEECH_RETRY.fatalErrors.indexOf((ev && ev.error) || "") >= 0;
+        if (!relinquish()) return;
+        if (fatal) { giveUp(); return; }
+        scheduleRestart();
+      };
+      inst.onend = () => {
+
+        if (stopped) return;
+        if (!relinquish()) return;
+        scheduleRestart();
+      };
+      inst.start();
+      recognition = inst;
+      emitStatus("ok");
+      return true;
+    } catch (e) { return false; }
+  }
+
+  if (SR && !serverSTT && !openRecognition()) scheduleRestart();
+
+  async function transcribeRecording(blob) {
+    if (!blob || !blob.size || !Scribe) return "";
+    let text = "";
+    try {
+      text = await Scribe.transcribe(blob, Scribe.langHint(opts.speechLang || SPK_SPEECH_LANG));
+    } catch (e) {
+      text = "";
+    }
+    if (text) {
+      finalText = text;
+      if (opts.onTranscript) { try { opts.onTranscript(text); } catch (e) {} }
+    }
+    return text;
+  }
+
+  let stopPromise = null;
+
+  return {
+    recognitionActive: !!recognition,
+    recorderActive: !!recorder,
+
+    serverSTT,
+
+    recognitionStatus() {
+      if (stopped) return "stopped";
+
+      if (serverSTT) return "server";
+      if (!SR) return "unsupported";
+      if (givenUp) return "lost";
+      if (recognition) return "ok";
+      return restartTimer ? "restarting" : "off";
+    },
+    recognitionRestarts() { return restarts; },
+
+    stop() {
+      if (stopped) return stopPromise || Promise.resolve(null);
+      stopped = true;
+      if (restartTimer) { clearTimeout(restartTimer); restartTimer = null; }
+
+      if (recognition) { try { recognition.stop(); } catch (e) {} }
+      stopPromise = new Promise((resolve) => {
+        if (!recorder || recorder.state === "inactive") { resolve(null); return; }
+        recorder.onstop = () => {
+          resolve(chunks.length ? new Blob(chunks, { type: recorder.mimeType || "audio/webm" }) : null);
+        };
+        try { recorder.stop(); } catch (e) { resolve(null); }
+      });
+      if (serverSTT) {
+        stopPromise = stopPromise.then((blob) => transcribeRecording(blob).then(() => blob));
+      }
+      return stopPromise;
+    }
+  };
+}
+
+const MIC_CHECK_TEST_SKIP_KEY = "lpp_speaking_skip_mic_check";
+const MIC_CHECK_GATED_SCREENS = new Set(["screen-test", "screen-practice2"]);
+
+const MicCheck = {
+  stream: null,
+  recorder: null,
+  chunks: [],
+  audioCtx: null,
+  analyser: null,
+  rafId: null,
+  recording: false,
+  pendingResolve: null,
+
+  shouldShow() {
+    try { return localStorage.getItem(MIC_CHECK_TEST_SKIP_KEY) !== "1"; }
+    catch (e) { return true; }
+  },
+
+  open(force) {
+    return new Promise((resolve) => {
+      if (!force && !this.shouldShow()) { resolve(); return; }
+      this.pendingResolve = resolve;
+      this.reset();
+      document.getElementById("mic-modal-overlay").classList.add("show");
+      this.start();
+    });
+  },
+
+  close() {
+    document.getElementById("mic-modal-overlay").classList.remove("show");
+    this.stopStream();
+    if (this.pendingResolve) { const r = this.pendingResolve; this.pendingResolve = null; r(); }
+  },
+
+  reset() {
+    document.getElementById("mic-modal-status").textContent = "Starting…";
+    document.getElementById("mic-modal-level-fill").style.width = "0%";
+    document.getElementById("mic-modal-retry-btn").style.display = "none";
+    document.getElementById("mic-modal-continue-btn").style.display = "none";
+  },
+
+  stopStream() {
+    if (this.rafId) { cancelAnimationFrame(this.rafId); this.rafId = null; }
+    if (this.audioCtx) { try { this.audioCtx.close(); } catch (e) {} this.audioCtx = null; }
+    if (this.stream) { this.stream.getTracks().forEach((t) => t.stop()); this.stream = null; }
+    this.recorder = null;
+    this.recording = false;
+  },
+
+  async start() {
+    const statusEl = document.getElementById("mic-modal-status");
+    const retryBtn = document.getElementById("mic-modal-retry-btn");
+    statusEl.textContent = "Requesting microphone…";
+    try {
+      this.stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+    } catch (e) {
+      statusEl.textContent = "Microphone access denied — allow it in the browser, then try again.";
+      retryBtn.style.display = "";
+      return;
+    }
+    this.chunks = [];
+    try {
+      this.recorder = new MediaRecorder(this.stream);
+      this.recorder.ondataavailable = (e) => { if (e.data && e.data.size) this.chunks.push(e.data); };
+      this.recorder.start();
+    } catch (e) {
+      statusEl.textContent = "Recording isn't supported in this browser — try Chrome or Safari.";
+      this.stopStream();
+      retryBtn.style.display = "";
+      return;
+    }
+    this.recording = true;
+    statusEl.textContent = "Recording… speak now.";
+    this.wireLevelMeter();
+    setTimeout(() => this.finishRecording(), 3000);
+  },
+
+  wireLevelMeter() {
+    try {
+      this.audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+      const source = this.audioCtx.createMediaStreamSource(this.stream);
+      this.analyser = this.audioCtx.createAnalyser();
+      this.analyser.fftSize = 256;
+      source.connect(this.analyser);
+      const data = new Uint8Array(this.analyser.frequencyBinCount);
+      const fill = document.getElementById("mic-modal-level-fill");
+      const tick = () => {
+        if (!this.recording) return;
+        this.analyser.getByteFrequencyData(data);
+        const avg = data.reduce((a, b) => a + b, 0) / data.length;
+        fill.style.width = Math.min(100, Math.round((avg / 128) * 100)) + "%";
+        this.rafId = requestAnimationFrame(tick);
+      };
+      tick();
+    } catch (e) {   }
+  },
+
+  finishRecording() {
+    if (!this.recording || !this.recorder) return;
+    this.recording = false;
+    if (this.rafId) { cancelAnimationFrame(this.rafId); this.rafId = null; }
+    const statusEl = document.getElementById("mic-modal-status");
+    statusEl.textContent = "Checking…";
+    const recorder = this.recorder;
+    const chunks = this.chunks;
+    const stream = this.stream;
+    const audioCtx = this.audioCtx;
+    const finish = () => {
+
+      const blob = chunks.length ? new Blob(chunks, { type: recorder.mimeType || "audio/webm" }) : null;
+
+      if (stream) stream.getTracks().forEach((t) => t.stop());
+      if (this.stream === stream) this.stream = null;
+      if (audioCtx) { try { audioCtx.close(); } catch (e) {} }
+      if (this.audioCtx === audioCtx) this.audioCtx = null;
+      statusEl.textContent = blob ? "Recorded — your mic is working." : "No audio captured — try again.";
+      document.getElementById("mic-modal-retry-btn").style.display = "";
+      document.getElementById("mic-modal-continue-btn").style.display = blob ? "" : "none";
+    };
+    try { recorder.onstop = finish; recorder.stop(); } catch (e) { finish(); }
+  },
+
+  continueClicked() { this.close(); },
+  retryClicked() { this.stopStream(); this.reset(); this.start(); },
+
+  wire() {
+    document.getElementById("mic-modal-retry-btn").addEventListener("click", () => this.retryClicked());
+    document.getElementById("mic-modal-continue-btn").addEventListener("click", () => this.continueClicked());
+
+    document.addEventListener("keydown", (e) => {
+      if (e.key !== "Enter" || e.isComposing) return;
+      const overlay = document.getElementById("mic-modal-overlay");
+      const btn = document.getElementById("mic-modal-continue-btn");
+      if (!overlay.classList.contains("show") || btn.style.display === "none") return;
+      if (document.activeElement === document.getElementById("mic-modal-retry-btn")) return;
+      e.preventDefault();
+      e.stopPropagation();
+      this.continueClicked();
+    }, true);
+  },
+};
+
+const PRACTICE2_COUNT_KEY = "lpp_speaking_practice_count";
+const PRACTICE2_COUNT_PRESETS = [1, 3, 5, 10];
+
+const DRILL_SPEAKING = "speaking";
+const DRILL_WRITING = "writing";
+const DRILL_SPEAKING_HY = "speaking-hy";
+const DRILL_WRITING_HY = "writing-hy";
+const DRILL_SPEAKING_RU = "speaking-ru";
+const DRILL_WRITING_RU = "writing-ru";
+const DRILL_MODES = {
+  speaking: {
+    skill: "speaking-practice2",
+    typed: false,
+    lang: "es",
+    route: "speaking/drill",
+    barPage: "Speaking · Practice",
+    barResults: "Speaking · Practice results",
+    title: "Speaking Practice",
+    resultsTitle: "Speaking Practice — Results",
+    kicker: "Speaking Practice — text only",
+    sub: "Random questions, text only. Each gives you 90 seconds; the mic " +
+         "starts the instant the question appears.",
+    wpmTitle: "Average speaking speed",
+  },
+  writing: {
+    skill: "writing-practice2",
+    typed: true,
+    lang: "es",
+    route: "writing/drill",
+    barPage: "Writing · Practice",
+    barResults: "Writing · Practice results",
+    title: "Writing Practice",
+    resultsTitle: "Writing Practice — Results",
+    kicker: "Writing Practice — text only",
+    sub: "Random questions, text only. Each gives you 90 seconds; typing " +
+         "starts the instant the question appears.",
+    wpmTitle: "Average typing speed",
+  },
+  "speaking-hy": {
+    skill: "speaking-practice2",
+    typed: false,
+    lang: "hy",
+    route: "speaking/drill-hy",
+    barPage: "Speaking · Practice",
+    barResults: "Speaking · Practice results",
+    title: "Speaking Practice",
+    resultsTitle: "Speaking Practice — Results",
+    kicker: "Speaking Practice — text only",
+    sub: "Random Armenian questions, text only. Each gives you 90 seconds; " +
+         "the mic starts the instant the question appears.",
+    wpmTitle: "Average speaking speed",
+  },
+  "writing-hy": {
+    skill: "writing-practice2",
+    typed: true,
+    lang: "hy",
+    route: "writing/drill-hy",
+    barPage: "Writing · Practice",
+    barResults: "Writing · Practice results",
+    title: "Writing Practice",
+    resultsTitle: "Writing Practice — Results",
+    kicker: "Writing Practice — text only",
+    sub: "The same Armenian questions, typed instead of spoken. Each gives you 90 seconds; " +
+         "typing starts the instant the question appears.",
+    wpmTitle: "Average typing speed",
+  },
+
+  "speaking-ru": {
+    skill: "speaking-practice2",
+    typed: false,
+    lang: "ru",
+    route: "speaking/drill-ru",
+    barPage: "Speaking · Practice",
+    barResults: "Speaking · Practice results",
+    title: "Speaking Practice",
+    resultsTitle: "Speaking Practice — Results",
+    kicker: "Speaking Practice — text only",
+    sub: "Random Russian questions, text only. Each gives you 90 seconds; " +
+         "the mic starts the instant the question appears.",
+    wpmTitle: "Average speaking speed",
+  },
+  "writing-ru": {
+    skill: "writing-practice2",
+    typed: true,
+    lang: "ru",
+    route: "writing/drill-ru",
+    barPage: "Writing · Practice",
+    barResults: "Writing · Practice results",
+    title: "Writing Practice",
+    resultsTitle: "Writing Practice — Results",
+    kicker: "Writing Practice — text only",
+    sub: "The same Russian questions, typed instead of spoken. Each gives you 90 seconds; " +
+         "typing starts the instant the question appears.",
+    wpmTitle: "Average typing speed",
+  }
+};
+
+const DRILL_SKILLS = Object.keys(DRILL_MODES)
+  .map(m => DRILL_MODES[m].skill)
+  .filter((s, i, all) => all.indexOf(s) === i);
+
+const SPK_EXAM_SKILL = "speaking";
+function isAskedIdSourceSkill(skill) {
+  return DRILL_SKILLS.indexOf(skill) >= 0 || !skill || skill === SPK_EXAM_SKILL;
+}
+function loadPractice2Count() {
+  try {
+    const v = JSON.parse(localStorage.getItem(PRACTICE2_COUNT_KEY) || "null");
+    return (typeof v === "number" && v > 0) ? v : null;
+  } catch (e) { return null; }
+}
+function savePractice2Count(v) {
+  try { localStorage.setItem(PRACTICE2_COUNT_KEY, JSON.stringify(v)); }
+  catch (e) { console.error("[speaking] failed to persist lpp_speaking_practice_count:", e); }
+}
+
+const RESPONSE_SECONDS = 90;
+
+const ADVANCE_DELAY_MS = 1000;
+
+function wpmFromWords(words, responseSeconds) {
+  return words / (responseSeconds / 60);
+}
+
+function runPractice2Prompt(mount, p, streamPromise, opts) {
+  const timerEl = document.getElementById("practice2-timer");
+
+  const cfg = DRILL_MODES[(opts && opts.mode)] || DRILL_MODES[DRILL_SPEAKING];
+  const writing = !!cfg.typed;
+
+  const writePlaceholder = cfg.lang === SPK_LANGUAGE_HY ? "Գրի՛ր քո պատասխանն այստեղ…"
+    : cfg.lang === SPK_LANGUAGE_RU ? "Напишите ваш ответ здесь…" : "Escribe tu respuesta aquí…";
+  mount.innerHTML = `
+    <div class="prompt-kicker">${escapeHtml(cfg.kicker)}</div>
+    <div class="prompt-text">${escapeHtml(primaryText(p))}</div>` + (writing ? `
+    <textarea class="p2-write-box" id="p2-write-box" spellcheck="false"
+      placeholder="${escapeHtml(writePlaceholder)}"></textarea>` : `
+    <div class="rec-status"><span class="rec-dot live" id="p2-rec-dot"></span><span id="p2-rec-label">Recording your answer…</span></div>
+    <div class="practice2-mic-msg" id="p2-mic-msg" style="display:none;"></div>`) + `
+    <div class="p2-finish-row"><button class="btn sm secondary" id="p2-finish-btn" type="button">Finish early</button></div>`;
+
+  const recDot = mount.querySelector("#p2-rec-dot");
+  const recLabel = mount.querySelector("#p2-rec-label");
+  const micMsgEl = mount.querySelector("#p2-mic-msg");
+  const writeBox = mount.querySelector("#p2-write-box");
+
+  if (writeBox) writeBox.focus();
+
+  let timeLeft = RESPONSE_SECONDS;
+  let finished = false;
+  let transcript = "";
+  let capture = null;
+
+  function updateTimerDisplay() {
+    timerEl.textContent = fmtClock(timeLeft);
+    timerEl.classList.toggle("urgent", timeLeft <= 10);
+  }
+  updateTimerDisplay();
+
+  let aborted = false;
+
+  function handOff() {
+    if (aborted) return;
+    App._abortPractice2 = null;
+    opts.onDone({ transcript: (writeBox ? writeBox.value : transcript).trim() });
+  }
+
+  function finish() {
+    if (finished) return;
+    finished = true;
+    clearInterval(timerHandle);
+    const pending = capture ? capture.stop() : null;
+    if (writeBox) {
+
+      writeBox.readOnly = true;
+    } else if (capture && capture.serverSTT && pending) {
+
+      recDot.classList.remove("live", "warn");
+      recLabel.textContent = "Transcribing…";
+      pending.then(handOff, handOff);
+      return;
+    } else {
+      recDot.classList.remove("live", "warn");
+      recLabel.textContent = "Stopped";
+    }
+    setTimeout(handOff, ADVANCE_DELAY_MS);
+  }
+
+  const finishBtn = mount.querySelector("#p2-finish-btn");
+  finishBtn.addEventListener("click", () => { finishBtn.disabled = true; finish(); });
+
+  const timerHandle = setInterval(() => {
+    timeLeft -= 1;
+    updateTimerDisplay();
+    if (timeLeft <= 0) { clearInterval(timerHandle); finish(); }
+  }, 1000);
+
+  App._abortPractice2 = function () {
+    aborted = true;
+    if (finished) return;
+    finished = true;
+    clearInterval(timerHandle);
+    if (capture) capture.stop();
+  };
+
+  if (writing) return;
+  function micMsg(text) { micMsgEl.style.display = ""; micMsgEl.textContent = text; }
+  let recDropped = false;
+  streamPromise.then((stream) => {
+    if (!stream) {
+      recDot.classList.remove("live", "warn");
+      recLabel.textContent = "Not recording";
+      micMsg("No microphone access — this response won't be recorded, but the timer still runs.");
+    }
+    if (finished) return;
+    capture = startVoiceCapture(stream, {
+      speechLang: spkLangCfg(cfg.lang).speechLang,
+      onTranscript: (text) => { transcript = text; },
+
+      onRecognitionStatus: (state) => {
+        if (finished || !recLabel.isConnected) return;
+        if (state === "restarting") {
+          recDropped = true;
+          recDot.classList.remove("live");
+          recDot.classList.add("warn");
+          recLabel.textContent = "Mic dropped — reconnecting…";
+        } else if (state === "ok") {
+          recDot.classList.remove("warn");
+          recDot.classList.add("live");
+          recLabel.textContent = "Recording your answer…";
+          if (recDropped) micMsg("Speech recognition dropped out for a moment and reconnected — a few words may be missing from this answer.");
+        } else if (state === "lost") {
+          recDot.classList.remove("live", "warn");
+          recLabel.textContent = "Not recording";
+          micMsg("Speech recognition stopped and could not restart — the rest of this answer won't be transcribed.");
+        }
+      }
+    });
+  });
+}
+
+function practice2AverageWpm(results, responseSeconds) {
+  const secs = responseSeconds || RESPONSE_SECONDS;
+  const counted = results.filter(r => r.transcript && r.transcript.trim());
+  if (!counted.length) return null;
+  const total = counted.reduce((sum, r) => sum + wordCount(r.transcript), 0);
+  return { wpm: wpmFromWords(total, secs) / counted.length, counted: counted.length, total: results.length };
+}
+
+const PRACTICE_FORM = "practice";
+
+function ratingSectionHtml(prefix, actionsHtml, options) {
+  const compact = !!(options && options.compact);
+  return `
+    <div class="results-body">
+      <div class="results-top">
+        <div class="results-rating-block">
+          <div id="${prefix}-loading" class="rating-pending">Rating your sitting<span class="dots"><span>.</span><span>.</span><span>.</span></span></div>
+          <div id="${prefix}-nokey" class="rating-nokey" style="display:none;"></div>
+          <div id="${prefix}-error" class="rating-error" style="display:none;"></div>
+          <div id="${prefix}-ready" style="display:none;">
+            ${compact ? "" : `<div class="results-rating" id="${prefix}-rating"></div>`}
+          </div>
+          ${compact ? "" : `<!-- Always rendered (resetRatingSection blanks it to "—" up front,
+               same as before) — now ONE inline line under the crosswalk
+               instead of its own tall card in a cramped left column. -->
+          <div class="results-floor-ceiling" id="${prefix}-floor-ceiling">—</div>`}
+        </div>
+        <div class="results-actions">
+          <button class="btn" id="${prefix}-retry-btn" type="button" style="display:none;">Retry rating</button>
+          ${actionsHtml || ""}
+        </div>
+      </div>
+      ${compact ? "" : `<div class="rcard">
+        <h3>Rationale</h3>
+        <div class="blurb-text results-rationale" id="${prefix}-rationale">—</div>
+      </div>`}
+      <div class="rcard table-card">
+        <h3>Per-prompt evidence</h3>
+        <!-- Desktop/tablet: a real table, compact fixed columns + Note taking
+             the rest (see table.evidence in <style>). Phone (<900px): the
+             table hides and #${prefix}-evidence-cards shows instead — both
+             are populated from the same row data in renderRatingSection(). -->
+        <div class="evidence-wrap">
+          <table class="evidence${compact ? " evidence-compact" : ""}">
+            <colgroup>
+              <col class="ec-n"><col class="ec-level">${compact ? "" : `<col class="ec-type"><col class="ec-kind">`}<col class="ec-response">
+            </colgroup>
+            <thead><tr><th>#</th><th>Level</th>${compact ? "" : "<th>Type</th><th>Kind</th>"}<th>Your response</th></tr></thead>
+            <tbody id="${prefix}-evidence-body"></tbody>
+          </table>
+        </div>
+        <div class="evidence-cards" id="${prefix}-evidence-cards"></div>
+      </div>
+    </div>`;
+}
+function ratingEl(prefix, name) { return document.getElementById(prefix + "-" + name); }
+const RATING_LEVEL_PENDING = `<span class="tag muted" title="Waiting on the rater">…</span>`;
+
+function prefillEvidenceTable(prefix, detail) {
+  const compact = !ratingEl(prefix, "rating");
+  const rows = (detail || []).map(d => ({
+    n: d.n, type: humanizeToken(d.type), kind: humanizeToken(d.kind),
+    response: d.transcript || "(no response)"
+  }));
+  ratingEl(prefix, "evidence-body").innerHTML = rows.map(r => `<tr>
+      <td>${r.n}</td>
+      <td>${RATING_LEVEL_PENDING}</td>
+      ${compact ? "" : `<td>${escapeHtml(r.type)}</td><td>${escapeHtml(r.kind)}</td>`}
+      <td class="transcript-cell">${escapeHtml(r.response)}</td>
+    </tr>`).join("");
+  ratingEl(prefix, "evidence-cards").innerHTML = rows.map(r => `<div class="evidence-card">
+      <div class="evidence-card-top">
+        <span class="evidence-card-n">#${r.n}</span>
+        <span class="evidence-card-meta">${compact
+          ? RATING_LEVEL_PENDING
+          : `${RATING_LEVEL_PENDING} · ${escapeHtml(r.type)} · ${escapeHtml(r.kind)}`}</span>
+      </div>
+      <div class="evidence-card-response">${escapeHtml(r.response)}</div>
+    </div>`).join("");
+}
+
+function resetRatingSection(prefix, detail) {
+  ratingEl(prefix, "loading").style.display = "";
+  ratingEl(prefix, "nokey").style.display = "none";
+  ratingEl(prefix, "error").style.display = "none";
+  ratingEl(prefix, "ready").style.display = "none";
+  ratingEl(prefix, "retry-btn").style.display = "none";
+  if (detail && detail.length) {
+    prefillEvidenceTable(prefix, detail);
+  } else {
+    ratingEl(prefix, "evidence-body").innerHTML = "";
+    ratingEl(prefix, "evidence-cards").innerHTML = "";
+  }
+
+  const floorCeiling = ratingEl(prefix, "floor-ceiling");
+  if (floorCeiling) floorCeiling.textContent = "—";
+  const rationale = ratingEl(prefix, "rationale");
+  if (rationale) rationale.textContent = "—";
+}
+
+function humanizeToken(s) {
+  return String(s || "").replace(/_/g, " ");
+}
+
+function renderRatingSection(prefix, rating, detail) {
+  const code = rating.rating;
+  const bandName = BAND_OF[code] || "?";
+
+  const compact = !ratingEl(prefix, "rating");
+  ratingEl(prefix, "ready").style.display = "";
+  if (!compact) {
+    ratingEl(prefix, "rating").innerHTML =
+      `${escapeHtml(RATING_NAMES[code] || code)}` + (bandName !== (RATING_NAMES[code] || code) ? `<span class="band-tag">${escapeHtml(bandName)}</span>` : "");
+  }
+  const floorCeiling = ratingEl(prefix, "floor-ceiling");
+  if (floorCeiling) {
+    floorCeiling.innerHTML =
+      `Floor <b>${escapeHtml(RATING_NAMES[rating.floor] || rating.floor || "?")}</b> &nbsp;→&nbsp; Ceiling <b>${escapeHtml(RATING_NAMES[rating.ceiling] || rating.ceiling || "?")}</b>`;
+  }
+  const rationaleEl = ratingEl(prefix, "rationale");
+  if (rationaleEl) rationaleEl.textContent = rating.rationale || "—";
+
+  const perPromptByN = {};
+  (rating.per_prompt || []).forEach(pp => { perPromptByN[pp.n] = pp; });
+
+  const rows = detail.map(d => {
+    const pp = perPromptByN[d.n];
+    const earned = (pp && pp.rating) || d.rating || null;
+    return {
+      n: d.n,
+      unratedTag: d.unrated ? `<br><span class="tag muted">unrated</span>` : "",
+      level: compact ? (earned || "—") : d.level,
+      levelTitle: compact ? (earned ? (RATING_NAMES[earned] || earned) : "not rated per question") : "",
+      type: humanizeToken(d.type), kind: humanizeToken(pp ? pp.kind : d.kind),
+      response: d.transcript || "(no response)"
+    };
+  });
+
+  const levelCell = r => r.levelTitle
+    ? `<span title="${escapeHtml(r.levelTitle)}">${escapeHtml(r.level)}</span>`
+    : escapeHtml(r.level);
+  ratingEl(prefix, "evidence-body").innerHTML = rows.map(r => `<tr>
+      <td>${r.n}${r.unratedTag}</td>
+      <td>${levelCell(r)}</td>
+      ${compact ? "" : `<td>${escapeHtml(r.type)}</td><td>${escapeHtml(r.kind)}</td>`}
+      <td class="transcript-cell">${escapeHtml(r.response)}</td>
+    </tr>`).join("");
+  ratingEl(prefix, "evidence-cards").innerHTML = rows.map(r => `<div class="evidence-card">
+      <div class="evidence-card-top">
+        <span class="evidence-card-n">#${r.n}${r.unratedTag}</span>
+        <span class="evidence-card-meta">${compact
+          ? levelCell(r)
+          : `${escapeHtml(r.level)} · ${escapeHtml(r.type)} · ${escapeHtml(r.kind)}`}</span>
+      </div>
+      <div class="evidence-card-response">${escapeHtml(r.response)}</div>
+    </div>`).join("");
+  return perPromptByN;
+}
+
+const SCREEN_BAR_PAGES = {
+  "screen-profile-choice": "Speaking · Exam",
+  "screen-exam-ranout": "Speaking · Exam",
+  "screen-selfassessment": "Speaking · Self-assessment",
+  "screen-setup": "Speaking · Setup",
+  "screen-test": "Speaking · Exam",
+  "screen-results": "Speaking · Exam results",
+  "screen-practice2-count": "Speaking · Practice",
+  "screen-practice2": "Speaking · Practice",
+  "screen-practice2-results": "Speaking · Practice results",
+  "screen-error": "Speaking"
+};
+
+const App = {
+  bank: [],
+  survey: { work: null, school: null, home: null, freetime: [] },
+  form: null,
+  sitting: [],
+  currentIndex: 0,
+  sittingDetail: [],
+  micStream: null,
+
+  recognitionSupported: !!(window.SpeechRecognition || window.webkitSpeechRecognition),
+  serverSpeech: false,
+  sittingAt: null,
+  lastRecord: null,
+
+  ratingSpecs: {},
+
+  ratingJobs: {},
+  analyzeJob: null,
+  profile: null,
+
+  practice2Sitting: [],
+  practice2Index: 0,
+  practice2Results: [],
+  practice2Stream: null,
+  practice2MicDenied: false,
+  _abortPractice2: null,
+  practice2At: null,
+  lastPractice2Record: null,
+
+  askedIds: new Set(),
+
+  historyRecords: [],
+
+  drillMode: DRILL_SPEAKING,
+
+  banks: {},
+
+  async boot() {
+    try {
+      const res = await fetch("content/prompts.json", { cache: "no-store" });
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      const data = await res.json();
+      if (!Array.isArray(data.prompts) || !data.prompts.length) throw new Error("prompts.json has no prompts");
+
+      this.bank = examBank(data.prompts);
+      this.banks[SPK_LANGUAGE] = data.prompts;
+    } catch (e) {
+      this.showError("Couldn't load the prompt bank", `content/prompts.json failed to load: ${e.message}. The exam can't run without it.`);
+      return;
+    }
+    this.profile = loadProfile();
+    this.mountRatingSections();
+    this.wireExamEnd();
+    this.wireBackButtons();
+    this.wireProfileChoice();
+    this.wireSelfAssessment();
+    this.wireSetup();
+    this.wireResults();
+    this.wirePractice2();
+    this.wirePractice2Count();
+    this.wireMicCheckModal();
+    document.getElementById("error-restart-btn").addEventListener("click", () => this.leaveToHub());
+
+    this.handleRoute(window.NavBar ? window.NavBar.route() : "");
+  },
+
+  wireMicCheckModal() {
+    MicCheck.wire();
+    ["practice-mic-check-btn", "practice2-count-mic-check-btn"].forEach((id) => {
+      const btn = document.getElementById(id);
+      if (btn) btn.addEventListener("click", () => MicCheck.open(true));
+    });
+  },
+  wireBackButtons() {
+    ["sa-back-btn", "setup-back-btn", "exam-ranout-back-btn"].forEach((id) => {
+      document.getElementById(id).addEventListener("click", () => this.leaveToHub());
+    });
+  },
+
+  showExamRanOut() {
+    this._showScreenNow("screen-exam-ranout");
+  },
+
+  showScreen(id) {
+
+    if (MIC_CHECK_GATED_SCREENS.has(id) && !this.drillIsWriting() && MicCheck.shouldShow()) {
+      return MicCheck.open(false).then(() => this._showScreenNow(id));
+    }
+    this._showScreenNow(id);
+    return Promise.resolve();
+  },
+  _showScreenNow(id) {
+    document.querySelectorAll(".screen").forEach(s => s.classList.remove("active"));
+    document.getElementById(id).classList.add("active");
+
+    if (window.NavBar) {
+      window.NavBar.setPage(this.barPageFor(id));
+      window.NavBar.setTestMode(id === "screen-test");
+    }
+
+  },
+  showError(title, message) {
+    document.getElementById("error-title").textContent = title;
+    document.getElementById("error-message").textContent = message;
+    this.showScreen("screen-error");
+  },
+
+  showSaveToast(message) {
+    const el = document.getElementById("save-toast");
+    if (!el) return;
+    el.textContent = message;
+    el.classList.add("show");
+    clearTimeout(this._saveToastTimer);
+    this._saveToastTimer = setTimeout(() => el.classList.remove("show"), 3200);
+  },
+
+  handleRoute(route) {
+
+    this.stopDrillQuestion();
+    if (route === "speaking/sample") { this.showSample(); return; }
+    if (route === "speaking/exam") { this.enterExam(); return; }
+    if (route === "speaking/drill") { this.enterPractice2Count(DRILL_SPEAKING); return; }
+    if (route === "writing/drill") { this.enterPractice2Count(DRILL_WRITING); return; }
+
+    if (route === "speaking/drill-hy") { this.enterPractice2Count(DRILL_SPEAKING_HY); return; }
+    if (route === "writing/drill-hy") { this.enterPractice2Count(DRILL_WRITING_HY); return; }
+    if (route === "speaking/drill-ru") { this.enterPractice2Count(DRILL_SPEAKING_RU); return; }
+    if (route === "writing/drill-ru") { this.enterPractice2Count(DRILL_WRITING_RU); return; }
+    window.NavBar.go("exams");
+
+  },
+
+  leaveToHub() {
+    this.abandonRun();
+    if (!window.NavBar) return;
+    const route = window.NavBar.route();
+    const practiceRoutes = ["speaking/drill", "writing/drill", "speaking/drill-hy", "writing/drill-hy",
+                            "speaking/drill-ru", "writing/drill-ru"];
+    window.NavBar.go(practiceRoutes.indexOf(route) >= 0 ? "practice" : "exams");
+  },
+
+  stopDrillQuestion() {
+    if (!this._abortPractice2) return;
+    try { this._abortPractice2(); } catch (e) {   }
+    this._abortPractice2 = null;
+  },
+
+  abandonRun() {
+    if (this._abortPrompt) {
+      try { this._abortPrompt(); } catch (e) {   }
+      this._abortPrompt = null;
+    }
+
+    this.stopDrillQuestion();
+    if (this.practice2Stream) {
+      this.practice2Stream.getTracks().forEach(t => { try { t.stop(); } catch (e) {} });
+      this.practice2Stream = null;
+    }
+    document.querySelectorAll("audio").forEach(a => { try { a.pause(); } catch (e) {} });
+    const box = document.getElementById("test-end-confirm");
+    if (box) box.style.display = "none";
+
+    if (window.NavBar) window.NavBar.setTestMode(false);
+  },
+
+  wireExamEnd() {
+    const box = document.getElementById("test-end-confirm");
+    document.getElementById("test-end-btn").addEventListener("click", () => { box.style.display = "flex"; });
+    document.getElementById("test-end-cancel-btn").addEventListener("click", () => { box.style.display = "none"; });
+    document.getElementById("test-end-confirm-btn").addEventListener("click", () => { this.leaveToHub(); });
+  },
+
+  enterExam() {
+    if (this.profile && this.profile.form) {
+      this.showProfileChoice();
+    } else {
+      this.showScreen("screen-selfassessment");
+    }
+  },
+
+  showProfileChoice() {
+    const sub = document.getElementById("profile-choice-sub");
+    if (sub && this.profile) {
+      sub.textContent = `You picked a self-assessment level before (Form ${this.profile.form}). Use it again, or pick again.`;
+    }
+    const useDesc = document.getElementById("profile-choice-use-desc");
+    if (useDesc) {
+      useDesc.textContent = "Skip straight to Setup and start the timed test — no need to pick again.";
+    }
+    this.showScreen("screen-profile-choice");
+  },
+  wireProfileChoice() {
+    document.getElementById("profile-choice-use-btn").addEventListener("click", async () => {
+      this.form = this.profile.form;
+
+      await this.refreshAskedIds();
+      this.sitting = composeSitting(this.bank, [], this.form, this.askedIds);
+      if (!this.sitting) { this.showExamRanOut(); return; }
+      this.showScreen("screen-setup");
+    });
+    document.getElementById("profile-choice-redo-btn").addEventListener("click", () => {
+      this.showScreen("screen-selfassessment");
+    });
+    document.getElementById("profile-choice-back-btn").addEventListener("click", () => this.leaveToHub());
+  },
+
+  drillIsWriting() { return !!this.drillCfg().typed; },
+  drillCfg() { return DRILL_MODES[this.drillMode] || DRILL_MODES[DRILL_SPEAKING]; },
+
+  drillLang() { return this.drillCfg().lang || SPK_LANGUAGE; },
+  drillLangCfg() { return spkLangCfg(this.drillLang()); },
+
+  barPageFor(id) {
+    const cfg = this.drillCfg();
+    if (id === "screen-practice2" || id === "screen-practice2-count") return cfg.barPage;
+    if (id === "screen-practice2-results") return cfg.barResults;
+    return SCREEN_BAR_PAGES[id] || "Speaking";
+  },
+  applyDrillMode(mode) {
+    this.drillMode = DRILL_MODES[mode] ? mode : DRILL_SPEAKING;
+    const cfg = this.drillCfg();
+    const set = (id, text) => { const el = document.getElementById(id); if (el) el.textContent = text; };
+    set("practice2-count-title", cfg.title);
+    set("practice2-title", cfg.title);
+    set("practice2-sub", cfg.sub);
+    set("practice2-results-title", cfg.resultsTitle);
+    set("practice2-wpm-title", cfg.wpmTitle);
+
+    const micBtn = document.getElementById("practice2-count-mic-check-btn");
+    if (micBtn) micBtn.style.display = this.drillIsWriting() ? "none" : "";
+  },
+
+  async refreshAskedIds() {
+    const history = loadHistoryLocal();
+    const ids = new Set();
+    history.forEach((rec) => {
+      if (rec && isAskedIdSourceSkill(rec.skill) && Array.isArray(rec.detail)) {
+        rec.detail.forEach((d) => { if (d && d.id) ids.add(d.id); });
+      }
+    });
+    this.askedIds = ids;
+    this.historyRecords = history;
+  },
+
+  practice2Pool() {
+    return this.drillBank().filter(p => !this.askedIds.has(p.id));
+  },
+
+  drillBank() {
+    const lang = this.drillLang();
+    if (lang === SPK_LANGUAGE) return drillBankOf(this.banks[lang] || this.bank || []);
+
+    return drillBankOf(this.banks[lang] || []);
+  },
+
+  async ensureDrillBank(lang) {
+    if (Array.isArray(this.banks[lang]) && this.banks[lang].length) return true;
+    const url = spkLangCfg(lang).bank;
+    try {
+      const res = await fetch(url, { cache: "no-store" });
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      const data = await res.json();
+      if (!Array.isArray(data.prompts) || !data.prompts.length) throw new Error(`${url} has no prompts`);
+      this.banks[lang] = data.prompts;
+      return true;
+    } catch (e) {
+      console.error(`[speaking] failed to load the ${lang} prompt bank:`, e);
+      return false;
+    }
+  },
+
+  showPractice2RanOut() {
+    this._showScreenNow("screen-practice2");
+    document.getElementById("practice2-progress").textContent = "";
+    const timerEl = document.getElementById("practice2-timer");
+    if (timerEl) timerEl.textContent = "—";
+    document.getElementById("practice2-prompt-mount").innerHTML =
+      `<div class="prompt-kicker">${escapeHtml(this.drillCfg().title)}</div><div class="prompt-text">question bank ran out</div>`;
+  },
+  enterPractice2Count(mode) {
+    this.applyDrillMode(mode);
+    const grid = document.getElementById("practice2-count-grid");
+    grid.innerHTML = '<p class="lede">Loading…</p>';
+    this.showScreen("screen-practice2-count");
+
+    return this.ensureDrillBank(this.drillLang()).then((ok) => {
+      if (!ok) { this.showPractice2RanOut(); return; }
+      return this.refreshAskedIds();
+    }).then(() => {
+      if (!this.drillBank().length) return;
+      const pool = this.practice2Pool();
+      if (!pool.length) {
+        this.showPractice2RanOut();
+        return;
+      }
+      const saved = loadPractice2Count();
+
+      const cap = distinctTopicCount(pool);
+      const options = PRACTICE2_COUNT_PRESETS
+        .filter(n => n < cap)
+        .map(n => ({ value: n, label: `${n} question${n === 1 ? "" : "s"}` }));
+
+      const effectiveSaved = (typeof saved === "number" && options.some(o => o.value === saved)) ? saved : null;
+
+      grid.innerHTML = options.map(opt => {
+        const isPrimary = effectiveSaved != null ? effectiveSaved === opt.value : opt.value === 10;
+        return `<button class="mode-card${isPrimary ? " mode-card-primary" : ""}" data-count="${opt.value}" type="button">
+          <div class="mode-card-title">${opt.label}</div>
+        </button>`;
+      }).join("");
+      grid.querySelectorAll("[data-count]").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const raw = btn.dataset.count;
+          const chosen = Number(raw);
+          savePractice2Count(chosen);
+          this.startPractice2(chosen);
+        });
+      });
+    });
+  },
+
+  startPractice2(requested) {
+
+    this.stopDrillQuestion();
+    const pool = this.practice2Pool();
+    const count = Math.max(0, Math.min(requested, distinctTopicCount(pool)));
+    if (!count) { this.showPractice2RanOut(); return; }
+    this.practice2Sitting = pickTopicDistinct(pool, count);
+    this.practice2Index = 0;
+    this.practice2Results = [];
+    this.practice2Stream = null;
+    this.practice2MicDenied = false;
+
+    this.practice2StartedMs = Date.now();
+
+    this.showScreen("screen-practice2").then(() => this.showPractice2Question());
+  },
+
+  async ensurePractice2Mic() {
+    if (this.drillIsWriting()) return;
+    if (this.practice2Stream || this.practice2MicDenied) return;
+    try {
+      this.practice2Stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+    } catch (e) {
+      this.practice2MicDenied = true;
+    }
+  },
+  showPractice2Question() {
+    const idx = this.practice2Index;
+    const p = this.practice2Sitting[idx];
+    document.getElementById("practice2-progress").textContent = `Question ${idx + 1} of ${this.practice2Sitting.length}`;
+    const mount = document.getElementById("practice2-prompt-mount");
+    const streamPromise = this.ensurePractice2Mic().then(() => this.practice2Stream);
+    runPractice2Prompt(mount, p, streamPromise, {
+      mode: this.drillMode,
+      onDone: (result) => {
+        this.practice2Results.push({ id: p.id, promptEs: p.promptEs, transcript: result.transcript });
+        if (this.practice2Index + 1 < this.practice2Sitting.length) {
+          this.practice2Index++;
+          this.showPractice2Question();
+        } else {
+          this.finishPractice2();
+        }
+      }
+    });
+  },
+  finishPractice2() {
+    if (this.practice2Stream) {
+      this.practice2Stream.getTracks().forEach(t => { try { t.stop(); } catch (e) {} });
+      this.practice2Stream = null;
+    }
+    this.practice2At = new Date().toISOString();
+
+    const stats = practice2AverageWpm(this.practice2Results);
+    const practice2Record = {
+      at: this.practice2At, skill: this.drillCfg().skill,
+
+      language: this.drillLang() === SPK_LANGUAGE ? undefined : this.drillLang(),
+
+      typedWpm: this.drillIsWriting() && stats ? Math.round(stats.wpm) : undefined,
+
+      responseSeconds: RESPONSE_SECONDS,
+
+      startedAt: this.practice2StartedMs || null,
+      rating: null, floor: null, ceiling: null, rationale: null,
+
+      detail: this.practice2Results.map((r, i) => {
+        const p = this.practice2Sitting.find(x => x.id === r.id) || {};
+        return {
+          n: i + 1, id: r.id, level: p.level, type: p.type, topic: p.topic, kind: p.kind,
+          unrated: false, promptEs: r.promptEs, transcript: r.transcript
+        };
+      }),
+      mistakes: null
+    };
+    this.lastPractice2Record = practice2Record;
+    saveHistoryLocal(practice2Record);
+
+    this.showScreen("screen-practice2-results");
+    this.renderPractice2Results();
+  },
+
+  renderPractice2Results() {
+
+    const n = this.practice2Sitting.length;
+    document.getElementById("practice2-results-sub").textContent =
+      `${n} question${n === 1 ? "" : "s"} · sat ${new Date(this.practice2At).toLocaleString()}`;
+
+    const stats = practice2AverageWpm(this.practice2Results);
+    const wpmEl = document.getElementById("practice2-wpm");
+    const noteEl = document.getElementById("practice2-wpm-note");
+    const typed = this.drillIsWriting();
+    if (!stats) {
+      wpmEl.textContent = "—";
+      noteEl.textContent = typed
+        ? "Nothing was typed for any question — nothing to measure."
+        : "No responses were recorded (mic unavailable, or nothing was recognized) — nothing to measure.";
+    } else {
+      wpmEl.textContent = `${Math.round(stats.wpm)} WPM`;
+      noteEl.textContent = `Average of ${stats.counted} of ${stats.total} questions — each ${RESPONSE_SECONDS}-second ` +
+        `response's word count divided by ${RESPONSE_SECONDS / 60} minutes is its WPM; questions with ` +
+        `${typed ? "nothing typed" : "no transcript"} are excluded from the average.`;
+    }
+
+    this.requestPractice2Rating();
+    this.requestPractice2Analysis();
+  },
+
+  requestPractice2Rating() {
+    const rec = this.lastPractice2Record;
+    if (!rec) return;
+    this.rateSitting({
+      prefix: "practice2", form: PRACTICE_FORM, mode: this.drillMode, language: this.drillLang(),
+      detail: rec.detail,
+      promptOf: d => this.practice2Sitting.find(x => x.id === d.id),
+      record: rec, currentRecord: () => this.lastPractice2Record || rec,
+      onStamp: r => { this.lastPractice2Record = r; }
+    });
+  },
+  async requestPractice2Analysis() {
+    const loadingEl = document.getElementById("practice2-mistakes-loading");
+    const nokeyEl = document.getElementById("practice2-mistakes-nokey");
+    const errorEl = document.getElementById("practice2-mistakes-error");
+    const listEl = document.getElementById("practice2-mistakes-list");
+    loadingEl.style.display = "";
+    nokeyEl.style.display = "none";
+    errorEl.style.display = "none";
+    listEl.style.display = "none";
+
+    const answered = this.practice2Results.filter(r => r.transcript && r.transcript.trim());
+    const transcripts = answered.map(r => ({ promptEs: r.promptEs, response: r.transcript }));
+
+    if (!transcripts.length) {
+      loadingEl.style.display = "none";
+      listEl.style.display = "";
+      listEl.innerHTML = `<p class="lede">No recorded responses to check.</p>`;
+      return;
+    }
+
+    const byIndex = {};
+    const renderGroups = () => {
+      listEl.innerHTML = spkMistakeGroupsHtml(answered, byIndex);
+    };
+    listEl.style.display = "";
+    renderGroups();
+
+    let json;
+    try {
+
+      json = await Grading.run("analyze", {
+
+        at: this.lastPractice2Record ? this.lastPractice2Record.at : undefined,
+        transcripts,
+
+        mode: this.drillIsWriting() ? DRILL_WRITING : undefined,
+
+        language: this.drillLang() === SPK_LANGUAGE ? undefined : this.drillLang()
+      }, {
+        label: "Analysing",
+
+        onStatus: msg => {
+          loadingEl.textContent = String(msg).replace(/(\d+ of \d+) questions?$/, "$1 checked");
+        },
+        onPartial: partial => {
+          for (const entry of (partial && partial.perQuestion) || []) {
+            if (entry && typeof entry.index === "number") {
+              byIndex[entry.index] = Array.isArray(entry.mistakes) ? entry.mistakes : [];
+            }
+          }
+          renderGroups();
+        },
+        onJob: id => { this.analyzeJob = id; }
+      });
+    } catch (e) {
+      json = { ok: false, error: "network", detail: (e && e.message) || String(e) };
+    }
+    this.analyzeJob = null;
+
+    loadingEl.style.display = "none";
+
+    if (json.ok === false && json.error === "no-key") {
+      listEl.style.display = "none";
+      nokeyEl.style.display = "";
+      nokeyEl.innerHTML = `No grading key is set, so the mistake check did not run. <a data-open-key>Add your Anthropic API key</a> and reopen this sitting's practice to try again.`;
+      return;
+    }
+    if (!json.ok) {
+      listEl.style.display = "none";
+      errorEl.style.display = "";
+      errorEl.textContent = `Mistake analysis failed: ${json.error || "unknown error"}${json.detail ? " — " + json.detail : ""}`;
+      return;
+    }
+
+    listEl.style.display = "";
+    const mistakes = Array.isArray(json.mistakes) ? json.mistakes : [];
+
+    listEl.innerHTML = spkMistakeGroupsHtml(
+      answered, spkMistakesByQuestion(mistakes, answered.length));
+
+    if (this.lastPractice2Record) {
+      const updated = { ...this.lastPractice2Record, mistakes };
+      this.lastPractice2Record = updated;
+      saveHistoryLocal(updated);
+    }
+  },
+  wirePractice2() {
+    document.getElementById("practice2-back-btn").addEventListener("click", () => this.leaveToHub());
+    document.getElementById("practice2-results-back-btn").addEventListener("click", () => this.leaveToHub());
+  },
+
+  wirePractice2Count() {
+    document.getElementById("practice2-count-back-btn").addEventListener("click", () => this.leaveToHub());
+  },
+
+  wireSelfAssessment() {
+    const wrap = document.getElementById("sa-options");
+    wrap.innerHTML = SELF_ASSESSMENT_OPTIONS.map((txt, i) => `
+      <label class="sa-opt">
+        <input type="radio" name="sa" value="${i + 1}">
+        <span class="sa-num">${i + 1}</span>
+        <span class="sa-text">${escapeHtml(txt)}</span>
+      </label>
+    `).join("");
+    wrap.addEventListener("change", () => {
+      const el = wrap.querySelector("input:checked");
+      const btn = document.getElementById("sa-continue-btn");
+      const hint = document.getElementById("sa-form-hint");
+      if (el) {
+        const form = Number(el.value);
+        btn.disabled = false;
+        const info = FORM_INFO[form];
+        hint.textContent = `${info.label} — printable range ${info.range}.`;
+      } else {
+        btn.disabled = true;
+        hint.textContent = "";
+      }
+    });
+
+    if (this.profile && this.profile.form) {
+      const el = wrap.querySelector(`input[name="sa"][value="${this.profile.form}"]`);
+      if (el) { el.checked = true; wrap.dispatchEvent(new Event("change")); }
+    }
+    document.getElementById("sa-continue-btn").addEventListener("click", async () => {
+      const el = wrap.querySelector("input:checked");
+      if (!el) return;
+      this.form = Number(el.value);
+      this.commitProfile();
+
+      await this.refreshAskedIds();
+      this.sitting = composeSitting(this.bank, [], this.form, this.askedIds);
+      if (!this.sitting) { this.showExamRanOut(); return; }
+      this.showScreen("screen-setup");
+    });
+  },
+
+  commitProfile() {
+    const profile = { form: this.form };
+    saveProfile(profile);
+    this.profile = profile;
+    this.showSaveToast("✓ Your answer is saved — you can skip this next time.");
+  },
+
+  wireSetup() {
+
+    document.getElementById("setup-mic-check-modal-btn").addEventListener("click", async () => {
+      const statusEl = document.getElementById("mic-status");
+      await MicCheck.open(true);
+
+      try {
+        this.micStream = await navigator.mediaDevices.getUserMedia({ audio: true });
+        statusEl.textContent = "Mic works.";
+        statusEl.className = "mic-status ok";
+      } catch (e) {
+        statusEl.textContent = "No microphone access — you can still type your answers.";
+        statusEl.className = "mic-status err";
+      }
+      this.revealSample();
+    });
+    document.getElementById("setup-skip-btn").addEventListener("click", () => this.startTest());
+    document.getElementById("setup-start-test-btn").addEventListener("click", () => this.startTest());
+  },
+  revealSample() {
+    document.getElementById("setup-sample-card").style.display = "";
+    document.getElementById("setup-skip-btn").style.display = "none";
+    const sample = this.bank.find(p => p.id === "sports-desc") || this.bank[1];
+    this.runPromptFlow(document.getElementById("setup-sample-mount"), { ...sample, n: null, kind: "level_check" }, {
+      counted: false,
+      onDone: () => { document.getElementById("setup-start-test-btn").style.display = ""; }
+    });
+  },
+
+  startTest() {
+    this.currentIndex = 0;
+    this.sittingDetail = [];
+    document.getElementById("test-form-sub").textContent =
+      `${FORM_INFO[this.form].label} · ${FORM_INFO[this.form].range} · ${this.sitting.length} prompts`;
+    this.showScreen("screen-test");
+    this.showTestPrompt();
+  },
+  showTestPrompt() {
+    const p = this.sitting[this.currentIndex];
+    document.getElementById("test-progress").textContent = `Question ${p.n} of ${this.sitting.length}`;
+    const mount = document.getElementById("test-prompt-mount");
+    this.runPromptFlow(mount, p, {
+      counted: true,
+      onDone: (result) => {
+        this.sittingDetail.push({
+
+          n: p.n, id: p.id, level: p.level, type: p.type, topic: p.topic, kind: p.kind,
+          transcript: result.transcript
+        });
+        if (this.currentIndex + 1 < this.sitting.length) {
+          this.currentIndex++;
+          this.showTestPrompt();
+        } else {
+          this.finishTest();
+        }
+      }
+    });
+  },
+
+  runPromptFlow(mount, p, opts) {
+    const timerEl = opts.counted ? document.getElementById("test-timer") : null;
+    const primary = primaryText(p);
+    const gloss = glossText(p);
+    const isRoleplay = ROLEPLAY_TYPES.has(p.type);
+
+    mount.innerHTML = `
+      <div class="prompt-kicker">${isRoleplay ? "Role-play" : "Question"}</div>
+      <div class="prompt-text" id="pf-primary">${escapeHtml(primary)}</div>
+      <button class="prompt-gloss-btn" type="button" id="pf-gloss-btn" title="Show English gloss">?</button>
+      <div class="prompt-gloss" id="pf-gloss">${escapeHtml(gloss || "")}</div>
+      <div class="rec-status"><span class="rec-dot" id="pf-rec-dot"></span><span id="pf-rec-label">Not started</span></div>
+      <div class="rec-msg" id="pf-rec-msg" style="display:none;"></div>
+      <div class="transcript-wrap">
+        <div class="transcript-label"><span>Your response ${this.serverSpeech ? "(transcribed when the window closes — editable)" : this.recognitionSupported ? "(live transcript — editable)" : "(type your answer — speech recognition unavailable in this browser)"}</span></div>
+        <textarea id="pf-transcript" placeholder="${this.serverSpeech ? "Speak — your words will appear here once the response window closes." : this.recognitionSupported ? "Speak — your words will appear here. You can edit anytime." : "Type your Spanish response here."}"></textarea>
+      </div>
+      <div class="step-footer">
+        <span class="hint"></span>
+        <button class="btn" id="pf-finish-btn" type="button">Finish answer</button>
+      </div>
+    `;
+
+    let responseStarted = false;
+
+    let timeLeft = RESPONSE_SECONDS;
+    let timerHandle = null;
+    let voiceCapture = null;
+    let finished = false;
+    let aborted = false;
+    let recDropped = false;
+
+    const recDot = mount.querySelector("#pf-rec-dot");
+    const recLabel = mount.querySelector("#pf-rec-label");
+    const recMsgEl = mount.querySelector("#pf-rec-msg");
+    const transcriptEl = mount.querySelector("#pf-transcript");
+    const finishBtn = mount.querySelector("#pf-finish-btn");
+    const glossBtn = mount.querySelector("#pf-gloss-btn");
+    if (glossBtn) glossBtn.addEventListener("click", () => mount.querySelector("#pf-gloss").classList.toggle("show"));
+
+    function updateTimerDisplay() {
+      if (timerEl) {
+        timerEl.textContent = fmtClock(timeLeft);
+        timerEl.classList.toggle("urgent", timeLeft <= 10);
+      }
+    }
+    updateTimerDisplay();
+
+    function beginResponseWindow() {
+      if (responseStarted) return;
+      responseStarted = true;
+      recLabel.textContent = "Recording...";
+      recDot.classList.add("live");
+
+      voiceCapture = startVoiceCapture(App.micStream, {
+        onTranscript: (text) => { transcriptEl.value = text; },
+
+        onRecognitionStatus: (state) => {
+          if (finished) return;
+          if (state === "restarting") {
+            recDropped = true;
+            recDot.classList.remove("live");
+            recDot.classList.add("warn");
+            recLabel.textContent = "Mic dropped — reconnecting…";
+          } else if (state === "ok") {
+            recDot.classList.remove("warn");
+            recDot.classList.add("live");
+            recLabel.textContent = "Recording...";
+            if (recDropped) recMsg("Speech recognition dropped out for a moment and reconnected — check the transcript below and add anything that went missing.");
+          } else if (state === "lost") {
+            recDot.classList.remove("live", "warn");
+            recLabel.textContent = "Speech recognition stopped";
+            recMsg("Speech recognition stopped and could not restart — type the rest of your answer in the box below.");
+          }
+        }
+      });
+
+      timerHandle = setInterval(() => {
+        timeLeft -= 1;
+        updateTimerDisplay();
+        if (timeLeft <= 0) { clearInterval(timerHandle); timeUp(); }
+      }, 1000);
+    }
+
+    App._abortPrompt = function () {
+
+      aborted = true;
+      if (finished) return;
+      finished = true;
+      stopCapture();
+    };
+
+    function recMsg(text) { recMsgEl.style.display = ""; recMsgEl.textContent = text; }
+
+    function stopCapture() {
+      clearInterval(timerHandle);
+      recDot.classList.remove("live", "warn");
+
+      recLabel.textContent = !responseStarted ? "Not started"
+        : (voiceCapture && voiceCapture.serverSTT) ? "Transcribing…" : "Stopped";
+      return voiceCapture ? voiceCapture.stop() : null;
+    }
+
+    function handOff() {
+      if (aborted) return;
+      App._abortPrompt = null;
+      opts.onDone({ transcript: transcriptEl.value.trim() });
+    }
+
+    function finishPrompt() {
+      if (finished) return;
+      finished = true;
+      const pending = stopCapture();
+      if (voiceCapture && voiceCapture.serverSTT && pending) { pending.then(handOff, handOff); return; }
+      handOff();
+    }
+
+    function timeUp() {
+      if (finished) return;
+      finished = true;
+      const pending = stopCapture();
+      finishBtn.style.display = "none";
+
+      if (voiceCapture && voiceCapture.serverSTT && pending) { pending.then(handOff, handOff); return; }
+      setTimeout(handOff, ADVANCE_DELAY_MS);
+    }
+
+    finishBtn.addEventListener("click", () => {
+      if (!responseStarted) beginResponseWindow();
+      finishPrompt();
+    });
+
+    beginResponseWindow();
+  },
+
+  finishTest() {
+    this.sittingAt = new Date().toISOString();
+    document.getElementById("results-sub").textContent =
+      `${FORM_INFO[this.form].label} · ${this.sitting.length} prompts · sat ${new Date(this.sittingAt).toLocaleString()}`;
+    this.showScreen("screen-results");
+    resetRatingSection("results", this.sittingDetail);
+
+    const baseRecord = {
+      at: this.sittingAt, skill: SPK_EXAM_SKILL, form: this.form,
+
+      responseSeconds: RESPONSE_SECONDS,
+      rating: null, floor: null, ceiling: null, rationale: null,
+      detail: this.sittingDetail.slice(),
+
+      survey: null, selfAssessment: this.form
+    };
+    this.lastRecord = baseRecord;
+    saveHistoryLocal(baseRecord);
+
+    this.rateSitting({
+      prefix: "results", form: this.form, detail: this.sittingDetail,
+      promptOf: d => this.sitting.find(x => x.n === d.n),
+      record: baseRecord, survey: null, selfAssessment: this.form,
+      onStamp: rec => { this.lastRecord = rec; }
+    });
+  },
+
+  async rateSitting(spec, opts) {
+    this.ratingSpecs[spec.prefix] = spec;
+    const prefix = spec.prefix;
+    resetRatingSection(prefix, spec.detail);
+
+    const payload = {
+      form: spec.form,
+
+      at: spec.record ? spec.record.at : undefined,
+
+      mode: (DRILL_MODES[spec.mode] && DRILL_MODES[spec.mode].typed) ? DRILL_WRITING : undefined,
+
+      language: (spec.language && spec.language !== SPK_LANGUAGE) ? spec.language : undefined,
+      transcripts: spec.detail.filter(d => !d.unrated).map(d => {
+        const p = spec.promptOf(d);
+        return { n: d.n, level: d.level, type: d.type, promptEs: p ? p.promptEs : "", promptEn: p ? p.promptEn : "", response: d.transcript };
+      }),
+      survey: spec.survey || null,
+      selfAssessment: spec.selfAssessment != null ? spec.selfAssessment : null
+    };
+    let json;
+    try {
+
+      json = await Grading.run("rate", payload, {
+        label: "Rating",
+        resumeJob: (opts && opts.resumeJob) || null,
+        onStatus: msg => { const el = ratingEl(prefix, "loading"); if (el) el.textContent = msg; },
+        onJob: id => { this.ratingJobs[prefix] = id; }
+      });
+    } catch (e) {
+      json = { ok: false, error: "network", detail: (e && e.message) || String(e) };
+    }
+    this.ratingJobs[prefix] = null;
+
+    ratingEl(prefix, "loading").style.display = "none";
+
+    if (json.ok === false && json.error === "no-key") {
+      ratingEl(prefix, "nokey").style.display = "";
+      const est = Grading.estimate(spec.detail.filter(d => !d.unrated).length, false);
+      ratingEl(prefix, "nokey").innerHTML =
+        `No grading key is set, so this sitting has not been rated. Your answers are saved in this browser. ` +
+        `<a data-open-key>Add your Anthropic API key</a>, then click Retry rating. Rating this sitting would cost you about ${Grading.money(est.usd)} in API credits.`;
+      ratingEl(prefix, "retry-btn").style.display = "";
+      return;
+    }
+    if (!json.ok) {
+      ratingEl(prefix, "error").style.display = "";
+      ratingEl(prefix, "error").innerHTML =
+        `Rating failed: ${escapeHtml(json.detail || json.error || "unknown error")}` +
+        (json.error === "bad-key" ? ` <a data-open-key>Change your key</a>.` : "");
+      ratingEl(prefix, "retry-btn").style.display = "";
+      return;
+    }
+
+    const rating = json.rating;
+    const perPromptByN = renderRatingSection(prefix, rating, spec.detail);
+
+    const base = spec.currentRecord ? spec.currentRecord() : spec.record;
+    const finalRecord = {
+      ...base,
+      rating: rating.rating, floor: rating.floor, ceiling: rating.ceiling, rationale: rating.rationale,
+      detail: spec.detail.map(d => {
+        const pp = perPromptByN[d.n];
+
+        return { ...d, rating: pp ? (pp.rating || null) : null,
+                 meets: pp ? pp.meets : null, note: pp ? pp.note : null };
+      })
+    };
+    spec.record = finalRecord;
+    spec.onStamp(finalRecord);
+    saveHistoryLocal(finalRecord);
+  },
+
+  mountRatingSections() {
+    document.getElementById("results-rating-mount").innerHTML = ratingSectionHtml("results",
+      `<button class="btn" id="retake-btn" type="button">Take again</button>`);
+
+    document.getElementById("practice2-rating-mount").innerHTML = ratingSectionHtml("practice2", "", { compact: true });
+  },
+
+  wireResults() {
+    ["results", "practice2"].forEach(prefix => {
+      ratingEl(prefix, "retry-btn").addEventListener("click", () => {
+        const spec = this.ratingSpecs[prefix];
+        if (!spec) return;
+
+        const live = this.ratingJobs[prefix];
+        this.rateSitting(spec, live ? { resumeJob: live } : null);
+      });
+    });
+
+    document.getElementById("retake-btn").addEventListener("click", () => this.leaveToHub());
+    document.addEventListener("click", (e) => {
+      if (e.target.closest && e.target.closest("[data-open-key]")) { e.preventDefault(); Grading.openPanel(); }
+    });
+  },
+
+  async showSample() {
+    let fx;
+    try {
+      const res = await fetch("sample/speaking-sample.json", { cache: "no-store" });
+      if (!res.ok) throw new Error("HTTP " + res.status);
+      fx = await res.json();
+    } catch (e) {
+      this.showError("Couldn't load the sample", "sample/speaking-sample.json failed to load: " + e.message);
+      return;
+    }
+    this._showScreenNow("screen-results");
+    window.NavBar.setPage("Sample result (illustrative)");
+    document.getElementById("results-sub").textContent =
+      `${fx.label} · Form ${fx.form} · ${fx.detail.length} prompts`;
+    resetRatingSection("results", fx.detail);
+    ratingEl("results", "loading").style.display = "none";
+    ratingEl("results", "retry-btn").style.display = "none";
+    let banner = document.getElementById("sample-banner");
+    if (!banner) {
+      banner = document.createElement("div");
+      banner.id = "sample-banner";
+      banner.className = "rating-nokey";
+      banner.style.margin = "0 0 12px";
+      const mount = document.getElementById("results-rating-mount");
+      mount.parentNode.insertBefore(banner, mount);
+    }
+    banner.innerHTML = `<b>${escapeHtml(fx.label)}.</b> ${escapeHtml(fx.note)}`;
+    banner.style.display = "";
+    renderRatingSection("results", fx.rating, fx.detail);
+  }
+};
+
+window.App = App;
+
+App.boot();
+</script>
+
+</body>
+</html>

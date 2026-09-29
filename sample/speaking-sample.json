@@ -1,0 +1,269 @@
+{
+ "label": "Sample (illustrative)",
+ "note": "Hand-written Spanish answers and a made-up rating, only to show what the results screen looks like. Not a real person and not a real grading run.",
+ "form": 3,
+ "at": "2026-01-15T10:00:00.000Z",
+ "language": "es",
+ "detail": [
+  {
+   "n": 1,
+   "id": "movies-desc",
+   "level": "intermediate",
+   "type": "description",
+   "topic": "movies",
+   "kind": "level_check",
+   "promptEs": "¿Qué tipo de películas te gusta ver? ¿Por qué te gustan esos tipos de películas?",
+   "promptEn": "What kind of movies do you like to watch? Why do you like those kinds of movies?",
+   "transcript": "Me gustan mucho las películas de comedia y también las de ciencia ficción. Me gustan porque me hacen reír y porque puedo olvidar los problemas del trabajo. No me gustan las películas de terror porque tengo miedo y no puedo dormir después. Mi película favorita es una comedia sobre dos amigos que viajan por España en una furgoneta."
+  },
+  {
+   "n": 2,
+   "id": "movies-routine",
+   "level": "intermediate",
+   "type": "routine",
+   "topic": "movies",
+   "kind": "level_check",
+   "promptEs": "Cuando vas al cine, ¿qué haces normalmente? ¿Con quién sueles ir?",
+   "promptEn": "When you go to the movies, what do you usually do? Who do you usually go with?",
+   "transcript": "Normalmente voy al cine los sábados por la noche con mi esposa o con mis amigos. Primero compramos las entradas por internet, después cenamos algo rápido y luego vamos a la sala. Siempre compro palomitas, aunque mi esposa dice que son muy caras. Después de la película, hablamos un rato sobre lo que nos gustó."
+  },
+  {
+   "n": 3,
+   "id": "movies-exp",
+   "level": "advanced",
+   "type": "experience",
+   "topic": "movies",
+   "kind": "probe",
+   "promptEs": "Piensa en la última película que viste. Cuéntame todo lo que pasó ese día, desde el principio hasta el final, con el mayor detalle posible.",
+   "promptEn": "Think about the last movie you saw. Tell me everything that happened that day, from beginning to end, in as much detail as you can.",
+   "transcript": "La última película que vi fue el domingo pasado. Yo estoy en casa por la mañana y limpio un poco, y después mi hermano llama y dice que quiere ir al cine. Nosotros vamos a un cine que está cerca del centro y compramos las entradas. La película es sobre un hombre que pierde su trabajo y decide abrir un restaurante. Es muy divertida. Cuando salimos, cenamos en un lugar de tacos y hablamos de la película toda la noche."
+  },
+  {
+   "n": 4,
+   "id": "cooking-desc",
+   "level": "intermediate",
+   "type": "description",
+   "topic": "cooking",
+   "kind": "level_check",
+   "promptEs": "¿Te gusta cocinar? Describe un plato que sepas preparar bien.",
+   "promptEn": "Do you like cooking? Describe a dish you know how to make well.",
+   "transcript": "Sí, me gusta cocinar, sobre todo los fines de semana. Un plato que sé preparar bien es la sopa de lentejas. Se necesitan lentejas, cebolla, zanahoria, ajo y un poco de chorizo. Primero se corta todo, luego se pone en una olla con agua y se cocina por una hora. Es un plato sencillo pero muy rico, y es perfecto para el invierno."
+  },
+  {
+   "n": 5,
+   "id": "cooking-routine",
+   "level": "intermediate",
+   "type": "routine",
+   "topic": "cooking",
+   "kind": "level_check",
+   "promptEs": "¿Con qué frecuencia cocinas en casa? ¿Qué sueles preparar durante una semana normal?",
+   "promptEn": "How often do you cook at home? What do you usually make during a normal week?",
+   "transcript": "Cocino en casa casi todos los días, cuatro o cinco veces por semana. Durante la semana preparo cosas rápidas, como pasta, arroz con pollo o ensaladas, porque llego tarde del trabajo. Los domingos hago algo más grande, por ejemplo un guiso, y guardo comida para los primeros días de la semana."
+  },
+  {
+   "n": 6,
+   "id": "cooking-exp",
+   "level": "advanced",
+   "type": "experience",
+   "topic": "cooking",
+   "kind": "probe",
+   "promptEs": "Cuéntame sobre una vez que cocinaste algo para una ocasión especial, o una vez que algo salió mal en la cocina. ¿Qué pasó?",
+   "promptEn": "Tell me about a time you cooked something for a special occasion, or a time something went wrong in the kitchen. What happened?",
+   "transcript": "Una vez cociné para el cumpleaños de mi madre. Yo quiero hacer una paella, pero nunca hice una antes. Compro todos los ingredientes en el mercado y empiezo a cocinar por la tarde. Pero cuando el arroz está casi listo, me doy cuenta de que no tengo suficiente caldo, y el arroz se quema un poco. Mi madre dice que está muy rico de todos modos, pero yo sé que no es perfecto."
+  },
+  {
+   "n": 7,
+   "id": "travel-desc",
+   "level": "intermediate",
+   "type": "description",
+   "topic": "travel",
+   "kind": "level_check",
+   "promptEs": "¿Te gusta viajar? Describe el tipo de viajes que prefieres hacer.",
+   "promptEn": "Do you like to travel? Describe the kind of trips you prefer to take.",
+   "transcript": "Sí, me encanta viajar. Prefiero los viajes cortos a ciudades pequeñas, donde puedo caminar y conocer a la gente. No me gustan los hoteles grandes con muchos turistas. Me gusta más quedarme en una casa pequeña o en un apartamento y comer en los restaurantes del barrio."
+  },
+  {
+   "n": 8,
+   "id": "travel-routine",
+   "level": "intermediate",
+   "type": "routine",
+   "topic": "travel",
+   "kind": "level_check",
+   "promptEs": "Cuando planeas un viaje, ¿qué haces normalmente para prepararte?",
+   "promptEn": "When you plan a trip, what do you normally do to prepare?",
+   "transcript": "Cuando planeo un viaje, primero busco información en internet sobre el lugar y miro las fotos. Después reservo el hotel y compro los billetes. También hago una lista de cosas para llevar y reviso el pronóstico del tiempo. Un día antes preparo la maleta y descargo los mapas en el teléfono."
+  },
+  {
+   "n": 9,
+   "id": "travel-exp",
+   "level": "advanced",
+   "type": "experience",
+   "topic": "travel",
+   "kind": "probe",
+   "promptEs": "Cuéntame sobre el mejor viaje que has hecho. ¿A dónde fuiste, con quién, y qué pasó?",
+   "promptEn": "Tell me about the best trip you've taken. Where did you go, with whom, and what happened?",
+   "transcript": "El mejor viaje que he hecho fue a Oaxaca, en México, con mi esposa hace dos años. Estuvimos ocho días. Visitamos las ruinas de Monte Albán y comimos mole todos los días. Un día, nos perdimos en un pueblo pequeño y una señora nos ayudó y nos invitó a comer en su casa. Fue una experiencia muy bonita y todavía hablamos de eso."
+  },
+  {
+   "n": 10,
+   "id": "hotel-ask",
+   "level": "intermediate",
+   "type": "roleplay_ask",
+   "topic": "hotel",
+   "kind": "level_check",
+   "promptEs": "Quieres reservar una habitación de hotel para este fin de semana. Llama al hotel y haz 3 o 4 preguntas para averiguar qué hay disponible.",
+   "promptEn": "You want to reserve a hotel room for this weekend. Call the hotel and ask 3 or 4 questions to find out what's available.",
+   "transcript": "Hola, buenas tardes. Quisiera reservar una habitación para este fin de semana, del viernes al domingo. ¿Tienen habitaciones disponibles? ¿Cuánto cuesta por noche? Y también quisiera saber si el desayuno está incluido y si hay estacionamiento. Muchas gracias."
+  },
+  {
+   "n": 11,
+   "id": "hotel-solve",
+   "level": "advanced",
+   "type": "roleplay_solve",
+   "topic": "hotel",
+   "kind": "probe",
+   "promptEs": "Estás viajando con un amigo y tienes una reserva pagada de antemano para una habitación con dos camas individuales. Cuando llegas, la habitación que te da el hotel solo tiene una cama. Habla con el recepcionista, explica el problema y propón 2 o 3 soluciones.",
+   "promptEn": "You're traveling with a friend and have a pre-paid reservation for a room with two twin beds. When you arrive, the room the hotel gives you only has one bed. Talk to the receptionist, explain the problem, and offer 2 or 3 solutions.",
+   "transcript": "Buenas noches. Tengo un problema con la habitación. Yo reservé una habitación con dos camas, pero la habitación que me dieron tiene solo una cama. Mi amigo y yo no podemos dormir en una cama. Yo pagué antes por internet. Puede darnos otra habitación con dos camas? Si no hay ninguna habitación, tal vez puede poner una cama extra, o puede darnos un descuento."
+  },
+  {
+   "n": 12,
+   "id": "hotel-experience",
+   "level": "advanced",
+   "type": "roleplay_experience",
+   "topic": "hotel",
+   "kind": "probe",
+   "promptEs": "¿Alguna vez tuviste un problema con una reserva de hotel o con un lugar donde te hospedaste? Cuéntame qué pasó y cómo lo resolviste, con todo el detalle posible.",
+   "promptEn": "Have you ever had a problem with a hotel reservation or a place you stayed? Tell me what happened and how you handled it, in as much detail as you can.",
+   "transcript": "Sí, una vez tuve un problema en un hotel en Chicago. Cuando llego, el recepcionista dice que no tiene mi reserva. Yo le enseño el correo, pero él no lo encuentra. Finalmente, el gerente viene y nos da una habitación mejor sin costo adicional. Yo estoy muy contento pero muy cansado después de una hora."
+  },
+  {
+   "n": 13,
+   "id": "compare-cities",
+   "level": "advanced",
+   "type": "comparison",
+   "topic": "travel",
+   "kind": "probe",
+   "promptEs": "Compara la ciudad donde vives ahora con otro lugar donde hayas vivido o que conozcas bien. ¿Cuáles son las principales diferencias?",
+   "promptEn": "Compare the city where you live now with another place you've lived in or know well. What are the main differences?",
+   "transcript": "Yo vivo ahora en una ciudad grande y antes vivía en un pueblo pequeño. La diferencia principal es el ritmo de vida. En el pueblo todo es más tranquilo y la gente se conoce. En la ciudad hay más trabajo y más cosas que hacer, pero también hay más tráfico y más ruido. Me gusta más la ciudad porque hay más oportunidades, pero a veces extraño el pueblo."
+  },
+  {
+   "n": 14,
+   "id": "opinion-tech",
+   "level": "advanced",
+   "type": "opinion",
+   "topic": "socialmedia",
+   "kind": "probe",
+   "promptEs": "¿Qué opinas sobre el uso de los teléfonos celulares y las redes sociales en la vida diaria? ¿Crees que tienen más ventajas o más desventajas?",
+   "promptEn": "What's your opinion on the use of cell phones and social media in daily life? Do you think they have more advantages or disadvantages?",
+   "transcript": "Creo que los teléfonos tienen ventajas y desventajas. Por un lado, nos ayudan a comunicarnos con la familia y a encontrar información rápido. Por otro lado, la gente pasa demasiado tiempo mirando la pantalla y no habla con las personas que están al lado. Yo pienso que es importante usar el teléfono con moderación, pero no es fácil."
+  }
+ ],
+ "rating": {
+  "rating": "IH",
+  "floor": "IM",
+  "ceiling": "AL",
+  "rationale": "The speaker holds Intermediate Mid steadily across the routine and description prompts, with accurate present-tense sentences and clear reasons. Attempts at Advanced narration break down: past events are told mostly in the present tense and stay short. Advanced functions appear often enough, for example in the comparison and the opinion answer, to place the sample at Intermediate High.",
+  "per_prompt": [
+   {
+    "n": 1,
+    "level_targeted": "IM",
+    "kind": "level_check",
+    "meets": "fully",
+    "note": "Simple sentences with clear reasons; consistent present-tense control."
+   },
+   {
+    "n": 2,
+    "level_targeted": "IM",
+    "kind": "level_check",
+    "meets": "fully",
+    "note": "Sequenced routine in connected sentences with correct verb forms."
+   },
+   {
+    "n": 3,
+    "level_targeted": "AL",
+    "kind": "probe",
+    "meets": "minimally",
+    "note": "Narrates a past event mostly in the present tense, so the past time frame is not controlled."
+   },
+   {
+    "n": 4,
+    "level_targeted": "IM",
+    "kind": "level_check",
+    "meets": "fully",
+    "note": "Describes a process in sentences with usable vocabulary."
+   },
+   {
+    "n": 5,
+    "level_targeted": "IM",
+    "kind": "level_check",
+    "meets": "fully",
+    "note": "Habits and frequency handled accurately at sentence level."
+   },
+   {
+    "n": 6,
+    "level_targeted": "AL",
+    "kind": "probe",
+    "meets": "minimally",
+    "note": "Switches between present and past inside the story; some past forms appear but not consistently."
+   },
+   {
+    "n": 7,
+    "level_targeted": "IM",
+    "kind": "level_check",
+    "meets": "fully",
+    "note": "Preferences and reasons stated in simple, accurate sentences."
+   },
+   {
+    "n": 8,
+    "level_targeted": "IM",
+    "kind": "level_check",
+    "meets": "fully",
+    "note": "Plans and sequencing described with correct present-tense forms."
+   },
+   {
+    "n": 9,
+    "level_targeted": "AL",
+    "kind": "probe",
+    "meets": "minimally",
+    "note": "Correct preterite and imperfect in places; the story is short and lacks sustained detail."
+   },
+   {
+    "n": 10,
+    "level_targeted": "IM",
+    "kind": "level_check",
+    "meets": "fully",
+    "note": "Asks four relevant questions with polite forms."
+   },
+   {
+    "n": 11,
+    "level_targeted": "AL",
+    "kind": "probe",
+    "meets": "minimally",
+    "note": "States the problem and offers solutions, but a missing question marker and repeated structures limit the paragraph."
+   },
+   {
+    "n": 12,
+    "level_targeted": "AL",
+    "kind": "probe",
+    "meets": "not",
+    "note": "Falls back to the present tense to tell a past event, and the story stays short."
+   },
+   {
+    "n": 13,
+    "level_targeted": "AL",
+    "kind": "probe",
+    "meets": "minimally",
+    "note": "Compares two places with contrast markers, in mostly accurate sentences, without extended abstraction."
+   },
+   {
+    "n": 14,
+    "level_targeted": "AL",
+    "kind": "probe",
+    "meets": "minimally",
+    "note": "Gives a balanced view with connectors; support stays general rather than developed."
+   }
+  ]
+ }
+}

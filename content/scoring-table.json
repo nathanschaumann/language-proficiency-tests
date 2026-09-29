@@ -1,0 +1,236 @@
+{
+ "sublevels_with_passages": [
+  "IL",
+  "IM",
+  "AL",
+  "AM",
+  "S"
+ ],
+ "passages_per_sublevel": 5,
+ "items_per_passage": 3,
+ "options_per_item": 4,
+ "start_block": "AL",
+ "pairs": {
+  "IL-IM": [
+   {
+    "min": 0,
+    "max": 11,
+    "rating": "NL"
+   },
+   {
+    "min": 12,
+    "max": 14,
+    "rating": "NM"
+   },
+   {
+    "min": 15,
+    "max": 17,
+    "rating": "NH"
+   },
+   {
+    "min": 18,
+    "max": 23,
+    "rating": "IL"
+   },
+   {
+    "min": 24,
+    "max": 30,
+    "rating": "IM"
+   }
+  ],
+  "IM-AL": [
+   {
+    "min": 0,
+    "max": 11,
+    "rating": "BR"
+   },
+   {
+    "min": 12,
+    "max": 14,
+    "rating": "NH"
+   },
+   {
+    "min": 15,
+    "max": 17,
+    "rating": "IL"
+   },
+   {
+    "min": 18,
+    "max": 21,
+    "rating": "IM"
+   },
+   {
+    "min": 22,
+    "max": 23,
+    "rating": "IH"
+   },
+   {
+    "min": 24,
+    "max": 30,
+    "rating": "AL"
+   }
+  ],
+  "AL-AM": [
+   {
+    "min": 0,
+    "max": 11,
+    "rating": "BR"
+   },
+   {
+    "min": 12,
+    "max": 14,
+    "rating": "IM"
+   },
+   {
+    "min": 15,
+    "max": 17,
+    "rating": "IH"
+   },
+   {
+    "min": 18,
+    "max": 23,
+    "rating": "AL"
+   },
+   {
+    "min": 24,
+    "max": 30,
+    "rating": "AM"
+   }
+  ],
+  "AM-S": [
+   {
+    "min": 0,
+    "max": 11,
+    "rating": "BR"
+   },
+   {
+    "min": 12,
+    "max": 14,
+    "rating": "IH"
+   },
+   {
+    "min": 15,
+    "max": 17,
+    "rating": "AL"
+   },
+   {
+    "min": 18,
+    "max": 21,
+    "rating": "AM"
+   },
+   {
+    "min": 22,
+    "max": 23,
+    "rating": "AH"
+   },
+   {
+    "min": 24,
+    "max": 28,
+    "rating": "S"
+   },
+   {
+    "min": 29,
+    "max": 30,
+    "rating": "D"
+   }
+  ]
+ },
+ "pair_selection_when_three_blocks": {
+  "thresholds": [
+   18,
+   11
+  ],
+  "skip_pair_scoring_in_its_own_BR_band_PROVISIONAL": true
+ },
+ "item_type_composition": {
+  "IL": {
+   "global": 1,
+   "selective": 1,
+   "detail": 1
+  },
+  "IM": {
+   "global": 1,
+   "detail": 2
+  },
+  "AL": {
+   "global": 1,
+   "detail": 2
+  },
+  "AM": {
+   "global": 1,
+   "detail": 1,
+   "inference": 1
+  },
+  "S": {
+   "global": 1,
+   "detail": 1,
+   "inference": 1
+  }
+ },
+ "timing_seconds": {
+  "preview": 30,
+  "preview_skippable": true,
+  "audio_plays": 1,
+  "audio_controls": "none - no stop, no replay, no speed",
+  "review": 20,
+  "review_skippable": true,
+  "answer_window_by_level": {
+   "IL": 120,
+   "IM": 120,
+   "AL": 120,
+   "AM": 120,
+   "S": 120
+  },
+  "overall_cap_minutes": {
+   "two_blocks": 50,
+   "three_blocks": 75
+  }
+ },
+ "branch_threshold_PROVISIONAL": {
+  "block1_level": "AL",
+  "block1_items": 15,
+  "go_up_if_score_at_least": 12,
+  "go_up_to": "AM",
+  "go_down_to": "IM"
+ },
+ "third_block_triggers": {
+  "AL-AM": {
+   "if_combined_at_least": 24,
+   "add_block": "S",
+   "then_rate_pair": "AM-S"
+  },
+  "IM-AL": {
+   "if_combined_below": 18,
+   "add_block": "IL",
+   "then_rate_pair": "IL-IM"
+  }
+ },
+ "reading": {
+  "per_passage_seconds": 300,
+  "forward_only": true,
+  "word_bands": {
+   "IL": [
+    150,
+    200
+   ],
+   "IM": [
+    190,
+    240
+   ],
+   "AL": [
+    240,
+    290
+   ],
+   "AM": [
+    280,
+    340
+   ],
+   "S": [
+    340,
+    400
+   ]
+  },
+  "question_language": "target"
+ },
+ "_notes": "Score-to-level table used by the listening and reading tests. Each test is built from blocks of 5 passages (15 questions) at one sublevel. Two adjacent blocks give a 30-point pair score, and the pair maps to a level through the bands below. The band boundaries follow the published table cited in the README. The first-block branch threshold, the third-block triggers and the pair-selection rule for three blocks are this project's own practice choices, not published values. The Distinguished (D) band on the top pair and the flat 120 second answer window are also this project's own choices."
+}
