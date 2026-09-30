@@ -25,6 +25,16 @@
   .screen.active { display: flex; }
   body.in-test .screen { height: 100%; }
 
+  /* Phones and other small windows: outside a test the page scrolls like a normal page.
+     The desktop layout pins the page to the window and scrolls panels inside it; on a small
+     screen that leaves content cut off. */
+  @media (max-width: 820px), (max-height: 500px) {
+    body:not(.in-test) { height: auto; min-height: 100dvh; overflow: visible; display: flex; flex-direction: column; padding-bottom: 60px; }
+    body:not(.in-test) .screen.active { height: auto; flex: 1 0 auto; }
+    body:not(.in-test) .step-body { flex: none; }
+    body:not(.in-test) .step-scroll, body:not(.in-test) .prompt-card { flex: none; overflow: visible; }
+  }
+
   .tag {
     display: inline-block; font-size: var(--fs-sm); font-weight: 700; padding: 2px 8px; border-radius: var(--radius-pill);
     background: var(--accent-soft); color: var(--accent-text);

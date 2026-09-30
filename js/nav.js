@@ -60,10 +60,12 @@
     "  justify-content: center; color: var(--muted-2, #8a94ad); font-size: 11px; white-space: nowrap;",
     "  overflow: hidden; text-overflow: ellipsis; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif; }",
     "@media (max-width: 560px) { .navbar { padding: 0 8px; gap: 8px; } .navbar-links { gap: 4px; }",
-    "  .navbar-links a { padding: 3px 7px; } .site-footer { font-size: 9px; padding: 0 6px; } }",
+    "  .navbar-links a { padding: 3px 7px; }",
+    "  .site-footer { font-size: 9px; line-height: 1.3; padding: 4px 10px; height: auto; min-height: 24px; white-space: normal; text-align: center; } }",
     "@media (max-width: 430px) { .navbar-where { display: none; } .navbar .home-link { padding-right: 0; border-right: 0; } }",
-    "@media (max-width: 560px) { :root { --nav-h: 94px; } .navbar { height: 70px; flex-wrap: wrap; align-content: center; row-gap: 4px; }",
-    "  .navbar-left { flex: 1 0 100%; } }"
+    "@media (max-width: 560px) { :root { --nav-h: 94px; } .navbar { height: auto; min-height: 70px; padding-top: 4px; padding-bottom: 4px;",
+    "  flex-wrap: wrap; align-content: center; row-gap: 4px; }",
+    "  .navbar-left { flex: 1 0 100%; } .navbar-links { flex: 0 1 auto; min-width: 0; flex-wrap: wrap; row-gap: 4px; } }"
   ].join("\n");
 
   var FOOTER = "Inspired by the ACTFL Proficiency Guidelines. Not affiliated with or endorsed by ACTFL; results are not official ratings.";
