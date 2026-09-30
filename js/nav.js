@@ -36,18 +36,23 @@
   var BAR_CSS = [
     ":root { --nav-h: 62px; }",
     "body.in-test .navbar, body.in-test .site-footer { display: none; }",
-    ".navbar { height: 38px; box-sizing: border-box; display: flex; align-items: center;",
-    "  justify-content: space-between; gap: 16px; padding: 0 18px; background: var(--card, #fff);",
+    ".navbar { min-height: 38px; box-sizing: border-box; display: flex; flex-wrap: wrap; align-items: center;",
+    "  justify-content: space-between; gap: 4px 16px; padding: 0 18px; background: var(--card, #fff);",
     "  border-bottom: 1px solid var(--border, #dde3ef);",
     "  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif; font-size: var(--fs-md); }",
+    ".navbar.navbar-rows { padding-top: 4px; padding-bottom: 4px; }",
     ".navbar-left { flex: 1 1 auto; min-width: 0; display: flex; align-items: center; gap: 14px; overflow: hidden; }",
-    ".navbar .home-link { flex: 0 1 auto; min-width: 0; margin: 0 !important; padding-right: 14px; white-space: nowrap;",
-    "  overflow: hidden; text-overflow: ellipsis; border-right: 1px solid var(--border, #dde3ef); }",
+    ".navbar .home-link { flex: none; position: relative; margin: 0 !important; padding-right: 15px; white-space: nowrap; }",
+    ".navbar .home-link::after { content: ''; position: absolute; right: 0; top: 50%; height: 20px; margin-top: -10px;",
+    "  border-right: 1px solid var(--border, #dde3ef); }",
     ".navbar-where { flex: 0 1 auto; min-width: 0; }",
     ".navbar-where { white-space: nowrap; overflow: hidden; text-overflow: ellipsis;",
     "  color: var(--muted, #6b7a99); font-weight: 600; }",
     ".navbar-where b { color: var(--text, #1a2030); font-weight: 700; }",
     ".navbar-sep { margin: 0 6px; opacity: 0.55; }",
+    ".navbar.navbar-tight .navbar-where { display: none; }",
+    ".navbar.navbar-tight .home-link { padding-right: 0; }",
+    ".navbar.navbar-tight .home-link::after { display: none; }",
     ".navbar-links { flex: none; display: flex; gap: 8px; align-items: center; }",
     ".navbar-links a { white-space: nowrap; color: var(--muted, #6b7a99); text-decoration: none;",
     "  border: 1px solid var(--border, #dde3ef); border-radius: 999px; padding: 3px 12px;",
@@ -57,14 +62,16 @@
     "body:not(.in-test) .step-body { padding-bottom: 44px; }",
     ".site-footer { position: fixed; left: 0; right: 0; bottom: 0; z-index: 50; background: var(--bg, #eef1f6);",
     "  height: 24px; box-sizing: border-box; padding: 0 18px; display: flex; align-items: center;",
-    "  justify-content: center; color: var(--muted-2, #8a94ad); font-size: 11px; white-space: nowrap;",
+    "  justify-content: center; color: var(--muted-aa, #5b6781); font-size: 11px; white-space: nowrap;",
     "  overflow: hidden; text-overflow: ellipsis; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif; }",
-    "@media (max-width: 560px) { .navbar { padding: 0 8px; gap: 8px; } .navbar-links { gap: 4px; }",
-    "  .navbar-links a { padding: 3px 7px; }",
-    "  .site-footer { font-size: 9px; line-height: 1.3; padding: 4px 10px; height: auto; min-height: 24px; white-space: normal; text-align: center; } }",
-    "@media (max-width: 430px) { .navbar-where { display: none; } .navbar .home-link { padding-right: 0; border-right: 0; } }",
-    "@media (max-width: 560px) { :root { --nav-h: 94px; } .navbar { height: auto; min-height: 70px; padding-top: 4px; padding-bottom: 4px;",
-    "  flex-wrap: wrap; align-content: center; row-gap: 4px; }",
+    /* Touch-sized tabs: phones, small windows and touch screens get 32px-tall tabs. */
+    "@media (max-width: 820px), (max-height: 500px), (pointer: coarse) { .navbar-links a { padding-top: 8px; padding-bottom: 8px; } }",
+    "@media (max-width: 560px) { .navbar { padding: 0 8px; gap: 4px 8px; } .navbar-links { gap: 4px; }",
+    "  .navbar-links a { padding-left: 7px; padding-right: 7px; }",
+    "  .site-footer { line-height: 1.3; padding: 4px 10px; height: auto; min-height: 24px; white-space: normal; text-align: center; } }",
+    "@media (max-width: 430px) { .navbar-where { display: none; } .navbar .home-link { padding-right: 0; } .navbar .home-link::after { display: none; } }",
+    "@media (max-width: 560px) { :root { --nav-h: 94px; } .navbar { min-height: 70px; padding-top: 4px; padding-bottom: 4px;",
+    "  align-content: center; row-gap: 4px; }",
     "  .navbar-left { flex: 1 0 100%; } .navbar-links { flex: 0 1 auto; min-width: 0; flex-wrap: wrap; row-gap: 4px; } }"
   ].join("\n");
 
@@ -98,8 +105,21 @@
   }
   function setPage(page) {
     if (pageEl) pageEl.textContent = page || (ROUTES[_route] || ROUTES[""]).page;
+    fit();
   }
-  function setTestMode(on) { document.body.classList.toggle("in-test", !!on); }
+  function setTestMode(on) { document.body.classList.toggle("in-test", !!on); if (!on) fit(); }
+
+  // Keep the bar readable at any width. If the page label does not fit next to the home link
+  // and the tabs, drop the label (the home link is never cut). When the tabs have to wrap onto
+  // a second row, mark the bar so it gets a little vertical padding.
+  function fit() {
+    if (!barEl || !barEl.offsetHeight) return; // hidden while a test is running
+    var left = barEl.querySelector(".navbar-left"), links = barEl.querySelector(".navbar-links");
+    function wrapped() { return links.getBoundingClientRect().top >= left.getBoundingClientRect().bottom - 1; }
+    barEl.classList.remove("navbar-tight", "navbar-rows");
+    if (left.scrollWidth > left.clientWidth + 1 || wrapped()) barEl.classList.add("navbar-tight");
+    if (wrapped()) barEl.classList.add("navbar-rows");
+  }
 
   function mount() {
     if (barEl) return;
@@ -122,6 +142,11 @@
     if (home) barEl.querySelector(".navbar-left").insertBefore(home, barEl.querySelector(".navbar-where"));
     pageEl = barEl.querySelector("#navbar-page");
     setPage();
+    global.addEventListener("resize", fit);
+    global.addEventListener("load", fit);
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(fit);
+    // The Grading key tab is added (and relabelled) by another script after this one.
+    if (global.MutationObserver) new MutationObserver(fit).observe(barEl, { childList: true, subtree: true, characterData: true });
     function addFooter() {
       var foot = document.createElement("div");
       foot.className = "site-footer";

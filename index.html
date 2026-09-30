@@ -2,7 +2,7 @@
 <html lang="en" class="it-app">
 <head>
 <meta charset="utf-8">
-<link rel="icon" href="data:,">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Language Proficiency Practice Tests</title>
 <meta property="og:title" content="Language Proficiency Practice Tests">
@@ -388,11 +388,16 @@
     .block-walk { flex-wrap: wrap; justify-content: center; }
     .walk-node { flex: 1 1 96px; }
   }
+
+  /* Touch-sized End test button on phones, small windows and touch screens. */
+  @media (max-width: 820px), (max-height: 500px), (pointer: coarse) {
+    .btn-end-test { min-height: 32px; padding-top: 7px; padding-bottom: 7px; }
+  }
 </style>
 </head>
 <body>
 
-<nav class="home-link" style="font:14px/1.4 system-ui,-apple-system,sans-serif;margin:0 0 12px"><a href="https://nschaumann.com/" style="color:#1F4E79;text-decoration:none">← Nathan Schaumann · all projects</a></nav>
+<nav class="home-link" style="font:14px/1.4 system-ui,-apple-system,sans-serif;margin:0 0 4px"><a href="https://nschaumann.com/" style="display:inline-block;padding:8px 0;color:#1F4E79;text-decoration:none">← Nathan Schaumann · all projects</a></nav>
 <script src="js/nav.js"></script>
 
 

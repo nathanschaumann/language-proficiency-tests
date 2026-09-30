@@ -4,6 +4,7 @@
   --card: #fff; --card-2: #f5f7fb;
   --border: #dde3ef; --border-soft: #e8ecf4;
   --text: #1a2030; --muted: #6b7a99; --muted-2: #7a86a1;
+  --muted-aa: #5b6781; /* small grey text that needs 4.5:1 on the page and card backgrounds */
   --accent: #4f7ef8; --accent-soft: #e3ebff; --accent-text: #2f5fd6;
   --accent-2: #e0574f;
   --danger: #e0574f; --danger-text: #b8382e; --danger-soft: #fdeceb;

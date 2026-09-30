@@ -2,7 +2,7 @@
 <html lang="en" class="it-app">
 <head>
 <meta charset="utf-8">
-<link rel="icon" href="data:,">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Speaking Practice - Language Proficiency Practice Tests</title>
 <link rel="stylesheet" href="css/tokens.css">
@@ -233,6 +233,9 @@
 
   #screen-practice2-results .step-scroll { overflow-y: visible; }
 
+  /* The results screens scroll the whole page, so their body must be as tall as its content:
+     then its bottom padding clears the fixed footer under the last row. */
+  #screen-results .step-body,
   #screen-practice2-results .step-body { flex: none; }
   .results-body { display: flex; flex-direction: column; gap: 16px; width: 100%; }
   .results-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 20px; flex-wrap: wrap; }
@@ -278,7 +281,7 @@
   .meets-fully { color: var(--good-text); font-weight: 700; }
   .meets-minimally { color: var(--warn-text); font-weight: 700; }
   .meets-not { color: var(--danger-text); font-weight: 700; }
-  .transcript-cell { color: var(--muted-2); font-size: var(--fs-sm); }
+  .transcript-cell { color: var(--muted-aa); font-size: var(--fs-sm); }
 
   .evidence td .tag { margin-top: 2px; }
 
@@ -287,7 +290,7 @@
   .evidence-card-top { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; font-size: var(--fs-md); font-weight: 600; }
   .evidence-card-n { color: var(--muted); font-weight: 700; }
   .evidence-card-meta { color: var(--muted); font-weight: 400; }
-  .evidence-card-response { margin-top: 4px; font-size: var(--fs-sm); color: var(--muted-2); line-height: 1.4; }
+  .evidence-card-response { margin-top: 4px; font-size: var(--fs-sm); color: var(--muted-aa); line-height: 1.4; }
   @media (max-width: 900px) {
     .evidence-wrap { display: none; }
     .evidence-cards { display: flex; }
@@ -329,12 +332,18 @@
   .mic-modal .level-meter-fill { height: 100%; width: 0%; background: var(--accent); transition: width .08s linear; }
   .mic-modal .mic-status { font-size: var(--fs-md); color: var(--muted-2); min-width: 0; }
   .mic-modal .mic-actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+
+  /* Touch-sized controls on phones, small windows and touch screens. */
+  @media (max-width: 820px), (max-height: 500px), (pointer: coarse) {
+    .btn-end-test { min-height: 32px; padding-top: 6px; padding-bottom: 6px; }
+    .prompt-gloss-btn { width: 32px; height: 32px; }
+  }
 </style>
 
 </head>
 <body>
 
-<nav class="home-link" style="font:14px/1.4 system-ui,-apple-system,sans-serif;margin:0 0 12px"><a href="https://nschaumann.com/" style="color:#1F4E79;text-decoration:none">← Nathan Schaumann · all projects</a></nav>
+<nav class="home-link" style="font:14px/1.4 system-ui,-apple-system,sans-serif;margin:0 0 4px"><a href="https://nschaumann.com/" style="display:inline-block;padding:8px 0;color:#1F4E79;text-decoration:none">← Nathan Schaumann · all projects</a></nav>
 <script src="js/nav.js"></script>
 <script src="js/grading.js"></script>
 
@@ -1403,7 +1412,7 @@ function runPractice2Prompt(mount, p, streamPromise, opts) {
         } else if (state === "lost") {
           recDot.classList.remove("live", "warn");
           recLabel.textContent = "Not recording";
-          micMsg("Speech recognition stopped and could not restart — the rest of this answer won't be transcribed.");
+          micMsg("Speech recognition stopped and could not restart. The rest of this answer won't be transcribed. Press Finish early to move on, or use Writing Practice in the Practice tab to type your answers instead.");
         }
       }
     });

@@ -67,12 +67,15 @@ async function waitFor(expr, ms = 20000, label = expr) {
 }
 
 const problems = { console: [], failed: [], external: [] };
+// The shared tab icon (/favicon.svg) lives at the root of nschaumann.com, not in this repo, so the local
+// server has no copy of it. A miss on that one file is expected here and is not a failure.
+const isSiteRootIcon = (url) => /\/favicon\.svg$/.test(url || "");
 listeners.push(m => {
   if (m.method === "Runtime.exceptionThrown") problems.console.push("exception: " + (m.params.exceptionDetails.exception?.description || m.params.exceptionDetails.text));
   if (m.method === "Runtime.consoleAPICalled" && m.params.type === "error") problems.console.push("console.error: " + m.params.args.map(a => a.value || a.description).join(" "));
-  if (m.method === "Log.entryAdded" && m.params.entry.level === "error") problems.console.push("log: " + m.params.entry.text + " " + (m.params.entry.url || ""));
+  if (m.method === "Log.entryAdded" && m.params.entry.level === "error" && !isSiteRootIcon(m.params.entry.url)) problems.console.push("log: " + m.params.entry.text + " " + (m.params.entry.url || ""));
   if (m.method === "Network.loadingFailed" && !m.params.canceled) problems.failed.push(m.params.errorText + " " + m.params.requestId);
-  if (m.method === "Network.responseReceived" && m.params.response.status >= 400) problems.failed.push(m.params.response.status + " " + m.params.response.url);
+  if (m.method === "Network.responseReceived" && m.params.response.status >= 400 && !isSiteRootIcon(m.params.response.url)) problems.failed.push(m.params.response.status + " " + m.params.response.url);
   if (m.method === "Network.requestWillBeSent") {
     const u = m.params.request.url;
     if (!u.startsWith("http://127.0.0.1:" + HTTP) && !u.startsWith("data:") && !u.startsWith("blob:") && !u.startsWith("about:")) problems.external.push(u);
