@@ -324,7 +324,7 @@
     var ex = estimate(14, false), pr5 = estimate(5, true), pr1 = estimate(1, true);
     return '<div class="kp-card" role="dialog" aria-modal="true" aria-labelledby="kp-title">' +
       '<h2 id="kp-title">Grading with your own Anthropic API key</h2>' +
-      '<p>The speaking exam and the practice drills are graded by Claude. This site has no server and no shared key, so ' +
+      '<p>The speaking test and the practice drills are graded by Claude. This site has no server and no shared key, so ' +
       'grading uses <b>your</b> key. Your recordings are never stored. Only the text of your answers is sent.</p>' +
       '<ul>' +
       '<li>The key stays in this browser. It is sent only to <code>api.anthropic.com</code>, nowhere else.</li>' +
@@ -340,7 +340,7 @@
       '<div class="kp-msg" id="kp-msg"></div>' +
       '<h3>Rough cost per sitting</h3>' +
       '<table class="kp-table"><tr><th>Sitting</th><th>Estimate</th></tr>' +
-      '<tr><td>Speaking exam, 14 answers (one rating call)</td><td>about ' + money(ex.usd) + '</td></tr>' +
+      '<tr><td>Speaking test, 14 answers (one rating call)</td><td>about ' + money(ex.usd) + '</td></tr>' +
       '<tr><td>Practice, 5 questions (rating plus mistake check)</td><td>about ' + money(pr5.usd) + '</td></tr>' +
       '<tr><td>Practice, 1 question</td><td>about ' + money(pr1.usd) + '</td></tr></table>' +
       '<p class="kp-small">Assumptions: rating uses ' + MODELS.rate.label + ' (' + MODELS.rate.id + ') at $' + MODELS.rate.inPerM + ' per million input and $' +

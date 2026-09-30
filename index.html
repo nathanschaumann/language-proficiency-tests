@@ -12,7 +12,7 @@
 <meta property="og:image" content="https://nathanschaumann.github.io/language-proficiency-tests/og.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="627">
-<meta property="og:image:alt" content="Language proficiency practice tests by Nathan Schaumann, with a screenshot of the exam page showing the Listening test and Speaking exam cards.">
+<meta property="og:image:alt" content="Language proficiency practice tests by Nathan Schaumann, with a screenshot of the tests page showing the Listening test and Speaking test cards.">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="stylesheet" href="css/tokens.css">
 
@@ -39,6 +39,7 @@
   .start-header { flex: none; }
   .hub-note { font-size: var(--fs-md); }
   .hub-note a { color: var(--accent-text, var(--accent)); }
+  .start-header .origin-line { color: var(--muted); font-size: var(--fs-sm); margin-top: 6px; }
 
   .start-header h1 { font-size: var(--fs-lg); font-weight: 700; }
   .start-header p { color: var(--muted); margin-top: 4px; font-size: var(--fs-base); }
@@ -363,9 +364,10 @@
 
 <div class="screen" id="screen-start">
   <div class="start-header">
-    <h1 id="hub-title">Exams</h1>
+    <h1 id="hub-title">Tests</h1>
     <p id="hub-sub">Timed practice tests that end with an estimated level. Not official ratings.</p>
     <p class="hub-note" id="hub-note">Listening and reading run entirely in your browser. Speaking is graded by Claude using your own API key, which never leaves your browser except to Anthropic. See a graded example first: <a href="speaking.html?route=speaking/sample">sample result (illustrative)</a>.</p>
+    <p class="origin-line" id="origin-line">Built inside my private study app from August 2026; published here as a standalone copy on 29 September 2026.</p>
   </div>
   <div class="start-body">
   <div class="hub-exams-wrap" id="hub-exams-wrap">
@@ -432,7 +434,7 @@
 
     <div class="hub-card" id="skill-card-speaking-exam" data-exam-lang="es">
       <div class="hub-head">
-        <h2>Speaking exam</h2>
+        <h2>Speaking test</h2>
       </div>
       <p class="hub-what">Questions appear on screen in Spanish, one at a time, and you speak your answer. A self-assessment comes first, then an estimated level. Graded with your own Anthropic API key.</p>
       <p class="hub-time">14 prompts · about 25 minutes</p>
@@ -1204,7 +1206,7 @@ const App = {
     document.getElementById("hub-exams-wrap").hidden = practice;
     document.getElementById("hub-exams").hidden = practice;
     document.getElementById("hub-practice-wrap").hidden = !practice;
-    document.getElementById("hub-title").textContent = practice ? "Practice" : "Exams";
+    document.getElementById("hub-title").textContent = practice ? "Practice" : "Tests";
     document.getElementById("hub-note").hidden = practice;
     document.getElementById("hub-sub").textContent = practice
       ? "Speaking and writing practice on your own clock. Graded with your own Anthropic API key."

@@ -433,10 +433,10 @@
 </div>
 
 <div class="screen" id="screen-exam-ranout">
-  <div class="app-header"><div><h1>Speaking Exam</h1><p class="sub">Not enough unused questions left for a full exam.</p></div></div>
+  <div class="app-header"><div><h1>Speaking Test</h1><p class="sub">Not enough unused questions left for a full test.</p></div></div>
   <div class="step-body">
     <div class="step-scroll">
-      <div class="card"><p class="lede">Not enough unused questions left for a full exam.</p></div>
+      <div class="card"><p class="lede">Not enough unused questions left for a full test.</p></div>
     </div>
     <div class="step-footer">
       <span class="hint"></span>
@@ -499,10 +499,10 @@
       <button class="btn-end-test" id="test-end-btn" type="button">End test</button>
     </div>
     <div class="end-test-confirm" id="test-end-confirm">
-      <p>End the exam now? <b>An ended exam is not saved</b> — it will not be rated and it will not appear in your Results.</p>
+      <p>End the test now? <b>An ended test is not saved</b> - it will not be rated and it will not appear in your Results.</p>
       <div class="end-test-confirm-actions">
         <button class="btn sm secondary" id="test-end-cancel-btn" type="button">Cancel</button>
-        <button class="btn sm danger" id="test-end-confirm-btn" type="button">End exam</button>
+        <button class="btn sm danger" id="test-end-confirm-btn" type="button">End test</button>
       </div>
     </div>
     <div class="prompt-card card" id="test-prompt-mount"></div>
@@ -1559,12 +1559,12 @@ function renderRatingSection(prefix, rating, detail) {
 }
 
 const SCREEN_BAR_PAGES = {
-  "screen-profile-choice": "Speaking · Exam",
-  "screen-exam-ranout": "Speaking · Exam",
+  "screen-profile-choice": "Speaking · Test",
+  "screen-exam-ranout": "Speaking · Test",
   "screen-selfassessment": "Speaking · Self-assessment",
   "screen-setup": "Speaking · Setup",
-  "screen-test": "Speaking · Exam",
-  "screen-results": "Speaking · Exam results",
+  "screen-test": "Speaking · Test",
+  "screen-results": "Speaking · Test results",
   "screen-practice2-count": "Speaking · Practice",
   "screen-practice2": "Speaking · Practice",
   "screen-practice2-results": "Speaking · Practice results",
@@ -1618,7 +1618,7 @@ const App = {
       this.bank = examBank(data.prompts);
       this.banks[SPK_LANGUAGE] = data.prompts;
     } catch (e) {
-      this.showError("Couldn't load the prompt bank", `content/prompts.json failed to load: ${e.message}. The exam can't run without it.`);
+      this.showError("Couldn't load the prompt bank", `content/prompts.json failed to load: ${e.message}. The test can't run without it.`);
       return;
     }
     this.profile = loadProfile();

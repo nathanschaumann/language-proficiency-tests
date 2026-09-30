@@ -1,15 +1,21 @@
 // Headless browser check. Serves the site locally, drives it in Chrome with audio muted,
 // and stubs fetch for api.anthropic.com so no real API call is ever made.
 // Usage: node tests/e2e.mjs [--shot]     (CHROME_PATH overrides the browser location)
+// The server and the Chrome debugging port are picked fresh on every run (LPP_HTTP_PORT and
+// LPP_CDP_PORT pin them), so two runs at once, or a leftover from a killed run, cannot collide.
 import { spawn } from "node:child_process";
 import fs from "node:fs";
+import net from "node:net";
 import os from "node:os";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const CHROME = process.env.CHROME_PATH || "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome";
-const HTTP = 8765, CDP = 9333, FAKE_KEY = "sk-ant-FAKE-TEST-KEY";
+const freePort = () => new Promise(res => { const s = net.createServer(); s.listen(0, "127.0.0.1", () => { const p = s.address().port; s.close(() => res(p)); }); });
+const HTTP = Number(process.env.LPP_HTTP_PORT) || await freePort();
+const CDP = Number(process.env.LPP_CDP_PORT) || await freePort();
+const FAKE_KEY = "sk-ant-FAKE-TEST-KEY";
 const base = `http://127.0.0.1:${HTTP}/`;
 const sleep = ms => new Promise(r => setTimeout(r, ms));
 const failures = [];
@@ -102,6 +108,10 @@ const INIT = `
   };
 })();`;
 
+// Look-and-click in ONE evaluation: the timed phases auto-advance (3 s in fast mode), so a separate
+// look-then-click can find the button already gone and throw "Cannot read properties of null".
+const clickIf = id => ev(`(() => { const b = document.getElementById('${id}'); if (!b) return false; b.click(); return true; })()`);
+
 async function go(rel) { await send("Page.navigate", { url: base + rel }); await sleep(400); await waitFor("document.readyState==='complete'", 15000); }
 
 async function runListening(route, label) {
@@ -111,13 +121,13 @@ async function runListening(route, label) {
   while (Date.now() - t0 < 120000) {
     const st = await ev(`(() => { const a = document.querySelector('.screen.active'); return { s: a && a.id, adv: !!document.getElementById('advance-btn'), pv: !!document.getElementById('preview-next-btn'), rv: !!document.getElementById('review-next-btn') }; })()`);
     if (st.s === "screen-results") break;
-    if (st.s === "screen-soundcheck") await ev(`document.getElementById('sc-go-btn').click()`);
+    if (st.s === "screen-soundcheck") await clickIf("sc-go-btn");
     else if (st.s === "screen-item") {
       if (st.adv) {
-        await ev(`(() => { const p = App.currentPassage; p.questions.forEach((q, i) => { const pick = Math.random() < 0.75 ? q.correct : (q.correct + 1) % 4; document.querySelector('input[name="q' + i + '"][value="' + pick + '"]').click(); }); document.getElementById('advance-btn').click(); })()`);
-        answered++;
-      } else if (st.pv) await ev(`document.getElementById('preview-next-btn').click()`);
-      else if (st.rv) await ev(`document.getElementById('review-next-btn').click()`);
+        const did = await ev(`(() => { const btn = document.getElementById('advance-btn'), p = App.currentPassage; if (!btn || !p) return false; p.questions.forEach((q, i) => { const pick = Math.random() < 0.75 ? q.correct : (q.correct + 1) % 4; const inp = document.querySelector('input[name="q' + i + '"][value="' + pick + '"]'); if (inp) inp.click(); }); btn.click(); return true; })()`);
+        if (did) answered++;
+      } else if (st.pv) await clickIf("preview-next-btn");
+      else if (st.rv) await clickIf("review-next-btn");
     }
     await sleep(150);
   }
@@ -149,7 +159,7 @@ async function runSpeakingExam() {
   await waitFor(`document.getElementById('screen-results').classList.contains('active')`);
   await waitFor(`document.getElementById('results-ready') && document.getElementById('results-ready').style.display !== 'none'`, 15000, "rating shown");
   const calls = await ev(`window.__calls`);
-  check(calls.length === 1, "exam made exactly one API request (stubbed), got " + calls.length);
+  check(calls.length === 1, "speaking test made exactly one API request (stubbed), got " + calls.length);
   const c = calls[0];
   check(c.url === "https://api.anthropic.com/v1/messages" && c.method === "POST", "request goes to https://api.anthropic.com/v1/messages by POST");
   check(c.headers["x-api-key"] === FAKE_KEY && c.headers["anthropic-version"] === "2023-06-01" && c.headers["anthropic-dangerous-direct-browser-access"] === "true",
@@ -211,6 +221,8 @@ try {
   await go("index.html");
   check(await ev(`document.title`) === "Language Proficiency Practice Tests", "hub loads");
   check(await ev(`document.querySelector('.site-footer').textContent.startsWith('Inspired by the ACTFL Proficiency Guidelines. Not affiliated')`), "footer disclaimer present");
+  check(await ev(`document.getElementById('hub-title').textContent === 'Tests' && !/\\bexams?\\b/i.test(document.body.innerText)`), "hub says Tests, with no visible \"exam\" wording");
+  check(await ev(`document.querySelectorAll('#origin-line').length === 1`), "origin line shown once on the hub");
   await runListening("listening-es", "Spanish listening");
   await runListening("reading", "Portuguese reading");
   await runSpeakingExam();

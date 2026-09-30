@@ -5,8 +5,8 @@
   "use strict";
 
   var ROUTES = {
-    "": { doc: "index.html", page: "Exams" },
-    "exams": { doc: "index.html", page: "Exams" },
+    "": { doc: "index.html", page: "Tests" },
+    "exams": { doc: "index.html", page: "Tests" },
     "practice": { doc: "index.html", page: "Practice" },
     "results": { doc: "results.html", page: "Results" },
     "how": { doc: "results.html", page: "How it works" },
@@ -14,7 +14,7 @@
     "reading": { doc: "index.html", page: "Portuguese reading test" },
     "listening-ru": { doc: "index.html", page: "Russian listening test" },
     "listening-es": { doc: "index.html", page: "Spanish listening test" },
-    "speaking/exam": { doc: "speaking.html", page: "Speaking exam" },
+    "speaking/exam": { doc: "speaking.html", page: "Speaking test" },
     "speaking/sample": { doc: "speaking.html", page: "Sample result" },
     "speaking/drill": { doc: "speaking.html", page: "Speaking practice" },
     "writing/drill": { doc: "speaking.html", page: "Writing practice" },
@@ -104,7 +104,7 @@
       '<span class="navbar-where"><b>Language Proficiency Practice Tests</b><span class="navbar-sep">&middot;</span>' +
       '<span id="navbar-page"></span></span>' +
       '<nav class="navbar-links">' +
-      linkHtml("", "Exams") + linkHtml("practice", "Practice") + linkHtml("results", "Results") + linkHtml("how", "How it works") +
+      linkHtml("", "Tests") + linkHtml("practice", "Practice") + linkHtml("results", "Results") + linkHtml("how", "How it works") +
       "</nav>";
     document.body.insertBefore(barEl, document.body.firstChild);
     pageEl = barEl.querySelector("#navbar-page");

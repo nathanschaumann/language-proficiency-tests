@@ -1,5 +1,5 @@
 {
- "_readme": "Eastern Armenian speaking and writing prompt bank, written with Claude. Each prompt has an id, a target level (novice, intermediate, advanced, superior), a type (description, routine, experience, comparison, role-play, opinion, hypothesize), a topic, the prompt in the target language (promptEs) and an English gloss (promptEn). usedBy is 'both' (exam and practice) or 'practice' (drills only). audioId is unused in this copy.",
+ "_readme": "Eastern Armenian speaking and writing prompt bank, written with Claude. Each prompt has an id, a target level (novice, intermediate, advanced, superior), a type (description, routine, experience, comparison, role-play, opinion, hypothesize), a topic, the prompt in the target language (promptEs) and an English gloss (promptEn). usedBy is 'both' (test and practice) or 'practice' (drills only). audioId is unused in this copy.",
  "prompts": [
   {
    "id": "hy-movies-desc",
