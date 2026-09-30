@@ -40,6 +40,10 @@
     "  justify-content: space-between; gap: 16px; padding: 0 18px; background: var(--card, #fff);",
     "  border-bottom: 1px solid var(--border, #dde3ef);",
     "  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif; font-size: var(--fs-md); }",
+    ".navbar-left { flex: 1 1 auto; min-width: 0; display: flex; align-items: center; gap: 14px; overflow: hidden; }",
+    ".navbar .home-link { flex: 0 1 auto; min-width: 0; margin: 0 !important; padding-right: 14px; white-space: nowrap;",
+    "  overflow: hidden; text-overflow: ellipsis; border-right: 1px solid var(--border, #dde3ef); }",
+    ".navbar-where { flex: 0 1 auto; min-width: 0; }",
     ".navbar-where { white-space: nowrap; overflow: hidden; text-overflow: ellipsis;",
     "  color: var(--muted, #6b7a99); font-weight: 600; }",
     ".navbar-where b { color: var(--text, #1a2030); font-weight: 700; }",
@@ -57,7 +61,9 @@
     "  overflow: hidden; text-overflow: ellipsis; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif; }",
     "@media (max-width: 560px) { .navbar { padding: 0 8px; gap: 8px; } .navbar-links { gap: 4px; }",
     "  .navbar-links a { padding: 3px 7px; } .site-footer { font-size: 9px; padding: 0 6px; } }",
-    "@media (max-width: 430px) { .navbar-where { display: none; } }"
+    "@media (max-width: 430px) { .navbar-where { display: none; } .navbar .home-link { padding-right: 0; border-right: 0; } }",
+    "@media (max-width: 560px) { :root { --nav-h: 94px; } .navbar { height: 70px; flex-wrap: wrap; align-content: center; row-gap: 4px; }",
+    "  .navbar-left { flex: 1 0 100%; } }"
   ].join("\n");
 
   var FOOTER = "Inspired by the ACTFL Proficiency Guidelines. Not affiliated with or endorsed by ACTFL; results are not official ratings.";
@@ -101,12 +107,17 @@
     barEl = document.createElement("div");
     barEl.className = "navbar";
     barEl.innerHTML =
-      '<span class="navbar-where"><b>Language Proficiency Practice Tests</b><span class="navbar-sep">&middot;</span>' +
-      '<span id="navbar-page"></span></span>' +
+      '<div class="navbar-left"><span class="navbar-where"><b>Language Proficiency Practice Tests</b><span class="navbar-sep">&middot;</span>' +
+      '<span id="navbar-page"></span></span></div>' +
       '<nav class="navbar-links">' +
       linkHtml("", "Tests") + linkHtml("practice", "Practice") + linkHtml("results", "Results") + linkHtml("how", "How it works") +
       "</nav>";
     document.body.insertBefore(barEl, document.body.firstChild);
+    // Each page carries a static "Nathan Schaumann, all projects" link (nav.home-link)
+    // before this script. Move it into the bar so it does not add a row above the
+    // fixed-height layout; if this script ever fails to load, it stays at the page top.
+    var home = document.querySelector("nav.home-link");
+    if (home) barEl.querySelector(".navbar-left").insertBefore(home, barEl.querySelector(".navbar-where"));
     pageEl = barEl.querySelector("#navbar-page");
     setPage();
     function addFooter() {
